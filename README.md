@@ -9,7 +9,10 @@ This has
 * Sizer Setting
 * Notepadd++ setting
 * WinMerge Setting
+* Putty Settings
 * SQL Developer Setting
 * Toad Settings
 * Toad Scripts
-* 
+* Chrome Settings
+* FireFox Settings
+
