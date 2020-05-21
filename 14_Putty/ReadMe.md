@@ -1,5 +1,6 @@
-# Oracle SQL Developer Settings Import/Export
-Oracle SQL Developer setting are stored in  "%APPDATA%\Sql Developer"  Folder
-Important files
-* Code Template.xml
-* system<version no> Folder
+# Putty Settings Import/Export
+To Export PuTTY Settings and Sessions
+```
+ regedit /e "%USERPROFILE%\Desktop\putty.reg" HKEY_CURRENT_USER\Software\SimonTatham
+``` 
+To import just import the *.reg file
