@@ -1,0 +1,450 @@
+[anon | Anonymous block]
+DECLARE
+   dummy NUMBER;
+BEGIN
+   SELECT count(*) INTO dummy FROM dual;
+   |;
+EXCEPTION
+   WHEN NO_DATA_FOUND THEN
+      NULL;
+   WHEN OTHERS THEN
+      NULL;
+END;
+[assertloc | Local Assertion Procedure with supporting DBMS_OUTPUT substitute]
+DECLARE
+   assertion_failure EXCEPTION;
+   PROCEDURE pl (
+      str         IN   VARCHAR2,
+      len         IN   INTEGER := 80,
+      expand_in   IN   BOOLEAN := TRUE
+   )
+   IS 
+      v_len   PLS_INTEGER     := LEAST (len, 255);
+      v_str   VARCHAR2 (2000);
+   BEGIN
+      IF LENGTH (str) > v_len
+      THEN
+         v_str := SUBSTR (str, 1, v_len);
+         DBMS_OUTPUT.put_line (v_str);
+         pl (SUBSTR (str, len   + 1), v_len,expand_in);
+      ELSE
+         v_str := str;
+         DBMS_OUTPUT.put_line (v_str);
+      END IF;
+   EXCEPTION
+      WHEN OTHERS
+      THEN
+         IF expand_in
+         THEN
+            DBMS_OUTPUT.ENABLE (1000000);
+            DBMS_OUTPUT.put_line (v_str);
+         ELSE
+            RAISE;
+         END IF;
+   END;
+   
+   PROCEDURE assert (
+      condition_in   IN   BOOLEAN,
+      msg_in         IN   VARCHAR2 := NULL
+   )
+   IS
+   BEGIN
+      IF    NOT condition_in
+         OR condition_in IS NULL
+      THEN
+         IF msg_in IS NOT NULL
+         THEN
+            pl (msg_in);
+            pl (DBMS_UTILITY.format_call_stack);
+         END IF;
+
+         RAISE assertion_failure;
+      END IF;
+   END;
+BEGIN
+   -- Sample usage
+   assert ( | my_parameter_in IS NOT NULL,
+      'Value cannot be NULL');
+EXCEPTION
+   WHEN assertion_failure  
+   THEN
+      -- Decide if you want to handle this locally or not.    
+END;
+[autonproc | Autonomous transaction PROCEDURE shell]
+PROCEDURE | ()
+IS
+   -- Available in Oracle8i and above
+   PRAGMA AUTONOMOUS_TRANSACTION;
+BEGIN
+   -- Upon successful completion, save all changes.
+   COMMIT;
+EXCEPTION
+   -- For each error handler, don't forget the rollback!
+   WHEN OTHERS 
+   THEN
+      ROLLBACK;   
+END;
+[bcquery | BULK COLLECT Query]
+DECLARE
+   l_array1 <array_type_declaration>;
+   l_array2 <array_type_declaration>;
+BEGIN
+   -- Fetch into individual collections, one for each
+   -- element in the SELECT list.
+   SELECT |
+      BULK COLLECT INTO l_array1, l_array2
+      FROM 
+     WHERE ;
+END;
+[case | CASE statment]
+case |
+   WHEN condition THEN
+
+   WHEN condition THEN
+
+   ELSE
+
+END CASE;
+[crbl | Entire cursor block]
+DECLARE
+   CURSOR &c1 IS
+      SELECT | FROM   WHERE;
+   c1rec &c1%ROWTYPE;
+BEGIN
+   OPEN &c1;
+   LOOP
+      FETCH &c1 INTO c1rec;
+      EXIT WHEN &c1%NOTFOUND;
+   END LOOP;
+   CLOSE &c1;
+END;
+[crbo | Package body cursor]
+/* declare package body */
+CURSOR c1 RETURN |tablename%ROWTYPE IS
+   SELECT ....;
+[crloop | Cursor LOOP]
+OPEN &c1;
+LOOP
+   FETCH &c1.| INTO  ;
+   EXIT WHEN &c1%NOTFOUND;
+END LOOP;
+CLOSE &c1;
+[crsp | Package spec cursor]
+/* declare package cursor specification */
+CURSOR c1 RETURN |tablename%ROWTYPE;
+[crt | CREATE TABLE AS Query]
+CREATE TABLE | AS (
+)
+[cur | CURSOR declaration]
+CURSOR c1 IS
+   SELECT | FROM table_name WHERE column_name = value;
+[curfor | CURSOR FOR-LOOP]
+FOR c1_rec IN &c1 LOOP
+   |;
+END LOOP;
+[curpar | CURSOR with Parameter declaration]
+CURSOR c2 (xxx NUMBER) IS
+   SELECT | FROM table_name WHERE column_name = xxx;
+[curpfor | CURSOR with Parameter FOR-LOOP]
+FOR c2_rec IN c2 (yyy) LOOP
+   |;
+END LOOP;
+[dolocal | Local DBMS_OUTPUT Substitute]
+DECLARE
+   -- Will wrap arbitrarily long strings, and automatically expand  
+   -- the DBMS_OUTPUT buffer.
+   PROCEDURE pl (
+      str         IN   VARCHAR2,
+      len         IN   INTEGER := 80,
+      expand_in   IN   BOOLEAN := TRUE
+   )
+   IS 
+      v_len   PLS_INTEGER     := LEAST (len, 255);
+      v_str   VARCHAR2 (2000);
+   BEGIN
+      IF LENGTH (str) > v_len
+      THEN
+         v_str := SUBSTR (str, 1, v_len);
+         DBMS_OUTPUT.put_line (v_str);
+         pl (SUBSTR (str, len   + 1), v_len,expand_in);
+      ELSE
+         v_str := str;
+         DBMS_OUTPUT.put_line (v_str);
+      END IF;
+   EXCEPTION
+      WHEN OTHERS
+      THEN
+         IF expand_in
+         THEN
+            DBMS_OUTPUT.ENABLE (1000000);
+            DBMS_OUTPUT.put_line (v_str);
+         ELSE
+            RAISE;
+         END IF;
+   END;
+BEGIN
+   |
+END;
+[fadel | FORALL Delete]
+DECLARE
+   l_array  <array_type_declaration>;
+BEGIN
+   FORALL indx IN l_array.FIRST .. l_array.LAST
+      DELETE FROM |
+       WHERE column = l_array (indx);
+END;
+[faexc | FORALL with SAVE EXCEPTIONS error handling]
+DECLARE -- Oracle9i and above!
+  l_array   <array_type_declaration>;
+  bulk_errors EXCEPTION;
+   PRAGMA EXCEPTION_INIT ( bulk_errors, -24381 );
+BEGIN    
+   FORALL indx IN l_array.FIRST .. l_array.LAST
+      SAVE EXCEPTIONS
+      /*DML statement of choice*/
+	  |;
+EXCEPTION
+   WHEN bulk_errors 
+   THEN 
+      FOR indx IN 1 .. SQL%BULK_EXCEPTIONS.COUNT
+      LOOP
+         DBMS_OUTPUT.PUT_LINE (
+            'Error ' || indx || ' occurred during ' ||
+            'iteration ' || SQL%BULK_EXCEPTIONS(indx).ERROR_INDEX ||
+            ' updating name to ' ||
+                 enames_with_errors(SQL%BULK_EXCEPTIONS(indx).ERROR_INDEX));
+         DBMS_OUTPUT.PUT_LINE (
+            'Oracle error is ' ||
+            SQLERRM(-1 * SQL%BULK_EXCEPTIONS(indx).ERROR_CODE));
+      END LOOP;   
+END;
+/
+[fains | FORALL Insert]
+DECLARE
+   l_array1     <array_type_declaration>;
+   l_array2     <array_type_declaration>;
+   l_array3     <array_type_declaration>;
+BEGIN
+   FORALL indx IN l_array1.FIRST .. l_array1.LAST
+      INSERT INTO |
+         ( column list )
+         VALUES
+         (l_array2 (indx), l_array3 (indx) ...);
+END;
+[faupd | FORALL Update]
+DECLARE
+   l_array1 <array_type_declaration>;
+   l_array2 <array_type_declaration>;
+BEGIN
+   FORALL indx IN l_array1.FIRST .. l_array1.LAST
+      UPDATE |
+         SET column = l_array2 (indx)
+       WHERE column = l_array1 (indx);
+END;
+[for | FOR-LOOP statement]
+FOR | IN 1 .. 10 LOOP
+
+END LOOP;
+[forwo | Nested FOR-LOOPs with EXIT-WHEN outer]
+<<outer>>
+FOR i IN 1 .. 10 LOOP
+
+   FOR j IN 1 .. 10 LOOP
+
+      EXIT outer WHEN |;
+   END LOOP;
+END LOOP outer;
+[func | FUNCTION shell]
+FUNCTION | () RETURN &returntype
+IS
+  xxx &returntype;
+BEGIN
+
+   RETURN xxx;
+END;
+[getline | Local substitute for UTL_FILE.GET_LINE]
+DECLARE
+   -- Trap NO_DATA_FOUND and return EOF flag.
+   file_id UTL_FILE.FILE_TYPE;
+   line VARCHAR2(32767);
+   eof BOOLEAN;
+
+   PROCEDURE get_nextline 
+     (file_in IN UTL_FILE.FILE_TYPE, 
+      line_out OUT VARCHAR2, 
+      eof_out OUT BOOLEAN)
+   IS
+   BEGIN
+      UTL_FILE.GET_LINE (file_in, line_out);
+      eof_out := FALSE;
+   EXCEPTION
+      WHEN NO_DATA_FOUND
+      THEN
+        line_out := NULL;
+        eof_out  := TRUE;
+   END;
+BEGIN /* main */
+   file_id := UTL_FILE.FOPEN (
+      <location>, <filename>, max_linesize => 32767);
+      
+   LOOP
+      get_nextline (file_id, line, eof);
+      EXIT WHEN eof;
+      /*process line*/
+	  |
+   END LOOP;
+   
+   UTL_FILE.FCLOSE (file_id);
+END;   
+[goto | GOTO statment]
+<<code_label>>
+|;
+goto code_label;
+[ift | IF-THEN statement]
+IF | THEN
+
+END IF;
+[ifte | IF-THEN-ELSE statement]
+IF | THEN
+
+ELSE
+
+END IF;
+[iftei | IF-THEN-ELSIF statement]
+IF | THEN
+
+ELSIF condition THEN
+
+ELSE
+
+END IF;
+[invproc | Invoker Rights PROCEDURE shell]
+PROCEDURE | ()
+  AUTHID CURRENT_USER
+IS
+BEGIN
+
+END;
+[lp | LOOP statement]
+LOOP
+   |;
+END LOOP;
+[lpew | LOOP with EXIT-WHEN statement]
+LOOP
+   EXIT WHEN |;
+END LOOP;
+[lpex | LOOP with EXIT statement]
+LOOP
+   IF | THEN
+      EXIT;
+   END IF;
+END LOOP;
+[mta | MODIFY TABLE ADD]
+MODIFY TABLE | ADD (
+)
+[ndsmrq | NDS multiple row query]
+DECLARE
+   l_var VARCHAR2(32767);
+   TYPE refcur_t IS REF CURSOR;
+   l_cursor refcur_t;
+   l_record table%ROWTYPE; -- MODIFY TO MATCH SELECT
+BEGIN
+   OPEN l_cursor FOR 'SELECT | ';
+   LOOP
+      FETCH l_cursor INTO l_record;
+      EXIT WHEN l_cursor%NOTFOUND;
+   END LOOP;
+   CLOSE l_cursor;
+END;
+[ndsplsql | NDS dynamic PL/SQL block execution]
+DECLARE
+   l_block VARCHAR2(32767) :=
+      '| ';
+BEGIN
+   EXECUTE IMMEDIATE 
+      'BEGIN ' || l_block || 'END;'
+      INTO l_var
+      USING var1 IN, var2 IN OUT, var3 OUT;
+END;
+[ndssrq | NDS single row query]
+DECLARE
+   l_var VARCHAR2(32767);
+BEGIN
+   EXECUTE IMMEDIATE 
+      'SELECT | '
+      INTO l_var
+      USING;
+END;
+[proc | PROCEDURE shell]
+PROCEDURE | ()
+IS
+BEGIN
+
+END;
+[recins | Record-based Insert]
+DECLARE  
+   l_record &tablename%ROWTYPE;
+BEGIN
+   -- Available in Oracle9i Release 2 and above
+   INSERT INTO &tablename
+      VALUES l_record;
+   |
+END;
+[record | Sample record declaration]
+TYPE |RecordName IS RECORD (
+  deptno  NUMBER;
+  deptname dept.name%TYPE );
+dept_rec RecordName;
+[recupd | Record-based Update]
+DECLARE  
+   l_record &tablename%ROWTYPE;
+BEGIN
+   -- Available in Oracle9i Release 2 and above
+   UPDATE &tablename
+      SET ROW = l_record
+    WHERE |;
+END;
+[ups | UPDATE with SAVEPOINTS]
+BEGIN
+   SAVEPOINT my_point;
+   UPDATE | SET ;
+EXCEPTION
+   WHEN OTHERS THEN
+      ROLLBACK TO my_point;
+END;
+[utlfexc | UTL_FILE exception handling]
+DECLARE
+   fid UTL_FILE.FILE_TYPE;
+
+   PROCEDURE recNgo (str IN VARCHAR2)
+   IS
+   BEGIN
+      DBMS_OUTPUT.PUT_LINE (CONCAT('UTL_FILE error: ', str));
+      UTL_FILE.FCLOSE (fid);
+   END;
+BEGIN
+
+    |
+
+EXCEPTION
+   WHEN UTL_FILE.INVALID_PATH
+    THEN recNgo ('invalid_path'); 
+   WHEN UTL_FILE.INVALID_MODE
+    THEN recNgo ('invalid_mode');
+   WHEN UTL_FILE.INVALID_FILEHANDLE
+    THEN recNgo ('invalid_filehandle');
+   WHEN UTL_FILE.INVALID_OPERATION
+    THEN recNgo ('invalid_operation');
+   WHEN UTL_FILE.READ_ERROR
+    THEN recNgo ('read_error');
+   WHEN UTL_FILE.WRITE_ERROR
+    THEN recNgo ('write_error');
+   WHEN UTL_FILE.INTERNAL_ERROR
+    THEN recNgo ('internal_error');
+   WHEN OTHERS
+    THEN recNgo (SQLERRM);
+END;
+[while | WHILE-LOOP statement]
+WHILE | LOOP
+
+END LOOP;
