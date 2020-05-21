@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">OWNER</Item>
+      <Item class="java.lang.String">DIRECTORY_NAME</Item>
+      <Item class="java.lang.String">DIRECTORY_PATH</Item>
+      <Item class="java.lang.String">ORIGIN_CON_ID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>116</Item>
+      <Item>159</Item>
+      <Item>600</Item>
+      <Item>101</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSelect    *
+From      dba_directories
+Where     1 = 1</uniqueName>
+</TableSettings>

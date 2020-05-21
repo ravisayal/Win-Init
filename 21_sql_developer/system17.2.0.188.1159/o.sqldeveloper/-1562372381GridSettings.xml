@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">INVOICE_ID</Item>
+      <Item class="java.lang.String">INVOICE_NUM</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">BATCH_NAME</Item>
+      <Item class="java.lang.String">APPROVAL_STATUS_LOOKUP_CODE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>78</Item>
+      <Item>103</Item>
+      <Item>202</Item>
+      <Item>199</Item>
+      <Item>195</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect distinct i.invoice_id, i.invoice_num, i.creation_date, i.batch_name, APPROVAL_STATUS_LOOKUP_CODE
+        from ap_invoices_v i
+        where 1=1 
+        and invoice_id  > 14403108 - 50000
+        and i.creation_date > sysdate -365
+         and i.cancelled_date is null
+         and i.APPROVAL_STATUS_LOOKUP_CODE &lt;> 'APPROVED'
+        and exists (select 't' from ap_invoice_distributions_all d,
+                        gl_code_combinations g
+            where d.invoice_id = i.invoice_id
+        and d.dist_code_combination_id = g.code_combination_id
+        and (g.segment3 = '8690' or g.segment3 = '8692'))
+        and not exists (select 't' from ap_holds_all h
+                        where h.invoice_id = i.invoice_id
+                        and h.hold_lookup_code ='HU Performers Tax Hold')</uniqueName>
+</TableSettings>

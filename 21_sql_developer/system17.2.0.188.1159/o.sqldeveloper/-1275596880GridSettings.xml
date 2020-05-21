@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">APP_KEY</Item>
+      <Item class="java.lang.String">APP_NAME</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">APP_PTR_ENABLED_FLAG</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>0</Item>
+      <Item>62</Item>
+      <Item>72</Item>
+      <Item>38</Item>
+      <Item>144</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">3 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUBTESTSELECT * FROM "PLANODS"."PLN_APP_TUB_V"</uniqueName>
+</TableSettings>

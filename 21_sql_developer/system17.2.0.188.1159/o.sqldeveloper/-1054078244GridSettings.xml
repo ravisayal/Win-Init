@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">ASSET_NUMBER</Item>
+      <Item class="java.lang.String">TAG_NUMBER</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>67</Item>
+      <Item>97</Item>
+      <Item>86</Item>
+      <Item>261</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-TNSselect  asset_id, 
+        asset_number, 
+        tag_number, 
+        attribute13
+        --attribute13, decode(upper(attribute13), 'NONE',tag_number, NULL, tag_number, tag_number||' '||'HIST'||' '||attribute13) new_val_ATT13 
+from    fa_additions_b
+WHERE    1 = 1
+and    tag_number IS NOT NULL</uniqueName>
+</TableSettings>

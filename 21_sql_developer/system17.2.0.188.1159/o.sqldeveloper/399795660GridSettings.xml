@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">CREATED_BY_MODULE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>304</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect  distinct created_by_module
+from    hz_party_sites hps
+where   1  =  1
+--and     party_id = 754439
+--and    party_site_name like 'ERIE%_'</uniqueName>
+</TableSettings>

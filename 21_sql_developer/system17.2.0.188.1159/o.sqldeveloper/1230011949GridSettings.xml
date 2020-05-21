@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">USERNAME</Item>
+      <Item class="java.lang.String">USER_ID</Item>
+      <Item class="java.lang.String">PASSWORD</Item>
+      <Item class="java.lang.String">ACCOUNT_STATUS</Item>
+      <Item class="java.lang.String">LOCK_DATE</Item>
+      <Item class="java.lang.String">EXPIRY_DATE</Item>
+      <Item class="java.lang.String">DEFAULT_TABLESPACE</Item>
+      <Item class="java.lang.String">TEMPORARY_TABLESPACE</Item>
+      <Item class="java.lang.String">CREATED</Item>
+      <Item class="java.lang.String">PROFILE</Item>
+      <Item class="java.lang.String">INITIAL_RSRC_CONSUMER_GROUP</Item>
+      <Item class="java.lang.String">EXTERNAL_NAME</Item>
+      <Item class="java.lang.String">PASSWORD_VERSIONS</Item>
+      <Item class="java.lang.String">EDITIONS_ENABLED</Item>
+      <Item class="java.lang.String">AUTHENTICATION_TYPE</Item>
+      <Item class="java.lang.String">PROXY_ONLY_CONNECT</Item>
+      <Item class="java.lang.String">COMMON</Item>
+      <Item class="java.lang.String">LAST_LOGIN</Item>
+      <Item class="java.lang.String">ORACLE_MAINTAINED</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>219</Item>
+      <Item>62</Item>
+      <Item>76</Item>
+      <Item>117</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>131</Item>
+      <Item>148</Item>
+      <Item>145</Item>
+      <Item>61</Item>
+      <Item>192</Item>
+      <Item>103</Item>
+      <Item>132</Item>
+      <Item>117</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>65</Item>
+      <Item>341</Item>
+      <Item>128</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect *
+from  dba_users
+where  1=1
+and regexp_like (username,'(apex)|(ords)', 'i')
+order by user_id</uniqueName>
+</TableSettings>

@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">INST_ID</Item>
+      <Item class="java.lang.String">SID</Item>
+      <Item class="java.lang.String">SERIAL</Item>
+      <Item class="java.lang.String">SQL_ID</Item>
+      <Item class="java.lang.String">SQL_CHILD_NUMBER</Item>
+      <Item class="java.lang.String">Username</Item>
+      <Item class="java.lang.String">Seconds in Wait</Item>
+      <Item class="java.lang.String">Command</Item>
+      <Item class="java.lang.String">Machine</Item>
+      <Item class="java.lang.String">OS User</Item>
+      <Item class="java.lang.String">Status</Item>
+      <Item class="java.lang.String">Module</Item>
+      <Item class="java.lang.String">Action</Item>
+      <Item class="java.lang.String">RESOURCE_CONSUMER_GROUP</Item>
+      <Item class="java.lang.String">CLIENT_INFO</Item>
+      <Item class="java.lang.String">CLIENT_IDENTIFIER</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>59</Item>
+      <Item>36</Item>
+      <Item>54</Item>
+      <Item>96</Item>
+      <Item>121</Item>
+      <Item>117</Item>
+      <Item>95</Item>
+      <Item>103</Item>
+      <Item>215</Item>
+      <Item>89</Item>
+      <Item>61</Item>
+      <Item>341</Item>
+      <Item>166</Item>
+      <Item>176</Item>
+      <Item>453</Item>
+      <Item>117</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPwith vs as (select rownum rnum,
+                                                  							  inst_id,
+                                                                              sid,
+                                                                              serial#,
+                                                                              status,
+                                                                              username,
+                                                                              last_call_et,
+                                                                              command,
+                                                                              machine,
+                                                                              osuser,
+                                                                              module,
+                                                                              action,
+                                                                              resource_consumer_group,
+                                                                              client_info,
+                                                                              client_identifier,
+                                                                              type,
+                                                                              terminal,
+                                                                              sql_id,
+                                                                              sql_child_number
+                                                                         from gv$session) 
+                                                             select vs.inst_id, vs.sid ,serial# serial, vs.sql_id, vs.sql_child_number,
+                                                                    vs.username "Username",
+                                                                    case when vs.status = 'ACTIVE' 
+                                                                              then last_call_et 
+                                                                         else null end "Seconds in Wait",
+                                                                    (select command_name from v$sqlcommand where command_type = vs.command ) "Command",
+                                                                    vs.machine "Machine",
+                                                                    vs.osuser "OS User", 
+                                                                    lower(vs.status) "Status",
+                                                                    vs.module "Module",
+                                                                    vs.action "Action",
+                                                                    vs.resource_consumer_group,
+                                                                    vs.client_info,
+                                                                    vs.client_identifier
+                                                               from vs 
+                                                              where vs.USERNAME is not null
+                                                                and nvl(vs.osuser,'x') &lt;> 'SYSTEM'
+                                                                and vs.type &lt;> 'BACKGROUND'
+                                                                order by 1,2,3</uniqueName>
+</TableSettings>

@@ -1,0 +1,238 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">SID</Item>
+      <Item class="java.lang.String">SERIAL#</Item>
+      <Item class="java.lang.String">AUDSID</Item>
+      <Item class="java.lang.String">OSUSER</Item>
+      <Item class="java.lang.String">USERNAME</Item>
+      <Item class="java.lang.String">OBJECT_NAME</Item>
+      <Item class="java.lang.String">MODULE</Item>
+      <Item class="java.lang.String">MACHINE</Item>
+      <Item class="java.lang.String">TERMINAL</Item>
+      <Item class="java.lang.String">SID_1</Item>
+      <Item class="java.lang.String">LOCK_TYPE</Item>
+      <Item class="java.lang.String">MODE_HELD</Item>
+      <Item class="java.lang.String">MODE_REQUESTED</Item>
+      <Item class="java.lang.String">LOCK_ID1</Item>
+      <Item class="java.lang.String">LOCK_ID2</Item>
+      <Item class="java.lang.String">TO_CHAR(LOGON_TIME,'DD-MON:HH24:MI')</Item>
+      <Item class="java.lang.String">REQ_ID</Item>
+      <Item class="java.lang.String">OPID</Item>
+      <Item class="java.lang.String">USER_CONCURRENT_PROGRAM_NAME</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_NAME</Item>
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">REQUEST_DATE_EST</Item>
+      <Item class="java.lang.String">ACTUAL_START_DATE_EST</Item>
+      <Item class="java.lang.String">PHASE_CODE</Item>
+      <Item class="java.lang.String">STATUS_CODE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>36</Item>
+      <Item>62</Item>
+      <Item>61</Item>
+      <Item>59</Item>
+      <Item>73</Item>
+      <Item>239</Item>
+      <Item>173</Item>
+      <Item>194</Item>
+      <Item>69</Item>
+      <Item>48</Item>
+      <Item>75</Item>
+      <Item>79</Item>
+      <Item>113</Item>
+      <Item>68</Item>
+      <Item>68</Item>
+      <Item>235</Item>
+      <Item>61</Item>
+      <Item>44</Item>
+      <Item>299</Item>
+      <Item>180</Item>
+      <Item>79</Item>
+      <Item>145</Item>
+      <Item>152</Item>
+      <Item>85</Item>
+      <Item>91</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-TNSSELECT ss.sid, 
+       ss.SERIAL#,
+       ss.audsid,
+       ss.osuser,
+       ss.username, 
+       obj.object_name, 
+       MODULE,
+       machine,
+       terminal,
+                     lk.SID,
+              DECODE (lk.TYPE,
+                      'MR', 'Media Recovery',
+                      'RT', 'Redo Thread',
+                      'UN', 'User Name',
+                      'TX', 'Transaction',
+                      'TM', 'DML',
+                      'UL', 'PL/SQL User Lock',
+                      'DX', 'Distributed Xaction',
+                      'CF', 'Control File',
+                      'IS', 'Instance State',
+                      'FS', 'File Set',
+                      'IR', 'Instance Recovery',
+                      'ST', 'Disk Space Transaction',
+                      'TS', 'Temp Segment',
+                      'IV', 'Library Cache Invalidation',
+                      'LS', 'Log Start or Switch',
+                      'RW', 'Row Wait',
+                      'SQ', 'Sequence Number',
+                      'TE', 'Extend Table',
+                      'TT', 'Temp Table',
+                      'BL', 'Buffer hash table instance',
+                      'CI', 'Cross-instance function invocation instance',
+                      'CU', 'Cursor bind',
+                      'DF', 'Data file instance',
+                      'DL', 'Direct loader parallel index create',
+                      'DM', 'Mount/startup db primary/secondary instance',
+                      'DR', 'Distributed recovery process',
+                      'HW', 'Space management operations on a specific segment',
+                      'IN', 'Instance number',
+                      'JQ', 'Job queue',
+                      'KK', 'Thread kick',
+                      'LA', 'Library cache lock instance lock namespace A',
+                      'LB', 'Library cache lock instance lock namespace B',
+                      'LC', 'Library cache lock instance lock namespace C',
+                      'LD', 'Library cache lock instance lock namespace D',
+                      'LE', 'Library cache lock instance lock namespace E',
+                      'LF', 'Library cache lock instance lock namespace F',
+                      'LG', 'Library cache lock instance lock namespace G',
+                      'LH', 'Library cache lock instance lock namespace H',
+                      'LI', 'Library cache lock instance lock namespace I',
+                      'LJ', 'Library cache lock instance lock namespace J',
+                      'LK', 'Library cache lock instance lock namespace K',
+                      'LL', 'Library cache lock instance lock namespace L',
+                      'LM', 'Library cache lock instance lock namespace M',
+                      'LN', 'Library cache lock instance lock namespace N',
+                      'LO', 'Library cache lock instance lock namespace O',
+                      'LP', 'Library cache lock instance lock namespace P',
+                      'MM', 'Mount definition global enqueue',
+                      'NA', 'Library cache pin instance A',
+                      'NB', 'Library cache pin instance B',
+                      'NC', 'Library cache pin instance C',
+                      'ND', 'Library cache pin instance D',
+                      'NE', 'Library cache pin instance E',
+                      'NF', 'Library cache pin instance F',
+                      'NG', 'Library cache pin instance G',
+                      'NH', 'Library cache pin instance H',
+                      'NI', 'Library cache pin instance I',
+                      'NJ', 'Library cache pin instance J',
+                      'NK', 'Library cache pin instance K',
+                      'NL', 'Library cache pin instance L',
+                      'NM', 'Library cache pin instance M',
+                      'NN', 'Library cache pin instance N',
+                      'NO', 'Library cache pin instance O',
+                      'NP', 'Library cache pin instance P',
+                      'NQ', 'Library cache pin instance Q',
+                      'NR', 'Library cache pin instance R',
+                      'NS', 'Library cache pin instance S',
+                      'NT', 'Library cache pin instance T',
+                      'NU', 'Library cache pin instance U',
+                      'NV', 'Library cache pin instance V',
+                      'NW', 'Library cache pin instance W',
+                      'NX', 'Library cache pin instance X',
+                      'NY', 'Library cache pin instance Y',
+                      'NZ', 'Library cache pin instance Z',
+                      'PF', 'Password File',
+                      'PI', ' PS Parallel operation',
+                      'PR', 'Process startup',
+                      'QA', 'Row cache instance A',
+                      'QB', 'Row cache instance B',
+                      'QC', 'Row cache instance C',
+                      'QD', 'Row cache instance D',
+                      'QE', 'Row cache instance E',
+                      'QF', 'Row cache instance F',
+                      'QG', 'Row cache instance G',
+                      'QH', 'Row cache instance H',
+                      'QI', 'Row cache instance I',
+                      'QJ', 'Row cache instance J',
+                      'QK', 'Row cache instance K',
+                      'QL', 'Row cache instance L',
+                      'QM', 'Row cache instance M',
+                      'QN', 'Row cache instance N',
+                      'QO', 'Row cache instance O',
+                      'QP', 'Row cache instance P',
+                      'QQ', 'Row cache instance Q',
+                      'QR', 'Row cache instance R',
+                      'QS', 'Row cache instance S',
+                      'QT', 'Row cache instance T',
+                      'QU', 'Row cache instance U',
+                      'QV', 'Row cache instance V',
+                      'QW', 'Row cache instance W',
+                      'QX', 'Row cache instance X',
+                      'QY', 'Row cache instance Y',
+                      'QZ', 'Row cache instance Z',
+                      'SC', 'System commit number instance',
+                      'SM', 'SMON',
+                      'SN', 'Sequence number instance',
+                      'SS', 'Sort segment',
+                      'SV', 'Sequence number value',
+                      'TA', 'Generic enqueue',
+                      'US', 'Undo segment DDL',
+                      'WL', 'Being-written redo log instance',
+                      lk.TYPE
+                     ) lock_type,
+              DECODE (lk.lmode,
+                      0, 'None',
+                      1, 'Null',
+                      2, 'Row-S (SS)',
+                      3, 'Row-X (SX)',
+                      4, 'Share',
+                      5, 'S/Row-X (SSX)',
+                      6, 'Exclusive',
+                      TO_CHAR (lk.lmode)
+                     ) mode_held,
+              DECODE (request,
+                      0, 'None',
+                      1, 'Null',
+                      2, 'Row-S (SS)',
+                      3, 'Row-X (SX)',
+                      4, 'Share',
+                      5, 'S/Row-X (SSX)',
+                      6, 'Exclusive',
+                      TO_CHAR (lk.request)
+                     ) mode_requested,
+              TO_CHAR (lk.id1) lock_id1,
+              TO_CHAR (lk.id2) lock_id2,
+       TO_CHAR(logon_time ,'DD-MON:Hh24:MI'),
+       fcr.REQUEST_ID REQ_ID,
+       ORACLE_PROCESS_ID OPID,
+       NVL(fcr.description, USER_CONCURRENT_PROGRAM_NAME) USER_CONCURRENT_PROGRAM_NAME,
+       fr.RESPONSIBILITY_NAME,
+       fu.user_name,
+       fcr.REQUEST_DATE - (1*60*60*5/86400) REQUEST_DATE_EST ,
+       actual_start_date - (1*60*60*5/86400) actual_start_DATE_EST, 
+       fcr.PHASE_code ,
+       fcr.status_code
+FROM   v$SESSION ss,
+       v$locked_object lobj,
+       all_objects obj,
+       v$lock lk,
+       fnd_concurrent_requests fcr,
+       fnd_concurrent_programs_vl fcp,
+       fnd_user fu,
+       fnd_responsibility_vl fr
+WHERE 1=1
+ and			lk.lmode > 1
+ AND          lk.SID = ss.SID
+ AND          obj.object_id = lk.id1
+-- AND      obj.object_name LIKE 'PO%%'--DRAFT_INV%'
+and      obj.object_type='TABLE'
+AND      lobj.object_id= obj.object_id         
+AND   ss.Sid= lobj.session_id
+and   fcr.ORACLE_SESSION_ID  = ss.audsid
+   AND fcr.responsibility_id = fr.responsibility_id
+   AND fu.user_id = fcr.requested_by
+   AND fcp.application_id = fcr.PROGRAM_APPLICATION_ID
+   AND fcp.CONCURRENT_PROGRAM_ID = fcr.CONCURRENT_PROGRAM_ID
+and   fcr.request_id = 49644280</uniqueName>
+</TableSettings>

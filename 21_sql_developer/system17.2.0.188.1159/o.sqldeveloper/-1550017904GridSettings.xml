@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">STATE</Item>
+      <Item class="java.lang.String">COUNT</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>89</Item>
+      <Item>206</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect decode(state, 0, '0 = Ready', 1, '1 = Delayed', 2, '2 = Retained', 3, '3 = Exception', to_char(state)) State, 
+       count(*) COUNT 
+from apps.wf_notification_out group by state
+union all
+select msg_state, count(*) 
+from applsys.aq$wf_notification_out where msg_state in ('WAITING','READY', 'PROCESSED') group by msg_state</uniqueName>
+</TableSettings>

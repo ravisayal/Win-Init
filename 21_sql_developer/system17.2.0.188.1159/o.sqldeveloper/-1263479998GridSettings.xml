@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ROW_ID</Item>
+      <Item class="java.lang.String">ID</Item>
+      <Item class="java.lang.String">TRANS_UNITS</Item>
+      <Item class="java.lang.String">UNITS</Item>
+      <Item class="java.lang.String">TRANSTYPE</Item>
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID</Item>
+      <Item class="java.lang.String">LOCATION_ID</Item>
+      <Item class="java.lang.String">ASSIGNED_TO</Item>
+      <Item class="java.lang.String">CODE_COMBINATION_ID</Item>
+      <Item class="java.lang.String">ASSET_NUMBER</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">BOOK_TYPE_CODE</Item>
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID_KEY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>131</Item>
+      <Item>143</Item>
+      <Item>88</Item>
+      <Item>49</Item>
+      <Item>82</Item>
+      <Item>154</Item>
+      <Item>88</Item>
+      <Item>89</Item>
+      <Item>142</Item>
+      <Item>97</Item>
+      <Item>67</Item>
+      <Item>111</Item>
+      <Item>178</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>125</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect  *
+from   FA_DISTRIBUTION_INQUIRY_V
+where  asset_id=32922</uniqueName>
+</TableSettings>

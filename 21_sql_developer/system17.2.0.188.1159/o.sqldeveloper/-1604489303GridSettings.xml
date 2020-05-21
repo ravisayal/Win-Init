@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">SEGMENT1</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">PARTY_SITE_NAME</Item>
+      <Item class="java.lang.String">SUPP_SITES</Item>
+      <Item class="java.lang.String">VENDOR_ID</Item>
+      <Item class="java.lang.String">PARTY_SITE_ID</Item>
+      <Item class="java.lang.String">PARTY_ID</Item>
+      <Item class="java.lang.String">LOCATION_ID</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">PARTY_SITE_NUMBER</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">REQUEST_ID</Item>
+      <Item class="java.lang.String">PROGRAM_APPLICATION_ID</Item>
+      <Item class="java.lang.String">PROGRAM_ID</Item>
+      <Item class="java.lang.String">PROGRAM_UPDATE_DATE</Item>
+      <Item class="java.lang.String">WH_UPDATE_DATE</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">ATTRIBUTE16</Item>
+      <Item class="java.lang.String">ATTRIBUTE17</Item>
+      <Item class="java.lang.String">ATTRIBUTE18</Item>
+      <Item class="java.lang.String">ATTRIBUTE19</Item>
+      <Item class="java.lang.String">ATTRIBUTE20</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE6</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE7</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE8</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE9</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE10</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE11</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE12</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE13</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE14</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE15</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE16</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE17</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE18</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE19</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE20</Item>
+      <Item class="java.lang.String">ORIG_SYSTEM_REFERENCE</Item>
+      <Item class="java.lang.String">START_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">END_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">REGION</Item>
+      <Item class="java.lang.String">MAILSTOP</Item>
+      <Item class="java.lang.String">CUSTOMER_KEY_OSM</Item>
+      <Item class="java.lang.String">PHONE_KEY_OSM</Item>
+      <Item class="java.lang.String">CONTACT_KEY_OSM</Item>
+      <Item class="java.lang.String">IDENTIFYING_ADDRESS_FLAG</Item>
+      <Item class="java.lang.String">LANGUAGE</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">PARTY_SITE_NAME_1</Item>
+      <Item class="java.lang.String">ADDRESSEE</Item>
+      <Item class="java.lang.String">OBJECT_VERSION_NUMBER</Item>
+      <Item class="java.lang.String">CREATED_BY_MODULE</Item>
+      <Item class="java.lang.String">APPLICATION_ID</Item>
+      <Item class="java.lang.String">ACTUAL_CONTENT_SOURCE</Item>
+      <Item class="java.lang.String">GLOBAL_LOCATION_NUMBER</Item>
+      <Item class="java.lang.String">DUNS_NUMBER_C</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>71</Item>
+      <Item>96</Item>
+      <Item>113</Item>
+      <Item>197</Item>
+      <Item>77</Item>
+      <Item>96</Item>
+      <Item>68</Item>
+      <Item>88</Item>
+      <Item>138</Item>
+      <Item>126</Item>
+      <Item>113</Item>
+      <Item>138</Item>
+      <Item>83</Item>
+      <Item>125</Item>
+      <Item>82</Item>
+      <Item>159</Item>
+      <Item>86</Item>
+      <Item>146</Item>
+      <Item>113</Item>
+      <Item>134</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>178</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>153</Item>
+      <Item>125</Item>
+      <Item>113</Item>
+      <Item>58</Item>
+      <Item>69</Item>
+      <Item>126</Item>
+      <Item>105</Item>
+      <Item>119</Item>
+      <Item>166</Item>
+      <Item>72</Item>
+      <Item>57</Item>
+      <Item>125</Item>
+      <Item>77</Item>
+      <Item>154</Item>
+      <Item>159</Item>
+      <Item>103</Item>
+      <Item>158</Item>
+      <Item>162</Item>
+      <Item>106</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect  ap.segment1, ap.vendor_name, hps.party_site_name,  (select  listagg(vendor_site_code , ',') within group (order by vendor_site_code) vnd_sites
+                                                            from     ap_supplier_sites_all aps
+                                                            where    aps.vendor_id = ap.vendor_id
+                                                            ) supp_sites,
+        ap.vendor_id, hps.*
+from    hz_party_sites hps,
+        ap_suppliers ap,
+        hz_parties hp
+where   1  =  1
+and     hps.party_id = hp.party_id
+and     hp.party_id = ap.party_id
+and     exists 
+           (select  1 
+           from  ap_supplier_sites_all aps
+           where 1=1
+           and   aps.party_site_id = hps.party_site_id
+           )
+and  party_site_name not in 
+          (select vendor_site_code
+           from  ap_supplier_sites_all aps
+           where 1=1
+           and   aps.party_site_id = hps.party_site_id
+           )
+and ap.segment1 like '152851'</uniqueName>
+</TableSettings>

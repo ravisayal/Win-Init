@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TEXT_LOB</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>1238</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect tab.user_data.text_lob text_lob
+from applsys.aq$wf_notification_out  tab
+where  1 =1
+--and tab.USER_DATA.get_string_property('BES_EVENT_KEY') = 33303006;	OFPI-PROD-LDAP	1541434911495	SQL	1	0.095</uniqueName>
+</TableSettings>

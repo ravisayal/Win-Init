@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">OWNER</Item>
+      <Item class="java.lang.String">OBJECT_NAME</Item>
+      <Item class="java.lang.String">SUBOBJECT_NAME</Item>
+      <Item class="java.lang.String">OBJECT_ID</Item>
+      <Item class="java.lang.String">DATA_OBJECT_ID</Item>
+      <Item class="java.lang.String">OBJECT_TYPE</Item>
+      <Item class="java.lang.String">CREATED</Item>
+      <Item class="java.lang.String">LAST_DDL_TIME</Item>
+      <Item class="java.lang.String">TIMESTAMP</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">TEMPORARY</Item>
+      <Item class="java.lang.String">GENERATED</Item>
+      <Item class="java.lang.String">SECONDARY</Item>
+      <Item class="java.lang.String">NAMESPACE</Item>
+      <Item class="java.lang.String">EDITION_NAME</Item>
+      <Item class="java.lang.String">SHARING</Item>
+      <Item class="java.lang.String">EDITIONABLE</Item>
+      <Item class="java.lang.String">ORACLE_MAINTAINED</Item>
+      <Item class="java.lang.String">APPLICATION</Item>
+      <Item class="java.lang.String">DEFAULT_COLLATION</Item>
+      <Item class="java.lang.String">DUPLICATED</Item>
+      <Item class="java.lang.String">SHARDED</Item>
+      <Item class="java.lang.String">CREATED_APPID</Item>
+      <Item class="java.lang.String">CREATED_VSNID</Item>
+      <Item class="java.lang.String">MODIFIED_APPID</Item>
+      <Item class="java.lang.String">MODIFIED_VSNID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>57</Item>
+      <Item>357</Item>
+      <Item>110</Item>
+      <Item>74</Item>
+      <Item>107</Item>
+      <Item>87</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>57</Item>
+      <Item>80</Item>
+      <Item>78</Item>
+      <Item>80</Item>
+      <Item>79</Item>
+      <Item>95</Item>
+      <Item>64</Item>
+      <Item>85</Item>
+      <Item>128</Item>
+      <Item>86</Item>
+      <Item>126</Item>
+      <Item>81</Item>
+      <Item>66</Item>
+      <Item>101</Item>
+      <Item>101</Item>
+      <Item>105</Item>
+      <Item>105</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSSelect       *
+         From       Dba_Objects
+         Where       1=1
+         And           Object_Type Like 'TABLE'
+         And           Object_Name Like 'PLN_%NONACT%STG'
+         order by object_name</uniqueName>
+</TableSettings>

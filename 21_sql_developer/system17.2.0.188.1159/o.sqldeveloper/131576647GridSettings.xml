@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TIME_STAMP</Item>
+      <Item class="java.lang.String">CAT1</Item>
+      <Item class="java.lang.String">MSGID</Item>
+      <Item class="java.lang.String">MESSAGE_TYPE</Item>
+      <Item class="java.lang.String">MESSAGE_STANDARD</Item>
+      <Item class="java.lang.String">TRANSACTION_TYPE</Item>
+      <Item class="java.lang.String">TRANSACTION_SUBTYPE</Item>
+      <Item class="java.lang.String">DOCUMENT_NUMBER</Item>
+      <Item class="java.lang.String">PARTYID</Item>
+      <Item class="java.lang.String">PARTY_SITE_ID</Item>
+      <Item class="java.lang.String">PARTY_TYPE</Item>
+      <Item class="java.lang.String">PROTOCOL_TYPE</Item>
+      <Item class="java.lang.String">PROTOCOL_ADDRESS</Item>
+      <Item class="java.lang.String">USERNAME</Item>
+      <Item class="java.lang.String">PASSWORD</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">PAYLOAD</Item>
+      <Item class="java.lang.String">FIELD1</Item>
+      <Item class="java.lang.String">FIELD2</Item>
+      <Item class="java.lang.String">FIELD3</Item>
+      <Item class="java.lang.String">FIELD4</Item>
+      <Item class="java.lang.String">FIELD5</Item>
+      <Item class="java.lang.String">FIELD6</Item>
+      <Item class="java.lang.String">FIELD7</Item>
+      <Item class="java.lang.String">FIELD8</Item>
+      <Item class="java.lang.String">FIELD9</Item>
+      <Item class="java.lang.String">FIELD10</Item>
+      <Item class="java.lang.String">FIELD11</Item>
+      <Item class="java.lang.String">FIELD12</Item>
+      <Item class="java.lang.String">FIELD13</Item>
+      <Item class="java.lang.String">FIELD14</Item>
+      <Item class="java.lang.String">FIELD15</Item>
+      <Item class="java.lang.String">FIELD16</Item>
+      <Item class="java.lang.String">FIELD17</Item>
+      <Item class="java.lang.String">FIELD18</Item>
+      <Item class="java.lang.String">FIELD19</Item>
+      <Item class="java.lang.String">FIELD20</Item>
+      <Item class="java.lang.String">FIELD21</Item>
+      <Item class="java.lang.String">FIELD22</Item>
+      <Item class="java.lang.String">FIELD23</Item>
+      <Item class="java.lang.String">FIELD24</Item>
+      <Item class="java.lang.String">FIELD25</Item>
+      <Item class="java.lang.String">FIELD26</Item>
+      <Item class="java.lang.String">FIELD27</Item>
+      <Item class="java.lang.String">FIELD28</Item>
+      <Item class="java.lang.String">FIELD29</Item>
+      <Item class="java.lang.String">FIELD30</Item>
+      <Item class="java.lang.String">LOGFILE</Item>
+      <Item class="java.lang.String">INTERNAL_CONTROL_NUMBER</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">DIRECTION</Item>
+      <Item class="java.lang.String">TIME_STAMP_1</Item>
+      <Item class="java.lang.String">OUT_MSGID</Item>
+      <Item class="java.lang.String">ITEM_TYPE</Item>
+      <Item class="java.lang.String">ITEM_KEY</Item>
+      <Item class="java.lang.String">ACTIVITY_ID</Item>
+      <Item class="java.lang.String">EVENT_NAME</Item>
+      <Item class="java.lang.String">EVENT_KEY</Item>
+      <Item class="java.lang.String">ORIG_REFERENCE_ID</Item>
+      <Item class="java.lang.String">CB_EVENT_NAME</Item>
+      <Item class="java.lang.String">CB_EVENT_KEY</Item>
+      <Item class="java.lang.String">BLOCK_MODE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>138</Item>
+      <Item>974</Item>
+      <Item>229</Item>
+      <Item>95</Item>
+      <Item>125</Item>
+      <Item>131</Item>
+      <Item>140</Item>
+      <Item>122</Item>
+      <Item>62</Item>
+      <Item>96</Item>
+      <Item>81</Item>
+      <Item>104</Item>
+      <Item>530</Item>
+      <Item>73</Item>
+      <Item>404</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>530</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>53</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>59</Item>
+      <Item>446</Item>
+      <Item>169</Item>
+      <Item>201</Item>
+      <Item>75</Item>
+      <Item>138</Item>
+      <Item>66</Item>
+      <Item>73</Item>
+      <Item>67</Item>
+      <Item>82</Item>
+      <Item>84</Item>
+      <Item>74</Item>
+      <Item>126</Item>
+      <Item>103</Item>
+      <Item>93</Item>
+      <Item>86</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P1-LDAPselect exd.time_stamp,   Regexp_Substr(payload , 'DOCTYPE(.)*.dtd', 1, 1) Cat1, 
+exd.* from ECX_DOCLOGS exd
+where 1=1
+--and payload like '%ReadInv.init%'
+and msgid = '976938855832DE5FE0535C9C890A6BE0'
+order by exd.time_stamp desc</uniqueName>
+</TableSettings>

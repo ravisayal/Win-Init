@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">OWNER</Item>
+      <Item class="java.lang.String">NAME</Item>
+      <Item class="java.lang.String">TYPE</Item>
+      <Item class="java.lang.String">REFERENCED_OWNER</Item>
+      <Item class="java.lang.String">REFERENCED_NAME</Item>
+      <Item class="java.lang.String">REFERENCED_TYPE</Item>
+      <Item class="java.lang.String">REFERENCED_LINK_NAME</Item>
+      <Item class="java.lang.String">DEPENDENCY_TYPE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>57</Item>
+      <Item>298</Item>
+      <Item>89</Item>
+      <Item>128</Item>
+      <Item>152</Item>
+      <Item>114</Item>
+      <Item>146</Item>
+      <Item>114</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSelect     *
+         From       Dba_Dependencies
+         Where      1=1
+         --and        name like '
+         And        Referenced_Name Like 'AP_INVOICES_INTERFACE'</uniqueName>
+</TableSettings>

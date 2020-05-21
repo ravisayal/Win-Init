@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">VENDOR_NUMBER</Item>
+      <Item class="java.lang.String">VENDOR_SITE_CODE</Item>
+      <Item class="java.lang.String">PARTY_SITE_NAME</Item>
+      <Item class="java.lang.String">VENDOR_SITE_ID</Item>
+      <Item class="java.lang.String">VENDOR_ID</Item>
+      <Item class="java.lang.String">VENDOR_SITE_CREATION_DATE</Item>
+      <Item class="java.lang.String">VENDOR_SITE_LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">PARTY_SITE_CREATION_DATE</Item>
+      <Item class="java.lang.String">PARTY_SITE_LAST_UPDATE_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>166</Item>
+      <Item>107</Item>
+      <Item>122</Item>
+      <Item>113</Item>
+      <Item>105</Item>
+      <Item>77</Item>
+      <Item>178</Item>
+      <Item>195</Item>
+      <Item>169</Item>
+      <Item>186</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-TRAINSELECT    ap.vendor_name, 
+          ap.segment1 vendor_number,
+          asa.vendor_site_code, 
+          hps.party_site_name,
+          asa.vendor_site_id,
+          asa.vendor_id,
+          asa.creation_date vendor_site_creation_date,
+          asa.last_update_date vendor_site_last_update_date,
+          hps.creation_date party_site_creation_date,
+          hps.last_update_date party_site_last_update_date
+FROM      apps.ap_suppliers               ap,
+          apps.ap_supplier_sites_all      asa,
+          apps.hz_parties                 hp,
+          apps.hz_party_sites             hps
+WHERE     ap.party_id              =         hp.party_id 
+AND       ap.vendor_id             =         asa.vendor_id
+AND       hps.party_site_id        =         asa.party_site_id
+AND       hp.party_id              =         hps.party_id
+and       ap.segment1              like     '589102'
+--AND       asa.vendor_site_id   =    2864053
+--and       asa.vendor_id      =    5002689</uniqueName>
+</TableSettings>

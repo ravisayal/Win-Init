@@ -1,0 +1,203 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">BEGIN_DATE</Item>
+      <Item class="java.lang.String">SUBJECT</Item>
+      <Item class="java.lang.String">NOTIFICATION_ID</Item>
+      <Item class="java.lang.String">GROUP_ID</Item>
+      <Item class="java.lang.String">MESSAGE_TYPE</Item>
+      <Item class="java.lang.String">MESSAGE_NAME</Item>
+      <Item class="java.lang.String">RECIPIENT_ROLE</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">ACCESS_KEY</Item>
+      <Item class="java.lang.String">MAIL_STATUS</Item>
+      <Item class="java.lang.String">PRIORITY</Item>
+      <Item class="java.lang.String">BEGIN_DATE_1</Item>
+      <Item class="java.lang.String">END_DATE</Item>
+      <Item class="java.lang.String">DUE_DATE</Item>
+      <Item class="java.lang.String">RESPONDER</Item>
+      <Item class="java.lang.String">USER_COMMENT</Item>
+      <Item class="java.lang.String">CALLBACK</Item>
+      <Item class="java.lang.String">CONTEXT</Item>
+      <Item class="java.lang.String">ORIGINAL_RECIPIENT</Item>
+      <Item class="java.lang.String">FROM_USER</Item>
+      <Item class="java.lang.String">TO_USER</Item>
+      <Item class="java.lang.String">SUBJECT_1</Item>
+      <Item class="java.lang.String">LANGUAGE</Item>
+      <Item class="java.lang.String">MORE_INFO_ROLE</Item>
+      <Item class="java.lang.String">FROM_ROLE</Item>
+      <Item class="java.lang.String">SECURITY_GROUP_ID</Item>
+      <Item class="java.lang.String">USER_KEY</Item>
+      <Item class="java.lang.String">ITEM_KEY</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE6</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE7</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE8</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE9</Item>
+      <Item class="java.lang.String">PROTECTED_TEXT_ATTRIBUTE10</Item>
+      <Item class="java.lang.String">PROTECTED_FORM_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">PROTECTED_FORM_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">PROTECTED_FORM_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">PROTECTED_FORM_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">PROTECTED_FORM_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">PROTECTED_URL_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">PROTECTED_URL_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">PROTECTED_URL_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">PROTECTED_URL_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">PROTECTED_URL_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">PROTECTED_DATE_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">PROTECTED_DATE_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">PROTECTED_DATE_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">PROTECTED_DATE_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">PROTECTED_DATE_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">PROTECTED_NUMBER_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">PROTECTED_NUMBER_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">PROTECTED_NUMBER_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">PROTECTED_NUMBER_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">PROTECTED_NUMBER_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE6</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE7</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE8</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE9</Item>
+      <Item class="java.lang.String">TEXT_ATTRIBUTE10</Item>
+      <Item class="java.lang.String">FORM_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">FORM_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">FORM_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">FORM_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">FORM_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">URL_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">URL_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">URL_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">URL_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">URL_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">DATE_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">DATE_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">DATE_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">DATE_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">DATE_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">NUMBER_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">NUMBER_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">NUMBER_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">NUMBER_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">NUMBER_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">SENT_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>145</Item>
+      <Item>460</Item>
+      <Item>110</Item>
+      <Item>71</Item>
+      <Item>95</Item>
+      <Item>138</Item>
+      <Item>104</Item>
+      <Item>61</Item>
+      <Item>278</Item>
+      <Item>87</Item>
+      <Item>67</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>71</Item>
+      <Item>79</Item>
+      <Item>101</Item>
+      <Item>89</Item>
+      <Item>222</Item>
+      <Item>127</Item>
+      <Item>103</Item>
+      <Item>110</Item>
+      <Item>460</Item>
+      <Item>72</Item>
+      <Item>111</Item>
+      <Item>80</Item>
+      <Item>126</Item>
+      <Item>69</Item>
+      <Item>110</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>175</Item>
+      <Item>181</Item>
+      <Item>180</Item>
+      <Item>180</Item>
+      <Item>180</Item>
+      <Item>180</Item>
+      <Item>180</Item>
+      <Item>170</Item>
+      <Item>170</Item>
+      <Item>170</Item>
+      <Item>170</Item>
+      <Item>170</Item>
+      <Item>177</Item>
+      <Item>177</Item>
+      <Item>177</Item>
+      <Item>177</Item>
+      <Item>177</Item>
+      <Item>192</Item>
+      <Item>192</Item>
+      <Item>192</Item>
+      <Item>192</Item>
+      <Item>192</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>110</Item>
+      <Item>116</Item>
+      <Item>115</Item>
+      <Item>115</Item>
+      <Item>115</Item>
+      <Item>115</Item>
+      <Item>115</Item>
+      <Item>105</Item>
+      <Item>105</Item>
+      <Item>105</Item>
+      <Item>105</Item>
+      <Item>105</Item>
+      <Item>112</Item>
+      <Item>112</Item>
+      <Item>112</Item>
+      <Item>112</Item>
+      <Item>112</Item>
+      <Item>127</Item>
+      <Item>127</Item>
+      <Item>127</Item>
+      <Item>127</Item>
+      <Item>127</Item>
+      <Item>145</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSelect    wf.begin_date, wf.subject, wf.*
+From      apps.wf_notifications wf
+Where     1 = 1
+and       notification_id > 33302881 - 1000
+--and mail_status is not null  -- Ignore the records for users NOT Having Email preference
+--and   mail_status = 'SENT'
+--and   status = 'OPEN'
+and   context like 'HU%'
+--and notification_id in (33535234, 33535201, 33535178, 33535165, 33535083, 33535082, 33535075, 33535068, 33535056, 33535039, 33535027, 33534981, 33534962, 33534916, 33534908, 33534881, 33534878, 33534863, 33534838, 33534836, 33534787, 33534763, 33534648, 33534641, 33534578, 33534543, 33534542, 33534511, 33534411, 33534404, 33534318, 33533988, 33533944, 33533937, 33533908, 33533513, 33533309, 33533216, 33532856, 33532850, 33532829, 33532816, 33532802, 33532632, 33532622, 33532621, 33532604, 33532598, 33532564, 33532540, 33532533, 33532302, 33532039, 33531927, 33531734, 33531389, 33531366, 33531344, 33531224, 33530125, 33530068, 33530060, 33535556, 33535412, 33535371, 33535312, 33535079, 33534524, 33534085, 33533695, 33532904, 33532651, 33531743, 33535785, 33535225, 33535052, 33534901, 33534896, 33533843, 33533797, 33533441, 33532878, 33532861, 33532830, 33532817, 33531006, 33530839, 33535869, 33535865, 33535864, 33535814, 33535776, 33535758, 33535757, 33535751, 33535747, 33535713, 33535700, 33535680, 33535672, 33535569, 33535313, 33535253, 33535220, 33535221, 33535219, 33535198, 33535196, 33535197, 33535186, 33535180, 33535179, 33535181, 33535112, 33535110, 33535111, 33535080, 33535069, 33535011, 33535009, 33535010, 33534998, 33534985, 33534983, 33534984, 33534943, 33534839, 33534793, 33534744, 33534676, 33534670, 33534672, 33534671, 33534660, 33534659, 33534658, 33534520, 33534405, 33534396, 33534336, 33534296, 33534012, 33533945, 33533314, 33533312, 33533225, 33532760, 33532694, 33532129, 33530732, 33521233 )
+--and sent_date is null
+and  upper(to_user) like '%NEIRA%'
+--and       message_type like '%REQ%'
+--and  wf.subject like 'Purchase%Req%USD)'
+order by wf.begin_date desc</uniqueName>
+</TableSettings>

@@ -1,0 +1,279 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">BOOK_TYPE_CODE</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">DATE_PLACED_IN_SERVICE</Item>
+      <Item class="java.lang.String">DATE_EFFECTIVE</Item>
+      <Item class="java.lang.String">DEPRN_START_DATE</Item>
+      <Item class="java.lang.String">DEPRN_METHOD_CODE</Item>
+      <Item class="java.lang.String">LIFE_IN_MONTHS</Item>
+      <Item class="java.lang.String">RATE_ADJUSTMENT_FACTOR</Item>
+      <Item class="java.lang.String">ADJUSTED_COST</Item>
+      <Item class="java.lang.String">COST</Item>
+      <Item class="java.lang.String">ORIGINAL_COST</Item>
+      <Item class="java.lang.String">SALVAGE_VALUE</Item>
+      <Item class="java.lang.String">PRORATE_CONVENTION_CODE</Item>
+      <Item class="java.lang.String">PRORATE_DATE</Item>
+      <Item class="java.lang.String">COST_CHANGE_FLAG</Item>
+      <Item class="java.lang.String">ADJUSTMENT_REQUIRED_STATUS</Item>
+      <Item class="java.lang.String">CAPITALIZE_FLAG</Item>
+      <Item class="java.lang.String">RETIREMENT_PENDING_FLAG</Item>
+      <Item class="java.lang.String">DEPRECIATE_FLAG</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">DATE_INEFFECTIVE</Item>
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID_IN</Item>
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID_OUT</Item>
+      <Item class="java.lang.String">ITC_AMOUNT_ID</Item>
+      <Item class="java.lang.String">ITC_AMOUNT</Item>
+      <Item class="java.lang.String">RETIREMENT_ID</Item>
+      <Item class="java.lang.String">TAX_REQUEST_ID</Item>
+      <Item class="java.lang.String">ITC_BASIS</Item>
+      <Item class="java.lang.String">BASIC_RATE</Item>
+      <Item class="java.lang.String">ADJUSTED_RATE</Item>
+      <Item class="java.lang.String">BONUS_RULE</Item>
+      <Item class="java.lang.String">CEILING_NAME</Item>
+      <Item class="java.lang.String">RECOVERABLE_COST</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">ADJUSTED_CAPACITY</Item>
+      <Item class="java.lang.String">FULLY_RSVD_REVALS_COUNTER</Item>
+      <Item class="java.lang.String">IDLED_FLAG</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER_CAPITALIZED</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER_FULLY_RESERVED</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER_FULLY_RETIRED</Item>
+      <Item class="java.lang.String">PRODUCTION_CAPACITY</Item>
+      <Item class="java.lang.String">REVAL_AMORTIZATION_BASIS</Item>
+      <Item class="java.lang.String">REVAL_CEILING</Item>
+      <Item class="java.lang.String">UNIT_OF_MEASURE</Item>
+      <Item class="java.lang.String">UNREVALUED_COST</Item>
+      <Item class="java.lang.String">ANNUAL_DEPRN_ROUNDING_FLAG</Item>
+      <Item class="java.lang.String">PERCENT_SALVAGE_VALUE</Item>
+      <Item class="java.lang.String">ALLOWED_DEPRN_LIMIT</Item>
+      <Item class="java.lang.String">ALLOWED_DEPRN_LIMIT_AMOUNT</Item>
+      <Item class="java.lang.String">ANNUAL_ROUNDING_FLAG</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER_LIFE_COMPLETE</Item>
+      <Item class="java.lang.String">ADJUSTED_RECOVERABLE_COST</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE6</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE7</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE8</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE9</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE10</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE11</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE12</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE13</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE14</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE15</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE16</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE17</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE18</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE19</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE20</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">EOFY_ADJ_COST</Item>
+      <Item class="java.lang.String">EOFY_FORMULA_FACTOR</Item>
+      <Item class="java.lang.String">SHORT_FISCAL_YEAR_FLAG</Item>
+      <Item class="java.lang.String">CONVERSION_DATE</Item>
+      <Item class="java.lang.String">ORIGINAL_DEPRN_START_DATE</Item>
+      <Item class="java.lang.String">REMAINING_LIFE1</Item>
+      <Item class="java.lang.String">REMAINING_LIFE2</Item>
+      <Item class="java.lang.String">OLD_ADJUSTED_COST</Item>
+      <Item class="java.lang.String">FORMULA_FACTOR</Item>
+      <Item class="java.lang.String">GROUP_ASSET_ID</Item>
+      <Item class="java.lang.String">SALVAGE_TYPE</Item>
+      <Item class="java.lang.String">DEPRN_LIMIT_TYPE</Item>
+      <Item class="java.lang.String">REDUCTION_RATE</Item>
+      <Item class="java.lang.String">REDUCE_ADDITION_FLAG</Item>
+      <Item class="java.lang.String">REDUCE_ADJUSTMENT_FLAG</Item>
+      <Item class="java.lang.String">REDUCE_RETIREMENT_FLAG</Item>
+      <Item class="java.lang.String">RECOGNIZE_GAIN_LOSS</Item>
+      <Item class="java.lang.String">RECAPTURE_RESERVE_FLAG</Item>
+      <Item class="java.lang.String">LIMIT_PROCEEDS_FLAG</Item>
+      <Item class="java.lang.String">TERMINAL_GAIN_LOSS</Item>
+      <Item class="java.lang.String">TRACKING_METHOD</Item>
+      <Item class="java.lang.String">EXCLUDE_FULLY_RSV_FLAG</Item>
+      <Item class="java.lang.String">EXCESS_ALLOCATION_OPTION</Item>
+      <Item class="java.lang.String">DEPRECIATION_OPTION</Item>
+      <Item class="java.lang.String">MEMBER_ROLLUP_FLAG</Item>
+      <Item class="java.lang.String">ALLOCATE_TO_FULLY_RSV_FLAG</Item>
+      <Item class="java.lang.String">ALLOCATE_TO_FULLY_RET_FLAG</Item>
+      <Item class="java.lang.String">TERMINAL_GAIN_LOSS_AMOUNT</Item>
+      <Item class="java.lang.String">CIP_COST</Item>
+      <Item class="java.lang.String">YTD_PROCEEDS</Item>
+      <Item class="java.lang.String">LTD_PROCEEDS</Item>
+      <Item class="java.lang.String">LTD_COST_OF_REMOVAL</Item>
+      <Item class="java.lang.String">EOFY_RESERVE</Item>
+      <Item class="java.lang.String">PRIOR_EOFY_RESERVE</Item>
+      <Item class="java.lang.String">EOP_ADJ_COST</Item>
+      <Item class="java.lang.String">EOP_FORMULA_FACTOR</Item>
+      <Item class="java.lang.String">EXCLUDE_PROCEEDS_FROM_BASIS</Item>
+      <Item class="java.lang.String">RETIREMENT_DEPRN_OPTION</Item>
+      <Item class="java.lang.String">TERMINAL_GAIN_LOSS_FLAG</Item>
+      <Item class="java.lang.String">SUPER_GROUP_ID</Item>
+      <Item class="java.lang.String">OVER_DEPRECIATE_OPTION</Item>
+      <Item class="java.lang.String">DISABLED_FLAG</Item>
+      <Item class="java.lang.String">OLD_ADJUSTED_CAPACITY</Item>
+      <Item class="java.lang.String">CASH_GENERATING_UNIT_ID</Item>
+      <Item class="java.lang.String">RATE_IN_USE</Item>
+      <Item class="java.lang.String">DRY_HOLE_FLAG</Item>
+      <Item class="java.lang.String">CONTRACT_ID</Item>
+      <Item class="java.lang.String">EXTENDED_DEPRN_FLAG</Item>
+      <Item class="java.lang.String">EXTENDED_DEPRECIATION_PERIOD</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER_FULLY_EXTENDED</Item>
+      <Item class="java.lang.String">NBV_AT_SWITCH</Item>
+      <Item class="java.lang.String">PRIOR_DEPRN_LIMIT_TYPE</Item>
+      <Item class="java.lang.String">PRIOR_DEPRN_LIMIT_AMOUNT</Item>
+      <Item class="java.lang.String">PRIOR_DEPRN_LIMIT</Item>
+      <Item class="java.lang.String">PRIOR_DEPRN_METHOD</Item>
+      <Item class="java.lang.String">PRIOR_LIFE_IN_MONTHS</Item>
+      <Item class="java.lang.String">PRIOR_BASIC_RATE</Item>
+      <Item class="java.lang.String">PRIOR_ADJUSTED_RATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>111</Item>
+      <Item>67</Item>
+      <Item>154</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>134</Item>
+      <Item>105</Item>
+      <Item>163</Item>
+      <Item>103</Item>
+      <Item>68</Item>
+      <Item>101</Item>
+      <Item>100</Item>
+      <Item>172</Item>
+      <Item>145</Item>
+      <Item>124</Item>
+      <Item>186</Item>
+      <Item>108</Item>
+      <Item>163</Item>
+      <Item>112</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>171</Item>
+      <Item>181</Item>
+      <Item>102</Item>
+      <Item>85</Item>
+      <Item>99</Item>
+      <Item>107</Item>
+      <Item>71</Item>
+      <Item>81</Item>
+      <Item>102</Item>
+      <Item>84</Item>
+      <Item>93</Item>
+      <Item>123</Item>
+      <Item>125</Item>
+      <Item>126</Item>
+      <Item>177</Item>
+      <Item>79</Item>
+      <Item>182</Item>
+      <Item>203</Item>
+      <Item>195</Item>
+      <Item>142</Item>
+      <Item>169</Item>
+      <Item>96</Item>
+      <Item>116</Item>
+      <Item>117</Item>
+      <Item>189</Item>
+      <Item>151</Item>
+      <Item>139</Item>
+      <Item>188</Item>
+      <Item>150</Item>
+      <Item>196</Item>
+      <Item>180</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>178</Item>
+      <Item>103</Item>
+      <Item>146</Item>
+      <Item>157</Item>
+      <Item>117</Item>
+      <Item>177</Item>
+      <Item>109</Item>
+      <Item>109</Item>
+      <Item>129</Item>
+      <Item>114</Item>
+      <Item>108</Item>
+      <Item>93</Item>
+      <Item>115</Item>
+      <Item>110</Item>
+      <Item>146</Item>
+      <Item>161</Item>
+      <Item>159</Item>
+      <Item>139</Item>
+      <Item>159</Item>
+      <Item>136</Item>
+      <Item>131</Item>
+      <Item>118</Item>
+      <Item>154</Item>
+      <Item>171</Item>
+      <Item>139</Item>
+      <Item>135</Item>
+      <Item>181</Item>
+      <Item>181</Item>
+      <Item>180</Item>
+      <Item>69</Item>
+      <Item>97</Item>
+      <Item>96</Item>
+      <Item>143</Item>
+      <Item>95</Item>
+      <Item>133</Item>
+      <Item>97</Item>
+      <Item>140</Item>
+      <Item>192</Item>
+      <Item>166</Item>
+      <Item>162</Item>
+      <Item>109</Item>
+      <Item>159</Item>
+      <Item>98</Item>
+      <Item>152</Item>
+      <Item>163</Item>
+      <Item>87</Item>
+      <Item>102</Item>
+      <Item>91</Item>
+      <Item>140</Item>
+      <Item>195</Item>
+      <Item>203</Item>
+      <Item>103</Item>
+      <Item>153</Item>
+      <Item>172</Item>
+      <Item>123</Item>
+      <Item>138</Item>
+      <Item>143</Item>
+      <Item>119</Item>
+      <Item>140</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSELECT   *
+FROM  FA_BOOKS
+WHERE 1 =1 
+AND  ASSET_ID = 3289</uniqueName>
+</TableSettings>

@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ssh-hosts xmlns="http://xmlns.oracle.com/jdeveloper/110000/sqldeveloper-ssh">
+   <hash n="hosts">
+      <hash n="findb-dev">
+         <value n="hostname" v="findb-dev.huit.harvard.edu"/>
+         <url n="keyfile" path="../../../../../../../work/AWS/ofpi_ravinder_private.ppk"/>
+         <value n="name" v="findb-dev"/>
+         <hash n="tunnels">
+            <hash n="findb-pf">
+               <value n="hostname" v="findb-dev.huit.harvard.edu"/>
+               <value n="hostport" v="1521"/>
+               <value n="name" v="findb-pf"/>
+               <value n="type" v="LOCAL"/>
+            </hash>
+         </hash>
+         <value n="user" v="ras8804"/>
+      </hash>
+      <hash n="FinDev-APP">
+         <value n="hostname" v="finapps1-dev.huit.harvard.edu"/>
+         <url n="keyfile" path="../../../../../../../work/AWS/Ravinder/ofpi_ravinder_private.ppk"/>
+         <value n="name" v="FinDev-APP"/>
+         <value n="user" v="ras8804"/>
+      </hash>
+   </hash>
+</ssh-hosts>

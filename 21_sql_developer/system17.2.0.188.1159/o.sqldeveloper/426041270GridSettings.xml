@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">Profile Name</Item>
+      <Item class="java.lang.String">User Profile Name</Item>
+      <Item class="java.lang.String">Personalization Level</Item>
+      <Item class="java.lang.String">Context</Item>
+      <Item class="java.lang.String">Value</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>278</Item>
+      <Item>285</Item>
+      <Item>119</Item>
+      <Item>82</Item>
+      <Item>83</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSELECT   po.profile_option_name "Profile Name",
+         po.user_profile_option_name "User Profile Name",
+         DECODE (TO_CHAR (pov.level_id),
+         '10001', 'SITE',
+         '10002', 'APP',
+         '10003', 'RESP',
+         '10004', 'USER'
+         ) "Personalization Level",
+         DECODE (TO_CHAR (pov.level_id),
+         '10002', app.application_short_name,
+         '10003', rsp.responsibility_name,
+         '10004', usr.user_name
+         ) "Context",
+         pov.profile_option_value "Value"
+FROM     fnd_profile_options_vl po,
+         fnd_profile_option_values pov,
+         fnd_user usr,
+         fnd_responsibility_tl rsp,
+         fnd_application app
+WHERE    1 = 1
+AND      pov.profile_option_value='Y'
+AND      pov.profile_option_id = po.profile_option_id
+AND      po.user_profile_option_name IN ('FND: Diagnostics','FND: Personalization Region Link Enabled','Personalize Self-Service Defn')
+AND      rsp.application_id(+) = pov.level_value_application_id
+AND      rsp.responsibility_id(+) = pov.level_value
+AND      usr.user_id(+) = pov.level_value
+AND      app.application_id(+) = pov.level_value        
+ORDER BY 1</uniqueName>
+</TableSettings>

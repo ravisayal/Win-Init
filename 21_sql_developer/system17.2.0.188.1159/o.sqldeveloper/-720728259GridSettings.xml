@@ -1,0 +1,273 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">SET_OF_BOOKS_ID</Item>
+      <Item class="java.lang.String">ACCOUNTING_DATE</Item>
+      <Item class="java.lang.String">CURRENCY_CODE</Item>
+      <Item class="java.lang.String">DATE_CREATED</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">ACTUAL_FLAG</Item>
+      <Item class="java.lang.String">USER_JE_CATEGORY_NAME</Item>
+      <Item class="java.lang.String">USER_JE_SOURCE_NAME</Item>
+      <Item class="java.lang.String">ENCUMBRANCE_TYPE_ID</Item>
+      <Item class="java.lang.String">BUDGET_VERSION_ID</Item>
+      <Item class="java.lang.String">CURRENCY_CONVERSION_DATE</Item>
+      <Item class="java.lang.String">USER_CURRENCY_CONVERSION_TYPE</Item>
+      <Item class="java.lang.String">CURRENCY_CONVERSION_RATE</Item>
+      <Item class="java.lang.String">AVERAGE_JOURNAL_FLAG</Item>
+      <Item class="java.lang.String">SEGMENT1</Item>
+      <Item class="java.lang.String">SEGMENT2</Item>
+      <Item class="java.lang.String">SEGMENT3</Item>
+      <Item class="java.lang.String">SEGMENT4</Item>
+      <Item class="java.lang.String">SEGMENT5</Item>
+      <Item class="java.lang.String">SEGMENT6</Item>
+      <Item class="java.lang.String">SEGMENT7</Item>
+      <Item class="java.lang.String">SEGMENT8</Item>
+      <Item class="java.lang.String">SEGMENT9</Item>
+      <Item class="java.lang.String">SEGMENT10</Item>
+      <Item class="java.lang.String">SEGMENT11</Item>
+      <Item class="java.lang.String">SEGMENT12</Item>
+      <Item class="java.lang.String">SEGMENT13</Item>
+      <Item class="java.lang.String">SEGMENT14</Item>
+      <Item class="java.lang.String">SEGMENT15</Item>
+      <Item class="java.lang.String">SEGMENT16</Item>
+      <Item class="java.lang.String">SEGMENT17</Item>
+      <Item class="java.lang.String">SEGMENT18</Item>
+      <Item class="java.lang.String">SEGMENT19</Item>
+      <Item class="java.lang.String">SEGMENT20</Item>
+      <Item class="java.lang.String">SEGMENT21</Item>
+      <Item class="java.lang.String">SEGMENT22</Item>
+      <Item class="java.lang.String">SEGMENT23</Item>
+      <Item class="java.lang.String">SEGMENT24</Item>
+      <Item class="java.lang.String">SEGMENT25</Item>
+      <Item class="java.lang.String">SEGMENT26</Item>
+      <Item class="java.lang.String">SEGMENT27</Item>
+      <Item class="java.lang.String">SEGMENT28</Item>
+      <Item class="java.lang.String">SEGMENT29</Item>
+      <Item class="java.lang.String">SEGMENT30</Item>
+      <Item class="java.lang.String">ENTERED_DR</Item>
+      <Item class="java.lang.String">ENTERED_CR</Item>
+      <Item class="java.lang.String">ACCOUNTED_DR</Item>
+      <Item class="java.lang.String">ACCOUNTED_CR</Item>
+      <Item class="java.lang.String">TRANSACTION_DATE</Item>
+      <Item class="java.lang.String">REFERENCE1</Item>
+      <Item class="java.lang.String">REFERENCE2</Item>
+      <Item class="java.lang.String">REFERENCE3</Item>
+      <Item class="java.lang.String">REFERENCE4</Item>
+      <Item class="java.lang.String">REFERENCE5</Item>
+      <Item class="java.lang.String">REFERENCE6</Item>
+      <Item class="java.lang.String">REFERENCE7</Item>
+      <Item class="java.lang.String">REFERENCE8</Item>
+      <Item class="java.lang.String">REFERENCE9</Item>
+      <Item class="java.lang.String">REFERENCE10</Item>
+      <Item class="java.lang.String">REFERENCE11</Item>
+      <Item class="java.lang.String">REFERENCE12</Item>
+      <Item class="java.lang.String">REFERENCE13</Item>
+      <Item class="java.lang.String">REFERENCE14</Item>
+      <Item class="java.lang.String">REFERENCE15</Item>
+      <Item class="java.lang.String">REFERENCE16</Item>
+      <Item class="java.lang.String">REFERENCE17</Item>
+      <Item class="java.lang.String">REFERENCE18</Item>
+      <Item class="java.lang.String">REFERENCE19</Item>
+      <Item class="java.lang.String">REFERENCE20</Item>
+      <Item class="java.lang.String">REFERENCE21</Item>
+      <Item class="java.lang.String">REFERENCE22</Item>
+      <Item class="java.lang.String">REFERENCE23</Item>
+      <Item class="java.lang.String">REFERENCE24</Item>
+      <Item class="java.lang.String">REFERENCE25</Item>
+      <Item class="java.lang.String">REFERENCE26</Item>
+      <Item class="java.lang.String">REFERENCE27</Item>
+      <Item class="java.lang.String">REFERENCE28</Item>
+      <Item class="java.lang.String">REFERENCE29</Item>
+      <Item class="java.lang.String">REFERENCE30</Item>
+      <Item class="java.lang.String">JE_BATCH_ID</Item>
+      <Item class="java.lang.String">PERIOD_NAME</Item>
+      <Item class="java.lang.String">JE_HEADER_ID</Item>
+      <Item class="java.lang.String">JE_LINE_NUM</Item>
+      <Item class="java.lang.String">CHART_OF_ACCOUNTS_ID</Item>
+      <Item class="java.lang.String">FUNCTIONAL_CURRENCY_CODE</Item>
+      <Item class="java.lang.String">CODE_COMBINATION_ID</Item>
+      <Item class="java.lang.String">DATE_CREATED_IN_GL</Item>
+      <Item class="java.lang.String">WARNING_CODE</Item>
+      <Item class="java.lang.String">STATUS_DESCRIPTION</Item>
+      <Item class="java.lang.String">STAT_AMOUNT</Item>
+      <Item class="java.lang.String">GROUP_ID</Item>
+      <Item class="java.lang.String">REQUEST_ID</Item>
+      <Item class="java.lang.String">SUBLEDGER_DOC_SEQUENCE_ID</Item>
+      <Item class="java.lang.String">SUBLEDGER_DOC_SEQUENCE_VALUE</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">ATTRIBUTE16</Item>
+      <Item class="java.lang.String">ATTRIBUTE17</Item>
+      <Item class="java.lang.String">ATTRIBUTE18</Item>
+      <Item class="java.lang.String">ATTRIBUTE19</Item>
+      <Item class="java.lang.String">ATTRIBUTE20</Item>
+      <Item class="java.lang.String">CONTEXT</Item>
+      <Item class="java.lang.String">CONTEXT2</Item>
+      <Item class="java.lang.String">INVOICE_DATE</Item>
+      <Item class="java.lang.String">TAX_CODE</Item>
+      <Item class="java.lang.String">INVOICE_IDENTIFIER</Item>
+      <Item class="java.lang.String">INVOICE_AMOUNT</Item>
+      <Item class="java.lang.String">CONTEXT3</Item>
+      <Item class="java.lang.String">USSGL_TRANSACTION_CODE</Item>
+      <Item class="java.lang.String">DESCR_FLEX_ERROR_MESSAGE</Item>
+      <Item class="java.lang.String">ORIGINATING_BAL_SEG_VALUE</Item>
+      <Item class="java.lang.String">LEDGER_ID</Item>
+      <Item class="java.lang.String">REFERENCE_DATE</Item>
+      <Item class="java.lang.String">GL_SL_LINK_ID</Item>
+      <Item class="java.lang.String">GL_SL_LINK_TABLE</Item>
+      <Item class="java.lang.String">JGZZ_RECON_REF</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>68</Item>
+      <Item>114</Item>
+      <Item>145</Item>
+      <Item>107</Item>
+      <Item>145</Item>
+      <Item>83</Item>
+      <Item>89</Item>
+      <Item>156</Item>
+      <Item>173</Item>
+      <Item>141</Item>
+      <Item>125</Item>
+      <Item>177</Item>
+      <Item>207</Item>
+      <Item>177</Item>
+      <Item>148</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>77</Item>
+      <Item>84</Item>
+      <Item>84</Item>
+      <Item>101</Item>
+      <Item>101</Item>
+      <Item>123</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>83</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>89</Item>
+      <Item>86</Item>
+      <Item>91</Item>
+      <Item>93</Item>
+      <Item>86</Item>
+      <Item>151</Item>
+      <Item>177</Item>
+      <Item>142</Item>
+      <Item>132</Item>
+      <Item>102</Item>
+      <Item>131</Item>
+      <Item>93</Item>
+      <Item>71</Item>
+      <Item>82</Item>
+      <Item>180</Item>
+      <Item>200</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>65</Item>
+      <Item>71</Item>
+      <Item>93</Item>
+      <Item>72</Item>
+      <Item>124</Item>
+      <Item>110</Item>
+      <Item>71</Item>
+      <Item>162</Item>
+      <Item>174</Item>
+      <Item>173</Item>
+      <Item>74</Item>
+      <Item>109</Item>
+      <Item>93</Item>
+      <Item>112</Item>
+      <Item>109</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P1-LDAPselect  *
+from   gl_interface_history</uniqueName>
+</TableSettings>

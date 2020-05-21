@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TRANSACTION_ID</Item>
+      <Item class="java.lang.String">CUSTOMER_NUMBER</Item>
+      <Item class="java.lang.String">CUSTOMER_NAME</Item>
+      <Item class="java.lang.String">PAID_AMOUNT</Item>
+      <Item class="java.lang.String">PAYMENT_DATE</Item>
+      <Item class="java.lang.String">INVOICE_NUMBER</Item>
+      <Item class="java.lang.String">AMOUNT_DUE</Item>
+      <Item class="java.lang.String">PAYMENT_METHOD</Item>
+      <Item class="java.lang.String">CARD_TYPE</Item>
+      <Item class="java.lang.String">PAYMENT_GATEWAY_REFERENCE_ID</Item>
+      <Item class="java.lang.String">SESSION_ID</Item>
+      <Item class="java.lang.String">RECEIPT_NUMBER</Item>
+      <Item class="java.lang.String">RECEIPT_ID</Item>
+      <Item class="java.lang.String">KILLED_AT</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">ERROR_MESSAGE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>108</Item>
+      <Item>121</Item>
+      <Item>281</Item>
+      <Item>92</Item>
+      <Item>145</Item>
+      <Item>108</Item>
+      <Item>88</Item>
+      <Item>194</Item>
+      <Item>77</Item>
+      <Item>201</Item>
+      <Item>79</Item>
+      <Item>108</Item>
+      <Item>78</Item>
+      <Item>145</Item>
+      <Item>278</Item>
+      <Item>106</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT   hiph.transaction_id,
+           arc.customer_number,
+           arc.customer_name,
+           hiph.payment_amount Paid_amount,
+           hiph.payment_date,
+           apsa.trx_number invoice_number,
+           hipl.amount_due,
+           (SELECT        arm.name
+              FROM        APPS.ar_receipt_classes arc,
+                          APPS.ar_receipt_methods arm,
+                          APPS.fnd_lookup_values_vl   flv
+              WHERE       arc.receipt_class_id        =   arm.receipt_class_id
+              AND         arc.name                    =   flv.meaning
+              AND         flv.lookup_type             =   'HUAR IREC RECEIPT CLASSES'
+              AND         flv.lookup_code             =   hiph.payment_method
+           ) payment_method ,
+           hiph.card_type,
+           hiph.payment_gateway_reference_id,
+           hiph.session_id,
+           hiph.receipt_number,
+           hiph.receipt_id,
+           hiph.killed_at,
+           DECODE ( transaction_status,'MK','Mark Killed',
+                                       'GF','Gateway Failure',
+                                       'GC','Gateway cancelled',
+                                       'GS','Gateway Success',
+                                       'A','In Flight Transaction',
+                                       'RAS','Receipt created and applied sucessfully',
+                                       'RCU','Receipt created as unapplied' 
+                  ) status,
+           CASE
+                  WHEN hiph.transaction_status IN ( 'RAS','RCU')
+                  THEN hiph.api_error_msg||' '||hiph.error_text
+                  ELSE 'No Error'
+           END error_message
+  FROM     apps.huar_irec_payment_header hiph,
+           apps.huar_irec_payment_lines hipl,
+           apps.ar_payment_schedules_all apsa,
+           apps.ar_customers arc
+   WHERE    hiph.transaction_id       = hipl.transaction_id
+  AND      hipl.invoice_id           = apsa.customer_trx_id
+  AND      hiph.customer_id          = apsa.customer_id(+)
+  AND      hiph.customer_id          = arc.customer_id
+  AND      hiph.transaction_id       = NVL('',hiph.transaction_id)
+  AND      TRUNC(hiph.payment_date)  = NVL('',TO_CHAR(TRUNC(hiph.payment_date),'DD-MON-YYYY'))
+  --AND      hiph.payment_date         >= SYSDATE -1 
+  AND      apsa.trx_number           = NVL('',apsa.trx_number)
+  AND      arc.customer_number       = NVL('',arc.customer_number)
+  ORDER BY hiph.transaction_id</uniqueName>
+</TableSettings>

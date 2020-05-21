@@ -1,0 +1,452 @@
+/***
+ * Set of formatting rules  
+ * https://vadimtropashko.wordpress.com/2017/01/03/custom-formatting-in-sqldev-4-2/
+***/
+
+/**
+ * simpleIndentConditions  
+ * Parse nodes to be indented with simple conditions, typically parse node payload, e.g.
+   [node) select_term                               --<-- all parse nodes with "select_term" payload
+   [node) expr  &  [node^) simple_case_expression   --<-- parse nodes with "expr" payload, whose parent (i.e. node^) is labeled "simple_case_expression"
+   [node) condition  & [node-1) 'WHEN'              --<-- parse nodes with "condition" payload, whose sibling predecessor (i.e. node-1) is keyword WHEN             --
+**/
+simpleIndentConditions:  
+  [node)  JSON_column_definition
+| [node) "db_link_auth" 
+| [node) "inner_cross_join_clause"
+| [node) "mv_log_details"
+| [node) '*'  &  [node) select_list 
+| [node) ',' & [node+1) cell_assignment
+| [node) ',' & [node^) object_properties
+| [node) '(' & [node^) compound_condition --(!) switches to parent node in the implementation
+| [node) 'ALL' & [node+1) 'ON'
+| [node) 'FOR' & [node^) explain_plan
+| [node) 'INTO' & [node^) call_statement
+| [node) 'PARTITION' & [node^) on_comp_partitioned_table[68,117)# 
+| [node) 'UPDATE' & [node-1) 'THEN'
+| [node) ELSE_expr_opt
+| [node) JSON_columns_clause 
+| [node) JSON_value_column 
+| [node) LOB_storage_clause
+| [node) LOB_storage_parameters#
+| [node) XMLSchema_spec
+| [node) XMLType_storage 
+| [node) XML_attributes_clause 
+| [node) XML_table_column 
+| [node) adt_field
+| [node) alias_in_out_constraints
+| [node) alter_method_spec 
+| [node) array_ty_def
+| [node) assoc_arg
+| [node) attr_dim_hierarchy 
+| [node) attribute_clause 
+| [node) autoextend_clause 
+| [node) aux_xml_value_expr
+| [node) basic_decl_item
+| [node) binding_clause
+| [node) bitmap_join_index_clause
+| [node) build_clause
+| [node) bulk_executable_stmt
+| [node) case_expr & ![node^) pls_expr     -- e.g. IF CASE a WHEN 3 THEN 4 ELSE a END > 7 THEN ...
+                                           --         ^^^^^^^^^^^^^^ pls_expr ^^^^^^^^^^^
+| [node) case_expr_alt
+| [node) case_expression
+| [node) case_stmt_alt
+| [node) cell_reference_options 
+| [node) cluster_range_partitions 
+| [node) col_properties 
+| [node) column_properties & ! [node^) column_properties --?++5 & ! [node^) relational_table
+| [node^) comment & [node) string_literal
+| [node) comparison_condition & [node^) bitmap_join_index_clause
+/*+breakAfterWhen | [node) condition  &  [node-1) 'WHEN'*/
+| [node) condition  &  [node-1) '('
+| [node) condition  &  [node^)  compound_condition & ![node) compound_condition --problematic: & [node^+10 < node^)
+| [node) condition  &  [node^) having_clause & ![node) compound_condition
+| [node) condition  &  [node^) hierarchical_query_clause & ![node) compound_condition
+| [node) condition  &  [node^) on_using_condition & ![node) compound_condition
+| [node) condition  &  [node^) where_clause --& ![node) compound_condition
+| [node) conditional_insert_clause
+| [node) conditional_insert_clause[58,99)#
+| [node) constraint_clauses & [node+10 < node) 
+| [node) create_cluster[41,70)#
+| [node) create_cluster[71,143)#
+| [node) create_database[15,196)# 
+| [node) create_index_statement & ![node^) sql_statement
+| [node) create_mv_refresh 
+| [node) create_mv_refresh[12,248)# 
+| [node) cycle_clause
+| [node) database_logging_clauses
+| [node) database_logging_clauses[24,42) 
+| [node) datafile_tempfile_spec 
+| [node) dblink_authentication 
+| [node) default_tablespace
+| [node) dependent_handling_clause 
+| [node) dimension_join_clause 
+| [node) dml_event_clause
+| [node) else_clause
+| [node) else_clause_opt & ![node^) if_stmt
+| [node) enable_pluggable_database 
+| [node) error_logging_clause
+| [node) et_field_spk
+| [node) excptn_handler
+| [node) export_keys[69,95) 
+| [node) expr  &  [node^) xmlelement[58,78)
+/*+breakAfterCase | [node) expr  &  [node^) simple_case_expression*/
+/*+breakAfterElse | [node) expr  &  [node-1) 'ELSE'*/
+/*+breakAfterThen | [node) expr  &  [node-1) 'THEN'*/
+/*+breakAfterWhen | [node) expr  &  [node-1) 'WHEN'*/
+| [node) expression_list  & ![node) grouping_expression_list
+| [node) external_table_data_props 
+| [node) field
+| [node) fields_def
+| [node) file_name_convert
+| [node) file_specification
+| [node) group_by_col
+| [node) hierarchy_clause 
+| [node) hierarchy_clause[14,29)#
+| [node) identifier & [node+1) colmapped_query_name[8,15) 
+| [node) identifier & [node^) colmapped_query_name[8,15) 
+| [node) identifier & [node^) create_materialized_view[33,79)
+| [node) identifier & [node^) create_materialized_view[53,77)
+| [node) identity_clause
+| [node) index_properties & [node^) table_index_clause
+| [node) index_subpartition_clause[69,119)# 
+| [node) inline_constraint & ![node) inline_constraint[14,67)
+| [node) inline_ref_constraint
+| [node) insert & ![node^) sql_statement & ![node^) stmt                         -- insert without trailing semcolon
+| [node) insert_into_clause & ![node^) single_table_insert & ![node^) multi_table_insert[12,24)#
+| [node) is_or_as & [node^) subprg_body & [node+1) 'BEGIN'
+| [node) java_call_specification
+| [node) json_name_value_pair
+| [node) json_object
+| [node) json_table 
+| [node) key_management_clauses 
+| [node) keystore_management_clauses 
+| [node) level_clause 
+| [node) list_partitions[68,90)#
+| [node) listagg & ![node^) select_term
+| [node) local_partitioned_index
+| [node) logfile_clause
+| [node) merge_into_new_keystore[35,47)
+| [node) merge_update_clause[36,56)#
+| [node) mining_attribute_clause & [node+2 < node) 
+| [node) model_column_clauses 
+| [node) model_rules_clause 
+| [node) model_rules_clause[3,76)
+| [node) modify_col_properties
+| [node) modify_col_visibility
+| [node) name_list & [node^) into_list
+| [node) nested_table_col_properties  & ![node)column_properties#  --  nested_table_col_properties->column_properties#->column_properties 
+| [node) new_values_clause 
+| [node) object_privilege & [node+1) 'ON'
+| [node) object_properties & ![node^) object_properties
+| [node) object_view_clause
+| [node) order_by_clause & ([node^) analytic_function | [node^) analytic_clause | [node^^) analytic_clause) --<-- not to ident order by in the main query block
+| [node) original_method_body_specification
+| [node) outer_join_clause
+| [node) parallel_clause 
+| [node) password_parameters
+| [node) pdb_storage_clause
+| [node) physical_properties 
+| [node) pivot_clause 
+| [node) pivot_for_clause 
+| [node) pivot_in_clause
+/*+breakAfterWhen | [node) pls_expr  &  [node-1) 'WHEN'*/
+/*+breakAfterThen | [node) pls_expr  &  [node-1) 'THEN'*/
+/*+breakAfterElse | [node) pls_expr  &  [node-1) 'ELSE'*/
+| [node) pls_expr & [node^) nonblock_compound_stmt  -- e.g. IF CASE a WHEN 3 THEN 4 ELSE a END > 7 THEN ...
+                                                    --         ^^^^^^^^^^^^^^ pls_expr ^^^^^^^^^^^
+| [node) privilege_audit_clause 
+| [node) range_values_clause 
+| [node) record_format 
+| [node) record_format2
+| [node) ref_cls
+| [node) references_clause 
+| [node) references_clause[28,59)
+| [node) referencing_clause
+/*| [node) rel  &  [node+1) 'AND'    
+  | [node) rel  &  [node-1) 'AND'    
+--| [node) rel  &  [node-1) 'WHEN'*/    
+| [node) rel  & [node) condition  
+/*+breakAfterIf     | [node) rel & [node^) if_stmt*/
+/*+breakAfterElsif | [node) rel & [node^) elsif_clause_opt*/
+/*+breakAfterWhile  | [node) rel & [node^) iteration_scheme*/
+| [node) resource_parameters 
+| [node) role_audit_clause
+| [node) rowOpt
+| [node) row_pattern_definition 
+| [node) row_pattern_measure_column 
+| [node) row_pattern_measures 
+| [node) row_pattern_order_by 
+| [node) row_pattern_partition_by 
+| [node) row_pattern_rows_per_match 
+| [node) row_pattern_skip_to
+| [node) search_clause
+| [node) searched_case_expression#
+| [node) security_clauses
+| [node) segment_attributes_clause & ![node^) segment_attributes_clause
+| [node) select_term 
+/***     ^^^^^^^^^^^
+ * The decision to indent individual "select_term"s
+ * implies that we don't have to indent "select_clause"
+          vvvvvvvvvvvvv 
+ | [node) select_clause 
+ * Likewise, for other clauses:
+ | [node) from_clause | [node) where_clause | [node) group_by_clause 
+ | [node) having_clause | [node) hierarchical_query_clause 
+ | [node) order_by_clause 
+***/ 
+| [node) simple_case_expression[4,27)#
+| [node) single_column_for_loop
+| [node) source_file_name_convert 
+| [node) sql_statement 
+| [node) standard_actions 
+| [node) stmt & ![node^) sqlplus_command 
+/*+breakAfterThen --| [node) stmt  &  [node-1) 'THEN'*/
+| [node) storage_clause 
+| [node) subpartition_by_hash
+| [node) subpartition_template
+| [node) subpartition_template[24,31)
+| [node) subprg_body & ![node^) create_plsql & ![node^) original_method_body_specification  --&  ! [node^) create    ++683(684?)
+| [node) subprg_property
+| [node) subprogram_spec 
+| [node) subquery
+          &  ![node^) sql_statement 
+          &  ![node^) stmt 
+          &  ![node^) unlabeled_nonblock_stmt  
+          &  ![node^) table_properties --or relational_table?
+          &  ![node^) single_table_insert  
+| [node) subquery  & [node-1) 'AS'   -- sql_statement+create_view
+| [node) system_privilege 
+| [node) table_index_clause 
+| [node) table_partitioning_clauses
+| [node) table_properties  & ![node) column_properties          --?or relational_table  extra ident for ++1222  
+                                                                -- &! [node) nested_table_col_properties
+| [node) table_reference 
+| [node) table_stmt -- for compound trigger
+| [node) tablespace_clauses 
+| [node) tablespace_datafile_clauses 
+| [node) tempfile_reuse_clause
+| [node) type_constructor_expression &  ! [node^) create
+| [node) update_set_clause
+| [node) update_set_clause_expr
+| [node) user_aux
+| [node) using_clause_opt
+| [node) using_index_clause 
+| [node) values_clause & ([node^) conditional_insert_clause[58,99)# | [node^) conditional_insert_clause)
+| [node) virtual_column_definition
+| [node) when_condition
+| [node) windowing_clause /*can be up 2 levels: & [node^) analytic_clause*/
+| [node) xmlelement & ![node^) select_term  
+| [node) xmlelement[41,54)
+| [node) XMLnamespaces_clause
+| [node-1-1) XMLnamespaces_clause & [node) string
+| [node) XMLnamespaces_clause[35,63)
+| [node) XMLTABLE_options
+;
+
+/**
+ * More elaborate condition on parse nodes to be indented.
+ * It specifies a constraint upon the node itself together with condition upon some ancestor.
+ * For example, 
+   [node) column  &  [ancestor) insert_into_clause  --<-- parse nodes with "column" payload, whose ancestor is labeled "insert_into_clause"  
+**/ 
+ancestorDescendant:
+ancestor < node & ![node^) "(x,y,z)" & (
+   [node) "ord_by_1desc"  &  [ancestor) order_by_clause & ![ancestor) analytic_clause 
+                                                        & ![ancestor^) analytic_clause 
+                                                        & ![ancestor^^) analytic_clause  
+ -- group_by_col: | [node) column  &  [ancestor) group_by_clause  
+ | [node) column  &  [ancestor) insert_into_clause[13,25)
+ | [node) column  &  [ancestor) attribute_clause                  & ![node^) compound_expression
+ | [node) column  &  [ancestor) dimension_join_clause             & ![node^) compound_expression
+ | [node) column  &  [ancestor) extended_attribute_clause         & ![node^) compound_expression
+ | [node) column  &  [ancestor) table_index_clause                & ![node^) compound_expression
+ | [node) column  &  [ancestor) range_partitions 
+ | [node) column  &  [ancestor) range_values_clause 
+ | [node) expr    &  [ancestor) "(x,y,z)"                         & ![node^) comparison_condition 
+                                                                  & ![node^) compound_expression
+                                                                  & ![node^) interval_expression
+ | [node) expr    &  [ancestor) analytic_function    
+ | [node) expr    &  [ancestor) aggregate_function                & ![ancestor) listagg
+ | [node) expr    &  [ancestor) par_expr_list   & ![node^) compound_expression --++758 
+                  &  [ancestor+3 < ancestor)    & ![node-1) '='
+ --| [node) expr    &  [ancestor) function_expression  
+ --                 &  ![ancestor)analytic_function
+ | [node) prm_spec &  [ancestor) fml_part  
+ | [node) pls_expr & ![node-1) '>' & [ancestor) paren_expr_list  
+ | [node) pls_expr & ![node-1) '>' & [ancestor) paren_aggr 
+);
+
+/**
+ * It is possible that a node can have multiple ancestors with same grammatic payload.
+ * For example, a column can be located within a subquery, which is nested within larger subquery.
+ * The Arbori directive "/\ancestor(ancestorDescendant|[ancestor node])" translated in SQL would have look like this:
+   select node, narrowest(ancestor) from
+       (select ancestor, node from ancestorDescendant)
+   group by node;
+ * Here the "narrowest" is aggregate function, which returns the parse node covering the narrowest interval. 
+ *
+ * Likewise, it is possible for a descendant to be nested within other descendant. 
+ * For example, "a-b" is an expression which has nested expressions "a" and "b". 
+ * The next operation in the pipeline - "\/node(...)" - is choosing the widest descendant nodes, such as "a-b" in the above example. 
+**/
+closestAncestorDescendent: \/node(/\ancestor(ancestorDescendant|[ancestor node]))
+;
+
+
+/**
+ * Two more aggregate Arbori queries.
+ * It is an artifact of a challenge to formally specify conditions like this:
+ "Choose the ancestors, which intervals span more than 5 tokens" 
+ * This is condition is nontrivial when node has multiple ancestors;
+ * naive implementation would have chosen a wrong ancestor 
+**/ 
+firstDescendant: \\node(closestAncestorDescendent)
+;
+lastDescendant: //node(closestAncestorDescendent)
+;
+
+firstAndLastDescendantsWithGap: 
+     firstDescendant.node) < [lastDescendant.node
+   & firstDescendant.ancestor = lastDescendant.ancestor  
+;
+
+ancestor4FirstAndLastDescendantsWithGap: firstAndLastDescendantsWithGap | [firstDescendant.ancestor]
+;
+
+complexIndentConditions:  
+    closestAncestorDescendent.ancestor = ancestor4FirstAndLastDescendantsWithGap.ancestor
+  & closestAncestorDescendent.node = closestAncestorDescendent.node   -- vacuous condition not to project this column away
+& [closestAncestorDescendent.ancestor+8 < closestAncestorDescendent.ancestor)
+;    
+
+
+indentedNodes1: simpleIndentConditions | complexIndentConditions
+->
+;
+
+/**
+ * This is the same set of nodes as indentedNodes1
+ * This duplicate relation is warranted for second callback 
+**/ 
+indentedNodes2: indentedNodes1
+->
+;
+
+
+/*
+ * Same idea as the chain of rules "ancestorDependent"->"indentedNodes2".
+ * In this rule we want to indent all descendants at the same level
+ */
+precursorDescendant1: 
+ancestor < node & 
+    [node) compound_expression[25,44) & ?node = '||' & [ancestor) select_term 
+;
+precursorDescendant2: 
+ancestor < node & [ancestor) pls_expr
+&  [node) binary_add_op & (?node = '||'  |   ?node = 'OR' )   
+;
+precursorDescendant:  precursorDescendant1 | precursorDescendant2 
+;
+closestPrecursorDescendant: \/node(/\ancestor(precursorDescendant))
+;
+sameLevel:
+    [closestPrecursorDescendant.ancestor+8 < closestPrecursorDescendant.ancestor) 
+  & closestPrecursorDescendant.node=closestPrecursorDescendant.node  -- careful not to project away this attribute if disjunct
+->
+;
+
+"built-ins":
+    [identifier) identifier 
+  & [call) analytic_function
+  & [call = [identifier
+-- | [identifier) 'TO_CHAR' -- not in grammar
+;
+"ids": --node) <= [node + 1
+   [identifier) identifier 
+;
+identifiers: "ids" - "built-ins"
+-> 
+;
+
+/**
+ * All alignments (paddings)
+ * This is binary relation: we want all grammar symbols matched by their scope.
+ * For example, in  
+   [id) identifier & [id+1) datatype & [scope) relational_properties 
+ * we are interested in all parse tree nodes named "id" with "identifier" grammar payload.
+ * Then, the node following the "id" (i.e. id+1) has to be labeled with "datatype" grammar symbol.
+ * Finally, we require the node named "scope" to be labeled with "relational_properties".
+ * The condition "scope < id" requires the node named "scope" to be ancestor and the "id" to be descendant.
+ * When parse tree nodes are represented as nested intervals, this condition informally stipulates that ancestor's 
+ * (i.e. "scope") Date Of Birth precedes that of descendant ("id").
+**/
+paddedIdsInScope: (
+-- types
+  [id) identifier & [id+1) datatype & [scope) relational_properties
+| [id) decl_id & ([id+1) prm_spec_unconstrained_type | [id+1) 'IN' | [id+1) 'OUT' ) & [scope) fml_part 
+                                                                                    & [scope+8 < scope)   -- where "8" is same as in ancestorDescendant
+| [id) decl_id & ([id+1) constrained_type | [id+1) object_d_rhs) & [scope) adt_definition
+| [id) decl_id & ([id+1) constrained_type | [id+1) object_d_rhs) & [scope) decl_list
+-- =>
+| [id) sim_expr & [id+1) '=' & [id+1+1) '>' & [scope) paren_expr_list
+-- :=
+| [id) name & [id+1) ':' & [id+1+1) '=' & [scope) seq_of_stmts
+-- =
+| [id) column & [id+1) '=' & [id+1+1) expr & [scope) where_clause
+| [id) column & [id+1) '=' & [id+1+1) expr & [scope) on_using_condition
+| [id) comparison_condition  & [id+1) 'THEN' & [id+1+1) expr & [scope) case_expression
+| [id) expr  & [id+1) 'THEN' & [id+1+1) expr & [scope) case_expression
+--
+--| [id) constrained_type & [id+1) default_expr_opt & [scope) decl_list
+) & scope < id
+->
+;
+
+/**
+ * Formal condition when to insert extra line breaks.
+ * You can either fine tune the rules below, or
+ * just set Options->Advanced Format->Break->After statement to Single Break
+ * to disable double line breaks altogether.
+**/
+extraLines1: child^=node & (
+   [node) stmt & [child) sql_query_or_dml_stmt  
+ | [node) stmt & [child) open_cursor_reference_statement
+ | [node) basic_decl_item & [child) subprg_spec
+) ;
+extraLines2: 
+  [node) sql_statement
+| [node) full_cursor_body
+| [node) stmt & ![node^) loop_stmt & ([node^) seq_of_stmts | [node^) stmt_list_opt) & [node+18 < node)  
+| [node) ',' & [node+1) method_specification 
+| [node) original_method_body_specification
+| [node) subprg_body & ![node^) create_plsql
+| [node) basic_decl_item_list & [node+1) subprg_body
+| [node) is_or_as & [node+1) decl_list & [node+1+20 < node+1) -- long declarations
+;
+extraLines: 
+  extraLines1 | extraLines2
+->
+;
+
+/**
+ * The rule listing which parenthesis padding is not welcome 
+ **/
+notPaddedParenthesis:
+ancestor < paren & (
+ (   [ancestor) constraint  & [ancestor) paren_expr_list 
+   | [ancestor) constraint & [ancestor^) constrained_type
+   | [ancestor) paren_expr_list & [ancestor^) function_call
+   | [ancestor) function_expression
+   | [ancestor) model_iterate_clause
+   | [ancestor) datetime_literal
+   | [ancestor) rollup_cube_clause
+   | [ancestor) datatype 
+ ) & ( [paren) '(' | [paren) ')' )
+|
+ (   [ancestor) model_clause  ) & ( [paren) '[' | [paren) ']' )
+ )
+->
+;
+

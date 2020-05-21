@@ -1,0 +1,2430 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="Fuj-AWS-DB" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>vis</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@//52.26.136.85:1526/vis</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>52.26.136.85</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>rzEDCmkoC10=</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1526</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>Fuj-AWS-DB</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P1-LDAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>finint</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>finint</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=findb-int.huit.harvard.edu)(PORT=8803)))(CONNECT_DATA=(SID=finint)(SERVER=DEDICATED)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>D5hRCwrgwFUQLD6VlPrw7w==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-int.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P1-LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P2-LDAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>fintest1</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>fintest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=findb-test.huit.harvard.edu)(PORT=8803)))(CONNECT_DATA=(SID=fintest)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-test.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P2-LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P2-LDAP-2" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>fintest1</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>fintest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=findb-test.huit.harvard.edu)(PORT=8803)))(CONNECT_DATA=(SID=fintest)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-test.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P2-LDAP-2</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P2-TNS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>fintest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-test.huit.harvard.edu:8803:fintest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-test.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>D5hRCwrgwFUQLD6VlPrw7w==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P2-TNS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P3-LDAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.138.152.223)(PORT=8803)))(CONNECT_DATA=(SID=findev)(SERVER=DEDICATED)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>10.138.152.223</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P3-LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P3-TNS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>D5hRCwrgwFUQLD6VlPrw7w==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P3-TNS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI PTCH" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>ofpiptch</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-poc.huit.harvard.edu:8803:ofpiptch</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-poc.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI PTCH</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P-TNS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-prod.huit.harvard.edu:8803:finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-prod.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P-TNS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-TRAIN" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>fintrain</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>fintrain</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = findb-train.huit.harvard.edu)(PORT = 8003)) (CONNECT_DATA = (SID = fintrain)(GLOBAL_NAME = fintrain.harvard.edu)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-train.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-TRAIN</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="POC AWS DEV" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>devr12</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:devr12</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>POC AWS DEV</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="POC DEV" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>devr12</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:devr12</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>POC DEV</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="PTCHR12" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>ptchr12</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@apollo23.cadm.harvard.edu:8803:ptchr12</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>apollo23.cadm.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>PTCHR12</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="RPCDEV" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>rpcdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-rpc.huit.harvard.edu:8803:rpcdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-rpc.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>D5hRCwrgwFUQLD6VlPrw7w==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>RPCDEV</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="VBOX-Oracle" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>orcl</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@localhost:1521/orcl</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>system</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>VBOX-Oracle</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P2-TNS-RSAYAL" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>fintest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-test.huit.harvard.edu:8803:fintest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-test.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>pYcBuBqx5poEwAGLa9jWdA==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rsayal</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P2-TNS-RSAYAL</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="ApexListenerConfig/FINDEV" className="oracle.dbtools.raptor.cloud.connection.ConnectionInfoReferenceable" xmlns="">
+      <Factory className="oracle.dbtools.raptor.cloud.connection.CConnectionInfoFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="ROOT_URI">
+            <Contents>https://finapps-dev.huit.harvard.edu:8852/ords/</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SERVICE_URI">
+            <Contents>https://finapps-dev.huit.harvard.edu:8852/ords/</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="USERNAME">
+            <Contents>21256447</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OATS-OLT" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>oatsprd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@localhost:38003:oatsprd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>9Y4vbVBlsGoyv7+9HKopRQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>38003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>olt</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OATS-OLT</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-DEV" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>plodsdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>plodsdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=plan-db-110.cadm.harvard.edu)(PORT=8023)))(CONNECT_DATA=(SERVICE_NAME=plodsdev)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>plan-db-110.cadm.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8023</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-DEV</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>planods</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-SANDBOX" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>plodssan</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>PLODSSAN</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS = (PROTOCOL = tcp)(HOST = plan-db-110.cadm.harvard.edu)(PORT = 8077)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = plodssan)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>plan-db-110.cadm.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8077</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-SANDBOX</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>planods</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P3-TNS-RSAYAL" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>pYcBuBqx5poEwAGLa9jWdA==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rsayal</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P3-TNS-RSAYAL</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="FUJ-OCI-DB" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>EBSDB</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@localhost:8521:EBSDB</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>rzEDCmkoC10=</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>apps</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>FUJ-OCI-DB</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OATS-ofb" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>oatsprd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@localhost:38003:oatsprd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>9Y4vbVBlsGoyv7+9HKopRQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>38003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>ofb</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OATS-ofb</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="RPCDEV-HUNFD" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>rpcdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-rpc.huit.harvard.edu:8803:rpcdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-rpc.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>EglP8zEfJ/6CKukUUGELgw==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>huap</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>RPCDEV-HUNFD</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-PROD" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>plodsprd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>plodsprd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=plan-db-410.cadm.harvard.edu)(PORT=8023)))(CONNECT_DATA=(SERVICE_NAME=plodsprd)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>pYcBuBqx5prFJMZPnd3UZw==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>plan-db-410.cadm.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8023</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-PROD</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>21404764</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-PROD-LDAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=findb-prod.huit.harvard.edu)(PORT=8003)))(CONNECT_DATA=(SID=finprod)(GLOBAL_NAME=finprod.harvard.edu)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-prod.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-PROD-LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rsayal</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-TEST" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@hubs-db01.test.ebs.cloud.huit.harvard.edu:8803:HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.test.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>QaOtVBshKIURSgV0Xiw/ug==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>PLNG0001</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-TEST</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-PROD-TNS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-prod.huit.harvard.edu:8003:finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-prod.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rsayal</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-PROD-TNS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-PROD2-TNS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb2-prod.huit.harvard.edu:8003:finprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb2-prod.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rsayal</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-PROD2-TNS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-TRAIN-LDAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>fintrain</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>fintrain</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = findb-train.huit.harvard.edu)(PORT = 8003)) (CONNECT_DATA = (SID = fintrain)(GLOBAL_NAME = fintrain.harvard.edu)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>pYcBuBqx5poEwAGLa9jWdA==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-train.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8003</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-TRAIN-LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rsayal</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-TEST-PLNG" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@hubs-db01.test.ebs.cloud.huit.harvard.edu:8803:HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.test.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>QaOtVBshKIURSgV0Xiw/ug==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>PLNG0001</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-TEST-PLNG</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-TEST-" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@hubs-db01.test.ebs.cloud.huit.harvard.edu:8803:HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.test.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>PLANODS</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-TEST-</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-TEST-PLANODS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@hubs-db01.test.ebs.cloud.huit.harvard.edu:8803:HUBSTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.test.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>PLANODS</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-TEST-PLANODS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-DEV-1" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>plodsdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>plodsdev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=plan-db-110.cadm.harvard.edu)(PORT=8023)))(CONNECT_DATA=(SERVICE_NAME=plodsdev)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>plan-db-110.cadm.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8023</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-DEV-1</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>planods</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUBTEST" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>plodstst</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>plodstst</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=plan-db-110.cadm.harvard.edu)(PORT=8053)))(CONNECT_DATA=(SID=plodstst)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>plan-db-110.cadm.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8053</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUBTEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>planods</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P3-TNS-HUAR" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>EglP8zEfJ/6CKukUUGELgw==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>hufnd</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P3-TNS-HUAR</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P3-TNS-HUEBS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>EglP8zEfJ/6CKukUUGELgw==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>HUEBS</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P3-TNS-HUEBS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="OFPI-P3-TNS-HUAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@findb-dev.huit.harvard.edu:8803:findev</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>findb-dev.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>EglP8zEfJ/6CKukUUGELgw==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>huap</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>OFPI-P3-TNS-HUAP</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUBS-NEXTGEN-TEST-LDAP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="LDAP_CONTEXT">
+            <Contents>cn=OracleContext,dc=harvard,dc=edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>hubstest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_NETWORK_ALIAS">
+            <Contents>hubstest</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=hubs-db01.test.ebs.cloud.huit.harvard.edu)(PORT=8803)))(CONNECT_DATA=(SERVICE_NAME=hubstest)))</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_SERVER">
+            <Contents>oidnames.cadm.harvard.edu:8010:8011</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>eidmdgd5D91v1VYd+6KYpQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.test.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUBS-NEXTGEN-TEST-LDAP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>planods</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="LDAP_USER">
+            <Contents/>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-PROD-RSAYAL-LH" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>hubsprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@localhost:8803:hubsprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>gWJTlqi9N2MHOew4KRRCNQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>21256447</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-PROD-RSAYAL-LH</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-PROD-RSAYAL" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>hubsprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@hubs-db01.ebs.cloud.huit.harvard.edu:8803:hubsprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>gWJTlqi9N2MHOew4KRRCNQ==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>21256447</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-PROD-RSAYAL</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HUB-NEXTGEN-PROD-PLANODS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+      <RefAddresses>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>hubsprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@hubs-db01.ebs.cloud.huit.harvard.edu:8803:hubsprod</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>hubs-db01.ebs.cloud.huit.harvard.edu</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>YJc4iACGDoRxvgs0dymsqg==</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>8803</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>PLANODS</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>HUB-NEXTGEN-PROD-PLANODS</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

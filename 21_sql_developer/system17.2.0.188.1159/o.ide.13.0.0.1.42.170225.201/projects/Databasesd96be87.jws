@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <value n="RunMRUConfigName" v="Default"/>
+   <value n="RunMRUConfigProjectRelativeUrl" v="/IdeConnections%23OFPI-P3-TNS.jpr"/>
+   <value n="RunMRUConfigProjectShortName" v="IdeConnections%23OFPI-P3-TNS.jpr"/>
+   <value n="RunMRUTargetURL" v="ide.worksheet.file:/C:/Users/ras8804/AppData/Local/Temp/worksheet7519440180963047162.sql"/>
+</jws:workspace>

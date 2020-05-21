@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">COMPONENT_NAME</Item>
+      <Item class="java.lang.String">PARAMETER_NAME</Item>
+      <Item class="java.lang.String">PARAMETER_VALUE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>201</Item>
+      <Item>266</Item>
+      <Item>451</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT b.component_name,  
+       c.parameter_name,  
+       a.parameter_value 
+FROM apps.fnd_svc_comp_param_vals a,  
+     apps.fnd_svc_components b,  
+     apps.fnd_svc_comp_params_b c 
+WHERE b.component_id = a.component_id  
+     AND b.component_type = c.component_type  
+     AND c.parameter_id = a.parameter_id 
+     AND c.encrypted_flag = 'N' 
+   AND regexp_like (b.component_name, '(Mailer)|(HU)','i') 
+--     AND c.parameter_name in ('OUTBOUND_SERVER', 'REPLYTO') 
+ORDER BY c.parameter_name</uniqueName>
+</TableSettings>

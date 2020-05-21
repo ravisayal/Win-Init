@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ORA_DATABASE_NAME</Item>
+      <Item class="java.lang.String">ORA_DATABASE_NAME_1</Item>
+      <Item class="java.lang.String">LOAD_KEY</Item>
+      <Item class="java.lang.String">INT_KEY</Item>
+      <Item class="java.lang.String">INTERFACE_CODE</Item>
+      <Item class="java.lang.String">SRC_KEY</Item>
+      <Item class="java.lang.String">SRC_NAME</Item>
+      <Item class="java.lang.String">TUB_ORG</Item>
+      <Item class="java.lang.String">TUB_ORG_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">OBJECT</Item>
+      <Item class="java.lang.String">OBJECT_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">FUND</Item>
+      <Item class="java.lang.String">FUND_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">ACT_SUB</Item>
+      <Item class="java.lang.String">ACT_SUB_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">ROOT</Item>
+      <Item class="java.lang.String">ROOT_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">POSITION</Item>
+      <Item class="java.lang.String">POSITION_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">EMPLOYEE</Item>
+      <Item class="java.lang.String">EMPLOYEE_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">YEAR</Item>
+      <Item class="java.lang.String">YEAR_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">PERIOD</Item>
+      <Item class="java.lang.String">PERIOD_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">SCENARIO</Item>
+      <Item class="java.lang.String">SCENARIO_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">VALUE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">VERSION</Item>
+      <Item class="java.lang.String">VERSION_SRC_DIM_KEY</Item>
+      <Item class="java.lang.String">BATCH_KEY</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>133</Item>
+      <Item>84</Item>
+      <Item>70</Item>
+      <Item>60</Item>
+      <Item>138</Item>
+      <Item>63</Item>
+      <Item>73</Item>
+      <Item>68</Item>
+      <Item>141</Item>
+      <Item>57</Item>
+      <Item>132</Item>
+      <Item>47</Item>
+      <Item>121</Item>
+      <Item>82</Item>
+      <Item>139</Item>
+      <Item>48</Item>
+      <Item>123</Item>
+      <Item>68</Item>
+      <Item>143</Item>
+      <Item>70</Item>
+      <Item>145</Item>
+      <Item>45</Item>
+      <Item>120</Item>
+      <Item>57</Item>
+      <Item>132</Item>
+      <Item>71</Item>
+      <Item>146</Item>
+      <Item>50</Item>
+      <Item>83</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>138</Item>
+      <Item>63</Item>
+      <Item>138</Item>
+      <Item>76</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect ora_database_name, ora_database_name,
+   int.*
+   from   pln_data_xform_int int
+where  1=1
+and    year         =   'FY20'
+and    period       =   'Oct'
+and    tub_org    like  '145-06770'
+and    object     like  '9303'
+--group by ora_database_name, year, period, TUB_ORG, OBJECT, POSITION
+minus
+-- On Prem Data
+select ora_database_name, ora_database_name@PLODS_HUBSTEST_LINK.HARVARD.EDU as source, 
+       xform.* 
+from pln_data_xform_int@PLODS_HUBSTEST_LINK.HARVARD.EDU xform
+where  1=1
+and    year         =   'FY20'
+and    period       =   'Oct'
+and    tub_org    like  '145-06770'
+and    object     like  '9303'
+--group by ora_database_name,  year, period, TUB_ORG, OBJECT, POSITION</uniqueName>
+</TableSettings>

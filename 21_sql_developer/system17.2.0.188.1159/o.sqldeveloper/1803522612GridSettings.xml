@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">GROUP_ID</Item>
+      <Item class="java.lang.String">HNG</Item>
+      <Item class="java.lang.String">ON_PREM</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>215</Item>
+      <Item>130</Item>
+      <Item>156</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect  * 
+from   
+(
+select  'HNG' Src, group_id
+from    pln_hsp_groups_v
+union  
+select  'On-Prem' src,  group_name 
+from    PLN_SHARED_SVC_USER_GROUPS_V@PLODS_HUBSTEST_LINK.HARVARD.EDU
+) main
+pivot ( 
+  count(*) for src in ( 'HNG' HNG, 'On-Prem' On_Prem )
+)</uniqueName>
+</TableSettings>

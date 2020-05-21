@@ -1,0 +1,349 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_SITE_CODE</Item>
+      <Item class="java.lang.String">PARTY_SITE_NAME</Item>
+      <Item class="java.lang.String">VENDOR_SITE_ID</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">VENDOR_ID</Item>
+      <Item class="java.lang.String">VENDOR_SITE_CODE_1</Item>
+      <Item class="java.lang.String">VENDOR_SITE_CODE_ALT</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">PURCHASING_SITE_FLAG</Item>
+      <Item class="java.lang.String">RFQ_ONLY_SITE_FLAG</Item>
+      <Item class="java.lang.String">PAY_SITE_FLAG</Item>
+      <Item class="java.lang.String">ATTENTION_AR_FLAG</Item>
+      <Item class="java.lang.String">ADDRESS_LINE1</Item>
+      <Item class="java.lang.String">ADDRESS_LINES_ALT</Item>
+      <Item class="java.lang.String">ADDRESS_LINE2</Item>
+      <Item class="java.lang.String">ADDRESS_LINE3</Item>
+      <Item class="java.lang.String">CITY</Item>
+      <Item class="java.lang.String">STATE</Item>
+      <Item class="java.lang.String">ZIP</Item>
+      <Item class="java.lang.String">PROVINCE</Item>
+      <Item class="java.lang.String">COUNTRY</Item>
+      <Item class="java.lang.String">AREA_CODE</Item>
+      <Item class="java.lang.String">PHONE</Item>
+      <Item class="java.lang.String">CUSTOMER_NUM</Item>
+      <Item class="java.lang.String">SHIP_TO_LOCATION_ID</Item>
+      <Item class="java.lang.String">BILL_TO_LOCATION_ID</Item>
+      <Item class="java.lang.String">SHIP_VIA_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">FREIGHT_TERMS_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">FOB_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">INACTIVE_DATE</Item>
+      <Item class="java.lang.String">FAX</Item>
+      <Item class="java.lang.String">FAX_AREA_CODE</Item>
+      <Item class="java.lang.String">TELEX</Item>
+      <Item class="java.lang.String">PAYMENT_METHOD_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">BANK_ACCOUNT_NAME</Item>
+      <Item class="java.lang.String">BANK_ACCOUNT_NUM</Item>
+      <Item class="java.lang.String">BANK_NUM</Item>
+      <Item class="java.lang.String">BANK_ACCOUNT_TYPE</Item>
+      <Item class="java.lang.String">TERMS_DATE_BASIS</Item>
+      <Item class="java.lang.String">CURRENT_CATALOG_NUM</Item>
+      <Item class="java.lang.String">VAT_CODE</Item>
+      <Item class="java.lang.String">DISTRIBUTION_SET_ID</Item>
+      <Item class="java.lang.String">ACCTS_PAY_CODE_COMBINATION_ID</Item>
+      <Item class="java.lang.String">PREPAY_CODE_COMBINATION_ID</Item>
+      <Item class="java.lang.String">PAY_GROUP_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">PAYMENT_PRIORITY</Item>
+      <Item class="java.lang.String">TERMS_ID</Item>
+      <Item class="java.lang.String">INVOICE_AMOUNT_LIMIT</Item>
+      <Item class="java.lang.String">PAY_DATE_BASIS_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">ALWAYS_TAKE_DISC_FLAG</Item>
+      <Item class="java.lang.String">INVOICE_CURRENCY_CODE</Item>
+      <Item class="java.lang.String">PAYMENT_CURRENCY_CODE</Item>
+      <Item class="java.lang.String">HOLD_ALL_PAYMENTS_FLAG</Item>
+      <Item class="java.lang.String">HOLD_FUTURE_PAYMENTS_FLAG</Item>
+      <Item class="java.lang.String">HOLD_REASON</Item>
+      <Item class="java.lang.String">HOLD_UNMATCHED_INVOICES_FLAG</Item>
+      <Item class="java.lang.String">AP_TAX_ROUNDING_RULE</Item>
+      <Item class="java.lang.String">AUTO_TAX_CALC_FLAG</Item>
+      <Item class="java.lang.String">AUTO_TAX_CALC_OVERRIDE</Item>
+      <Item class="java.lang.String">AMOUNT_INCLUDES_TAX_FLAG</Item>
+      <Item class="java.lang.String">EXCLUSIVE_PAYMENT_FLAG</Item>
+      <Item class="java.lang.String">TAX_REPORTING_SITE_FLAG</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">REQUEST_ID</Item>
+      <Item class="java.lang.String">PROGRAM_APPLICATION_ID</Item>
+      <Item class="java.lang.String">PROGRAM_ID</Item>
+      <Item class="java.lang.String">PROGRAM_UPDATE_DATE</Item>
+      <Item class="java.lang.String">VALIDATION_NUMBER</Item>
+      <Item class="java.lang.String">EXCLUDE_FREIGHT_FROM_DISCOUNT</Item>
+      <Item class="java.lang.String">VAT_REGISTRATION_NUM</Item>
+      <Item class="java.lang.String">OFFSET_VAT_CODE</Item>
+      <Item class="java.lang.String">ORG_ID</Item>
+      <Item class="java.lang.String">CHECK_DIGITS</Item>
+      <Item class="java.lang.String">BANK_NUMBER</Item>
+      <Item class="java.lang.String">ADDRESS_LINE4</Item>
+      <Item class="java.lang.String">COUNTY</Item>
+      <Item class="java.lang.String">ADDRESS_STYLE</Item>
+      <Item class="java.lang.String">LANGUAGE</Item>
+      <Item class="java.lang.String">ALLOW_AWT_FLAG</Item>
+      <Item class="java.lang.String">AWT_GROUP_ID</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE1</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE2</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE3</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE4</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE5</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE6</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE7</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE8</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE9</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE10</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE11</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE12</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE13</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE14</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE15</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE16</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE17</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE18</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE19</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE20</Item>
+      <Item class="java.lang.String">GLOBAL_ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">EDI_TRANSACTION_HANDLING</Item>
+      <Item class="java.lang.String">EDI_ID_NUMBER</Item>
+      <Item class="java.lang.String">EDI_PAYMENT_METHOD</Item>
+      <Item class="java.lang.String">EDI_PAYMENT_FORMAT</Item>
+      <Item class="java.lang.String">EDI_REMITTANCE_METHOD</Item>
+      <Item class="java.lang.String">BANK_CHARGE_BEARER</Item>
+      <Item class="java.lang.String">EDI_REMITTANCE_INSTRUCTION</Item>
+      <Item class="java.lang.String">BANK_BRANCH_TYPE</Item>
+      <Item class="java.lang.String">PAY_ON_CODE</Item>
+      <Item class="java.lang.String">DEFAULT_PAY_SITE_ID</Item>
+      <Item class="java.lang.String">PAY_ON_RECEIPT_SUMMARY_CODE</Item>
+      <Item class="java.lang.String">TP_HEADER_ID</Item>
+      <Item class="java.lang.String">ECE_TP_LOCATION_CODE</Item>
+      <Item class="java.lang.String">PCARD_SITE_FLAG</Item>
+      <Item class="java.lang.String">MATCH_OPTION</Item>
+      <Item class="java.lang.String">COUNTRY_OF_ORIGIN_CODE</Item>
+      <Item class="java.lang.String">FUTURE_DATED_PAYMENT_CCID</Item>
+      <Item class="java.lang.String">CREATE_DEBIT_MEMO_FLAG</Item>
+      <Item class="java.lang.String">OFFSET_TAX_FLAG</Item>
+      <Item class="java.lang.String">SUPPLIER_NOTIF_METHOD</Item>
+      <Item class="java.lang.String">EMAIL_ADDRESS</Item>
+      <Item class="java.lang.String">REMITTANCE_EMAIL</Item>
+      <Item class="java.lang.String">PRIMARY_PAY_SITE_FLAG</Item>
+      <Item class="java.lang.String">SHIPPING_CONTROL</Item>
+      <Item class="java.lang.String">SELLING_COMPANY_IDENTIFIER</Item>
+      <Item class="java.lang.String">GAPLESS_INV_NUM_FLAG</Item>
+      <Item class="java.lang.String">DUNS_NUMBER</Item>
+      <Item class="java.lang.String">TOLERANCE_ID</Item>
+      <Item class="java.lang.String">LOCATION_ID</Item>
+      <Item class="java.lang.String">PARTY_SITE_ID</Item>
+      <Item class="java.lang.String">SERVICES_TOLERANCE_ID</Item>
+      <Item class="java.lang.String">RETAINAGE_RATE</Item>
+      <Item class="java.lang.String">TCA_SYNC_STATE</Item>
+      <Item class="java.lang.String">TCA_SYNC_PROVINCE</Item>
+      <Item class="java.lang.String">TCA_SYNC_COUNTY</Item>
+      <Item class="java.lang.String">TCA_SYNC_CITY</Item>
+      <Item class="java.lang.String">TCA_SYNC_ZIP</Item>
+      <Item class="java.lang.String">TCA_SYNC_COUNTRY</Item>
+      <Item class="java.lang.String">PAY_AWT_GROUP_ID</Item>
+      <Item class="java.lang.String">CAGE_CODE</Item>
+      <Item class="java.lang.String">LEGAL_BUSINESS_NAME</Item>
+      <Item class="java.lang.String">DOING_BUS_AS_NAME</Item>
+      <Item class="java.lang.String">DIVISION_NAME</Item>
+      <Item class="java.lang.String">SMALL_BUSINESS_CODE</Item>
+      <Item class="java.lang.String">CCR_COMMENTS</Item>
+      <Item class="java.lang.String">DEBARMENT_START_DATE</Item>
+      <Item class="java.lang.String">DEBARMENT_END_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>122</Item>
+      <Item>151</Item>
+      <Item>105</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>77</Item>
+      <Item>134</Item>
+      <Item>146</Item>
+      <Item>125</Item>
+      <Item>138</Item>
+      <Item>83</Item>
+      <Item>143</Item>
+      <Item>131</Item>
+      <Item>97</Item>
+      <Item>127</Item>
+      <Item>243</Item>
+      <Item>123</Item>
+      <Item>194</Item>
+      <Item>99</Item>
+      <Item>61</Item>
+      <Item>50</Item>
+      <Item>75</Item>
+      <Item>70</Item>
+      <Item>67</Item>
+      <Item>80</Item>
+      <Item>53</Item>
+      <Item>102</Item>
+      <Item>137</Item>
+      <Item>134</Item>
+      <Item>145</Item>
+      <Item>181</Item>
+      <Item>119</Item>
+      <Item>138</Item>
+      <Item>47</Item>
+      <Item>105</Item>
+      <Item>48</Item>
+      <Item>193</Item>
+      <Item>134</Item>
+      <Item>128</Item>
+      <Item>73</Item>
+      <Item>130</Item>
+      <Item>119</Item>
+      <Item>147</Item>
+      <Item>72</Item>
+      <Item>132</Item>
+      <Item>206</Item>
+      <Item>186</Item>
+      <Item>159</Item>
+      <Item>119</Item>
+      <Item>69</Item>
+      <Item>143</Item>
+      <Item>185</Item>
+      <Item>152</Item>
+      <Item>155</Item>
+      <Item>159</Item>
+      <Item>158</Item>
+      <Item>180</Item>
+      <Item>93</Item>
+      <Item>199</Item>
+      <Item>148</Item>
+      <Item>135</Item>
+      <Item>161</Item>
+      <Item>173</Item>
+      <Item>155</Item>
+      <Item>161</Item>
+      <Item>134</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>82</Item>
+      <Item>159</Item>
+      <Item>86</Item>
+      <Item>146</Item>
+      <Item>127</Item>
+      <Item>205</Item>
+      <Item>147</Item>
+      <Item>116</Item>
+      <Item>58</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>99</Item>
+      <Item>60</Item>
+      <Item>103</Item>
+      <Item>72</Item>
+      <Item>114</Item>
+      <Item>100</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>124</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>130</Item>
+      <Item>178</Item>
+      <Item>171</Item>
+      <Item>100</Item>
+      <Item>136</Item>
+      <Item>136</Item>
+      <Item>154</Item>
+      <Item>137</Item>
+      <Item>181</Item>
+      <Item>122</Item>
+      <Item>93</Item>
+      <Item>133</Item>
+      <Item>196</Item>
+      <Item>94</Item>
+      <Item>148</Item>
+      <Item>112</Item>
+      <Item>99</Item>
+      <Item>164</Item>
+      <Item>180</Item>
+      <Item>160</Item>
+      <Item>113</Item>
+      <Item>151</Item>
+      <Item>101</Item>
+      <Item>119</Item>
+      <Item>148</Item>
+      <Item>120</Item>
+      <Item>177</Item>
+      <Item>144</Item>
+      <Item>93</Item>
+      <Item>95</Item>
+      <Item>88</Item>
+      <Item>96</Item>
+      <Item>149</Item>
+      <Item>108</Item>
+      <Item>108</Item>
+      <Item>128</Item>
+      <Item>118</Item>
+      <Item>100</Item>
+      <Item>93</Item>
+      <Item>125</Item>
+      <Item>125</Item>
+      <Item>80</Item>
+      <Item>137</Item>
+      <Item>130</Item>
+      <Item>99</Item>
+      <Item>138</Item>
+      <Item>102</Item>
+      <Item>149</Item>
+      <Item>137</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect  aps.vendor_site_code, hps.party_site_name, aps.*
+from    ap_supplier_sites_all aps,
+        hz_party_sites hps 
+where   1 = 1
+and    aps.party_site_id = hps.party_site_id
+and     vendor_id = 53556</uniqueName>
+</TableSettings>

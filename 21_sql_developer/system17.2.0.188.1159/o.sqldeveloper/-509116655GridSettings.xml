@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ROW_ID</Item>
+      <Item class="java.lang.String">RESOURCE_CONSUMER_GROUP</Item>
+      <Item class="java.lang.String">APPLICATION_ID</Item>
+      <Item class="java.lang.String">CONCURRENT_QUEUE_ID</Item>
+      <Item class="java.lang.String">CONCURRENT_QUEUE_NAME</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">PROCESSOR_APPLICATION_ID</Item>
+      <Item class="java.lang.String">CONCURRENT_PROCESSOR_ID</Item>
+      <Item class="java.lang.String">MAX_PROCESSES</Item>
+      <Item class="java.lang.String">RUNNING_PROCESSES</Item>
+      <Item class="java.lang.String">CACHE_SIZE</Item>
+      <Item class="java.lang.String">MIN_PROCESSES</Item>
+      <Item class="java.lang.String">TARGET_PROCESSES</Item>
+      <Item class="java.lang.String">TARGET_NODE</Item>
+      <Item class="java.lang.String">TARGET_QUEUE</Item>
+      <Item class="java.lang.String">SLEEP_SECONDS</Item>
+      <Item class="java.lang.String">CONTROL_CODE</Item>
+      <Item class="java.lang.String">DIAGNOSTIC_LEVEL</Item>
+      <Item class="java.lang.String">MANAGER_TYPE</Item>
+      <Item class="java.lang.String">NODE_NAME</Item>
+      <Item class="java.lang.String">NODE_NAME2</Item>
+      <Item class="java.lang.String">OS_QUEUE</Item>
+      <Item class="java.lang.String">OS_QUEUE2</Item>
+      <Item class="java.lang.String">DATA_GROUP_ID</Item>
+      <Item class="java.lang.String">RESTART_TYPE</Item>
+      <Item class="java.lang.String">RESTART_INTERVAL</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ENABLED_FLAG</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+      <Item class="java.lang.String">USER_CONCURRENT_QUEUE_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>131</Item>
+      <Item>176</Item>
+      <Item>103</Item>
+      <Item>145</Item>
+      <Item>162</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>83</Item>
+      <Item>125</Item>
+      <Item>170</Item>
+      <Item>172</Item>
+      <Item>104</Item>
+      <Item>129</Item>
+      <Item>81</Item>
+      <Item>102</Item>
+      <Item>122</Item>
+      <Item>92</Item>
+      <Item>98</Item>
+      <Item>101</Item>
+      <Item>101</Item>
+      <Item>116</Item>
+      <Item>98</Item>
+      <Item>82</Item>
+      <Item>87</Item>
+      <Item>73</Item>
+      <Item>79</Item>
+      <Item>104</Item>
+      <Item>94</Item>
+      <Item>118</Item>
+      <Item>134</Item>
+      <Item>74</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>94</Item>
+      <Item>446</Item>
+      <Item>222</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-TRAINselect * from apps.fnd_concurrent_queues_vl 
+where 1= 1
+and  control_code is null
+--and target_node = 'DELTA'</uniqueName>
+</TableSettings>

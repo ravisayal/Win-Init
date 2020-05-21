@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">Name</Item>
+      <Item class="java.lang.String">Value</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>145</Item>
+      <Item>321</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect o.*, s.nls_length_semantics, s.plsql_ccflags, s.plsql_code_type, s.plsql_debug, s.plsql_optimize_level, s.plsql_warnings 
+, s.plscope_settings 
+ from DBA_objects o, DBA_plsql_object_settings s 
+		  where o.owner = :OBJECT_OWNER  
+		  and o.object_name = :OBJECT_NAME 
+		  AND ROWNUM = 1 
+		   and object_type = :OBJECT_TYPE 
+         and s.owner = :OBJECT_OWNER   
+		  and s.type = :OBJECT_TYPE   
+		  and s.name = :OBJECT_NAME</uniqueName>
+</TableSettings>

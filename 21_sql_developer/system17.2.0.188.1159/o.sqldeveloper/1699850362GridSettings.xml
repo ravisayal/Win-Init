@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">MEANING</Item>
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">REQUESTOR</Item>
+      <Item class="java.lang.String">END_DATE</Item>
+      <Item class="java.lang.String">EMAIL_ADDRESS</Item>
+      <Item class="java.lang.String">REQUEST_ID</Item>
+      <Item class="java.lang.String">NUMBER_OF_COPIES</Item>
+      <Item class="java.lang.String">PRINTER</Item>
+      <Item class="java.lang.String">REQUEST_DATE</Item>
+      <Item class="java.lang.String">REQUESTED_START_DATE</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+      <Item class="java.lang.String">ARGUMENT_TEXT</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>65</Item>
+      <Item>79</Item>
+      <Item>593</Item>
+      <Item>71</Item>
+      <Item>194</Item>
+      <Item>82</Item>
+      <Item>123</Item>
+      <Item>62</Item>
+      <Item>145</Item>
+      <Item>148</Item>
+      <Item>901</Item>
+      <Item>397</Item>
+      <Item>180</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT fl.meaning
+     , fu.user_name
+     , fu.description requestor
+     , fu.end_date
+     , NVL(fu.email_address, 'n/a') email_address
+     , fcr.request_id
+     , fcr.number_of_copies
+     , fcr.printer
+     , fcr.request_date
+     , fcr.requested_start_date
+     , fcp.description
+     , fcr.argument_text
+     , frt.responsibility_name
+  FROM apps.fnd_concurrent_requests fcr
+     , apps.fnd_user fu
+     , apps.fnd_lookups fl
+     , apps.fnd_concurrent_programs_vl fcp
+     , apps.fnd_responsibility_tl frt
+ WHERE fcr.requested_by = fu.user_id
+   AND fl.lookup_type = 'CP_STATUS_CODE'
+   AND fcr.status_code = fl.lookup_code
+   AND fcr.program_application_id = fcp.application_id
+   AND fcr.concurrent_program_id = fcp.concurrent_program_id
+   AND fcr.responsibility_id = frt.responsibility_id
+   AND fcr.phase_code = 'P'</uniqueName>
+</TableSettings>

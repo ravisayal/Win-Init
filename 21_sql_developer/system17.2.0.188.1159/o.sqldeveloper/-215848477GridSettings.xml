@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ORGANIZATION_PROFILE_ID</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">SEGMENT1</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">PARTY_NAME</Item>
+      <Item class="java.lang.String">ORGANIZATION_NAME</Item>
+      <Item class="java.lang.String">TCA_SYNC_VENDOR_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>162</Item>
+      <Item>138</Item>
+      <Item>71</Item>
+      <Item>348</Item>
+      <Item>327</Item>
+      <Item>327</Item>
+      <Item>327</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect organization_profile_id, v.last_update_date, v.segment1, v.vendor_name, hzp.party_name , hp.organization_name,  v.tca_sync_vendor_name
+from ar.HZ_ORGANIZATION_PROFILES hp,  ap.ap_suppliers v, ar.hz_parties hzp
+where hp.party_id = v.party_id 
+and v.party_id=hzp.party_id
+and v.vendor_name &lt;> v.tca_sync_vendor_name
+and hp.party_id = hzp.party_id
+and v.vendor_type_lookup_code &lt;> 'EMPLOYEE'
+and exists 
+    ( select  aip.invoice_id 
+      from    apps.ap_invoice_payments_all aip,
+              apps.ap_invoices_all ai,
+              apps.ap_checks_all ac
+      where   1  = 1
+      and     aip.invoice_id = ai.invoice_id
+      and     ai.vendor_id = v.vendor_id
+      and    aip.accounting_date >= To_Date('23-May-2019','dd-mon-yyyy')
+     ) 
+order by 1 desc</uniqueName>
+</TableSettings>

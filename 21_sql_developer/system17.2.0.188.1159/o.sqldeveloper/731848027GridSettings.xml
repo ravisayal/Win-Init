@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">FLEX_VALUE_SET_NAME</Item>
+      <Item class="java.lang.String">FLEX_VALUE</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+      <Item class="java.lang.String">ENABLED_FLAG</Item>
+      <Item class="java.lang.String">PARENT_FLEX_VALUE_LOW</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>137</Item>
+      <Item>79</Item>
+      <Item>131</Item>
+      <Item>94</Item>
+      <Item>153</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+      <Item class="java.lang.String">5 desc</Item>
+      <Item class="java.lang.String">5 asc</Item>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNS-RSAYALselect      ffvs.flex_value_set_name,
+            ffv.flex_value,
+            ffv.description,
+            ffv.enabled_flag,
+            ffv.PARENT_FLEX_VALUE_LOW
+from   apps.fND_FLEX_VALUE_SETS ffvs,
+       apps.fND_FLEX_VALUES_VL ffv
+where  1=1
+and ffvs.flex_value_set_id = ffv.flex_value_set_id
+--and ffv.enabled_flag = 'Y'
+and ffvs.flex_value_set_name like 'HRVD_SUBACTIVITY'
+--And      Regexp_Like(ffv.flex_value, '^[[:alpha:]]+$') -- returns only the records which are ALPHAS
+And      Regexp_Like(ffv.flex_value , '^[[:alnum:]]+$') -- returns only the records which are ALPHANUMERIC 
+And      Regexp_Like(ffv.flex_value, '^[[:digit:]]+$') -- returns only the records which are NUMBERS
+order by ffv.flex_value</uniqueName>
+</TableSettings>

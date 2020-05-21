@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <value n="RunMRUConfigName" v="Default"/>
+   <value n="RunMRUConfigProjectRelativeUrl" v="IdeConnections#OFPI-P3-TNS.jpr"/>
+   <value n="RunMRUConfigProjectShortName" v="IdeConnections#OFPI-P3-TNS.jpr"/>
+   <value n="RunMRUTargetURL" v="ide.worksheet.file:/C:/Users/ras8804/AppData/Local/Temp/worksheet2203508006429454469.sql"/>
+   <hash n="working-sets">
+      <value n=".current" v="(All Files)"/>
+      <hash n="(All Files)">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+      </hash>
+   </hash>
+</jws:workspace>

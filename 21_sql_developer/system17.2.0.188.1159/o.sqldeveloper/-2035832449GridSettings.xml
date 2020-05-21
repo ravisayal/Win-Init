@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">APP_NAME</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">APP_NAME_1</Item>
+      <Item class="java.lang.String">TUB_1</Item>
+      <Item class="java.lang.String">'F'</Item>
+      <Item class="java.lang.String">NULL</Item>
+      <Item class="java.lang.String">SYSDATE</Item>
+      <Item class="java.lang.String">'21256447'</Item>
+      <Item class="java.lang.String">'21256447'_1</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>72</Item>
+      <Item>38</Item>
+      <Item>84</Item>
+      <Item>50</Item>
+      <Item>29</Item>
+      <Item>47</Item>
+      <Item>138</Item>
+      <Item>71</Item>
+      <Item>83</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">1 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODS(
+select distinct app_name, tub, app_name , tub, 'F',NULL,sysdate, '21256447','21256447'
+from PLN_APP_TUB_v  app_list
+where 1=1
+and    app_name like 'PLNG%'
+and   to_number(substr(app_name, 7,2)) >=25
+--order by 1, 2
+)</uniqueName>
+</TableSettings>

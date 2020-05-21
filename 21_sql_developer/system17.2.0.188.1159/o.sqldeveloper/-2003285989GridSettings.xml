@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PAYMENT_TERMS</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>169</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect  distinct payment_terms
+from   huap_b2p_vendor_data_orcl
+where  1=1
+--and   segment1  like '601762'</uniqueName>
+</TableSettings>

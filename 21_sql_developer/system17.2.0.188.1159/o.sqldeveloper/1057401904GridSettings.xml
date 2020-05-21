@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>79</Item>
+      <Item>330</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSelect      user_name, description
+         From        apps.Fnd_User
+         Where       1=1
+         --and         employee_id = 420874
+         and         user_name in ('10515017', '11399398', '20477539', '20578602', '21248134', '21256447', '21404764', '21426547', '30533569', '40408290', '40497420', '41276169', '50496007', '50929477', '50971112', '61338969', '61386319', '71434850', '80268467', '80408838', '80585845', '80787634', '81357919', '81386315', '90613596')
+ --        And         User_Id = 4205</uniqueName>
+</TableSettings>

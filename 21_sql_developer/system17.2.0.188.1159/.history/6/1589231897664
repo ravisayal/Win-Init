@@ -1,0 +1,90 @@
+alter session set current_schema=APPS
+;
+
+Select      email_address, fu.*
+         From        Fnd_User fu
+         Where       1=1
+         --and         employee_id = 420874
+         and   regexp_like (user_name, '(90911724)|(31147700)|(70444135)|(30393406)','i')
+         --And         User_Id = 4205
+;
+
+
+select  from_user, to_user, sent_date, subject
+from    wf_notifications
+where   1=1
+and     message_type like 'HUREQAPP'
+--and   message_type like 'HUAPDIST'
+--and    mail_status is not null
+--and     mail_status like 'SENT'
+and   (  regexp_like ( from_user, '(xkyungah)', 'i')
+or     regexp_like ( to_user, '(kyungah)', 'i')
+)
+;
+
+kyungah_benedetti@hms.harvard.edu
+KyungAh_Benedetti@hms.harvard.edu
+KyungAh_Benedetti@hms.harvard.edu
+
+select sysdate, pf.*
+from  apps.FND_USER_PREFERENCES pf
+where  1=1
+and   regexp_like (user_name, '(90911724)|(70633434)|(31147700)|(70444135)|(30393406)','i')
+and   PREFERENCE_NAME like 'MAILTYPE'
+;
+
+
+SELECT email_address, nvl(WF_PREF.get_pref(name, 'MAILTYPE'), notification_preference) pref
+FROM wf_roles
+WHERE name = '90911724'
+;
+
+
+update  FND_USER_PREFERENCES fp
+set     PREFERENCE_VALUE  = (select PREFERENCE_VALUE
+                            from    FND_USER_PREF_BAK10302019 bkup
+                            where  1=1
+                            and    bkup.user_name = fp.user_name
+                            and    bkup.PREFERENCE_NAME= fp.PREFERENCE_NAME
+                            and    bkup.module_name = fp.module_name
+                            )
+where   1=1
+and   PREFERENCE_NAME='MAILTYPE' 
+;
+
+
+
+Select       *
+         From       Dba_Objects
+         Where       1=1
+         And           Object_Type Like 'TABLE'
+         and    owner like 'APPLSYS'
+         And           Object_Name Like 'WF_%'
+;
+
+select   *
+from    WF_LOCAL_ROLES
+;
+
+select  *
+from    WF_LOCAL_USERS
+;
+
+select   *
+from   WF_LOCAL_USER_ROLES
+where 1=1
+and   regexp_like (user_name, '(90911724)|(70633434)','i')
+;
+
+select  *
+from    WF_USER_ROLE_ASSIGNMENTS
+where 1=1
+and   regexp_like (user_name, '(90911724)|(70633434)','i')
+;
+
+
+select   *
+from    WF_NOTIFICATION_ATTRIBUTES
+where  1=1
+and    notification_id in (34929100, 34932794) 
+;

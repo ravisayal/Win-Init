@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">MEANING</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>293</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT   meaning
+    FROM     apps.fnd_lookup_values t,
+             apps.fnd_lookup_types l
+    WHERE    l.lookup_type           like 'HUAR%'
+      --AND    upper(t.lookup_code)    = 'PRIV_USER'
+      AND    l.lookup_type           = t.lookup_type
+      AND    l.security_group_id     = t.security_group_id
+      AND    l.view_application_id   = t.view_application_id
+      --and   regexp_like (meaning, '(^|\s|\W)17($|\s|\W)');	
+      --RPCDEV	1548796024822	SQL	1	0.043</uniqueName>
+</TableSettings>

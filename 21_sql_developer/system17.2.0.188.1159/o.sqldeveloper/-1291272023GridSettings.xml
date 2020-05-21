@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TUB</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>128</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect distinct tub from (
+select * 
+from (
+select   
+          substr(tub_org, 1,3) as tub,
+          substr(tub_org, 5,5) as org,
+          object,
+          fund,
+          substr(act_sub,1,6) as activity,
+          substr(act_sub,8,4) as subactivity,
+          root,
+		  period,
+		  value
+from      pln_data_xform_sum
+where     1=1
+--and       db_name like 'CINA'
+--and       app_name like 'PLNG0008'
+--and       year = 'FY17'
+--and       scenario = 'Actual'
+--and       version = 'Final'
+)
+pivot (
+        sum(value)
+		for period
+		in ('Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun')
+)
+)
+where 1=1</uniqueName>
+</TableSettings>

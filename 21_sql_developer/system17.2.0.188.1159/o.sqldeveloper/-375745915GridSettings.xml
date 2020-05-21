@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATION_DATE_1</Item>
+      <Item class="java.lang.String">VENDOR_NUMBER</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">INVOICE_DATE</Item>
+      <Item class="java.lang.String">INVOICE_ID</Item>
+      <Item class="java.lang.String">INVOICE_NUM</Item>
+      <Item class="java.lang.String">INVOICE_AMOUNT</Item>
+      <Item class="java.lang.String">CHECK_DATE</Item>
+      <Item class="java.lang.String">AMOUNT_PAID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>107</Item>
+      <Item>173</Item>
+      <Item>145</Item>
+      <Item>116</Item>
+      <Item>248</Item>
+      <Item>110</Item>
+      <Item>145</Item>
+      <Item>92</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect      ai.creation_date, c.creation_date,
+            pv.segment1 vendor_number,
+            pv.vendor_name,
+            ai.invoice_date,
+            ai.invoice_id,
+            Regexp_Replace( ai.invoice_num, '' || Chr (9) || Chr (10) || Chr (13)|| '') invoice_num,
+            ai.invoice_amount,
+            c.check_date,
+            ai.amount_paid
+from     apps.ap_invoices_all ai,
+         apps.Po_Vendors pv,
+         apps.ap_invoice_payments_all p,
+            apps.ap_checks_all c
+where    1    =  1
+And       Ai.Vendor_Id  = Pv.Vendor_Id
+ and ai.invoice_id = p.invoice_id
+    AND     c.check_id = p.check_id    
+and      ai.invoice_id >= 13866203
+--and      invoice_num like 'DIANASCHAUB21DEC18'
+and      exists 
+         (
+select  1
+from  apps.ap_invoice_distributions_all aid
+where  1=1
+and  aid.invoice_id = ai.invoice_id
+and  aid.line_type_lookup_code='AWT'
+and  aid.description like 'MA Withholding Tax' 
+and  awt_flag='A'
+and   withholding_tax_code_id is not null
+and   awt_tax_rate_id is not null
+and   awt_invoice_id is   null   ----
+)</uniqueName>
+</TableSettings>

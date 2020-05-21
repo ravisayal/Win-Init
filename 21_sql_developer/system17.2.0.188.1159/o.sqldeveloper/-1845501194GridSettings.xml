@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ACCESS_ID</Item>
+      <Item class="java.lang.String">FILE_ID</Item>
+      <Item class="java.lang.String">TIMESTAMP</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>421</Item>
+      <Item>57</Item>
+      <Item>138</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23RPCDEVselect  *
+from   fnd_lob_access</uniqueName>
+</TableSettings>

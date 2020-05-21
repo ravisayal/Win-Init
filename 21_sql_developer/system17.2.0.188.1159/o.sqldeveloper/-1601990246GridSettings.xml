@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">SOURCE_ID_INT_1</Item>
+      <Item class="java.lang.String">ENTITY_CODE</Item>
+      <Item class="java.lang.String">ENTITY_ID</Item>
+      <Item class="java.lang.String">EVENT_ID</Item>
+      <Item class="java.lang.String">ENTITY_ID_1</Item>
+      <Item class="java.lang.String">EVENT_TYPE_CODE</Item>
+      <Item class="java.lang.String">EVENT_STATUS_CODE</Item>
+      <Item class="java.lang.String">EVENT_DATE</Item>
+      <Item class="java.lang.String">SECURITY_ID_INT_1</Item>
+      <Item class="java.lang.String">LEDGER_ID</Item>
+      <Item class="java.lang.String">TRANSACTION_NUMBER</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>112</Item>
+      <Item>89</Item>
+      <Item>71</Item>
+      <Item>67</Item>
+      <Item>83</Item>
+      <Item>114</Item>
+      <Item>128</Item>
+      <Item>138</Item>
+      <Item>120</Item>
+      <Item>74</Item>
+      <Item>289</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect     et.source_id_int_1, et.entity_code, et.entity_id,
+    ev.event_id, ev.entity_id, ev.event_type_code,
+    ev.event_status_code, ev.event_date,
+     et.SECURITY_ID_INT_1, et.ledger_id, et.transaction_number
+from    XLA.XLA_TRANSACTION_ENTITIES et,
+    XLA.XLA_EVENTS ev
+where   1=1
+and   ev.event_date > sysdate - 30
+--and ev.event_date between to_date('', 'dd-mon-yyyy') AND        to_date('', 'dd-mon-yyyy')
+and    ev.event_status_code not in ('P','N')
+and     ev.application_id = 222
+and     et.entity_id = ev.entity_id</uniqueName>
+</TableSettings>

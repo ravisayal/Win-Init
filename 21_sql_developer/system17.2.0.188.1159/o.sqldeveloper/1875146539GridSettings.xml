@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">BUG_ID</Item>
+      <Item class="java.lang.String">BUG_NUMBER</Item>
+      <Item class="java.lang.String">ARU_RELEASE_NAME</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">TRACKABLE_ENTITY_ABBR</Item>
+      <Item class="java.lang.String">BASELINE_NAME</Item>
+      <Item class="java.lang.String">GENERIC_PATCH</Item>
+      <Item class="java.lang.String">LANGUAGE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>56</Item>
+      <Item>86</Item>
+      <Item>123</Item>
+      <Item>145</Item>
+      <Item>83</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>149</Item>
+      <Item>100</Item>
+      <Item>102</Item>
+      <Item>72</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT    *
+FROM      apps.ad_bugs
+WHERE     1 = 1
+--and  bug_number like '19287293%'
+and  regexp_like (bug_number,'(10098001|10113913|10116616|10131650|10189376|10301406|10399418|11684796|11738560|11767687|11767783|11769977|12311480|12348600|12427010|12582633|12628319)')--12666409|12693467|12711866|12747284|12776331|12821441|12874866|12932103|12957954|13009610|13056071|13066729|13075711|13262775|13353167|13371648|13426254|13520666|13620594|13825341|14046931|14128319|14265552|14348816|14364164|14526013|14545884|14673409|14695512|14786043|14828518|14828523|14841198|15898572|15972360|15981176|16311718|16602978|16735285|16818306|16880989|16946854|17002231|17075600|17279094|17287546|17758638|18071903|18083491|18137744|18182723|18332973|18383570|18455555|18977939|19048604|19064976|19065069|19065267|19065293|19080080|19080122|19211176|19479047|19887645|20013011|20691679|21101859|21251552|21256003|21385444|21386094|3400667|9301929|9560529|9755236|)')
+--and   trackable_entity_abbr like 'atg_pf'
+order by creation_date desc</uniqueName>
+</TableSettings>

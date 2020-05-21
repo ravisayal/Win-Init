@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">ASSET_NUMBER</Item>
+      <Item class="java.lang.String">TAG_NUMBER</Item>
+      <Item class="java.lang.String">DATE_INEFFECTIVE</Item>
+      <Item class="java.lang.String">ASSET_BOOK_LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">PARENT_ASSET_NUMBER</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">ORG</Item>
+      <Item class="java.lang.String">FUND</Item>
+      <Item class="java.lang.String">ACTIVITY</Item>
+      <Item class="java.lang.String">SUBACTIVITY</Item>
+      <Item class="java.lang.String">TAG_STATUS</Item>
+      <Item class="java.lang.String">SECONDARYTUB</Item>
+      <Item class="java.lang.String">ROOT</Item>
+      <Item class="java.lang.String">HIST_FUND</Item>
+      <Item class="java.lang.String">HIST_ACTIVITY_SUB</Item>
+      <Item class="java.lang.String">SERIAL_NUMBER</Item>
+      <Item class="java.lang.String">MODEL_NUMBER</Item>
+      <Item class="java.lang.String">CURRENT_UNITS</Item>
+      <Item class="java.lang.String">OWNED_LEASED</Item>
+      <Item class="java.lang.String">IN_USE_FLAG</Item>
+      <Item class="java.lang.String">ASSET_TYPE</Item>
+      <Item class="java.lang.String">BOOK_TYPE_CODE</Item>
+      <Item class="java.lang.String">DATE_PLACED_IN_SERVICE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">EMPLOYEE</Item>
+      <Item class="java.lang.String">CAPITALIZE_FLAG</Item>
+      <Item class="java.lang.String">RETIREMENT_PENDING_FLAG</Item>
+      <Item class="java.lang.String">DEPRECIATE_FLAG</Item>
+      <Item class="java.lang.String">DEPRN_METHOD_CODE</Item>
+      <Item class="java.lang.String">PRORATE_DATE</Item>
+      <Item class="java.lang.String">LIFE_IN_MONTHS</Item>
+      <Item class="java.lang.String">ASSET_COST_ACCT</Item>
+      <Item class="java.lang.String">ORIGINAL_COST</Item>
+      <Item class="java.lang.String">AMORTIZED_FLAG</Item>
+      <Item class="java.lang.String">ADJUSTED_COST</Item>
+      <Item class="java.lang.String">CATEGORY_MAJOR</Item>
+      <Item class="java.lang.String">CATEGORY_MINOR</Item>
+      <Item class="java.lang.String">PARCEL_NUMBER</Item>
+      <Item class="java.lang.String">LEGAL_ADDRESS_HIST_TAG</Item>
+      <Item class="java.lang.String">TAX_ID</Item>
+      <Item class="java.lang.String">MAP</Item>
+      <Item class="java.lang.String">EST_IN_SERV_DATE</Item>
+      <Item class="java.lang.String">DEBT_FUNDED</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">LOAN_NUMBER_DEBT_FUNDED</Item>
+      <Item class="java.lang.String">LEASE_END_DATE</Item>
+      <Item class="java.lang.String">PVU</Item>
+      <Item class="java.lang.String">AWARD_NUMBER</Item>
+      <Item class="java.lang.String">PI_NAME</Item>
+      <Item class="java.lang.String">SECONDARY_TAG</Item>
+      <Item class="java.lang.String">TITLE</Item>
+      <Item class="java.lang.String">LICENSE_PLATE</Item>
+      <Item class="java.lang.String">MILEAGE</Item>
+      <Item class="java.lang.String">ATTRIBUTE17</Item>
+      <Item class="java.lang.String">ATTRIBUTE18</Item>
+      <Item class="java.lang.String">ATTRIBUTE19</Item>
+      <Item class="java.lang.String">CONDITION_CODE</Item>
+      <Item class="java.lang.String">UPLOADED_BY</Item>
+      <Item class="java.lang.String">INVENTORY_DATE</Item>
+      <Item class="java.lang.String">ATTRIBUTE23</Item>
+      <Item class="java.lang.String">ATTRIBUTE24</Item>
+      <Item class="java.lang.String">ATTRIBUTE25</Item>
+      <Item class="java.lang.String">ATTRIBUTE26</Item>
+      <Item class="java.lang.String">ATTRIBUTE27</Item>
+      <Item class="java.lang.String">ATTRIBUTE28</Item>
+      <Item class="java.lang.String">ATTRIBUTE29</Item>
+      <Item class="java.lang.String">ATTRIBUTE30</Item>
+      <Item class="java.lang.String">CONVERTED_FLAG</Item>
+      <Item class="java.lang.String">PERIOD_NAME</Item>
+      <Item class="java.lang.String">PRIME_REC_FLAG</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>67</Item>
+      <Item>97</Item>
+      <Item>86</Item>
+      <Item>145</Item>
+      <Item>191</Item>
+      <Item>142</Item>
+      <Item>103</Item>
+      <Item>38</Item>
+      <Item>41</Item>
+      <Item>47</Item>
+      <Item>65</Item>
+      <Item>84</Item>
+      <Item>83</Item>
+      <Item>99</Item>
+      <Item>48</Item>
+      <Item>75</Item>
+      <Item>119</Item>
+      <Item>101</Item>
+      <Item>100</Item>
+      <Item>102</Item>
+      <Item>100</Item>
+      <Item>86</Item>
+      <Item>80</Item>
+      <Item>111</Item>
+      <Item>154</Item>
+      <Item>120</Item>
+      <Item>70</Item>
+      <Item>108</Item>
+      <Item>163</Item>
+      <Item>112</Item>
+      <Item>134</Item>
+      <Item>98</Item>
+      <Item>105</Item>
+      <Item>116</Item>
+      <Item>101</Item>
+      <Item>109</Item>
+      <Item>103</Item>
+      <Item>114</Item>
+      <Item>113</Item>
+      <Item>104</Item>
+      <Item>156</Item>
+      <Item>55</Item>
+      <Item>47</Item>
+      <Item>117</Item>
+      <Item>90</Item>
+      <Item>80</Item>
+      <Item>170</Item>
+      <Item>107</Item>
+      <Item>47</Item>
+      <Item>104</Item>
+      <Item>63</Item>
+      <Item>106</Item>
+      <Item>47</Item>
+      <Item>96</Item>
+      <Item>62</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>111</Item>
+      <Item>90</Item>
+      <Item>108</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>110</Item>
+      <Item>91</Item>
+      <Item>107</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect  * 
+from    hufa_asset_detail_v
+where 1=1
+and asset_Id = 3289</uniqueName>
+</TableSettings>

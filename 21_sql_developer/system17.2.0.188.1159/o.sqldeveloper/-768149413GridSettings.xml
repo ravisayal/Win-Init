@@ -1,0 +1,269 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PP_REQUEST_ID</Item>
+      <Item class="java.lang.String">REQUEST_TYPE_CATEGORY</Item>
+      <Item class="java.lang.String">REQUEST_TYPE_CODE</Item>
+      <Item class="java.lang.String">STATUS_CATEGORY</Item>
+      <Item class="java.lang.String">STATUS_CODE</Item>
+      <Item class="java.lang.String">PROJECT_ID</Item>
+      <Item class="java.lang.String">REVISION_NUMBER</Item>
+      <Item class="java.lang.String">BGT_TYPE_CODE</Item>
+      <Item class="java.lang.String">TUB_TIER</Item>
+      <Item class="java.lang.String">PROJECT_PROPOSAL_ID</Item>
+      <Item class="java.lang.String">PROJECT_TYPE_CODE</Item>
+      <Item class="java.lang.String">CAPS_NUMBER</Item>
+      <Item class="java.lang.String">PROJECT_NAME</Item>
+      <Item class="java.lang.String">CIP_ACTIVITY</Item>
+      <Item class="java.lang.String">CIP_SUBACTIVITY</Item>
+      <Item class="java.lang.String">EXPENSE_ACTIVITY</Item>
+      <Item class="java.lang.String">EXPENSE_SUBACTIVITY</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">ASSET_TYPE_CODE</Item>
+      <Item class="java.lang.String">SPONSOR_TUB</Item>
+      <Item class="java.lang.String">SPONSOR_ORG</Item>
+      <Item class="java.lang.String">FACULTY_RENOV_FLAG</Item>
+      <Item class="java.lang.String">PROJECT_DESC</Item>
+      <Item class="java.lang.String">PROJECT_RISKS</Item>
+      <Item class="java.lang.String">SUSTAINABILITY_COMP_FLAG</Item>
+      <Item class="java.lang.String">PROJECT_SUSTAINABILITY</Item>
+      <Item class="java.lang.String">PROG_FEASIBILITY_DATE</Item>
+      <Item class="java.lang.String">DESIGN_DATE</Item>
+      <Item class="java.lang.String">BID_NEGOTIATE_DATE</Item>
+      <Item class="java.lang.String">CONSTRUCTION_DATE</Item>
+      <Item class="java.lang.String">OCCUPANCY_DATE</Item>
+      <Item class="java.lang.String">CLOSEOUT_DATE</Item>
+      <Item class="java.lang.String">NEW_ADDITIONAL_GSF</Item>
+      <Item class="java.lang.String">RENEWAL_GSF</Item>
+      <Item class="java.lang.String">RENOVATION_OTHER_GSF</Item>
+      <Item class="java.lang.String">NET_ASSIGN_SF</Item>
+      <Item class="java.lang.String">PCT_NASF_FSRA</Item>
+      <Item class="java.lang.String">EST_LOW_CAPITAL_BGT_AMT</Item>
+      <Item class="java.lang.String">EST_HIGH_CAPITAL_BGT_AMT</Item>
+      <Item class="java.lang.String">ESTIMATE_SOURCE</Item>
+      <Item class="java.lang.String">ESTIMATE_METHODOLOGY</Item>
+      <Item class="java.lang.String">OM_IMPACT</Item>
+      <Item class="java.lang.String">CORP_APPROVAL_DATE</Item>
+      <Item class="java.lang.String">CORP_APPROVAL_AMT</Item>
+      <Item class="java.lang.String">CORP_CONDITIONS_COMMENTS</Item>
+      <Item class="java.lang.String">PRIMARY_MANAGING_ORG</Item>
+      <Item class="java.lang.String">INTEREST_ORG</Item>
+      <Item class="java.lang.String">CIP_PROJECT_ORG</Item>
+      <Item class="java.lang.String">CIP_ACTIVITY_DESC</Item>
+      <Item class="java.lang.String">CIP_ACTIVITY_LOCAL_ATTR</Item>
+      <Item class="java.lang.String">USE_OF_FUNDING_ROOT</Item>
+      <Item class="java.lang.String">FEDERAL_GRANT_FUNDING_FLAG</Item>
+      <Item class="java.lang.String">STATE_GRANT_FUNDING_FLAG</Item>
+      <Item class="java.lang.String">INC_CAPITAL_BGT_FLAG</Item>
+      <Item class="java.lang.String">NEW_UPG_UTIL_SVCS_FLAG</Item>
+      <Item class="java.lang.String">CITY_WATER_FLAG</Item>
+      <Item class="java.lang.String">CITY_SEWER_FLAG</Item>
+      <Item class="java.lang.String">STORM_DRAIN_FLAG</Item>
+      <Item class="java.lang.String">STEAM_FLAG</Item>
+      <Item class="java.lang.String">CHILLED_WATER_FLAG</Item>
+      <Item class="java.lang.String">GEOTHERMAL_FLAG</Item>
+      <Item class="java.lang.String">FUEL_OIL_FLAG</Item>
+      <Item class="java.lang.String">ELECTRICAL_FLAG</Item>
+      <Item class="java.lang.String">NATURAL_GAS_FLAG</Item>
+      <Item class="java.lang.String">OTHER_UTIL_FLAG</Item>
+      <Item class="java.lang.String">OTHER_UTIL_DESC</Item>
+      <Item class="java.lang.String">TELEPHONE_FLAG</Item>
+      <Item class="java.lang.String">HIGH_SPEED_DATA_NETWORK_FLAG</Item>
+      <Item class="java.lang.String">SUSTAINABLE_DEV_SUPPORT_FLAG</Item>
+      <Item class="java.lang.String">GREEN_CAMPUS_LOAN_ELIG_FLAG</Item>
+      <Item class="java.lang.String">UTILITY_REBATE_ELIG_FLAG</Item>
+      <Item class="java.lang.String">PROGRAMMATIC_BGT_APPR_FLAG</Item>
+      <Item class="java.lang.String">CURRENT_USE_TYPE_CODE</Item>
+      <Item class="java.lang.String">CHANGE_OF_USE_FLAG</Item>
+      <Item class="java.lang.String">PROPOSED_USE_TYPE_CODE</Item>
+      <Item class="java.lang.String">REQUIRED_LICENSE_FLAG</Item>
+      <Item class="java.lang.String">COMMON_VICTUALERS_FLAG</Item>
+      <Item class="java.lang.String">PARKING_FLAG</Item>
+      <Item class="java.lang.String">LODGING_HOUSE_FLAG</Item>
+      <Item class="java.lang.String">FUEL_STORAGE_FLAG</Item>
+      <Item class="java.lang.String">ENTERTAINMENT_FLAG</Item>
+      <Item class="java.lang.String">OTHER_LICENSE_FLAG</Item>
+      <Item class="java.lang.String">OTHER_LICENSE_DESC</Item>
+      <Item class="java.lang.String">OTHER_CONST_FLAG</Item>
+      <Item class="java.lang.String">RELATED_PROJECT_FLAG</Item>
+      <Item class="java.lang.String">EHS_CHECKLIST_FLAG</Item>
+      <Item class="java.lang.String">EXTERIOR_WORK_FLAG</Item>
+      <Item class="java.lang.String">PARKING_CHANGES_FLAG</Item>
+      <Item class="java.lang.String">ABUTTER_IMPACT_FLAG</Item>
+      <Item class="java.lang.String">CADM_NOTIFY_FLAG</Item>
+      <Item class="java.lang.String">WF_ROUTING_RULE_ID</Item>
+      <Item class="java.lang.String">WF_STATUS</Item>
+      <Item class="java.lang.String">CAPS_ATTR_VALID_FLAG</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATED_BY_RESP_ID</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LABOR_AGREEMENT_FLAG</Item>
+      <Item class="java.lang.String">DEMOLITION_GSF</Item>
+      <Item class="java.lang.String">FACILITIES_ASSESSMENT_FLAG</Item>
+      <Item class="java.lang.String">LEED_CERT_IN_RFP_FLAG</Item>
+      <Item class="java.lang.String">GREEN_BUILDING_CHARETTE_FLAG</Item>
+      <Item class="java.lang.String">LIFE_CYCLE_COSTING_FLAG</Item>
+      <Item class="java.lang.String">CPRC_DEV_FUNDS_AMT</Item>
+      <Item class="java.lang.String">CPRC_APPROVAL_DATE</Item>
+      <Item class="java.lang.String">PROJECT_MEASUREMENT_TYPE_CODE</Item>
+      <Item class="java.lang.String">PHILANTHROPY_FUNDING_FLAG</Item>
+      <Item class="java.lang.String">BRIDGE_FINANCING_FLAG</Item>
+      <Item class="java.lang.String">GREEN_LOAN_FUND_AMT</Item>
+      <Item class="java.lang.String">BUILDING_OUTSIDE_AREA</Item>
+      <Item class="java.lang.String">EST_NON_CAPITAL_COSTS</Item>
+      <Item class="java.lang.String">CPATH_PROJECT_ID</Item>
+      <Item class="java.lang.String">PLAN_START_YEAR</Item>
+      <Item class="java.lang.String">CPATH_ASSET_ID</Item>
+      <Item class="java.lang.String">PLACEHOLDER_FLAG</Item>
+      <Item class="java.lang.String">UNAUTHORIZED_FLAG</Item>
+      <Item class="java.lang.String">CPATH_AUTHORIZED_BUDGET</Item>
+      <Item class="java.lang.String">NOT_IN_PLAN_FLAG</Item>
+      <Item class="java.lang.String">ROOT_CHANGE_FLAG</Item>
+      <Item class="java.lang.String">BUDGET_SCOPE_INC_FLAG</Item>
+      <Item class="java.lang.String">EXCEPTION_COMMENTS</Item>
+      <Item class="java.lang.String">CONST_PHASE_CODE</Item>
+      <Item class="java.lang.String">APPROVAL_SOURCE_CODE</Item>
+      <Item class="java.lang.String">REPORTED_OR_APPROVED_BUDGET</Item>
+      <Item class="java.lang.String">JOURNALS_SUBMITTED_FLAG</Item>
+      <Item class="java.lang.String">FAR_ACCOUNTING_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>138</Item>
+      <Item>155</Item>
+      <Item>129</Item>
+      <Item>117</Item>
+      <Item>91</Item>
+      <Item>81</Item>
+      <Item>114</Item>
+      <Item>102</Item>
+      <Item>67</Item>
+      <Item>140</Item>
+      <Item>128</Item>
+      <Item>92</Item>
+      <Item>432</Item>
+      <Item>88</Item>
+      <Item>107</Item>
+      <Item>114</Item>
+      <Item>133</Item>
+      <Item>67</Item>
+      <Item>114</Item>
+      <Item>92</Item>
+      <Item>95</Item>
+      <Item>134</Item>
+      <Item>6788</Item>
+      <Item>1692</Item>
+      <Item>166</Item>
+      <Item>1181</Item>
+      <Item>145</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>135</Item>
+      <Item>92</Item>
+      <Item>150</Item>
+      <Item>99</Item>
+      <Item>102</Item>
+      <Item>166</Item>
+      <Item>168</Item>
+      <Item>467</Item>
+      <Item>551</Item>
+      <Item>79</Item>
+      <Item>137</Item>
+      <Item>132</Item>
+      <Item>3589</Item>
+      <Item>152</Item>
+      <Item>95</Item>
+      <Item>115</Item>
+      <Item>432</Item>
+      <Item>158</Item>
+      <Item>144</Item>
+      <Item>185</Item>
+      <Item>172</Item>
+      <Item>141</Item>
+      <Item>158</Item>
+      <Item>115</Item>
+      <Item>114</Item>
+      <Item>123</Item>
+      <Item>83</Item>
+      <Item>133</Item>
+      <Item>117</Item>
+      <Item>97</Item>
+      <Item>110</Item>
+      <Item>122</Item>
+      <Item>112</Item>
+      <Item>113</Item>
+      <Item>107</Item>
+      <Item>201</Item>
+      <Item>194</Item>
+      <Item>191</Item>
+      <Item>160</Item>
+      <Item>189</Item>
+      <Item>155</Item>
+      <Item>136</Item>
+      <Item>162</Item>
+      <Item>149</Item>
+      <Item>163</Item>
+      <Item>94</Item>
+      <Item>135</Item>
+      <Item>127</Item>
+      <Item>133</Item>
+      <Item>131</Item>
+      <Item>132</Item>
+      <Item>124</Item>
+      <Item>145</Item>
+      <Item>129</Item>
+      <Item>137</Item>
+      <Item>147</Item>
+      <Item>139</Item>
+      <Item>122</Item>
+      <Item>135</Item>
+      <Item>79</Item>
+      <Item>143</Item>
+      <Item>138</Item>
+      <Item>83</Item>
+      <Item>131</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>149</Item>
+      <Item>107</Item>
+      <Item>175</Item>
+      <Item>148</Item>
+      <Item>194</Item>
+      <Item>159</Item>
+      <Item>137</Item>
+      <Item>138</Item>
+      <Item>208</Item>
+      <Item>177</Item>
+      <Item>149</Item>
+      <Item>145</Item>
+      <Item>149</Item>
+      <Item>152</Item>
+      <Item>120</Item>
+      <Item>114</Item>
+      <Item>106</Item>
+      <Item>121</Item>
+      <Item>129</Item>
+      <Item>168</Item>
+      <Item>119</Item>
+      <Item>126</Item>
+      <Item>152</Item>
+      <Item>509</Item>
+      <Item>125</Item>
+      <Item>152</Item>
+      <Item>197</Item>
+      <Item>164</Item>
+      <Item>144</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSelect    *
+From      apps.hucp_project_proposal_request
+Where     1 = 1
+order by last_update_date desc</uniqueName>
+</TableSettings>

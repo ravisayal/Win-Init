@@ -1,0 +1,2691 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<rows>
+   <row>
+      <key>addresp</key>
+      <value>DECLARE
+         
+            CURSOR C_RESP
+            IS
+               SELECT fav.application_short_name,
+                      fav.application_name,
+                      frv.responsibility_key,
+                      frv.responsibility_name
+                 FROM FND_APPLICATION_VL fav, 
+                      FND_RESPONSIBILITY_VL frv
+                WHERE frv.application_id = fav.application_id
+       AND   (frv.responsibility_name like 'ELC%Receivables%Supervisor' or frv.responsibility_name like 'ELC%Receivables%Manager')
+             order by frv.responsibility_name ;  
+         
+         
+            l_user_name         VARCHAR2 (15) := 'RAVINDER.SAYAL';
+   l_appl_short_name   fnd_application_vl.application_short_name%TYPE;
+   l_resp_name         FND_RESPONSIBILITY_VL.responsibility_name%TYPE;
+   l_resp_key          FND_RESPONSIBILITY_VL.responsibility_key%TYPE;
+         
+--   l_description       VARCHAR2 (100) := 'Adding Responsibility to the user using script';
+           l_description       VARCHAR2 (100) := ';
+          
+         BEGIN
+         
+           FOR resp_rec IN C_RESP
+           LOOP
+              l_appl_short_name := resp_rec.application_short_name;
+              l_resp_key := resp_rec.responsibility_key;
+              l_resp_name := resp_rec.responsibility_name;
+         
+              BEGIN
+                 FND_USER_PKG.ADDRESP (username         => l_user_name,
+                              resp_app         => l_appl_short_name,
+                                       resp_key         => l_resp_key,
+                                       security_group   => 'STANDARD',
+                                       description      => l_description,
+                                       start_date       => SYSDATE,
+                                       end_date         => NULL);
+                 COMMIT;
+                 DBMS_OUTPUT.put_line (
+                       'The responsibility '
+                    || l_resp_name
+                    || ' is added to the user '
+                    || l_user_name);
+              EXCEPTION
+             
+                 WHEN OTHERS
+                 THEN
+                    DBMS_OUTPUT.put_line (
+                          'Responsibility '
+                       || l_resp_name
+                       || ' IS NOT added to the user '
+                       || l_user_name
+                       || ' due to '
+                       || SQLCODE
+                       || '; '
+                       || SUBSTR (SQLERRM, 1, 250));
+                    DBMS_OUTPUT.put_line (');
+                    ROLLBACK;
+              END;
+           END LOOP;
+         END;
+</value>
+   </row>
+   <row>
+      <key>adfp</key>
+      <value>SELECT   f.bug_number "BUG_NBR", a.filename "FILE_NAME",
+         SUBSTR (c.VERSION, 1, 20) "PATCH_VERSION",
+         SUBSTR (d.VERSION, 1, 20) "SITE_VERSION", b.executed_flag,
+         b.creation_date "PATCH_DATE"
+    FROM ad_files a,
+         ad_patch_run_bug_actions b,
+         ad_file_versions c,
+         ad_file_versions d,
+         ad_patch_run_bugs e,
+         ad_bugs f
+   WHERE a.file_id = b.file_id
+     AND a.filename LIKE 'appvndrb.pls'
+     AND c.file_version_id = b.patch_file_version_id
+     AND d.file_version_id = b.onsite_file_version_id
+     AND b.executed_flag = 'Y'
+     AND e.bug_id = f.bug_id
+     AND e.patch_run_bug_id = b.patch_run_bug_id
+ORDER BY b.creation_date DESC
+;
+</value>
+   </row>
+   <row>
+      <key>adpf</key>
+      <value>SELECT   f.bug_number "BUG_NBR", a.filename "FILE_NAME",
+         SUBSTR (c.VERSION, 1, 20) "PATCH_VERSION",
+         SUBSTR (d.VERSION, 1, 20) "SITE_VERSION", b.executed_flag,
+         b.creation_date "PATCH_DATE"
+FROM     ad_files a,
+         ad_patch_run_bug_actions b,
+         ad_file_versions c,
+         ad_file_versions d,
+         ad_patch_run_bugs e,
+         ad_bugs f
+WHERE    a.file_id = b.file_id
+AND      c.file_version_id = b.patch_file_version_id
+AND      d.file_version_id = b.onsite_file_version_id
+AND      b.executed_flag = 'Y'
+AND      e.bug_id = f.bug_id
+AND      e.patch_run_bug_id = b.patch_run_bug_id
+AND      f.bug_number = :Patch_number
+ORDER BY b.creation_date DESC
+;
+</value>
+   </row>
+   <row>
+      <key>aid</key>
+      <value>select   haou.name,
+         pv.segment1,
+         pv.vendor_name,
+         pvs.vendor_site_code,
+         ai.invoice_num,
+         ai.invoice_date,
+         ail.line_number,
+         ail.description, 
+         gcc.CONCATENATED_SEGMENTS  Charge_account,
+         ail.*,
+         aid.*          
+from     ap_invoices_all ai,
+         ap_invoice_lines_all ail,
+         ap_invoice_distributions_all aid,
+         po_vendors pv,
+         po_vendor_sites_all pvs,
+         gl_code_combinations_kfv gcc,
+         hr_all_organization_units haou,
+         global_name
+where     1=1
+and       ai.vendor_id  = pv.vendor_id
+and       ai.vendor_site_id = pvs.vendor_site_id
+and       ai.invoice_id = ail.invoice_id
+and       ail.invoice_id = aid.invoice_id
+and       ail.line_number = aid.invoice_line_number
+and       ai.org_id = haou.organization_id
+and       aid.DIST_CODE_COMBINATION_ID = gcc.code_combination_id
+--and       ai.invoice_id = 
+--and       ai.invoice_num like 
+;
+</value>
+   </row>
+   <row>
+      <key>aif</key>
+      <value>select    haou.name,
+         pv.segment1,
+         pv.vendor_name,
+         pvs.vendor_site_code,
+         ai.invoice_num,
+         ai.invoice_date,
+         gcc.CONCATENATED_SEGMENTS  liability_account,
+         ai.*,
+         global_name, 
+         sysdate  date_qry_run,
+         rownum
+from      ap_invoices_all ai,
+         po_vendors pv,
+         po_vendor_sites_all pvs,
+         gl_code_combinations_kfv gcc,
+         hr_all_organization_units haou,
+         global_name
+where     1=1
+and       ai.vendor_id  = pv.vendor_id
+and       ai.vendor_site_id = pvs.vendor_site_id
+and       ai.org_id = haou.organization_id
+and       ai.accts_pay_code_combination_id = gcc.code_combination_id
+--and       ai.invoice_id =
+--and       ai.invoice_num like 
+)
+;
+
+</value>
+   </row>
+   <row>
+      <key>anon</key>
+      <value>DECLARE
+  dummy NUMBER;
+BEGIN
+  SELECT count(*) INTO dummy FROM dual;
+  |;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+     NULL;
+  WHEN OTHERS THEN
+     NULL;
+END;
+</value>
+   </row>
+   <row>
+      <key>asp</key>
+      <value>alter session set current_schema=APPS;</value>
+   </row>
+   <row>
+      <key>assertloc</key>
+      <value>DECLARE
+    assertion_failure EXCEPTION;
+    PROCEDURE pl (
+       str         IN   VARCHAR2,
+       len         IN   INTEGER := 80,
+       expand_in   IN   BOOLEAN := TRUE
+    )
+    IS 
+       v_len   PLS_INTEGER     := LEAST (len, 255);
+       v_str   VARCHAR2 (2000);
+    BEGIN
+       IF LENGTH (str) > v_len
+       THEN
+          v_str := SUBSTR (str, 1, v_len);
+          DBMS_OUTPUT.put_line (v_str);
+          pl (SUBSTR (str, len   + 1), v_len,expand_in);
+       ELSE
+          v_str := str;
+          DBMS_OUTPUT.put_line (v_str);
+       END IF;
+    EXCEPTION
+       WHEN OTHERS
+       THEN
+          IF expand_in
+          THEN
+             DBMS_OUTPUT.ENABLE (1000000);
+             DBMS_OUTPUT.put_line (v_str);
+          ELSE
+             RAISE;
+          END IF;
+    END;
+    
+    PROCEDURE assert (
+       condition_in   IN   BOOLEAN,
+       msg_in         IN   VARCHAR2 := NULL
+    )
+    IS
+    BEGIN
+       IF    NOT condition_in
+          OR condition_in IS NULL
+       THEN
+          IF msg_in IS NOT NULL
+          THEN
+             pl (msg_in);
+             pl (DBMS_UTILITY.format_call_stack);
+          END IF;
+ 
+          RAISE assertion_failure;
+       END IF;
+    END;
+ BEGIN
+    -- Sample usage
+    assert ( | my_parameter_in IS NOT NULL,
+       'Value cannot be NULL');
+ EXCEPTION
+    WHEN assertion_failure  
+    THEN
+       -- Decide if you want to handle this locally or not.    
+ END;
+</value>
+   </row>
+   <row>
+      <key>asyn</key>
+      <value>SELECT    *
+  FROM    ALL_SYNONYMS
+ WHERE    1 = 1
+   AND    UPPER(synonym_name) LIKE 
+;
+</value>
+   </row>
+   <row>
+      <key>autonproc</key>
+      <value>PROCEDURE | ()
+         IS
+            -- Available in Oracle8i and above
+            PRAGMA AUTONOMOUS_TRANSACTION;
+         BEGIN
+            -- Upon successful completion, save all changes.
+            COMMIT;
+         EXCEPTION
+            -- For each error handler, don't forget the rollback!
+            WHEN OTHERS 
+            THEN
+               ROLLBACK;   
+         END;
+</value>
+   </row>
+   <row>
+      <key>bcquery</key>
+      <value>DECLARE
+  l_array1 'array_type_declaration';
+  l_array2 'array_type_declaration';
+BEGIN
+  -- Fetch into individual collections, one for each
+  -- element in the SELECT list.
+  SELECT |
+     BULK COLLECT INTO l_array1, l_array2
+     FROM 
+    WHERE ;
+END;
+</value>
+   </row>
+   <row>
+      <key>case</key>
+      <value>case |
+            WHEN condition THEN
+         
+            WHEN condition THEN
+         
+            ELSE
+         
+         END CASE;
+</value>
+   </row>
+   <row>
+      <key>ccdf</key>
+      <value>cost_distributed_flag</value>
+   </row>
+   <row>
+      <key>ccid</key>
+      <value>code_combination_id
+</value>
+   </row>
+   <row>
+      <key>cctid</key>
+      <value>customer_trx_id
+</value>
+   </row>
+   <row>
+      <key>cdiln</key>
+      <value>draft_invoice_line_num
+</value>
+   </row>
+   <row>
+      <key>cdin</key>
+      <value>draft_invoice_Num
+</value>
+   </row>
+   <row>
+      <key>ceed</key>
+      <value>effective_end_date
+</value>
+   </row>
+   <row>
+      <key>ceid</key>
+      <value>expenditure_id
+</value>
+   </row>
+   <row>
+      <key>ceidt</key>
+      <value>expenditure_item_date
+</value>
+   </row>
+   <row>
+      <key>ceiid</key>
+      <value>expenditure_item_id
+</value>
+   </row>
+   <row>
+      <key>cesd</key>
+      <value>effective_start_date
+</value>
+   </row>
+   <row>
+      <key>cf</key>
+      <value>CREATE FUNCTION function_name
+          [ (parameter) ]
+          RETURN return_datatype
+          IS
+              [declaration_section]
+          BEGIN
+              ...
+          END function_name;
+      </value>
+   </row>
+   <row>
+      <key>cinid</key>
+      <value>invoice_id
+</value>
+   </row>
+   <row>
+      <key>clag</key>
+      <value>LISTAGG(segment1, ', ') WITHIN GROUP (ORDER BY segment1) list
+</value>
+   </row>
+   <row>
+      <key>coid</key>
+      <value>organization_id
+</value>
+   </row>
+   <row>
+      <key>cp</key>
+      <value>CREATE PROCEDURE procedure_name
+      [ (parameter]) ]
+      IS
+          [declaration_section]
+      BEGIN
+          ...
+      END procedure_name;
+      </value>
+   </row>
+   <row>
+      <key>cpid</key>
+      <value>project_id
+</value>
+   </row>
+   <row>
+      <key>cprog</key>
+      <value>SELECT fcpt.user_concurrent_program_name,
+         fcp.concurrent_program_name,
+         fe.executable_name,
+         fe.execution_file_name,
+         DECODE(fe.execution_method_code,'
+        B', 'Request Set Stage Function','
+        Q', 'SQL*Plus','
+        H', 'Host','
+        L', 'SQL*Loader','
+        A', 'Spawned','
+        I', 'PL/SQL Stored Procedure','
+        P', 'Oracle Reports','
+        S', 'Immediate', 'N/A') execution_method,
+         fa.application_name,
+         fa.basepath
+         FROM fnd_concurrent_programs_tl fcpt,
+         fnd_concurrent_programs fcp,
+         fnd_executables fe,
+         fnd_application_vl fa
+         WHERE 1 = 1
+         AND fcp.concurrent_program_id = fcpt.concurrent_program_id
+         AND fe.executable_id          = fcp.executable_id
+         AND fcpt.language = USERENV('LANG
+AND fe.application_id = fa.application_id
+         --AND fe.execution_file_name = 'TestDeepak'
+         AND fcpt.user_concurrent_program_name = 'TestDeepak
+;		 
+</value>
+   </row>
+   <row>
+      <key>cpsql</key>
+      <value>SELECT SQLT.hash_value
+      ,SQLT.sql_text
+      ,VSES.username
+      ,VSES.module
+      ,VSES.command
+  FROM v$sqltext                    SQLT
+      ,v$session                    VSES
+      ,APPS.fnd_concurrent_requests FCONC
+ WHERE SQLT.hash_value         = VSES.sql_hash_value 
+   AND FCONC.oracle_session_id = VSES.audsid 
+   AND FCONC.request_id        = 46989213
+ORDER BY SQLT.piece
+;
+</value>
+   </row>
+   <row>
+      <key>cpsql2</key>
+      <value>SELECT C.sql_text
+      ,C.module 
+  FROM APPS.fnd_concurrent_requests A
+      ,V$SESSION B
+      ,V$SQLAREA C 
+ WHERE A.oracle_session_id = B.audsid 
+   AND B.sql_hash_value    = C.hash_value 
+   AND A.request_id        = 46989213
+;
+</value>
+   </row>
+   <row>
+      <key>crbl</key>
+      <value>DECLARE
+            CURSOR c1 IS
+               SELECT | FROM   WHERE;
+            c1rec c1%ROWTYPE;
+         BEGIN
+            OPEN c1;
+            LOOP
+               FETCH c1 INTO c1rec;
+               EXIT WHEN c1%NOTFOUND;
+            END LOOP;
+            CLOSE c1;
+         END;
+</value>
+   </row>
+   <row>
+      <key>crbo</key>
+      <value>/* declare package body */
+         CURSOR c1 RETURN |tablename%ROWTYPE IS
+            SELECT ....;
+</value>
+   </row>
+   <row>
+      <key>crdf</key>
+      <value>revenue_distributed_flag</value>
+   </row>
+   <row>
+      <key>cresp</key>
+      <value>SELECT DISTINCT frt.responsibility_name
+                        ,frg.request_group_name
+                        ,fat.application_name
+                        ,fcp.concurrent_program_name
+                        ,fcpt.user_concurrent_program_name
+                        ,fe.executable_name
+             FROM apps.fnd_responsibility fr,
+                  apps.fnd_responsibility_tl frt,
+                  apps.fnd_request_groups frg,
+                  apps.fnd_request_group_units frgu,
+                  apps.fnd_application_tl fat,
+                  apps.fnd_executables fe,
+                  apps.fnd_concurrent_programs fcp,
+                  apps.fnd_concurrent_programs_tl fcpt
+            WHERE frt.responsibility_id      = fr.responsibility_id
+              AND frg.request_group_id       = fr.request_group_id
+              AND frgu.request_group_id      = frg.request_group_id
+              AND frg.application_id         = fat.application_id
+              AND fcpt.concurrent_program_id = frgu.request_unit_id
+              AND fcp.executable_id          = fe.executable_id
+              AND fcpt.concurrent_program_id = fcp.concurrent_program_id
+              AND fcpt.user_concurrent_program_name LIKE 'TestDeepak
+;
+</value>
+   </row>
+   <row>
+      <key>crex</key>
+      <value>REGEXP_REPLACE( ccc, '[' || CHR (9) || CHR (10) || CHR (13)|| ']')
+</value>
+   </row>
+   <row>
+      <key>crloop</key>
+      <value>OPEN c1;
+         LOOP
+            FETCH c1.| INTO  ;
+            EXIT WHEN c1%NOTFOUND;
+         END LOOP;
+         CLOSE c1;
+</value>
+   </row>
+   <row>
+      <key>crsp</key>
+      <value>/* declare package cursor specification */
+         CURSOR c1 RETURN |tablename%ROWTYPE;
+</value>
+   </row>
+   <row>
+      <key>crt</key>
+      <value>CREATE TABLE | AS (
+         )
+</value>
+   </row>
+   <row>
+      <key>ct</key>
+      <value>CREATE TABLE table ()</value>
+   </row>
+   <row>
+      <key>cur</key>
+      <value>CURSOR c1 IS
+            SELECT | FROM table_name WHERE column_name = value;
+</value>
+   </row>
+   <row>
+      <key>curfor</key>
+      <value>FOR c1_rec IN c1 LOOP
+            |;
+         END LOOP;
+</value>
+   </row>
+   <row>
+      <key>curpar</key>
+      <value>CURSOR c2 (xxx NUMBER) IS
+            SELECT | FROM table_name WHERE column_name = xxx;
+</value>
+   </row>
+   <row>
+      <key>curpfor</key>
+      <value>FOR c2_rec IN c2 (yyy) LOOP
+            |;
+         END LOOP;
+</value>
+   </row>
+   <row>
+      <key>dbl</key>
+      <value>create public database link 
+           mylink
+         connect to 
+           remote_username
+         identified by 
+           mypassword 
+         using 'myserver:1521/MYSID
+;
+ </value>
+   </row>
+   <row>
+      <key>ddep</key>
+      <value>select     *
+         from       dba_dependencies
+         where      1=1
+         --and        name like '
+         and        referenced_name like 
+;
+</value>
+   </row>
+   <row>
+      <key>df</key>
+      <value>DELETE FROM table WHERE </value>
+   </row>
+   <row>
+      <key>dic</key>
+      <value>SELECT        *
+          FROM        dba_ind_columns
+          WHERE        1=1
+          AND        table_name LIKE 'MAS_MTE_BATCH_INFO'
+          AND        index_name LIKE 'MAS_MTE_BATCH_INFO_N1'
+          ORDER BY index_name, column_position
+;
+</value>
+   </row>
+   <row>
+      <key>didx</key>
+      <value>SELECT       *
+         FROM       DBA_INDEXES
+         WHERE       1=1
+         AND           INDEX_NAME LIKE 
+;
+</value>
+   </row>
+   <row>
+      <key>dindcol</key>
+      <value>SELECT       *
+         FROM       DBA_IND_COLUMNS
+         WHERE       1=1
+         AND           TABLE_NAME LIKE 
+;
+</value>
+   </row>
+   <row>
+      <key>dobj</key>
+      <value>SELECT       *
+         FROM       DBA_OBJECTS
+         WHERE       1=1
+         AND           OBJECT_TYPE LIKE 'TABLE'
+         AND           OBJECT_NAME LIKE 'PA_PROJECTS_ALL
+;
+</value>
+   </row>
+   <row>
+      <key>dolocal</key>
+      <value>DECLARE
+   -- Will wrap arbitrarily long strings, and automatically expand  
+            -- the DBMS_OUTPUT buffer.
+            PROCEDURE pl (
+               str         IN   VARCHAR2,
+               len         IN   INTEGER := 80,
+               expand_in   IN   BOOLEAN := TRUE
+            )
+            IS 
+               v_len   PLS_INTEGER     := LEAST (len, 255);
+               v_str   VARCHAR2 (2000);
+            BEGIN
+               IF LENGTH (str) > v_len
+               THEN
+                  v_str := SUBSTR (str, 1, v_len);
+                  DBMS_OUTPUT.put_line (v_str);
+                  pl (SUBSTR (str, len   + 1), v_len,expand_in);
+               ELSE
+                  v_str := str;
+                  DBMS_OUTPUT.put_line (v_str);
+               END IF;
+            EXCEPTION
+               WHEN OTHERS
+               THEN
+                  IF expand_in
+                  THEN
+                     DBMS_OUTPUT.ENABLE (1000000);
+                     DBMS_OUTPUT.put_line (v_str);
+                  ELSE
+                     RAISE;
+                  END IF;
+            END;
+         BEGIN
+            |
+         END;
+</value>
+   </row>
+   <row>
+      <key>dopl</key>
+      <value>dbms_output.put_line();
+</value>
+   </row>
+   <row>
+      <key>dseg</key>
+      <value>SELECT       *
+         FROM       DBA_SEGMENTS
+         WHERE       1=1
+         AND           SEGMENT_NAME LIKE 
+;
+</value>
+   </row>
+   <row>
+      <key>dsrc</key>
+      <value>SELECT       *
+         FROM       DBA_SOURCE
+         WHERE       1=1
+         AND           OWNER LIKE 'APPS'
+         AND           NAME  LIKE 'PA_PROJECTS_PKG1
+;
+</value>
+   </row>
+   <row>
+      <key>dtbl</key>
+      <value>select       *
+          from       dba_tables
+          where       1=1
+          and       table_name like 'PA_PROJECTS_ALL
+;
+</value>
+   </row>
+   <row>
+      <key>dtc</key>
+      <value>SELECT        *
+          FROM        dba_tab_columns
+          WHERE        1=1
+          AND        table_name LIKE 'MAS_MTE_BATCH_INFO'
+          ORDER BY   column_position
+;
+</value>
+   </row>
+   <row>
+      <key>dtmf</key>
+      <value>to_date('20-aug-2004','dd-mon-yyyy')
+</value>
+   </row>
+   <row>
+      <key>extr</key>
+      <value>global_name, 
+                   sysdate  date_qry_run,
+                   rownum
+</value>
+   </row>
+   <row>
+      <key>fadel</key>
+      <value>DECLARE
+            l_array  'array_type_declaration';
+         BEGIN
+            FORALL indx IN l_array.FIRST .. l_array.LAST
+               DELETE FROM |
+                WHERE column = l_array (indx);
+         END;
+</value>
+   </row>
+   <row>
+      <key>faexc</key>
+      <value>DECLARE -- Oracle9i and above!
+           l_array   'array_type_declaration';
+           bulk_errors EXCEPTION;
+            PRAGMA EXCEPTION_INIT ( bulk_errors, -24381 );
+         BEGIN    
+            FORALL indx IN l_array.FIRST .. l_array.LAST
+               SAVE EXCEPTIONS
+               /*DML statement of choice*/'
+        #9'  |;
+         EXCEPTION
+            WHEN bulk_errors 
+            THEN 
+               FOR indx IN 1 .. SQL%BULK_EXCEPTIONS.COUNT
+               LOOP
+                  DBMS_OUTPUT.PUT_LINE (
+                     'Error ' || indx || ' occurred during ' ||
+            'iteration ' || SQL%BULK_EXCEPTIONS(indx).ERROR_INDEX ||
+                     ' updating name to ' ||
+                 enames_with_errors(SQL%BULK_EXCEPTIONS(indx).ERROR_INDEX));
+                  DBMS_OUTPUT.PUT_LINE (
+                     'Oracle error is ' ||
+                     SQLERRM(-1 * SQL%BULK_EXCEPTIONS(indx).ERROR_CODE));
+               END LOOP;   
+         END;
+         /
+</value>
+   </row>
+   <row>
+      <key>fains</key>
+      <value>DECLARE
+            l_array1     'array_type_declaration';
+            l_array2     'array_type_declaration';
+            l_array3     'array_type_declaration';
+         BEGIN
+            FORALL indx IN l_array1.FIRST .. l_array1.LAST
+               INSERT INTO |
+                  ( column list )
+                  VALUES
+                  (l_array2 (indx), l_array3 (indx) ...);
+         END;
+</value>
+   </row>
+   <row>
+      <key>faupd</key>
+      <value>DECLARE
+            l_array1 'array_type_declaration';
+            l_array2 'array_type_declaration';
+         BEGIN
+            FORALL indx IN l_array1.FIRST .. l_array1.LAST
+               UPDATE |
+                  SET column = l_array2 (indx)
+                WHERE column = l_array1 (indx);
+         END;
+</value>
+   </row>
+   <row>
+      <key>fcpp</key>
+      <value>-------------------------------------------------------------------------------
+-- Query to find Parameters and Value Sets associated with a Concurrent Program
+-------------------------------------------------------------------------------
+SELECT fcpl.user_concurrent_program_name  "Concurrent Program Name",
+                fcp.concurrent_program_name        "Program Short Name",
+                fe.executable_name, 
+                flv2.meaning execution_method, 
+                fe.execution_file_name,
+                fdfcuv.column_seq_num              "Column Seq #",
+                fdfcuv.end_user_column_name        "Parameter Name",
+                fdfcuv.form_left_prompt            "Prompt Name",
+                fdfcuv.enabled_flag                "Enabled Flag",
+                fdfcuv.required_flag               "Required Flag",
+                fdfcuv.display_flag                "Display Flag",
+                fdfcuv.flex_value_set_id           "Value Set ID",
+                ffvs.flex_value_set_name           "Value Set Name",
+                flv.meaning                        "Default Type",
+                fdfcuv.default_value               "Default Value",
+                fuc.user_name                      "CP_Update_by",
+                fcp.last_update_date               "CP_Last_update_date",
+                fue.user_name                      "CE_Update_by",
+                fe.last_update_date               "CE_Last_update_date",
+                fup.user_name                      "Param_Update_by",
+       fdfcuv.last_update_date               "Param_Last_update_date"
+           FROM fnd_concurrent_programs      fcp,
+                fnd_concurrent_programs_tl   fcpl,
+                fnd_descr_flex_col_usage_vl  fdfcuv,
+                fnd_flex_value_sets          ffvs,
+                fnd_lookup_values            flv,
+                fnd_executables              fe,
+                fnd_user                     fuc,
+                fnd_user                     fue,
+                fnd_user                     fup,
+                fnd_lookup_values            flv2
+          WHERE 1= 1
+   and fcp.concurrent_program_id          =  fcpl.concurrent_program_id
+            and fcp.executable_id = fe.executable_id 
+            and flv2.lookup_type = 'CP_EXECUTION_METHOD_CODE'
+            and flv2.lookup_code = fe.execution_method_code
+   AND fdfcuv.descriptive_flexfield_name  =  '$SRS$.' || fcp.concurrent_program_name
+   AND ffvs.flex_value_set_id             =  fdfcuv.flex_value_set_id
+            AND flv.lookup_type(+)                 =  'FLEX_DEFAULT_TYPE'
+            AND flv.lookup_code(+)                 =  fdfcuv.default_type
+            AND fcpl.LANGUAGE                      =  USERENV('LANG
+AND flv.LANGUAGE(+)                    =  USERENV('LANG
+AND fdfcuv.enabled_flag                =  'Y'
+            and fcp.last_updated_by = fuc.user_id(+)
+            and fe.last_updated_by = fue.user_id(+)
+            and fdfcuv.last_updated_by = fup.user_id(+)
+--   AND fcpl.user_concurrent_program_name  like  'AAM%%Inv%%Conv%'  -- {change it}
+            and  fcp.CONCURRENT_PROGRAM_NAME like 'MARINVXML%'
+          ORDER BY fcp.CONCURRENT_PROGRAM_NAME, fdfcuv.column_seq_num
+;
+</value>
+   </row>
+   <row>
+      <key>ff</key>
+      <value>#user#</value>
+   </row>
+   <row>
+      <key>FNDMSG</key>
+      <value>SELECT fnd_message.get_string ('FND', 'AFDICT- ARG APPL
+FROM   DUAL
+;
+</value>
+   </row>
+   <row>
+      <key>fnr</key>
+      <value>SELECT REQUEST_ID REQ_ID,
+  ORACLE_PROCESS_ID OPID,
+  FCR.PARENT_REQUEST_ID PARENT_REQ_ID,
+  DECODE(EXECUTABLE_NAME, 'fndrssub','y','n') IS_REQ_SET,
+  NVL(FCR.DESCRIPTION, USER_CONCURRENT_PROGRAM_NAME) USER_CONCURRENT_PROGRAM_NAME,
+  FR.RESPONSIBILITY_NAME,
+  PHASE_CODE,
+  STATUS_CODE ,
+  ARGUMENT_TEXT,
+  TO_CHAR(FLOOR((NVL(ACTUAL_COMPLETION_DATE, SYSDATE) - ACTUAL_START_DATE)*24*60))
+  ||':'
+  ||LPAD(TO_CHAR(ROUND(MOD((NVL(ACTUAL_COMPLETION_DATE, SYSDATE) - ACTUAL_START_DATE)*24*60,1)*60,2)),2,'0') MIN_SECS,
+  USER_NAME,
+  fu.description, 
+  REQUEST_DATE ,
+  ACTUAL_START_DATE,
+  ACTUAL_COMPLETION_DATE,
+  FCR.CONCURRENT_PROGRAM_ID,
+  FU.USER_ID,
+  FR.RESPONSIBILITY_ID,
+  FCR.PROGRAM_APPLICATION_ID,
+  FE.EXECUTABLE_NAME,
+  FE.EXECUTION_METHOD_CODE,
+  FE.EXECUTION_FILE_NAME,
+  --  get_link(fcr.request_id, 'o') outfile_link,
+  --  get_link(fcr.request_id, 'l') logfile_link,
+  FCR.ORACLE_SESSION_ID,
+  LOGFILE_NAME,
+  OUTFILE_NAME,
+  LOGFILE_NODE_NAME,
+  OUTFILE_NODE_NAME
+FROM APPS.FND_CONCURRENT_REQUESTS FCR,
+  APPS.FND_CONCURRENT_PROGRAMS_VL FCP,
+  APPS.FND_USER FU,
+  APPS.FND_RESPONSIBILITY_VL FR,
+  APPS.FND_EXECUTABLES FE
+WHERE 1                       =1
+AND FCR.RESPONSIBILITY_ID     = FR.RESPONSIBILITY_ID
+AND FU.USER_ID                = FCR.REQUESTED_BY
+AND FCP.APPLICATION_ID        = FCR.PROGRAM_APPLICATION_ID
+AND FCP.CONCURRENT_PROGRAM_ID = FCR.CONCURRENT_PROGRAM_ID
+AND FCP.EXECUTABLE_ID         = FE.EXECUTABLE_ID
+  --and          user_concurrent_program_name not in ('dqm serial sync index program','workflow control queue cleanup', 'workflow background process','wip move transaction manager', 'process transaction interface','oam applications dashboard collection')
+  --and          fr.responsibility_name like 'cash management superuser
+AND REGEXP_LIKE (NVL(FCR.DESCRIPTION, USER_CONCURRENT_PROGRAM_NAME),'(HU Asset Workbench Detail Report)','i')--bank statement cashflow creation'--aam ce bank statement master automation program'--'aam ce bank statement %%'
+  --and          user_name like 'sayalr'
+AND REGEXP_LIKE (USER_NAME , '(80408838)|(999)', 'i')
+  --and          actual_start_date between to_date('12-feb-2017 20:00:00','dd-mon-yyyy hh24:mi:ss') and to_date('25-feb-2017 21:00:00','dd-mon-yyyy hh24:mi:ss')
+  --and          status_code != 'c'
+  --and          request_id in (7203118)
+  --and          parent_request_id in (6790792)
+ORDER BY REQUEST_ID desc;</value>
+   </row>
+   <row>
+      <key>fnrm</key>
+      <value>SELECT USER_CONCURRENT_PROGRAM_NAME,
+                REQUEST_ID REQ_ID,
+                argument5 Batch, 
+                argument1 file_name, 
+                argument2 File_type, 
+                argument3 destn_path, 
+                argument4 execute,
+                user_name,
+                REQUEST_DATE,
+                Status_code
+           FROM fnd_concurrent_requests fcr,
+                fnd_concurrent_programs_vl fcp,
+                fnd_user fu,
+                fnd_responsibility_vl fr,
+                fnd_executables fe
+         WHERE  1=1
+            AND fcr.responsibility_id = fr.responsibility_id
+            AND fu.user_id = fcr.requested_by
+            AND fcp.application_id = fcr.PROGRAM_APPLICATION_ID
+            AND fcp.CONCURRENT_PROGRAM_ID = fcr.CONCURRENT_PROGRAM_ID
+            and fcp.executable_id = fe.executable_id 
+            and USER_CONCURRENT_PROGRAM_NAME like 'AAM%Mig%' 
+         --   and fu.user_name like 'SAYALR' 
+         -- batch_name
+         and argument1 like 'AAM_MM_TYPE_LKP.ldt'  
+         -- File name
+         --   and argument5 like 'FUJ%'
+         --and argument1 like '
+            ORDER  BY request_id  DESC;
+</value>
+   </row>
+   <row>
+      <key>for</key>
+      <value>FOR | IN 1 .. 10 LOOP
+         
+         END LOOP;
+</value>
+   </row>
+   <row>
+      <key>forwo</key>
+      <value>-- outer
+         FOR i IN 1 .. 10 LOOP
+         
+            FOR j IN 1 .. 10 LOOP
+         
+               EXIT outer WHEN |;
+            END LOOP;
+         END LOOP outer;
+</value>
+   </row>
+   <row>
+      <key>frncm</key>
+      <value>SELECT      a.USER_CONCURRENT_QUEUE_NAME,
+                     a.MAX_PROCESSES,
+            sum(decode(b.PHASE_CODE,'P',decode(b.STATUS_CODE,'Q,1,0),0)) Pending_Standby,
+            sum(decode(b.PHASE_CODE,'P',decode(b.STATUS_CODE,'I,1,0),0)) Pending_Normal,
+            sum(decode(b.PHASE_CODE,'R',decode(b.STATUS_CODE,'R,1,0),0)) Running_Normal
+         FROM        FND_CONCURRENT_QUEUES_VL a, 
+                     FND_CONCURRENT_WORKER_REQUESTS b
+         where       a.concurrent_queue_id = b.concurrent_queue_id
+         AND         b.Requested_Start_Date=SYSDATE -1
+         GROUP BY    a.USER_CONCURRENT_QUEUE_NAME,a.MAX_PROCESSES
+;
+</value>
+   </row>
+   <row>
+      <key>fu</key>
+      <value>select      *
+         from        fnd_user
+         where       1=1
+         --and         employee_id = 420874
+         --and         user_name like '
+         and         user_id = 4205
+;
+</value>
+   </row>
+   <row>
+      <key>func</key>
+      <value>FUNCTION | () RETURN returntype
+         IS
+           xxx returntype;
+         BEGIN
+         
+            RETURN xxx;
+         END;
+</value>
+   </row>
+   <row>
+      <key>gcc</key>
+      <value>SELECT      SELECT      DECODE(GL_ACCOUNT_TYPE, 'A', 'BS-A','E','PL-E', 'L', 'BS-L', 'O', 'BS-O', 'R','PL-R') account_type,
+            gcc. *-- segment1 |'.'||segment2 ||'.'||segment3 ||.'||segment4 ||'.'||segment5||'.'||segment6
+         FROM        gl_code_combinations_kfv gcc
+         WHERE       1=1
+         --AND         code_combination_id = 14918088    
+--and         CONCATENATED_SEGMENTS = '10207.0100.000001.110001.00000.00000.000000
+;
+</value>
+   </row>
+   <row>
+      <key>getddl</key>
+      <value>SELECT DBMS_METADATA.GET_DDL('TABLE','PA_PROJECTS_ALL
+FROM   dual
+;
+</value>
+   </row>
+   <row>
+      <key>getline</key>
+      <value>DECLARE
+            -- Trap NO_DATA_FOUND and return EOF flag.
+            file_id UTL_FILE.FILE_TYPE;
+            line VARCHAR2(32767);
+            eof BOOLEAN;
+         
+            PROCEDURE get_nextline 
+              (file_in IN UTL_FILE.FILE_TYPE, 
+               line_out OUT VARCHAR2, 
+               eof_out OUT BOOLEAN)
+            IS
+            BEGIN
+               UTL_FILE.GET_LINE (file_in, line_out);
+               eof_out := FALSE;
+            EXCEPTION
+               WHEN NO_DATA_FOUND
+               THEN
+                 line_out := NULL;
+                 eof_out  := TRUE;
+            END;
+         BEGIN /* main */
+            file_id := UTL_FILE.FOPEN (
+               {location}, {filename}, max_linesize => 32767);
+               
+            LOOP
+               get_nextline (file_id, line, eof);
+               EXIT WHEN eof;
+               /*process line*/'
+        #9'  |
+            END LOOP;
+            
+            UTL_FILE.FCLOSE (file_id);
+         END;   
+</value>
+   </row>
+   <row>
+      <key>gn</key>
+      <value>select   global_name
+         from     global_name
+;
+</value>
+   </row>
+   <row>
+      <key>goto</key>
+      <value>-- code_label
+         |;
+         goto code_label;
+</value>
+   </row>
+   <row>
+      <key>haou</key>
+      <value>select       *
+         from         hr_all_organization_units
+         where        1=1
+         --and          organization_id = 1
+         and          name like 
+;
+</value>
+   </row>
+   <row>
+      <key>hubu</key>
+      <value>select      phgm.app_name,
+            phgm.group_id,
+            phgm.user_id,
+            phu.email,
+            phu.first_name,
+            phu.last_name,
+            phgm.user_provider,
+            phgm.group_member,
+            phgm.group_provider
+from        pln_hsp_group_membership_v phgm,
+            pln_hsp_users_v phu,
+            PLN_HSP_GROUPS_V phg
+where       1 = 1
+and         phgm.app_name      =    phu.app_name(+)
+and         phgm.user_id       =    phu.user_id(+)
+and         phgm.app_name      =    phg.app_name(+)
+and         phgm.group_member  =    phg.group_id(+)
+--and         phgm.user_id is not null
+--and         regexp_like (phgm.app_name,'(006)|()','i')
+--and         regexp_like (phgm.user_id, '(2125)','i')
+--and         regexp_like (phu.email, '(conrad)|(sharon)','i')
+--and         regexp_like (phgm.group_id, '(admin)','i')
+order by app_name, group_id, email
+;
+</value>
+   </row>
+   <row>
+      <key>ift</key>
+      <value>IF | THEN
+         
+         END IF;
+</value>
+   </row>
+   <row>
+      <key>ifte</key>
+      <value>IF | THEN
+         
+         ELSE
+         
+         END IF;
+</value>
+   </row>
+   <row>
+      <key>iftei</key>
+      <value>IF | THEN
+         
+         ELSIF condition THEN
+         
+         ELSE
+         
+         END IF;
+</value>
+   </row>
+   <row>
+      <key>ii</key>
+      <value>INSERT INTO table VALUES ()</value>
+   </row>
+   <row>
+      <key>invproc</key>
+      <value>PROCEDURE | ()
+           AUTHID CURRENT_USER
+         IS
+         BEGIN
+         
+         END;
+</value>
+   </row>
+   <row>
+      <key>KillSession</key>
+      <value>SELECT SID,SERIAL# 
+         FROM V$SESSION 
+         WHERE SID IN (select session_id 
+         FROM DBA_DML_LOCKS
+         WHERE NAME = upper('FND_USER'))
+         
+         ALTER SYSTEM KILL SESSION '2955,12';
+</value>
+   </row>
+   <row>
+      <key>lck</key>
+      <value>SELECT to_char(sysdate ,'YYYY-MON-DD HH24:MI:SS') query_run_time_est,
+                sys_context('USERENV', 'DB_NAME') Instance,
+                ss.sid, 
+                ss.SERIAL#,
+                ss.audsid,
+                ss.osuser,
+                ss.username, 
+                obj.object_name, 
+                MODULE,
+                machine,
+                terminal,
+                TO_CHAR(logon_time ,'DD-MON:Hh24:MI
+FROM   v$SESSION ss,
+                v$locked_object lobj,
+                dba_objects obj
+         WHERE 1=1
+          AND      obj.object_name LIKE 'MTL%%'--DRAFT_INV%'
+         -- and      obj.object_type='TABLE'
+         AND      lobj.object_id= obj.object_id         
+         AND   ss.Sid= lobj.session_id
+         ORDER BY object_name
+;         
+         
+SELECT nvl(ses.username,'ORACLE PROC')||' ('||ses.sid||')' USERNAME,
+                SID,   
+                MACHINE, 
+                REPLACE(SQL.SQL_TEXT,CHR(10),') STMT, 
+                SES.LAST_CALL_ET,
+               ltrim(to_char(floor(SES.LAST_CALL_ET/3600), '09')) || ':
+       || ltrim(to_char(floor(mod(SES.LAST_CALL_ET, 3600)/60), 09')) || ':
+       || ltrim(to_char(mod(SES.LAST_CALL_ET, 60), '09'))    RUNT 
+           FROM V$SESSION SES,   
+                V$SQLtext_with_newlines SQL 
+          where SES.STATUS = 'ACTIVE'
+            and SES.USERNAME is not null
+            and SES.SQL_ADDRESS    = SQL.ADDRESS 
+            and SES.SQL_HASH_VALUE = SQL.HASH_VALUE 
+            and Ses.AUDSID != userenv('SESSIONID') 
+            and   sid = 3121
+         --and serial# = 28843
+          order by runt desc, 1,sql.piece;
+         
+</value>
+   </row>
+   <row>
+      <key>lckfr</key>
+      <value>SELECT to_char(sysdate ,'YYYY-MON-DD HH24:MI:SS') query_run_time_est,
+                sys_context('USERENV', 'DB_NAME') Instance,
+                ss.SERIAL#,
+                ss.audsid,
+                ss.osuser,
+                ss.username, 
+                obj.object_name,
+                DECODE(lobj.locked_mode,
+                          1, NULL,
+                          2, 'Row Share',
+                          3, 'Row Exclusive',
+                          4, 'Share',
+                          5, 'Share Row Exclusive',
+                          6, 'Exclusive',
+                          'None'
+                         ) locked_mode,
+                MODULE,
+                program,
+                action,
+                machine,
+                terminal,
+                TO_CHAR(logon_time ,'DD-MON-YYYY Hh24:MI:SS') logon_time,
+                fcr.REQUEST_ID REQ_ID,
+                --ORACLE_PROCESS_ID OPID,
+                fcr.parent_request_id,
+       NVL(fcr.description, USER_CONCURRENT_PROGRAM_NAME) USER_CONCURRENT_PROGRAM_NAME,
+                fr.RESPONSIBILITY_NAME,
+                fu.user_name,
+                fcr.REQUEST_DATE,  
+                fcr.actual_start_date, 
+                fcr.PHASE_code ,
+                fcr.status_code
+         FROM   v$SESSION ss,
+                v$locked_object lobj,
+                all_objects obj,
+                v$lock lk,
+                fnd_concurrent_requests fcr,
+                fnd_concurrent_programs_vl fcp,
+                fnd_user fu,
+                fnd_responsibility_vl fr
+         WHERE 1=1
+          and            lk.lmode > 1
+          AND          lk.SID = ss.SID
+          AND          obj.object_id = lk.id1
+         -- AND      obj.object_name LIKE 'PO%%'--DRAFT_INV%'
+         and      obj.object_type='TABLE'
+         AND      lobj.object_id= obj.object_id         
+         AND   ss.Sid= lobj.session_id
+         and   fcr.ORACLE_SESSION_ID  = ss.audsid
+            AND fcr.responsibility_id = fr.responsibility_id
+            AND fu.user_id = fcr.requested_by
+            AND fcp.application_id = fcr.PROGRAM_APPLICATION_ID
+            AND fcp.CONCURRENT_PROGRAM_ID = fcr.CONCURRENT_PROGRAM_ID
+         and   fcr.request_id >=4045835
+         and  fcr.requested_by= 4205
+;
+</value>
+   </row>
+   <row>
+      <key>lp</key>
+      <value>LOOP
+            |;
+         END LOOP;
+</value>
+   </row>
+   <row>
+      <key>lpew</key>
+      <value>LOOP
+            EXIT WHEN |;
+         END LOOP;
+</value>
+   </row>
+   <row>
+      <key>lpex</key>
+      <value>LOOP
+            IF | THEN
+               EXIT;
+            END IF;
+         END LOOP;
+</value>
+   </row>
+   <row>
+      <key>modm</key>
+      <value>select   *
+         from   modutl_org_def_map_all
+         where  1=1
+         
+</value>
+   </row>
+   <row>
+      <key>moum</key>
+      <value>select    *
+         from      modutl_operating_units_map
+</value>
+   </row>
+   <row>
+      <key>msi</key>
+      <value>SELECT    haou.name Item_orgn_name,
+                   msi.segment1,
+                   msi.*
+         FROM      mtl_system_items_b msi,
+                   hr_all_organization_units haou
+         WHERE     1 = 1
+         and       msi.organization_id = haou.organization_id
+         --and       msi.inventory_item_id = 
+         --and       msi.segment1 like 
+;
+</value>
+   </row>
+   <row>
+      <key>mta</key>
+      <value>MODIFY TABLE | ADD (
+         )
+</value>
+   </row>
+   <row>
+      <key>mydesc</key>
+      <value>DECLARE
+            v_sqlstr  varchar2(32767) := '(
+                                )';       -- 'Sql Scripts Ends here
+            
+            
+            cur PLS_INTEGER := DBMS_SQL.OPEN_CURSOR;
+            cols DBMS_SQL.desc_tab2;
+            ncols PLS_INTEGER;
+         BEGIN
+            DBMS_SQL.PARSE 
+               (cur, v_sqlstr, DBMS_SQL.NATIVE);
+            DBMS_SQL.describe_columns2 (cur, ncols, cols);
+            FOR col_count IN 1 .. ncols
+            LOOP
+                  if col_count != ncols then 
+          DBMS_OUTPUT.PUT_LINE (concat(cols(col_count).col_name , ', ') );
+               else
+                   DBMS_OUTPUT.PUT_LINE (cols(col_count).col_name);
+               end if;            
+            END LOOP;
+            DBMS_SQL.CLOSE_CURSOR (cur);
+         END;
+         /
+</value>
+   </row>
+   <row>
+      <key>ndsmrq</key>
+      <value>DECLARE
+            l_var VARCHAR2(32767);
+            TYPE refcur_t IS REF CURSOR;
+            l_cursor refcur_t;
+            l_record table%ROWTYPE; -- MODIFY TO MATCH SELECT
+         BEGIN
+            OPEN l_cursor FOR 'SELECT | ';
+            LOOP
+               FETCH l_cursor INTO l_record;
+               EXIT WHEN l_cursor%NOTFOUND;
+            END LOOP;
+            CLOSE l_cursor;
+         END;
+</value>
+   </row>
+   <row>
+      <key>ndsplsql</key>
+      <value>DECLARE
+            l_block VARCHAR2(32767) :=
+               '| ';
+         BEGIN
+            EXECUTE IMMEDIATE 
+               'BEGIN ' || l_block || 'END;'
+               INTO l_var
+               USING var1 IN, var2 IN OUT, var3 OUT;
+         END;
+</value>
+   </row>
+   <row>
+      <key>ndssrq</key>
+      <value>DECLARE
+            l_var VARCHAR2(32767);
+         BEGIN
+            EXECUTE IMMEDIATE 
+               'SELECT | '
+               INTO l_var
+               USING;
+         END;
+</value>
+   </row>
+   <row>
+      <key>oehdr</key>
+      <value>SELECT ORDER_NUMBER,
+                CUSTOMER_NUMBER,
+                SHIP_TO_ADDRESS5,
+                INVOICE_TO_ADDRESS5,
+                FLOW_STATUS_CODE,
+                TAX_EXEMPT_FLAG,
+                CREATION_DATE,
+                CREATED_BY,
+                HEADER_ID,
+                sold_to,
+                ship_to,
+                invoice_to,
+                oh.*
+              --  ship_to_Customer_id,
+               -- bill_to_customer_id
+         FROM   OE_ORDER_HEADERS_V oh
+         WHERE  1 = 1
+         and    header_id > 5426296
+         and    customer_number like 'CAGREATN'
+         and    ordered_date > sysdate - 1
+;
+</value>
+   </row>
+   <row>
+      <key>pa</key>
+      <value>select        *
+         from    po_agents
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>paaf</key>
+      <value>select        *
+         from    per_all_assignments_f
+         where        1=1
+         and person_id = 
+;
+</value>
+   </row>
+   <row>
+      <key>paf</key>
+      <value>select        *
+         from        PER_ASSIGNMENTS_F
+         where        1=1
+         and            person_id =    :person_id
+         order by      EFFECTIVE_START_DATE       desc
+;
+</value>
+   </row>
+   <row>
+      <key>papf</key>
+      <value>select        *
+         from    per_all_people_f
+         where        1=1
+         and person_id = 
+;
+</value>
+   </row>
+   <row>
+      <key>pccdl</key>
+      <value>SELECT        *
+         from        pa_cc_dist_lines 
+         where        1=1 
+         --and            expenditure_item_id 
+;
+</value>
+   </row>
+   <row>
+      <key>pcdl</key>
+      <value>select       *
+         from       pa_cost_distribution_lines_all
+         where       1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pcerdl</key>
+      <value>select        *
+         from        PA_CUST_EVENT_RDL_ALL      
+         where        1=1   
+;
+</value>
+   </row>
+   <row>
+      <key>pcrdl</key>
+      <value>select       *
+         from       pa_cust_rev_dist_lines_all
+         where       1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pdi</key>
+      <value>select        *
+         from        pa_draft_invoices_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pdid</key>
+      <value>select        *
+         from        pa_draft_invoice_details_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pdii</key>
+      <value>select        *
+         from        pa_draft_invoice_items
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pdr</key>
+      <value>select        *
+         from        pa_draft_revenues_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pdri</key>
+      <value>select        *
+         from        pa_draft_revenue_items
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pe</key>
+      <value>select        *
+         from        pa_expenditures_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pei</key>
+      <value>select        *
+         from        pa_expenditure_items_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>peiadj</key>
+      <value>SELECT       *
+         FROM       PA_EXPEND_ITEM_ADJ_ACTIVITIES
+         WHERE       1=1
+         AND           expenditure_item_id = 90763041
+;
+</value>
+   </row>
+   <row>
+      <key>peicc</key>
+      <value>SELECT    pp.segment1, pp.project_type,  pp.CC_TAX_TASK_ID, pt.task_number,  pt.billable_flag,
+                 pt.allow_cross_charge_flag,     
+        pt.CC_PROCESS_LABOR_FLAG, tps1.name labor_tp_name, pt.CC_PROCESS_NL_FLAG, tps2.name nl_tp_name,             
+                 pwt.name task_work_type, pwt1.name EI_Work_type,
+                 ( SELECT    full_name 
+                       FROM        per_all_people_f 
+                       WHERE        1=1
+              AND        SYSDATE BETWEEN EFFECTIVE_START_DATE AND     EFFECTIVE_END_DATE
+              AND            pe.incurred_by_person_id = person_id 
+                     ) full_name ,
+        pe.EXPENDITURE_CLASS_CODE, pe.EXPENDITURE_GROUP, EXPENDITURE_ITEM_DATE, EXPENDITURE_TYPE,ORIG_USER_EXP_TXN_REFERENCE, 
+                 pe.user_batch_name, 
+                 pei.BILLABLE_FLAG,QUANTITY,
+        COST_DISTRIBUTED_FLAG, RAW_COST, RAW_COST_RATE, COST_DIST_REJECTION_CODE, CC_CROSS_CHARGE_TYPE, CC_CROSS_CHARGE_CODE,
+                 CC_IC_PROCESSED_CODE, CC_REJECTION_CODE, 
+        haou1.name PRVDR_ORGANIZATION, haou2.name RECVR_ORGANIZATION,
+                 haou3.name Prvdr_OU, haou4.name RECVR_OU,
+        REVENUE_DISTRIBUTED_FLAG, RAW_REVENUE, ACCRUED_REVENUE, ACCRUAL_RATE, REV_DIST_REJECTION_CODE,  BILL_HOLD_FLAG,
+        pei.tp_amt_type_code, BILL_RATE, BILL_AMOUNT, BILL_TRANS_BILL_AMOUNT, INV_GEN_REJECTION_CODE,
+        ADJUSTED_EXPENDITURE_ITEM_ID, NET_ZERO_ADJUSTMENT_FLAG,    TRANSFERRED_FROM_EXP_ITEM_ID, ORIG_TRANSACTION_REFERENCE, 
+        TRANSACTION_SOURCE, SOURCE_EXPENDITURE_ITEM_ID,    SYSTEM_LINKAGE_FUNCTION,
+        pe.incurred_by_person_id, EXPENDITURE_ITEM_ID, pei.EXPENDITURE_ID, pei.PROJECT_ID, pei.TASK_ID, 
+        pei.CC_prvdr_organization_id, pei.CC_RECVR_ORGANIZATION_ID, 
+                 pei.org_id, pei.recvr_org_id,
+                 pe.creation_date,
+                 pei.last_update_date        
+         FROM        pa_expenditure_items_all pei,
+                     pa_projects_all  pp,
+                     pa_expenditures_all pe,
+                     pa_tasks pt,
+                     pa_work_types_vl pwt, 
+                     pa_work_types_vl pwt1,
+                     PA_CC_TP_SCHEDULES_bg tps1,
+                     PA_CC_TP_SCHEDULES_bg tps2,
+                     hr_all_organization_units haou1,
+                     hr_all_organization_units haou2,
+                     hr_all_organization_units haou3,
+                     hr_all_organization_units haou4
+         WHERE        1=1           
+         AND            pp.project_id = pei.project_id
+         AND            pei.expenditure_id = pe.expenditure_id
+         AND            pei.task_id = pt.task_id
+         AND            pt.work_type_id = pwt.work_type_id(+)
+         AND            pei.work_type_id = pwt1.work_type_id(+)
+AND            pei.cc_prvdr_ORGANIZATION_id = haou1.organization_id(+)
+AND            pei.cc_RECVR_ORGANIZATION_id = haou2.organization_id(+)
+         AND            pei.ORG_id = haou3.organization_id
+         AND            pei.RECVR_ORG_id = haou4.organization_id
+         AND            tps1.TP_SCHEDULE_id(+) = pt.LABOR_TP_SCHEDULE_ID 
+         AND            tps2.TP_SCHEDULE_id(+) = pt.NL_TP_SCHEDULE_ID
+         AND            NET_ZERO_ADJUSTMENT_FLAG = 'N'
+          AND            CC_CROSS_CHARGE_TYPE = 'IC
+ AND        (    CC_CROSS_CHARGE_CODE = 'N'  )--OR ( CC_CROSS_CHARGE_CODE = 'I' AND  cc_ic_processed_code = 'N' )) 
+         -- and            pp.project_type like 'TM'
+         -- and            cc_ic_processed_code = 'N'      
+          AND            recvr_org_id = 28
+          AND            pei.org_id = 1080546
+AND            expenditure_item_date BETWEEN TO_DATE('25-dec-2004','dd-mon-yyyy') AND TO_DATE('31-Mar-2005','dd-mon-yyyy')  
+--AND            expenditure_item_date BETWEEN TO_DATE('01-oct-2004','dd-mon-yyyy') AND TO_DATE('24-dec-2004','dd-mon-yyyy
+--AND            expenditure_item_date BETWEEN TO_DATE('25-Jun-2004','dd-mon-yyyy') AND TO_DATE('30-sep-2004','dd-mon-yyyy')
+;
+</value>
+   </row>
+   <row>
+      <key>peiccn</key>
+      <value>SELECT      haou4.name RECVR_OU,pp.segment1, pp.project_type,  pp.CC_TAX_TASK_ID, pt.task_number,  pt.billable_flag,
+                     pt.allow_cross_charge_flag,       
+            pt.CC_PROCESS_LABOR_FLAG, tps1.name labor_tp_name, pt.CC_PROCESS_NL_FLAG, tps2.name nl_tp_name,             
+                     pwt.name task_work_type, pwt1.name EI_Work_type,
+            ( SELECT      concat(concat(full_name,chr(9)), EMPLOYEE_NUMBER)
+                             FROM            per_all_people_f 
+                             WHERE            1=1
+                    AND            SYSDATE BETWEEN EFFECTIVE_START_DATE AND       EFFECTIVE_END_DATE
+                    AND                  pe.incurred_by_person_id = person_id 
+                     ) "Employee Name      PRN",
+            EXPENDITURE_ITEM_DATE, EXPENDITURE_TYPE,      QUANTITY,pei.BILLABLE_FLAG,
+            COST_DISTRIBUTED_FLAG, COST_DIST_REJECTION_CODE, RAW_COST, RAW_COST_RATE, 
+                     CC_CROSS_CHARGE_TYPE, CC_CROSS_CHARGE_CODE,
+            CC_IC_PROCESSED_CODE, cc_bl_distributed_code, CC_REJECTION_CODE,pei.tp_amt_type_code,
+                     pj.name, pei.job_id,  
+            haou1.name PRVDR_ORGANIZATION, haou2.name RECVR_ORGANIZATION,
+                     haou3.name Prvdr_OU, 
+            NET_ZERO_ADJUSTMENT_FLAG, ADJUSTED_EXPENDITURE_ITEM_ID,       TRANSFERRED_FROM_EXP_ITEM_ID, ORIG_TRANSACTION_REFERENCE, 
+            TRANSACTION_SOURCE, SOURCE_EXPENDITURE_ITEM_ID,      SYSTEM_LINKAGE_FUNCTION,
+            pe.incurred_by_person_id, pe.INCURRED_BY_ORGANIZATION_ID, EXPENDITURE_ITEM_ID, pei.EXPENDITURE_ID, pei.PROJECT_ID, pei.TASK_ID, 
+            pei.CC_prvdr_organization_id, pei.CC_RECVR_ORGANIZATION_ID, 
+                     pei.org_id, pei.recvr_org_id,
+            pei.BILLABLE_FLAG,REVENUE_DISTRIBUTED_FLAG, REV_DIST_REJECTION_CODE,  ACCRUAL_RATE, RAW_REVENUE, ACCRUED_REVENUE, BILL_HOLD_FLAG,
+            BILL_RATE, BILL_AMOUNT, BILL_TRANS_BILL_AMOUNT, INV_GEN_REJECTION_CODE,
+            pe.EXPENDITURE_CLASS_CODE, pe.EXPENDITURE_GROUP, ORIG_USER_EXP_TXN_REFERENCE, 
+                     pe.user_batch_name,
+                     pe.creation_date,
+                     pei.last_update_date 
+         FROM        pa_expenditure_items_all pei,
+                     pa_projects_all  pp,
+                     pa_expenditures_all pe,
+                     pa_tasks pt,
+                     pa_work_types_vl pwt, 
+                     pa_work_types_vl pwt1,
+                     PA_CC_TP_SCHEDULES_bg tps1,
+                     PA_CC_TP_SCHEDULES_bg tps2,
+                     hr_all_organization_units haou1,
+                     hr_all_organization_units haou2,
+                     hr_all_organization_units haou3,
+                     hr_all_organization_units haou4,
+                     per_jobs pj
+         WHERE       1=1               
+         and         pei.job_id = pj.job_id
+         AND         pp.project_id = pei.project_id
+         AND         pei.expenditure_id = pe.expenditure_id
+         AND         pei.task_id = pt.task_id
+         AND         pt.work_type_id = pwt.work_type_id(+)
+         AND         pei.work_type_id = pwt1.work_type_id(+)
+AND         pei.cc_prvdr_ORGANIZATION_id = haou1.organization_id(+)
+AND         pei.cc_RECVR_ORGANIZATION_id = haou2.organization_id(+)
+         AND         pei.ORG_id = haou3.organization_id
+         AND         pei.RECVR_ORG_id = haou4.organization_id
+         AND         tps1.TP_SCHEDULE_id(+) = pt.LABOR_TP_SCHEDULE_ID 
+         AND         tps2.TP_SCHEDULE_id(+) = pt.NL_TP_SCHEDULE_ID
+         AND         NET_ZERO_ADJUSTMENT_FLAG = 'N'
+         --and         pei.cost_distributed_flag like 'N'
+         --and         pp.segment1 like '300115709'
+         AND         CC_CROSS_CHARGE_TYPE = 'IC'
+         AND         ( (CC_CROSS_CHARGE_CODE = 'N'  ) 
+                       OR (   CC_CROSS_CHARGE_CODE = 'I' 
+                              AND  cc_ic_processed_code = 'N' 
+                       and  (   (    pei.TP_AMT_TYPE_CODE  not like 'COST_TRANSFER
+                                   or  pei.TP_AMT_TYPE_CODE  is null )
+                                        or pp.cc_tax_task_id is null)
+                           )
+                     )
+         AND         recvr_org_id !=1080546
+         AND         pei.org_id = 1080546
+AND                  expenditure_item_date BETWEEN TO_DATE('01-jun-2004','dd-mon-yyyy') AND TO_DATE('24-aug-2004','dd-mon-yyyy')
+;
+</value>
+   </row>
+   <row>
+      <key>peid</key>
+      <value>select        *
+         from        pa_ei_denorm
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pein</key>
+      <value>SELECT    pp.segment1, pp.project_type,  pt.task_number,  pt.billable_flag,             
+                 ( SELECT    full_name 
+                       FROM        per_all_people_f 
+                       WHERE        1=1
+              AND        SYSDATE BETWEEN EFFECTIVE_START_DATE AND     EFFECTIVE_END_DATE
+              AND            pe.incurred_by_person_id = person_id 
+                     ) full_name ,
+        pe.EXPENDITURE_CLASS_CODE, pe.EXPENDITURE_GROUP, EXPENDITURE_ITEM_DATE, EXPENDITURE_TYPE,ORIG_USER_EXP_TXN_REFERENCE, 
+                 pe.user_batch_name, 
+                 pei.BILLABLE_FLAG,QUANTITY, pc.expenditure_comment,
+        COST_DISTRIBUTED_FLAG, RAW_COST, RAW_COST_RATE, COST_DIST_REJECTION_CODE, 
+        haou1.name PRVDR_ORGANIZATION, haou2.name RECVR_ORGANIZATION,
+                 haou3.name Prvdr_OU, haou4.name RECVR_OU,
+        REVENUE_DISTRIBUTED_FLAG, RAW_REVENUE, ACCRUED_REVENUE, ACCRUAL_RATE, REV_DIST_REJECTION_CODE,  BILL_HOLD_FLAG,
+        pei.tp_amt_type_code, BILL_RATE, BILL_AMOUNT, BILL_TRANS_BILL_AMOUNT, INV_GEN_REJECTION_CODE,
+        ADJUSTED_EXPENDITURE_ITEM_ID, NET_ZERO_ADJUSTMENT_FLAG,    TRANSFERRED_FROM_EXP_ITEM_ID, ORIG_TRANSACTION_REFERENCE, 
+        TRANSACTION_SOURCE, SOURCE_EXPENDITURE_ITEM_ID,    SYSTEM_LINKAGE_FUNCTION,
+        pe.incurred_by_person_id, pei.EXPENDITURE_ID, pei.PROJECT_ID, pei.TASK_ID, 
+        pei.CC_prvdr_organization_id, pei.CC_RECVR_ORGANIZATION_ID, 
+                 pei.org_id, pei.recvr_org_id,
+                 pe.creation_date,
+                 pei.last_update_date        
+         FROM        pa_expenditure_items_all pei,
+                     pa_projects_all  pp,
+                     pa_expenditures_all pe,
+                     pa_tasks pt,
+                     hr_all_organization_units haou1,
+                     hr_all_organization_units haou2,
+                     hr_all_organization_units haou3,
+                     hr_all_organization_units haou4,
+                     pa_expenditure_comments pc
+         WHERE        1=1           
+         AND            pp.project_id = pei.project_id
+         AND            pei.expenditure_id = pe.expenditure_id
+         AND            pei.task_id = pt.task_id
+AND            pei.cc_prvdr_ORGANIZATION_id = haou1.organization_id(+)
+AND            pei.cc_RECVR_ORGANIZATION_id = haou2.organization_id(+)
+         AND            pei.ORG_id = haou3.organization_id
+         AND            pei.RECVR_ORG_id = haou4.organization_id
+and            pei.expenditure_item_id = pc.expenditure_item_id(+)
+         AND            NET_ZERO_ADJUSTMENT_FLAG = 'N'
+         --AND            pei.cost_distributed_flag LIKE 'N'
+         and            pei.billable_flag = 'N'
+         --AND            pei.org_id = 4
+         AND            pp.segment1 IN ( '212386
+--AND            pe.incurred_by_person_id = 17221
+--AND            expenditure_item_date BETWEEN TO_DATE('01-jun-2006','dd-mon-yyyy') AND TO_DATE('9-jun-2006','dd-mon-yyyy
+ORDER BY pp.segment1;
+;
+</value>
+   </row>
+   <row>
+      <key>peirel</key>
+      <value>select    level, rpad('|',(level-1)*4,'-') ||to_char(pei_v.expenditure_item_id) exp_item_id, 
+                 pei_v.expenditure_item_id, 
+                 pei_v.expenditure_id, 
+                 (select        /* no_merge(pt)     */ 
+                             task_number 
+                  from        pa_tasks pt 
+                  where        1=1 
+                  and        pt.task_id = pei_v.task_id) task_name , 
+                 related_exp, 
+                 typ_exp, 
+                 cost_distributed_flag cdf, 
+                 revenue_distributed_flag rdf, 
+                 quantity, 
+                 expenditure_item_date, 
+                 CC_CROSS_CHARGE_TYPE, 
+                   CC_CROSS_CHARGE_code, 
+                 pei_v.creation_date 
+         from 
+                 ( 
+                         select     expenditure_item_id , 
+                                  expenditure_item_date, 
+                                  expenditure_id, 
+                                  quantity, 
+                         decode(TRANSFERRED_FROM_EXP_ITEM_ID,null,null,'T') typ_exp, 
+                         TRANSFERRED_FROM_EXP_ITEM_ID  related_exp, 
+                                  cost_distributed_flag , 
+                                  revenue_distributed_flag , 
+                                  creation_date, 
+                                  task_id, 
+                                  CC_CROSS_CHARGE_TYPE, 
+                                  CC_CROSS_CHARGE_code 
+                         from     pa_expenditure_items_all 
+                         where     1=1 
+                and         expenditure_item_id in (86225832, 86225833, 86535746, 86535747, 86535748, 86669086, 86669087, 86669088, 86669089, 86669092, 86669093, 86669094, 86669095, 86669096, 86669097, 86875330, 86875338, 86875344, 86875346, 86875350, 86875351, 86875352, 86875353, 86875354, 86875355, 86875356, 86875357, 86875358, 86875359, 86875360, 86875361, 86875362, 86875363, 86875364, 86875365, 86875366, 86875367, 86875368, 86875369, 86875370, 87163191, 87163192, 87163193, 87163194, 87163195, 87163196, 87163197, 87163198, 87163199, 87163200, 87163201, 87163202, 87163203, 87163204, 87163205, 87163206, 87163207, 87163208, 87163209, 87163210, 87163211, 87163212, 87163213, 87163214, 87163215, 87163216, 87163217, 87163218, 87163219, 87163220, 87163221, 87163222, 87163223, 87163224, 87163225, 87163226, 87163227, 87163228, 87163229, 87163230, 87163231, 87163232, 87225022, 87225023, 87225024, 87225025, 87225026, 87225027, 87225028, 87225029, 87525154, 87525155, 87525156, 87525157, 87525158, 87525159, 87525160, 87525161, 87525162, 87525163, 87525164, 87525165, 87525166, 87525167, 87525168, 87525169, 87525170, 87525171, 87525172, 87525173, 87525174, 87525175, 87525176, 87525177, 87525178, 87525179, 87525180, 87525181, 87525182, 87525183, 87525184, 87525185, 87525186, 87525187, 87525188, 87525189, 87525190, 87525191, 87525192, 87525193, 87525194, 87525195, 87525240, 87525241, 87525242, 87525243, 87525244, 87525245, 87525246, 87525247) 
+                         union 
+                         select     expenditure_item_id , 
+                                  expenditure_item_date, 
+                                  expenditure_id, 
+                                  quantity, 
+                         decode(ADJUSTED_EXPENDITURE_ITEM_ID  ,null,null,'A') typ_exp, 
+                         ADJUSTED_EXPENDITURE_ITEM_ID  related_exp, 
+                                  cost_distributed_flag , 
+                                  revenue_distributed_flag , 
+                                  creation_date, 
+                                  task_id, 
+                                  CC_CROSS_CHARGE_TYPE, 
+                                  CC_CROSS_CHARGE_code 
+                         from     pa_expenditure_items_all 
+                         where     1=1 
+                and         expenditure_item_id in (86225832, 86225833, 86535746, 86535747, 86535748, 86669086, 86669087, 86669088, 86669089, 86669092, 86669093, 86669094, 86669095, 86669096, 86669097, 86875330, 86875338, 86875344, 86875346, 86875350, 86875351, 86875352, 86875353, 86875354, 86875355, 86875356, 86875357, 86875358, 86875359, 86875360, 86875361, 86875362, 86875363, 86875364, 86875365, 86875366, 86875367, 86875368, 86875369, 86875370, 87163191, 87163192, 87163193, 87163194, 87163195, 87163196, 87163197, 87163198, 87163199, 87163200, 87163201, 87163202, 87163203, 87163204, 87163205, 87163206, 87163207, 87163208, 87163209, 87163210, 87163211, 87163212, 87163213, 87163214, 87163215, 87163216, 87163217, 87163218, 87163219, 87163220, 87163221, 87163222, 87163223, 87163224, 87163225, 87163226, 87163227, 87163228, 87163229, 87163230, 87163231, 87163232, 87225022, 87225023, 87225024, 87225025, 87225026, 87225027, 87225028, 87225029, 87525154, 87525155, 87525156, 87525157, 87525158, 87525159, 87525160, 87525161, 87525162, 87525163, 87525164, 87525165, 87525166, 87525167, 87525168, 87525169, 87525170, 87525171, 87525172, 87525173, 87525174, 87525175, 87525176, 87525177, 87525178, 87525179, 87525180, 87525181, 87525182, 87525183, 87525184, 87525185, 87525186, 87525187, 87525188, 87525189, 87525190, 87525191, 87525192, 87525193, 87525194, 87525195, 87525240, 87525241, 87525242, 87525243, 87525244, 87525245, 87525246, 87525247) 
+                 )        pei_v , 
+                 pa_expenditures_all pe 
+         where        pe.expenditure_id = pei_v.expenditure_id 
+connect by prior     pei_v.expenditure_item_id = pei_v.related_exp 
+         start with  related_exp is null
+;
+</value>
+   </row>
+   <row>
+      <key>pepei</key>
+      <value>select        pe.*
+         from        pa_expenditures pe,
+                     pa_expenditure_items pei
+         where        1=1 
+         and            pe.expenditure_id = pei.expenditure_id
+         --and            pei.project_id =
+;
+</value>
+   </row>
+   <row>
+      <key>pi</key>
+      <value>select        *
+         from        pa_implementations
+         where        1=1    
+;
+</value>
+   </row>
+   <row>
+      <key>podtl</key>
+      <value>SELECT * 
+         FROM PO_LINES_ALL
+         WHERE 1 = 1
+         AND PO_HEADER_ID LIKE 101956
+;
+</value>
+   </row>
+   <row>
+      <key>poh</key>
+      <value>SELECT    haou.name operating_unit, 
+                   poh.segment1,
+                   poh.document_number,
+                   pv.vendor_number,
+                   pv.vendor_name,
+                   pvs.site_name,
+                   poh.*,
+                   global_name,
+                   sysdate date_qry_run,
+                   rownum
+         FROM      po_headers_all poh,
+                   hr_all_organization_units haou,
+                   po_vendors pv,
+                   po_vendor_sites_all pvs,
+                   global_name          
+         WHERE     1 = 1
+         and       poh.org_id = haou.organization_id
+         and       poh.vendor_id = pv.vendor_id,
+         and       poh.vendor_site_id = pvs.vendor_site_id
+         --and       po_header_id = 702180
+;
+</value>
+   </row>
+   <row>
+      <key>pohdr</key>
+      <value>SELECT * 
+         FROM PO_HEADERS_ALL
+         WHERE 1 = 1
+         AND SEGMENT1 LIKE 98256
+;
+</value>
+   </row>
+   <row>
+      <key>pol</key>
+      <value>SELECT    haou.name operating_unit, 
+                   poh.segment1,
+                   poh.document_number,
+                   pv.vendor_number,
+                   pv.vendor_name,
+                   pvs.site_name,
+                   -- buyer_name
+                   -- date of po
+                   -- m
+                   pol.*,
+                   global_name,
+                   sysdate date_qry_run,
+                   rownum
+         FROM      po_headers_all poh,
+                   hr_all_organization_units haou,
+                   po_vendors pv,
+                   po_vendor_sites_all pvs,
+                   po_lines_all,
+                   mtl_system_items_b msi
+                   global_name          
+         WHERE     1 = 1
+         and       poh.org_id = haou.organization_id
+         and       poh.vendor_id = pv.vendor_id,
+         and       poh.vendor_site_id = pvs.vendor_site_id
+         and       poh.po_header_id = pol.po_header_id
+         and       pol.inventory_item_id = msi.inventory_item_id
+         and       pol.organization_id = msi.organization_id
+         --and       po_header_id = 702180
+;
+</value>
+   </row>
+   <row>
+      <key>pp</key>
+      <value>SELECT        *
+         FROM        pa_projects_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>ppa</key>
+      <value>SELECT pp1.segment1, pp1.project_status_code
+           FROM pa_projects_all@r11erp3 pp1,
+                pa_projects_all pp2,
+                pa_project_types_all@r11erp3 ppt
+          WHERE 1 = 1
+          and   pp1.project_id = pp2.project_id
+          and   pp1.project_type = ppt.project_type
+          and   pp1.org_id = ppt.org_id
+ and   pp1.org_id in (select r11_ou_id from modutl_operating_units_map)
+         -- and   ppt.project_type_class_code like 'INDIRECT'
+           and   ppt.project_type_class_code like 'CAPITAL
+;
+</value>
+   </row>
+   <row>
+      <key>ppal</key>
+      <value>SELECT *
+           FROM pa_project_assets_all
+          WHERE 1 = 1                
+;          
+         SELECT *
+           FROM PA_PROJECT_ASSET_LINES_ALL@r11erp3
+          WHERE 1 = 1
+          and org_id = 0
+;
+</value>
+   </row>
+   <row>
+      <key>ppiv</key>
+      <value>SELECT    *
+         FROM      PA_PROJ_INVOICE_VIEW
+         WHERE      1=1
+         AND          PROJECT_NUMBER LIKE 'EG-50014
+;
+</value>
+   </row>
+   <row>
+      <key>prax</key>
+      <value>select       * 
+         from       per_assignments_x 
+         where       1=1 
+         --and           person_id = 166002
+;
+</value>
+   </row>
+   <row>
+      <key>proc</key>
+      <value>PROCEDURE | ()
+         IS
+         BEGIN
+         
+         END;
+</value>
+   </row>
+   <row>
+      <key>proj</key>
+      <value>SELECT * 
+         FROM MAS_EFI_CLLI_PROJ_T_NEW
+         WHERE 1 = 1 
+         AND ORACLE_PROJECT LIKE 'CO-40120A-ENG'
+         ORDER BY CLLI
+</value>
+   </row>
+   <row>
+      <key>prpf</key>
+      <value>select   *
+         from     per_all_people_f 
+         where    1=1
+         and      person_id = 886318071
+;
+</value>
+   </row>
+   <row>
+      <key>prptux</key>
+      <value>select      *
+         from        per_person_type_usages_x 
+         where       1=1 
+         --and         person_id in ( 166002)
+;
+</value>
+   </row>
+   <row>
+      <key>prpx</key>
+      <value>select        * 
+         from        per_people_x 
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>pt</key>
+      <value>select      *
+         from        pa_tasks
+         where       1=1
+;
+</value>
+   </row>
+   <row>
+      <key>ptc</key>
+      <value>select        *
+         from        pa_transaction_controls
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>ptpp</key>
+      <value>SELECT        LEVEL, pt.segment1 project, 
+            CONCAT(RPAD(' ',3*(LEVEL-1),' ') , pt.task_number) TASK,
+                     pt.chargeable_flag CF, 
+                     pt.BILLABLE_FLAG BF, 
+                     pt.LIMIT_TO_TXN_CONTROLS_FLAG LTF, 
+                     pt.START_DATE, 
+                     pt.completion_date,
+                     pt.project_id,
+                     pt.TASK_ID,
+                     pt.CREATED_BY             
+FROM        (SELECT pp.segment1, pt1.* FROM pa_tasks pt1, pa_projects_all pp
+                      WHERE  pp.project_id = pt1.project_id
+                      AND    pp.segment1 LIKE  'CGS-1220-060310'
+                      ORDER BY task_number) pt 
+         WHERE        1=1
+         CONNECT    BY  PRIOR  pt.task_id = pt.parent_task_id
+         START WITH  pt.parent_task_id IS NULL
+;
+</value>
+   </row>
+   <row>
+      <key>qry_sess</key>
+      <value>-- queries run by a session
+         SELECT    *
+         FROM      v$session
+         WHERE     1 = 1
+         and    logon_time > sysdate - 0.1
+         and     client_identifier like 'AAM_CONV%'
+         --and    program like 'JDBC Thin Client%'
+		;
+         
+         SELECT t.*
+           FROM v$open_cursor c
+           JOIN v$sqltext t ON c.hash_value = t.hash_value
+                           AND c.address = t.address
+          WHERE sid =  1525--, 1545
+          ORDER BY t.hash_value, t.piece
+		  ;
+     </value>
+   </row>
+   <row>
+      <key>raila</key>
+      <value>SELECT    sysdate date_qry_run,
+                   rail.creation_date,
+                   hou.name ORG_NAME,
+                   (SELECT customer_name 
+                    FROM ra_customers
+                    WHERE 1 = 1
+           and customer_id = orig_system_bill_customer_id) customer,
+                   rail.interface_line_id,
+                   rail.interface_status,
+                   rail.batch_source_name,       
+                   interface_line_attribute2 order_type,
+                   rail.sales_order ,
+                   rail.sales_order_date, 
+                   rail.sales_order_line,
+                   rail.amount,
+                   rail.tax_code,
+                   rail.tax_rate,
+                   rail.vat_tax_id, 
+          case when err.interface_line_id is null  then 'No' else 'Yes' end LINE_IN_ERROR, 
+                   err.message_text, 
+                   err.invalid_value, 
+                   rail.INTERFACE_LINE_CONTEXT,
+                   interface_line_attribute1,
+                   interface_line_attribute3,
+                   interface_line_attribute4,
+                   interface_line_attribute5,
+                   interface_line_attribute6,
+                   interface_line_attribute7,
+                   interface_line_attribute8,
+                   interface_line_attribute9,
+                   rail.term_id, 
+                   rail.orig_system_bill_customer_id, --used for VAT 
+                   rail.orig_system_bill_address_id,  --used for VAT 
+                   rail.orig_system_ship_customer_id ,
+                   rail.orig_system_ship_address_id ,
+                   rail.orig_system_sold_customer_id, 
+                   rail.ship_date_actual ,
+                   rail.inventory_item_id, 
+                   rail.DESCRIPTION,
+                   rail.tax_code ,
+                   rail.tax_rate ,
+                   rail.vat_tax_id ,
+                   rail.warehouse_id ,
+                   rail.interface_line_attribute1 SALES_ORDER2, 
+                   rail.attribute14 PO_NUMBER ,
+                   rail.attribute15 SALES_REP_ID 
+         --        ,rail.*
+         FROM      ra_interface_lines_all rail, 
+                   ra_interface_errors_all err, 
+                   hr_all_organization_units hou 
+         WHERE     1 = 1 
+         AND       rail.org_id = hou.organization_id (+) 
+         AND       rail.interface_line_id = err.interface_line_id (+) 
+         --and       rail.creation_date > sysdate - 0.2
+         --and       rail.org_id = 933
+         --and       rail.interface_line_id is not null
+--and       rail.interface_line_attribute1 in ('1160049671', '1160049930', '1160050795', '1160051312','1160052103', '1160048979, '1160049494','1160053457', '1160053721
+order by rail.sales_order , sales_order_line
+;
+</value>
+   </row>
+   <row>
+      <key>rct</key>
+      <value>select       *
+         from         ra_customer_trx_all 
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>rcta</key>
+      <value>select   rctt.name trx_type, 
+                  rc1.customer_name bill_to_cust,
+                  rc1.customer_number bill_to_cust#,
+                  rc2.customer_name ship_to_cust,
+                  rc2.customer_number ship_to_cust#,
+                  hzl.province,
+                  rct.trx_number ,
+                  rct.trx_date,
+                  rct.interface_header_context source,     
+                  rct.interface_header_attribute2 order_type,
+                  rct.interface_header_attribute1,
+                  rct.purchase_order,
+                  rct.creation_date,
+                  rct.created_by
+         from     ra_customer_trx_all rct,
+                  RA_CUST_TRX_TYPES_ALL rctt,
+                  ra_customers rc1,
+                  ra_customers rc2,
+                  hz_cust_site_uses_all hcsua1,
+                  hz_cust_acct_sites_all hcasa1 ,
+                  hz_party_sites hps,
+                  hz_locations hzl
+         where    1=1
+         and      rct.ship_to_customer_id = rc2.customer_id
+         and      rct.bill_to_customer_id = rc1.customer_id
+         and      rct.cust_trx_type_id = rctt.cust_trx_type_id
+         AND        hcsua1.cust_acct_site_id = hcasa1.cust_acct_site_id
+         AND        hcasa1.party_site_id = hps.party_site_id
+         and        hps.location_id = hzl.location_id
+         and        hcsua1.site_use_id = rct.ship_to_site_use_id
+         --and      rct.customer_trx_id = rctl.customer_trx_id
+--and      rct.creation_date  between to_date(t'01-Jan-2013','dd-mon-yyyy') and to_date('10-Jan-2013','dd-mon-yyyy
+--and      rct.trx_date between to_date('01-Jan-2013','dd-mon-yyyy') and to_date('31-Mar-2013','dd-mon-yyyy
+--and      rct.trx_date between to_date('01-Apr-2013','dd-mon-yyyy') and to_date('30-Apr-2013','dd-mon-yyyy
+--and      rct.trx_date between to_date('01-Apr-2013','dd-mon-yyyy') and to_date('30-Apr-2013','dd-mon-yyyy
+and      rct.creation_date  > sysdate - 2
+         --and     rc1.customer_name like '%REBATES'
+         and      rc1.customer_number like  'CAFRASER'
+         --AND      rct.ORG_ID = 933
+         --and     hzl.province in ('PE', 'BC
+--and      trx_number between '30064300' and '30065000'
+         --and      rct.interface_header_context like 'ORDER%ENTRY%'
+         --and      rct.term_id = 1337
+--and      rctl.vat_tax_id in (11801, 11815, 11831, 11823, 11831, 11823, 11810, 11815, 11823, 11815, 11840, 11815)
+         --and      bill_to_customer_id = 4881639-- 4882204
+and    rct.interface_header_attribute1  in ('1160056159','1160056184
+--and    customer_trx_id in (6930533, 
+         --order by hzl.province, trx_date, trx_number 
+;
+</value>
+   </row>
+   <row>
+      <key>rctaa</key>
+      <value>select   rctt.name trx_type, 
+                  rc1.customer_name bill_to_cust,
+                  rc1.customer_number bill_to_cust#,
+                  rc2.customer_name ship_to_cust,
+                  rc2.customer_number ship_to_cust#,
+                  rct.trx_number ,
+                  rct.interface_header_context source,     
+                  rct.interface_header_attribute2 order_type,
+                rct.interface_header_attribute1,
+                  count(distinct rctl.customer_trx_Line_id) lines,
+                  sum(extended_amount) value,
+                  rct.creation_date,
+                  rct.created_by
+         from     ra_customer_trx_lines_all rctl,
+                  ra_customer_trx_all rct,
+                  RA_CUST_TRX_TYPES_ALL rctt,
+                  AR_VAT_TAX_ALL_B tax,
+                  ra_customers rc1,
+                  ra_customers rc2         
+         where    1=1
+         and      rct.ship_to_customer_id = rc2.customer_id
+         and      rct.bill_to_customer_id = rc1.customer_id
+         and      rct.cust_trx_type_id = rctt.cust_trx_type_id
+         and      rct.customer_trx_id = rctl.customer_trx_id
+         and      tax.vat_tax_id (+)= rctl.vat_tax_id
+--and      rct.creation_date  between to_date('01-Jan-2013','dd-mon-yyyy') and to_date('10-Jan-2013','dd-mon-yyyy
+and      rct.creation_date  > sysdate - 0.03
+         AND      rct.ORG_ID = 933
+         --and      rct.term_id = 1337
+--and      rctl.vat_tax_id in (11801, 11815, 11831, 11823, 11831, 11823, 11810, 11815, 11823, 11815, 11840, 11815)
+         --and      bill_to_customer_id = 4881639-- 4882204
+--and    rct.interface_header_attribute1  in('3160004677','3160004678
+group by 
+         rctt.name ,  rc1.customer_name,
+                  rc1.customer_number,
+                  rc2.customer_name,
+                  rc2.customer_number,
+                 rct.trx_number ,
+                  rct.interface_header_context,     
+                  rct.interface_header_attribute2 ,
+                  rct.interface_header_attribute1,
+                  rct.creation_date,
+                  rct.created_by
+;
+</value>
+   </row>
+   <row>
+      <key>rctl</key>
+      <value>select        *
+         from        ra_customer_trx_lines_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>rctla</key>
+      <value>select   rctt.name trx_type,
+                  rct.trx_number, 
+                  rct.trx_date,
+                  rct.complete_flag,
+                  rct.attribute14 Customer_PO, 
+                  rct.interface_header_context source,     
+                  rct.interface_header_attribute2 order_type, 
+                  rct.interface_header_attribute1 sales_order,
+                  rct.interface_header_attribute3 delivery_id, 
+                  --nvl(link_to_cust_trx_line_id, customer_trx_line_id), 
+                  line_number, 
+                  line_type, 
+                  rctl.inventory_item_id,
+                  rctl.description,
+                  tax.tax_code,
+                  rctl.extended_amount,
+                  rctl.taxable_amount,
+                  rctl.amount_includes_tax_flag,
+                  rctl.quantity_ordered,
+                  rctl.quantity_credited,
+                  rctl.quantity_invoiced,
+                  rctl.unit_standard_price,
+                  rctl.unit_selling_price,
+                  rctl.sales_order_line,
+                  rctl.sales_order_date,
+                  rctl.attribute10,
+                  rct.creation_date,
+                  rct.created_by,
+                  rct.last_update_date,   
+                  rct.last_updated_by,
+                  rctl.creation_date,
+                  rctl.created_by,
+                  rctl.last_update_date,   
+                  rctl.last_updated_by,
+                  rctl.vat_tax_id,
+                  rct.customer_trx_id, 
+                  rctl.customer_trx_line_id,
+                  link_to_cust_trx_line_id
+         from     ra_customer_trx_lines_all rctl,
+                  ra_customer_trx_all rct,
+                  RA_CUST_TRX_TYPES_ALL rctt,
+                  AR_VAT_TAX_ALL_B tax,
+                  ra_customers rc1         
+         where    1=1
+         and      rct.bill_to_customer_id = rc1.customer_id
+         and      rct.cust_trx_type_id = rctt.cust_trx_type_id
+         and      rct.customer_trx_id = rctl.customer_trx_id
+         and      rctl.vat_tax_id = tax.vat_tax_id(+)
+         and rct.creation_date >sysdate - 2
+         AND      rct.ORG_ID = 933
+         AND      rct.ORG_ID = 933
+         and      rc1.customer_number like  'CAFRASER
+and    rct.interface_header_attribute1  in ('1160056159','1160056184
+and   rct.attribute14 like 'Scancode Yes'
+         and  not exists (
+         select        1
+         from        ra_customer_trx_lines_all rctl2
+         where        1=1
+         and          inventory_item_id = 1800727
+         and         rct.customer_trx_id = rctl2.customer_trx_id
+          )
+         order by rctl.customer_trx_id, 
+         nvl(rctl.link_to_cust_trx_line_id, rctl.customer_trx_line_id), 
+                  rctl.line_type, 
+                  rctl.line_number, 
+                  rctl.vat_tax_id
+				  ;
+</value>
+   </row>
+   <row>
+      <key>rctlgl</key>
+      <value>select        *
+         from        ra_cust_trx_line_gl_dist_all
+         where        1=1
+;
+</value>
+   </row>
+   <row>
+      <key>recins</key>
+      <value>DECLARE  
+            l_record tablename%ROWTYPE;
+         BEGIN
+            -- Available in Oracle9i Release 2 and above
+            INSERT INTO tablename
+               VALUES l_record;
+            |
+         END;
+</value>
+   </row>
+   <row>
+      <key>record</key>
+      <value>TYPE |RecordName IS RECORD (
+           deptno  NUMBER;
+           deptname dept.name%TYPE );
+         dept_rec RecordName;
+</value>
+   </row>
+   <row>
+      <key>recupd</key>
+      <value>DECLARE  
+            l_record tablename%ROWTYPE;
+         BEGIN
+            -- Available in Oracle9i Release 2 and above
+            UPDATE tablename
+               SET ROW = l_record
+             WHERE |;
+         END;
+</value>
+   </row>
+   <row>
+      <key>regx</key>
+      <value>-- http://www.regexr.com/
+	  -- Note the use of double "[[" single "[" in code tempelate do not show up in SQLDEV
+	  -- a extra [ acts as escape chr 
+         SELECT   party_name ,
+         REGEXP_REPLACE( fa.TAG_NUMBER, '[['  CHR (9) | CHR (10) || CHR (13)|| ']]') tag_number,
+         REGEXP_SUBSTR(R12_CONCAT_SEGMENTS , '[[^-]]+', 1, 1) Cat1, 
+              REGEXP_SUBSTR(R12_CONCAT_SEGMENTS , '[[^-]]+', 1, 2) Cat2, 
+              REGEXP_SUBSTR(R12_CONCAT_SEGMENTS , '[[^-]]+', 1, 3) Cat3, 
+              REGEXP_SUBSTR(R12_CONCAT_SEGMENTS , '[[^-]]+', 1, 4) Cat4, 
+              REGEXP_SUBSTR(R12_CONCAT_SEGMENTS , '[[^-]]+', 1, 5) Cat5, 
+              REGEXP_SUBSTR(R12_CONCAT_SEGMENTS , '[[^-]]+', 1, 6) Cat6 
+         FROM     ha_parties
+         WHERE    1=1
+and      REGEXP_LIKE (party_name, 'Anders(o|e|a)n')  --return all where party_name is either Anderson, Andersen, or Andersan. 
+and      REGEXP_LIKE (party_name, '^A(*)')  -- return whose name starts with 'A
+and      REGEXP_LIKE (party_name, '(*)n$')   -- return whose name ends with 'n
+and      REGEXP_LIKE(party_name, '^[[[:digit:]]]+$') -- returns only the records which are NUMBERS
+and      REGEXP_LIKE(party_name, '^[[[:alpha:]]]+$') -- returns only the records which are ALPHAS
+and      REGEXP_LIKE(party_name, '^[[[:alnum:]]]+$') -- returns only the records which are ALPHANUMERIC
+and      TO_NUMBER(REGEXP_SUBSTR(party_name, '\d{4}')) >= 2014   -- returns only the records which have 2014 or more in the string 
+and      regexp_like(party_name, '^-?[[[:digit:]],.]]*$')  -- return only the records which are number
+and      regexp_like (ai.Invoice_num, '#TRD\d{3,6}\-')  -- return only records which are like TRD123, TRD1234, TRD12345, TRD123456
+and      REGEXP_LIKE (batch_name, '^([[PL]]|[[IN]]|[[TH]]|[[CN]]|)')  --return all where batch like PL% IN% TH% CN% 
+;
+</value>
+   </row>
+   <row>
+      <key>reqdtl</key>
+      <value>SELECT * 
+         FROM PO_REQUISITION_LINES_ALL
+         WHERE 1 = 1
+         AND REQUISITION_HEADER_ID LIKE 2807
+;
+</value>
+   </row>
+   <row>
+      <key>reqgrpprog</key>
+      <value>SELECT fcp.user_concurrent_program_name , frg.REQUEST_GROUP_NAME, frg.REQUEST_GROUP_ID,fat.application_name 
+         FROM FND_REQUEST_GROUP_UNITS  frgu, 
+         fnd_request_groups frg, 
+         fnd_concurrent_programs_vl fcp, 
+         fnd_application_tl fat
+         WHERE    1=1 
+         AND  fat.application_id = frg.APPLICATION_ID
+         AND  frg.request_group_id = frgu.request_group_id 
+         --and  REQUEST_GROUP_NAME = 'MAS PA SUPER USER' 
+         AND  fcp.APPLICATION_ID    = frgu.UNIT_APPLICATION_ID 
+         AND  fcp.concurrent_program_id =  frgu.REQUEST_UNIT_ID 
+AND  fcp.user_concurrent_program_name    LIKE 'MAS Projects Transaction Interface Exception Update'--CONCURRENT PROGRAM SHORT NAME 
+         ORDER BY 1
+;
+</value>
+   </row>
+   <row>
+      <key>reqgrpreq</key>
+      <value>SELECT frs.USER_REQUEST_SET_NAME , frg.REQUEST_GROUP_NAME, frg.REQUEST_GROUP_ID,fat.application_name 
+         FROM FND_REQUEST_GROUP_UNITS  frgu,
+          fnd_request_groups frg,
+          FND_REQUEST_SETS_VL frs,
+          fnd_application_tl fat
+         WHERE 1=1
+         AND  fat.application_id = frg.APPLICATION_ID
+         AND  frg.request_group_id = frgu.request_group_id
+         --and  REQUEST_GROUP_NAME = 'MAS PA SUPER USER'
+         AND  frs.APPLICATION_ID = frgu.UNIT_APPLICATION_ID      
+         AND  frs.REQUEST_SET_ID =  frgu.REQUEST_UNIT_ID
+       AND  frs.USER_REQUEST_SET_NAME LIKE 'MasTec CO EFI Rev/Bill with AP Interface'
+         ORDER BY 1
+;
+</value>
+   </row>
+   <row>
+      <key>reqhdr</key>
+      <value>SELECT * 
+         FROM PO_REQUISITION_HEADERS_ALL
+         WHERE 1 = 1
+         AND ATTRIBUTE10 LIKE '7HC7450700
+;
+</value>
+   </row>
+   <row>
+      <key>ril</key>
+      <value>SELECT   to_char(sysdate ,'YYYY-MM-DD HH24:MI:SS') query_run_time,
+                 rail.creation_date  Creation_date, 
+                 hou.name ORG_NAME,
+                (SELECT customer_name 
+                 FROM ra_customers
+                 WHERE 1 = 1
+        and customer_id = orig_system_bill_customer_id) customer,
+                 rail.interface_line_id,
+                 rail.interface_status,
+                 rail.batch_source_name,       
+                 interface_line_attribute2 order_type,
+                 rail.sales_order ,
+                 rail.sales_order_date, 
+                 rail.sales_order_line,
+                 rail.amount,
+                 rail.tax_code,
+                 rail.tax_rate,
+                 rail.vat_tax_id, 
+        case when err.interface_line_id is null  then 'No' else 'Yes' end LINE_IN_ERROR, 
+                 err.message_text, 
+                 err.invalid_value, 
+                 rail.INTERFACE_LINE_CONTEXT,
+                 interface_line_attribute1,
+                 interface_line_attribute3,
+                 interface_line_attribute4,
+                 interface_line_attribute5,
+                 interface_line_attribute6,
+                 interface_line_attribute7,
+                 interface_line_attribute8,
+                 interface_line_attribute9,
+                 rail.term_id, 
+                 rail.orig_system_bill_customer_id, --used for VAT 
+                rail.orig_system_bill_address_id,  --used for VAT 
+                rail.orig_system_ship_customer_id ,
+                rail.orig_system_ship_address_id ,
+                rail.orig_system_sold_customer_id, 
+                rail.ship_date_actual ,
+                rail.inventory_item_id, 
+                 rail.DESCRIPTION,
+                rail.tax_code ,
+                rail.tax_rate ,
+                rail.vat_tax_id ,
+                rail.warehouse_id ,
+                rail.interface_line_attribute1 SALES_ORDER2, 
+                rail.attribute14 PO_NUMBER ,
+                rail.attribute15 SALES_REP_ID 
+         --        ,rail.*
+           FROM ra_interface_lines_all rail, 
+               ra_interface_errors_all err, 
+                hr_all_organization_units hou 
+           WHERE 1=1 
+           and rail.creation_date > sysdate - 0.2
+          and  rail.org_id = 933
+             AND rail.org_id = hou.organization_id (+) 
+             AND rail.interface_line_id = err.interface_line_id (+) 
+          --  and rail.interface_line_id is not null
+--  and rail.interface_line_attribute1 in ('1160049671', '1160049930', '1160050795', '1160051312','1160052103', '1160048979', '1160049494','1160053457', '1160053721
+order by rail.sales_order , sales_order_line
+;
+</value>
+   </row>
+   <row>
+      <key>setapp</key>
+      <value>BEGIN
+         -- fnd_global.apps_initialize(userId, resp_id,resp_app_id);
+         --mo_global.init('AR');
+            MO_GLOBAL.SET_POLICY_CONTEXT('S',2000);
+            fnd_global.apps_initialize(1130, 50737,275); 
+         END;
+         /
+</value>
+   </row>
+   <row>
+      <key>setmo</key>
+      <value>begin
+         -- mo_global.set_policy_context(scope,org_id);       
+         mo_global.init('AR'); 
+         mo_global.set_policy_context('S','10044'); 
+         end;
+         
+</value>
+   </row>
+   <row>
+      <key>setorg</key>
+      <value>begin
+              dbms_application_info.set_client_info(org_id);
+         end;
+</value>
+   </row>
+   <row>
+      <key>slct</key>
+      <value>SELECT    *
+FROM      
+WHERE     1 = 1
+;
+</value>
+   </row>
+   <row>
+      <key>tai</key>
+      <value>ap_invoices_all 
+</value>
+   </row>
+   <row>
+      <key>taid</key>
+      <value>ap_invoice_distributions_all
+</value>
+   </row>
+   <row>
+      <key>tail</key>
+      <value>ap_invoice_lines_all
+</value>
+   </row>
+   <row>
+      <key>thaou</key>
+      <value>hr_all_organization_units
+</value>
+   </row>
+   <row>
+      <key>tmoum</key>
+      <value>modutl_operating_units_map
+</value>
+   </row>
+   <row>
+      <key>tmsi</key>
+      <value>mtl_system_items_b 
+</value>
+   </row>
+   <row>
+      <key>tpdi</key>
+      <value>pa_draft_invoices_all
+</value>
+   </row>
+   <row>
+      <key>tpdid</key>
+      <value>pa_draft_invoice_details_all
+</value>
+   </row>
+   <row>
+      <key>tpe</key>
+      <value>pa_expenditures_all
+</value>
+   </row>
+   <row>
+      <key>tpei</key>
+      <value>pa_expenditure_items_all
+</value>
+   </row>
+   <row>
+      <key>tpp</key>
+      <value>pa_projects_all</value>
+   </row>
+   <row>
+      <key>trct</key>
+      <value>ra_customer_trx_all 
+</value>
+   </row>
+   <row>
+      <key>ups</key>
+      <value>BEGIN
+            SAVEPOINT my_point;
+            UPDATE | SET ;
+         EXCEPTION
+            WHEN OTHERS THEN
+               ROLLBACK TO my_point;
+         END;
+</value>
+   </row>
+   <row>
+      <key>utlfexc</key>
+      <value>DECLARE
+            fid UTL_FILE.FILE_TYPE;
+         
+            PROCEDURE recNgo (str IN VARCHAR2)
+            IS
+            BEGIN
+               DBMS_OUTPUT.PUT_LINE (CONCAT('UTL_FILE error: ', str));
+               UTL_FILE.FCLOSE (fid);
+            END;
+         BEGIN
+         
+             |
+         
+         EXCEPTION
+            WHEN UTL_FILE.INVALID_PATH
+             THEN recNgo ('invalid_path'); 
+            WHEN UTL_FILE.INVALID_MODE
+             THEN recNgo ('invalid_mode');
+            WHEN UTL_FILE.INVALID_FILEHANDLE
+             THEN recNgo ('invalid_filehandle');
+            WHEN UTL_FILE.INVALID_OPERATION
+             THEN recNgo ('invalid_operation');
+            WHEN UTL_FILE.READ_ERROR
+             THEN recNgo ('read_error');
+            WHEN UTL_FILE.WRITE_ERROR
+             THEN recNgo ('write_error');
+            WHEN UTL_FILE.INTERNAL_ERROR
+             THEN recNgo ('internal_error');
+            WHEN OTHERS
+             THEN recNgo (SQLERRM);
+         END;
+</value>
+   </row>
+   <row>
+      <key>view</key>
+      <value>select        *
+         from        all_views 
+         where        1=1
+         and view_name like 
+</value>
+   </row>
+   <row>
+      <key>vp</key>
+      <value>SELECT    *
+         FROM      v$parameter
+         WHERE     1 = 1
+         and       name like 'user%dump%dest%
+;
+</value>
+   </row>
+   <row>
+      <key>xplan</key>
+      <value>select        *
+         from     table(dbms_xplan.display)
+</value>
+   </row>
+   <row>
+      <key>ddtp</key>
+      <value>SELECT  * 
+FROM    DBA_TAB_PRIVs
+where   1=1
+and     grantee like 'PLANODS'
+and     type like 'DIR%'
+;
+</value>
+   </row>
+</rows>

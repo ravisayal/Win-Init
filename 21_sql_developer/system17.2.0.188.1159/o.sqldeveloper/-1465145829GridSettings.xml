@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ID</Item>
+      <Item class="java.lang.String">APPLICATION_ID</Item>
+      <Item class="java.lang.String">NAME</Item>
+      <Item class="java.lang.String">FILENAME</Item>
+      <Item class="java.lang.String">MIME_TYPE</Item>
+      <Item class="java.lang.String">CREATED_ON</Item>
+      <Item class="java.lang.String">BLOB_CONTENT</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>75</Item>
+      <Item>135</Item>
+      <Item>122</Item>
+      <Item>127</Item>
+      <Item>127</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect  *
+from apex_application_temp_files</uniqueName>
+</TableSettings>

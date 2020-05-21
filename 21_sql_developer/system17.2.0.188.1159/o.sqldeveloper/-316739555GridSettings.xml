@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_NUMBER</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">INVOICE_DATE</Item>
+      <Item class="java.lang.String">INVOICE_ID</Item>
+      <Item class="java.lang.String">BATCH_ID</Item>
+      <Item class="java.lang.String">INVOICE_NUM</Item>
+      <Item class="java.lang.String">INVOICE_AMOUNT</Item>
+      <Item class="java.lang.String">CHECK_DATE</Item>
+      <Item class="java.lang.String">AMOUNT_PAID</Item>
+      <Item class="java.lang.String">INV_CREATION_DATE</Item>
+      <Item class="java.lang.String">INVOICE_CREATED_BY</Item>
+      <Item class="java.lang.String">PERFORMER_HOLD_CREATION_DATE</Item>
+      <Item class="java.lang.String">PERFORMER_HOLD_CREATED_BY</Item>
+      <Item class="java.lang.String">MA_TAX_HOLD_CREATION_DATE</Item>
+      <Item class="java.lang.String">MA_TAX_HOLD_CREATED_BY</Item>
+      <Item class="java.lang.String">AWT_LINE_CREATION_DATE</Item>
+      <Item class="java.lang.String">AWT_LINE_CREATED_BY</Item>
+      <Item class="java.lang.String">PAYMENT_DATE</Item>
+      <Item class="java.lang.String">1</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>107</Item>
+      <Item>173</Item>
+      <Item>145</Item>
+      <Item>78</Item>
+      <Item>69</Item>
+      <Item>222</Item>
+      <Item>110</Item>
+      <Item>145</Item>
+      <Item>92</Item>
+      <Item>145</Item>
+      <Item>243</Item>
+      <Item>203</Item>
+      <Item>593</Item>
+      <Item>182</Item>
+      <Item>162</Item>
+      <Item>160</Item>
+      <Item>141</Item>
+      <Item>145</Item>
+      <Item>25</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect      pv.segment1 vendor_number,
+            pv.vendor_name,
+            ai.invoice_date,
+            ai.invoice_id,
+            ai.batch_id,
+            Regexp_Replace( ai.invoice_num, '' || Chr (9) || Chr (10) || Chr (13)|| '') invoice_num,
+            ai.invoice_amount,
+            c.check_date,
+            ai.amount_paid,
+            ai.creation_date Inv_creation_date,
+                ( SELECT   fu.user_name ||' - '|| fu.description 
+                  FROM     apps.fnd_user fu
+                  WHERE    fu.user_id   = ai.created_by
+                ) invoice_created_by,
+                ( SELECT   creation_date 
+                  FROM     apps.ap_holds_all h
+                  WHERE    h.invoice_id = ai.invoice_id
+                  AND      h.hold_lookup_code ='HU Performers Tax Hold'
+                ) performer_hold_creation_date,
+                ( SELECT   fu.description 
+                  FROM     apps.ap_holds_all h
+                           ,apps.fnd_user fu
+                  WHERE    h.invoice_id = ai.invoice_id
+                  AND      fu.user_id   = h.created_by
+                  AND      h.hold_lookup_code ='HU Performers Tax Hold'
+                ) performer_hold_created_by,
+                ( SELECT   creation_date 
+                  FROM     ap_holds_all h
+                  WHERE    h.invoice_id = ai.invoice_id
+                  AND      h.hold_lookup_code ='MA Tax Hold'
+                ) ma_tax_hold_creation_date,
+                ( SELECT   fu.description 
+                  FROM     ap_holds_all h
+                           ,fnd_user fu
+                  WHERE    h.invoice_id = ai.invoice_id
+                  AND      fu.user_id =h.created_by
+                  AND      h.hold_lookup_code ='MA Tax Hold'
+                ) ma_tax_hold_created_by,
+                ( SELECT   creation_date 
+                  FROM     ap_invoice_lines_all
+                  WHERE    invoice_id = ai.invoice_id
+                  AND      line_type_lookup_code ='AWT'
+                ) AWT_line_creation_date,
+                ( SELECT   fu.description
+                  FROM     ap_invoice_lines_all aila
+                           ,fnd_user fu
+                  WHERE    aila.invoice_id = ai.invoice_id
+                  AND      fu.user_id = aila.created_by
+                  AND      aila.line_type_lookup_code ='AWT'
+                ) AWT_line_created_by,
+                ( SELECT   min(aipa.creation_date)
+                  FROM     ap_invoice_payments_all aipa
+                  WHERE    1=1
+                  AND      aipa.invoice_id = ai.invoice_id
+                ) payment_date,
+--                ( SELECT   fu.description
+--                  FROM     ap_invoice_payments_all aipa,
+--                           fnd_user fu
+--                  WHERE    1= 1
+--                  AND      aipa.invoice_id = ai.invoice_id
+--                  AND      fu.user_id = aipa.created_by
+--                ) payment_created_by
+            1
+from     apps.ap_invoices_all ai,
+         apps.Po_Vendors pv,
+         apps.ap_invoice_payments_all p,
+            apps.ap_checks_all c
+where    1    =  1
+And       Ai.Vendor_Id  = Pv.Vendor_Id
+ and ai.invoice_id = p.invoice_id
+    AND     c.check_id = p.check_id
+and      ai.invoice_id >= 13866203
+--and      invoice_num like 'DIANASCHAUB21DEC18'
+and      exists 
+         (
+select  1
+from  apps.ap_invoice_distributions_all aid
+where  1=1
+and  aid.invoice_id = ai.invoice_id
+and  aid.line_type_lookup_code='AWT'
+and  aid.description like 'MA Withholding Tax' 
+and  awt_flag='A'
+and   withholding_tax_code_id is not null
+and   awt_tax_rate_id is not null
+and   awt_invoice_id is   null   ----
+)
+order by invoice_id desc</uniqueName>
+</TableSettings>

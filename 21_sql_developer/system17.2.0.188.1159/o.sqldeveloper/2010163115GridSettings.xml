@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_NAME</Item>
+      <Item class="java.lang.String">RESP_START_DATE</Item>
+      <Item class="java.lang.String">RESP_END_DATE</Item>
+      <Item class="java.lang.String">MENU_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>170</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>102</Item>
+      <Item>124</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSELECT		fu.user_name, 
+			fr.RESPONSIBILITY_NAME , 
+            fr.start_date resp_start_date,
+            fr.end_date   resp_end_date,
+        	fm.menu_name
+FROM		apps.FND_USER_RESP_GROUPS_DIRECT furg, 
+			apps.fnd_responsibility_vl fr, 
+			apps.fnd_user fu, 
+			apps.fnd_menus fm 
+WHERE		1=1 
+AND			fu.user_id =  furg.user_id 
+AND			fr.responsibility_id = furg.responsibility_id 
+AND			fm.menu_id = fr.MENU_ID 
+AND		(	fr.RESPONSIBILITY_NAME LIKE 'HRVD^HUAP^APP ADMIN%' )
+--         OR fr.RESPONSIBILITY_NAME LIKE '% PA %SUPER%') 
+--AND		   fu.user_name in ('21256447','21404764')</uniqueName>
+</TableSettings>

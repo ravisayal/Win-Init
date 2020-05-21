@@ -1,0 +1,18 @@
+SELECT to_char(sysdate,'dd-mon-rrrr hh24:mi:ss') run_date,
+       global_name, 
+       Regexp_Substr(CORR_ID , '[^:]+', 1, 2) MAILER,
+       Regexp_Substr(CORR_ID , '[^:]+', 1, 3) NOTIFICATION,
+       msg_state, 
+       count(*) 
+from applsys.aq$wf_notification_out,
+     global_name
+Group by 
+       global_name,
+       msg_state,
+       Regexp_Substr(CORR_ID , '[^:]+', 1, 2) ,
+       Regexp_Substr(CORR_ID , '[^:]+', 1, 3) 
+order by  msg_state, 
+       Regexp_Substr(CORR_ID , '[^:]+', 1, 2) ,
+       Regexp_Substr(CORR_ID , '[^:]+', 1, 3)
+       ;
+

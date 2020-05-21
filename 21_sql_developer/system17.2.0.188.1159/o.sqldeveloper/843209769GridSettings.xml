@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID</Item>
+      <Item class="java.lang.String">BOOK_TYPE_CODE</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">TRANSACTION_TYPE_CODE</Item>
+      <Item class="java.lang.String">TRANSACTION_DATE_ENTERED</Item>
+      <Item class="java.lang.String">DATE_EFFECTIVE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">TRANSACTION_NAME</Item>
+      <Item class="java.lang.String">INVOICE_TRANSACTION_ID</Item>
+      <Item class="java.lang.String">SOURCE_TRANSACTION_HEADER_ID</Item>
+      <Item class="java.lang.String">MASS_REFERENCE_ID</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">TRANSACTION_SUBTYPE</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY_CODE</Item>
+      <Item class="java.lang.String">TRANSACTION_KEY</Item>
+      <Item class="java.lang.String">AMORTIZATION_START_DATE</Item>
+      <Item class="java.lang.String">CALLING_INTERFACE</Item>
+      <Item class="java.lang.String">MASS_TRANSACTION_ID</Item>
+      <Item class="java.lang.String">MEMBER_TRANSACTION_HEADER_ID</Item>
+      <Item class="java.lang.String">TRX_REFERENCE_ID</Item>
+      <Item class="java.lang.String">EVENT_ID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>154</Item>
+      <Item>111</Item>
+      <Item>67</Item>
+      <Item>155</Item>
+      <Item>174</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>125</Item>
+      <Item>156</Item>
+      <Item>201</Item>
+      <Item>127</Item>
+      <Item>125</Item>
+      <Item>140</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>168</Item>
+      <Item>115</Item>
+      <Item>167</Item>
+      <Item>123</Item>
+      <Item>141</Item>
+      <Item>201</Item>
+      <Item>119</Item>
+      <Item>67</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23RPCDEVselect   *
+from    FA_TRANSACTION_HEADERS
+where   1  =  1
+and   asset_id = 37779</uniqueName>
+</TableSettings>

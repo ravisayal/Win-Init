@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TERRITORY_CODE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">ISO_NUMERIC_CODE</Item>
+      <Item class="java.lang.String">ALTERNATE_TERRITORY_CODE</Item>
+      <Item class="java.lang.String">NLS_TERRITORY</Item>
+      <Item class="java.lang.String">ADDRESS_STYLE</Item>
+      <Item class="java.lang.String">ADDRESS_VALIDATION</Item>
+      <Item class="java.lang.String">BANK_INFO_STYLE</Item>
+      <Item class="java.lang.String">BANK_INFO_VALIDATION</Item>
+      <Item class="java.lang.String">EU_CODE</Item>
+      <Item class="java.lang.String">OBSOLETE_FLAG</Item>
+      <Item class="java.lang.String">ISO_TERRITORY_CODE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>110</Item>
+      <Item>202</Item>
+      <Item>113</Item>
+      <Item>138</Item>
+      <Item>83</Item>
+      <Item>125</Item>
+      <Item>123</Item>
+      <Item>173</Item>
+      <Item>152</Item>
+      <Item>103</Item>
+      <Item>132</Item>
+      <Item>111</Item>
+      <Item>143</Item>
+      <Item>66</Item>
+      <Item>101</Item>
+      <Item>134</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect  *
+From FND_TERRITORIES
+where 1=1
+order by last_update_date desc</uniqueName>
+</TableSettings>

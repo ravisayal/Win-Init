@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_NUMBER</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>264</Item>
+      <Item>87</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT
+    vendor_name,
+    vendor_number
+FROM
+    (
+        SELECT
+            vendor_name,
+            segment1                     vendor_number,
+            asl.pay_group_lookup_code    vendor_pay_group,
+            asll.vendor_site_code        vendor_site,
+            asll.attribute3              site_paymode_id,
+            asll.pay_group_lookup_code   site_paygroup
+        FROM
+            apps.ap_suppliers asl,
+            apps.ap_supplier_sites_all asll
+        WHERE
+            1 = 1
+            AND asl.vendor_id = asll.vendor_id
+            AND nvl(asl.enabled_flag, 'Y') = 'Y'
+            AND nvl(asl.end_date_active, SYSDATE + 1) > SYSDATE
+            AND nvl(asll.inactive_date, SYSDATE + 1) > SYSDATE
+            AND EXISTS (
+                SELECT
+                    1
+                FROM
+                    apps.ap_supplier_sites_all asa
+                WHERE
+                    asa.vendor_id = asl.vendor_id
+                    AND asa.attribute3 IS NOT NULL
+            )
+            AND EXISTS (
+                SELECT
+                    COUNT(DISTINCT(pay_group_lookup_code)),
+                    vendor_id
+                FROM
+                    apps.ap_supplier_sites_all asa
+                WHERE
+                    asa.vendor_id = asl.vendor_id
+                    AND nvl(asa.inactive_date, SYSDATE + 1) > SYSDATE
+                GROUP BY
+                    vendor_id
+                HAVING
+                    COUNT(DISTINCT(pay_group_lookup_code)) > 1
+            )
+    )
+GROUP BY
+    vendor_name,
+    vendor_number</uniqueName>
+</TableSettings>

@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">RUN_SEQ</Item>
+      <Item class="java.lang.String">RUN_DATE</Item>
+      <Item class="java.lang.String">SNO</Item>
+      <Item class="java.lang.String">TEST_CONDITION</Item>
+      <Item class="java.lang.String">SOURCE</Item>
+      <Item class="java.lang.String">SYSTEM_ID</Item>
+      <Item class="java.lang.String">SUPPLIER_NUMBER</Item>
+      <Item class="java.lang.String">SUPPLIER_NAME</Item>
+      <Item class="java.lang.String">INACTIVATION_DATE</Item>
+      <Item class="java.lang.String">TAX_REPORTABLE_FEDERAL</Item>
+      <Item class="java.lang.String">TAXID</Item>
+      <Item class="java.lang.String">ALLOW_WITHOLDING_TAX</Item>
+      <Item class="java.lang.String">PAYMENT_TERMS</Item>
+      <Item class="java.lang.String">PAY_GROUP</Item>
+      <Item class="java.lang.String">HOLD_REASON</Item>
+      <Item class="java.lang.String">PAYMODE_ACCOUNT_ID</Item>
+      <Item class="java.lang.String">VISA_END_DATE</Item>
+      <Item class="java.lang.String">SQIN</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>66</Item>
+      <Item>138</Item>
+      <Item>148</Item>
+      <Item>107</Item>
+      <Item>60</Item>
+      <Item>75</Item>
+      <Item>113</Item>
+      <Item>278</Item>
+      <Item>138</Item>
+      <Item>158</Item>
+      <Item>49</Item>
+      <Item>150</Item>
+      <Item>104</Item>
+      <Item>79</Item>
+      <Item>93</Item>
+      <Item>139</Item>
+      <Item>100</Item>
+      <Item>47</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23RPCDEVselect  *
+from  HUAP_TSM_VALIDATION_RESULT</uniqueName>
+</TableSettings>

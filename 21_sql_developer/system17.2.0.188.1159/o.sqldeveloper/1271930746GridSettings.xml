@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">AT1</Item>
+      <Item class="java.lang.String">ATT2</Item>
+      <Item class="java.lang.String">ATT3</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>61</Item>
+      <Item>47</Item>
+      <Item>115</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect Regexp_Substr(pp , '[^\^]+', 1, 1) at1, Regexp_Substr(pp , '[^\^]+', 1, 2) att2, Regexp_Substr(pp , '[^\^]+', 1, 3) att3
+from (
+select replace(parent_node,'/','^')  pp
+from hubs_udf_file_list hufl
+where  1= 1
+and  node_type = 'F'
+)</uniqueName>
+</TableSettings>

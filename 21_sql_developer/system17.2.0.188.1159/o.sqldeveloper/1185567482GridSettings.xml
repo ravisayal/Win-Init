@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">DESCRIPTIVE_FLEX_CONTEXT_CODE</Item>
+      <Item class="java.lang.String">APPLICATION_COLUMN_NAME</Item>
+      <Item class="java.lang.String">END_USER_COLUMN_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>215</Item>
+      <Item>168</Item>
+      <Item>355</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-TNSSELECT      descriptive_flex_context_code, application_column_name, end_user_column_name
+FROM        fnd_descr_flex_col_usage_vl 
+WHERE      1=1 
+--and        descriptive_flex_context_code    =   'Global Data Elements' 
+--AND         default_type                     =   'C' --constant
+AND         descriptive_flexfield_name       =   'FA_ADDITIONS'
+--AND         application_column_name          in (   'ATTRIBUTE20',   'ATTRIBUTE21',   'ATTRIBUTE22')
+order by descriptive_flex_context_code, application_column_name</uniqueName>
+</TableSettings>

@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">REQ_ID</Item>
+      <Item class="java.lang.String">OPID</Item>
+      <Item class="java.lang.String">PARENT_REQ_ID</Item>
+      <Item class="java.lang.String">IS_REQ_SET</Item>
+      <Item class="java.lang.String">USER_CONCURRENT_PROGRAM_NAME</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_NAME</Item>
+      <Item class="java.lang.String">PHASE_CODE</Item>
+      <Item class="java.lang.String">STATUS_CODE</Item>
+      <Item class="java.lang.String">ARGUMENT_TEXT</Item>
+      <Item class="java.lang.String">MIN_SECS</Item>
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+      <Item class="java.lang.String">REQUEST_DATE</Item>
+      <Item class="java.lang.String">ACTUAL_START_DATE</Item>
+      <Item class="java.lang.String">ACTUAL_COMPLETION_DATE</Item>
+      <Item class="java.lang.String">CONCURRENT_PROGRAM_ID</Item>
+      <Item class="java.lang.String">USER_ID</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_ID</Item>
+      <Item class="java.lang.String">PROGRAM_APPLICATION_ID</Item>
+      <Item class="java.lang.String">EXECUTABLE_NAME</Item>
+      <Item class="java.lang.String">EXECUTION_METHOD_CODE</Item>
+      <Item class="java.lang.String">EXECUTION_FILE_NAME</Item>
+      <Item class="java.lang.String">ORACLE_SESSION_ID</Item>
+      <Item class="java.lang.String">LOGFILE_NAME</Item>
+      <Item class="java.lang.String">OUTFILE_NAME</Item>
+      <Item class="java.lang.String">LOGFILE_NODE_NAME</Item>
+      <Item class="java.lang.String">OUTFILE_NODE_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>61</Item>
+      <Item>47</Item>
+      <Item>102</Item>
+      <Item>80</Item>
+      <Item>295</Item>
+      <Item>180</Item>
+      <Item>85</Item>
+      <Item>91</Item>
+      <Item>355</Item>
+      <Item>69</Item>
+      <Item>79</Item>
+      <Item>593</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>161</Item>
+      <Item>161</Item>
+      <Item>62</Item>
+      <Item>117</Item>
+      <Item>159</Item>
+      <Item>115</Item>
+      <Item>158</Item>
+      <Item>348</Item>
+      <Item>125</Item>
+      <Item>614</Item>
+      <Item>642</Item>
+      <Item>128</Item>
+      <Item>129</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSelect Request_Id Req_Id,
+  Oracle_Process_Id Opid,
+  Fcr.Parent_Request_Id Parent_Req_Id,
+  Decode(Executable_Name, 'fndrssub','y','n') Is_Req_Set,
+  Nvl(Fcr.Description, User_Concurrent_Program_Name) User_Concurrent_Program_Name,
+  Fr.Responsibility_Name,
+  Phase_Code,
+  Status_Code ,
+  Argument_Text,
+  To_Char(Floor((Nvl(Actual_Completion_Date, Sysdate) - Actual_Start_Date)*24*60))
+  ||':'
+  ||Lpad(To_Char(Round(Mod((Nvl(Actual_Completion_Date, Sysdate) - Actual_Start_Date)*24*60,1)*60,2)),2,'0') Min_Secs,
+  User_Name,
+  Fu.Description, 
+  Request_Date ,
+  Actual_Start_Date,
+  Actual_Completion_Date,
+  Fcr.Concurrent_Program_Id,
+  Fu.User_Id,
+  Fr.Responsibility_Id,
+  Fcr.Program_Application_Id,
+  Fe.Executable_Name,
+  Fe.Execution_Method_Code,
+  Fe.Execution_File_Name,
+  --  get_link(fcr.request_id, 'o') outfile_link,
+  --  get_link(fcr.request_id, 'l') logfile_link,
+  Fcr.Oracle_Session_Id,
+  Logfile_Name,
+  Outfile_Name,
+  Logfile_Node_Name,
+  Outfile_Node_Name
+From Apps.Fnd_Concurrent_Requests Fcr,
+  Apps.Fnd_Concurrent_Programs_Vl Fcp,
+  Apps.Fnd_User Fu,
+  Apps.Fnd_Responsibility_Vl Fr,
+  Apps.Fnd_Executables Fe
+Where 1                       =1
+And Fcr.Responsibility_Id     = Fr.Responsibility_Id
+And Fu.User_Id                = Fcr.Requested_By
+And Fcp.Application_Id        = Fcr.Program_Application_Id
+And Fcp.Concurrent_Program_Id = Fcr.Concurrent_Program_Id
+And Fcp.Executable_Id         = Fe.Executable_Id
+  --and          user_concurrent_program_name not in ('dqm serial sync index program','workflow control queue cleanup', 'workflow background process','wip move transaction manager', 'process transaction interface','oam applications dashboard collection')
+  --and          fr.responsibility_name like 'cash management superuser
+And Regexp_Like (Nvl(Fcr.Description, User_Concurrent_Program_Name),'(HUFA)','i')--bank statement cashflow creation'--aam ce bank statement master automation program'--'aam ce bank statement %%'
+  --and          user_name like 'sayalr'
+--And Regexp_Like (User_Name , '(80408838)|(999)', 'i')
+  --and          actual_start_date between to_date('12-feb-2017 20:00:00','dd-mon-yyyy hh24:mi:ss') and to_date('25-feb-2017 21:00:00','dd-mon-yyyy hh24:mi:ss')
+  --and          status_code != 'c'
+  --and          request_id in (7203118)
+  --and          parent_request_id in (6790792)
+Order By Request_Id Desc</uniqueName>
+</TableSettings>

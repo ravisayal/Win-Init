@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">ORACLE_VENDOR_NUMBER</Item>
+      <Item class="java.lang.String">END_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">ORACLE_VENDOR_ID</Item>
+      <Item class="java.lang.String">HOLD_ALL_INVOICES</Item>
+      <Item class="java.lang.String">HOLD_UNVALIDATED_INVOICES</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>250</Item>
+      <Item>153</Item>
+      <Item>138</Item>
+      <Item>123</Item>
+      <Item>123</Item>
+      <Item>175</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT    aps.vendor_name                        vendor_name,                  --Vendor Name
+          aps.segment1                           oracle_vendor_number,         -- Vendor Number in Oracle
+          aps.end_date_active                    end_date_active,
+          aps.vendor_id                          oracle_vendor_id,
+          aps.hold_all_payments_flag             hold_all_invoices,        --Hold for Payment- All Invoices
+          --aps.hold_unmatched_invoices_flag       hold_from_pymt_unmatched_inv,  --Hold for Payment- Unmatched Invoices
+          aps.hold_future_payments_flag          hold_unvalidated_invoices --Hold for Payment- Unvalidated Invoices
+FROM      apps.ap_suppliers                      aps,
+          apps.fnd_user                          fu
+WHERE     aps.vendor_type_lookup_code            !=   'EMPLOYEE'
+AND       aps.vendor_type_lookup_code             =   'BER-Foreign Individual'
+AND       aps.last_updated_by                     =    fu.user_id (+)
+AND       NVL(aps.end_date_active,SYSDATE +1)     >    SYSDATE</uniqueName>
+</TableSettings>

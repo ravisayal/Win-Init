@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">OWNER</Item>
+      <Item class="java.lang.String">SEGMENT_NAME</Item>
+      <Item class="java.lang.String">PARTITION_NAME</Item>
+      <Item class="java.lang.String">SEGMENT_TYPE</Item>
+      <Item class="java.lang.String">SEGMENT_SUBTYPE</Item>
+      <Item class="java.lang.String">TABLESPACE_NAME</Item>
+      <Item class="java.lang.String">HEADER_FILE</Item>
+      <Item class="java.lang.String">HEADER_BLOCK</Item>
+      <Item class="java.lang.String">BYTES</Item>
+      <Item class="java.lang.String">BLOCKS</Item>
+      <Item class="java.lang.String">EXTENTS</Item>
+      <Item class="java.lang.String">INITIAL_EXTENT</Item>
+      <Item class="java.lang.String">NEXT_EXTENT</Item>
+      <Item class="java.lang.String">MIN_EXTENTS</Item>
+      <Item class="java.lang.String">MAX_EXTENTS</Item>
+      <Item class="java.lang.String">MAX_SIZE</Item>
+      <Item class="java.lang.String">RETENTION</Item>
+      <Item class="java.lang.String">MINRETENTION</Item>
+      <Item class="java.lang.String">PCT_INCREASE</Item>
+      <Item class="java.lang.String">FREELISTS</Item>
+      <Item class="java.lang.String">FREELIST_GROUPS</Item>
+      <Item class="java.lang.String">RELATIVE_FNO</Item>
+      <Item class="java.lang.String">BUFFER_POOL</Item>
+      <Item class="java.lang.String">FLASH_CACHE</Item>
+      <Item class="java.lang.String">CELL_FLASH_CACHE</Item>
+      <Item class="java.lang.String">INMEMORY</Item>
+      <Item class="java.lang.String">INMEMORY_PRIORITY</Item>
+      <Item class="java.lang.String">INMEMORY_DISTRIBUTE</Item>
+      <Item class="java.lang.String">INMEMORY_DUPLICATE</Item>
+      <Item class="java.lang.String">INMEMORY_COMPRESSION</Item>
+      <Item class="java.lang.String">CELLMEMORY</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>75</Item>
+      <Item>121</Item>
+      <Item>126</Item>
+      <Item>132</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+      <Item>75</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect  *
+from    dba_segments
+where   1=1
+and segment_name like 'TEST'</uniqueName>
+</TableSettings>

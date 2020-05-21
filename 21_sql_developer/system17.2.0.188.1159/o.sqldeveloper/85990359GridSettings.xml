@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_ID</Item>
+      <Item class="java.lang.String">ACTION_LOG</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>209</Item>
+      <Item>378</Item>
+      <Item>138</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect   vendor_id, action_log, creation_date 
+from     huap_jg_suppliers hjs 
+where    1=1
+and      vendor_id in 
+                (select    vendor_id 
+                 from      huap_jg_suppliers hjs
+                 where     1=1
+                 and       creation_date > to_date('8-APR-2020','dd-mon-rrrr')
+                 AND       ACTION_LOG IN ('Converted to Jagger and got SQIN', 'Add record','Expiration date becomes current-Transmitted to Jaggaer via Mule', 'Add record by Performers tax program-Transmitted to Jaggaer via Mule') 
+                 group by vendor_Id having count(1) > 1 
+                )
+and     exists
+        (        select    vendor_id 
+                 from      huap_jg_suppliers hjs2
+                 where     1=1
+                 and       hjs.vendor_id = hjs2.vendor_id
+                 and       creation_date > to_date('8-APR-2020','dd-mon-rrrr')
+                 AND       ACTION_LOG IN ('Converted to Jagger and got SQIN')
+                )         
+order by vendor_id, decode(action_log,'Converted to Jagger and got SQIN','AA',action_log)</uniqueName>
+</TableSettings>

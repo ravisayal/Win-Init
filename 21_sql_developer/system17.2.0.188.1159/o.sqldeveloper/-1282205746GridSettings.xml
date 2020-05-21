@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">BOOK_TYPE_CODE</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">DEPRN_RUN_DATE</Item>
+      <Item class="java.lang.String">DEPRN_AMOUNT</Item>
+      <Item class="java.lang.String">YTD_DEPRN</Item>
+      <Item class="java.lang.String">DEPRN_RESERVE</Item>
+      <Item class="java.lang.String">DEPRN_SOURCE_CODE</Item>
+      <Item class="java.lang.String">ADJUSTED_COST</Item>
+      <Item class="java.lang.String">BONUS_RATE</Item>
+      <Item class="java.lang.String">LTD_PRODUCTION</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER</Item>
+      <Item class="java.lang.String">PRODUCTION</Item>
+      <Item class="java.lang.String">REVAL_AMORTIZATION</Item>
+      <Item class="java.lang.String">REVAL_AMORTIZATION_BASIS</Item>
+      <Item class="java.lang.String">REVAL_DEPRN_EXPENSE</Item>
+      <Item class="java.lang.String">REVAL_RESERVE</Item>
+      <Item class="java.lang.String">YTD_PRODUCTION</Item>
+      <Item class="java.lang.String">YTD_REVAL_DEPRN_EXPENSE</Item>
+      <Item class="java.lang.String">PRIOR_FY_EXPENSE</Item>
+      <Item class="java.lang.String">BONUS_DEPRN_AMOUNT</Item>
+      <Item class="java.lang.String">BONUS_YTD_DEPRN</Item>
+      <Item class="java.lang.String">BONUS_DEPRN_RESERVE</Item>
+      <Item class="java.lang.String">PRIOR_FY_BONUS_EXPENSE</Item>
+      <Item class="java.lang.String">DEPRN_OVERRIDE_FLAG</Item>
+      <Item class="java.lang.String">SYSTEM_DEPRN_AMOUNT</Item>
+      <Item class="java.lang.String">SYSTEM_BONUS_DEPRN_AMOUNT</Item>
+      <Item class="java.lang.String">IMPAIRMENT_AMOUNT</Item>
+      <Item class="java.lang.String">YTD_IMPAIRMENT</Item>
+      <Item class="java.lang.String">IMPAIRMENT_RESERVE</Item>
+      <Item class="java.lang.String">EVENT_ID</Item>
+      <Item class="java.lang.String">DEPRN_RUN_ID</Item>
+      <Item class="java.lang.String">DEPRN_ADJUSTMENT_AMOUNT</Item>
+      <Item class="java.lang.String">BONUS_DEPRN_ADJUSTMENT_AMOUNT</Item>
+      <Item class="java.lang.String">CAPITAL_ADJUSTMENT</Item>
+      <Item class="java.lang.String">GENERAL_FUND</Item>
+      <Item class="java.lang.String">REVAL_LOSS_BALANCE</Item>
+      <Item class="java.lang.String">UNREVALUED_COST</Item>
+      <Item class="java.lang.String">HISTORICAL_NBV</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>111</Item>
+      <Item>67</Item>
+      <Item>145</Item>
+      <Item>101</Item>
+      <Item>77</Item>
+      <Item>102</Item>
+      <Item>133</Item>
+      <Item>103</Item>
+      <Item>85</Item>
+      <Item>110</Item>
+      <Item>111</Item>
+      <Item>86</Item>
+      <Item>134</Item>
+      <Item>169</Item>
+      <Item>138</Item>
+      <Item>100</Item>
+      <Item>111</Item>
+      <Item>163</Item>
+      <Item>118</Item>
+      <Item>141</Item>
+      <Item>117</Item>
+      <Item>142</Item>
+      <Item>158</Item>
+      <Item>140</Item>
+      <Item>145</Item>
+      <Item>185</Item>
+      <Item>131</Item>
+      <Item>107</Item>
+      <Item>132</Item>
+      <Item>67</Item>
+      <Item>96</Item>
+      <Item>172</Item>
+      <Item>212</Item>
+      <Item>132</Item>
+      <Item>97</Item>
+      <Item>132</Item>
+      <Item>117</Item>
+      <Item>105</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSelect   *
+From      fa_deprn_summary
+Where     1 = 1
+--and    book_type_code = 'BOOK'
+and  asset_id in (1164, 48268)
+order by asset_id</uniqueName>
+</TableSettings>

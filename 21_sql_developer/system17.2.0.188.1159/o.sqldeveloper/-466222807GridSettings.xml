@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">SEQ</Item>
+      <Item class="java.lang.String">SESSION_ID</Item>
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">SESSION_VAR</Item>
+      <Item class="java.lang.String">FIRST_CONNECT</Item>
+      <Item class="java.lang.String">LAST_CONNECT</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>0</Item>
+      <Item>0</Item>
+      <Item>73</Item>
+      <Item>103</Item>
+      <Item>79</Item>
+      <Item>285</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">4 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSSELECT * FROM "PLANODS"."HUBS_APEX_LOGIN_SESSIONS"</uniqueName>
+</TableSettings>

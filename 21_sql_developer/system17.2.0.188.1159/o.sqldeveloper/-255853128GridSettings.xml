@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">GL_PERIOD</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">ORG</Item>
+      <Item class="java.lang.String">OBJECT</Item>
+      <Item class="java.lang.String">ACCOUNTED_CR</Item>
+      <Item class="java.lang.String">ACCOUNTED_DR</Item>
+      <Item class="java.lang.String">LINE_AMOUNT</Item>
+      <Item class="java.lang.String">STORE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>75</Item>
+      <Item>38</Item>
+      <Item>41</Item>
+      <Item>57</Item>
+      <Item>101</Item>
+      <Item>101</Item>
+      <Item>90</Item>
+      <Item>166</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-TNSSELECT gjh.period_name gl_period,
+       glc.segment1 tub,
+       glc.segment2 org,
+       glc.segment3 object,
+       gjl.accounted_cr,
+       gjl.accounted_dr,
+       gjl.accounted_cr - gjl.accounted_dr line_amount,
+       REGEXP_REPLACE(REGEXP_SUBSTR(gjl.description, 'StoreNo:[ ]*[^ ]*'), 'StoreNo:[ ]*') AS store
+  FROM apps.gl_je_sources gjs
+  JOIN apps.gl_je_headers gjh
+    ON gjs.je_source_name = gjh.je_source
+  JOIN apps.gl_je_lines gjl
+    ON gjh.je_header_id = gjl.je_header_id
+  JOIN apps.gl_code_combinations glc
+    ON glc.code_combination_id = gjl.code_combination_id
+WHERE 1 = 1
+   and gjl.accounted_dr -accounted_cr  != 0  -- remove noise
+   AND Account_type in ('R','L')  -- revenue is most of it - liabilities for those that pay invoices this way
+   AND gjs.user_je_source_name = 'OTM700 eCommerce'</uniqueName>
+</TableSettings>

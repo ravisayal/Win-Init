@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PERIOD_KEY</Item>
+      <Item class="java.lang.String">PERIOD_ID_NO</Item>
+      <Item class="java.lang.String">PERIOD_NAME</Item>
+      <Item class="java.lang.String">ACCOUNTING_START_DATE</Item>
+      <Item class="java.lang.String">ACCOUNTING_END_DATE</Item>
+      <Item class="java.lang.String">POSTING_START_DATE</Item>
+      <Item class="java.lang.String">POSTING_END_DATE</Item>
+      <Item class="java.lang.String">FISCAL_YEAR</Item>
+      <Item class="java.lang.String">FISCAL_YEAR_PERIOD_NO</Item>
+      <Item class="java.lang.String">FISCAL_YEAR_FINAL_PERIOD_FLAG</Item>
+      <Item class="java.lang.String">ADJUSTMENT_PERIOD_FLAG</Item>
+      <Item class="java.lang.String">CALENDAR_YEAR</Item>
+      <Item class="java.lang.String">CALENDAR_MONTH</Item>
+      <Item class="java.lang.String">CURRENT_PERIOD_OFFSET</Item>
+      <Item class="java.lang.String">CURRENT_FISCAL_YEAR_OFFSET</Item>
+      <Item class="java.lang.String">QUARTER_NO</Item>
+      <Item class="java.lang.String">QUARTER_START_DATE</Item>
+      <Item class="java.lang.String">FISCAL_YEAR_START_DATE</Item>
+      <Item class="java.lang.String">CLOSING_STATUS_CODE</Item>
+      <Item class="java.lang.String">CLOSING_STATUS_DESCRIPTION</Item>
+      <Item class="java.lang.String">SCHEDULED_CLOSE_DATE</Item>
+      <Item class="java.lang.String">STATUS_LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">EARLIEST_OPEN_PERIOD_FLAG</Item>
+      <Item class="java.lang.String">LATEST_OPEN_PERIOD_FLAG</Item>
+      <Item class="java.lang.String">LATEST_CLOSED_PERIOD_FLAG</Item>
+      <Item class="java.lang.String">LAST_LOAD_DT</Item>
+      <Item class="java.lang.String">QUARTER_CLOSING_STATUS_CODE</Item>
+      <Item class="java.lang.String">SCHEDULED_CAPS_PIT_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>0</Item>
+      <Item>0</Item>
+      <Item>81</Item>
+      <Item>95</Item>
+      <Item>91</Item>
+      <Item>156</Item>
+      <Item>144</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>86</Item>
+      <Item>151</Item>
+      <Item>196</Item>
+      <Item>159</Item>
+      <Item>104</Item>
+      <Item>114</Item>
+      <Item>154</Item>
+      <Item>183</Item>
+      <Item>88</Item>
+      <Item>138</Item>
+      <Item>156</Item>
+      <Item>141</Item>
+      <Item>181</Item>
+      <Item>147</Item>
+      <Item>164</Item>
+      <Item>174</Item>
+      <Item>163</Item>
+      <Item>175</Item>
+      <Item>138</Item>
+      <Item>195</Item>
+      <Item>163</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">6 desc</Item>
+      <Item class="java.lang.String">6 asc</Item>
+      <Item class="java.lang.String">5 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSSELECT * FROM "PLANODS"."PLN_PERIODS_STG"</uniqueName>
+</TableSettings>

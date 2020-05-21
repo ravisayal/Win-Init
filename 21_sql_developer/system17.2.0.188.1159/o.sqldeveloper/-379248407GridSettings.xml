@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">DNAME</Item>
+      <Item class="java.lang.String">PNAME</Item>
+      <Item class="java.lang.String">P_TIMESTAMP</Item>
+      <Item class="java.lang.String">P_STIME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>215</Item>
+      <Item>96</Item>
+      <Item>235</Item>
+      <Item>232</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect do.name dname, po.name pname, p_timestamp, po.stime p_stime
+    from sys.obj$ do, sys.dependency$ d, sys.obj$ po
+    where p_obj# = po.obj#(+)
+    and d_obj# = do.obj#
+    and do.status = 1
+    and po.status = 1
+    and po.stime != p_timestamp
+    and do.type# not in (28,29,30)
+    and po.type# not in (28,29,30)
+    order by 2,1</uniqueName>
+</TableSettings>

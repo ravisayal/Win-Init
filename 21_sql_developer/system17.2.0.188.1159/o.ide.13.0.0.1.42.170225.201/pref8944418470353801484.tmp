@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<client-settings class="java.util.HashMap" xmlns="http://xmlns.oracle.com/jdeveloper/110000/client-preferences">
+   <Item>
+      <Key>editors-options</Key>
+      <Value class="oracle.ide.editor.EditorsOptions">
+         <editorsData/>
+         <lruFiles>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/OFPI-2/11. OFPI-2 Audit Docs/09. Record Count Queries/HU_Data_Validation_R12_AP_linux.sql"/>
+               <projectURL/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/OFPI-2/11. OFPI-2 Audit Docs/09. Record Count Queries/HU_Data_Validation_R12_AR_linux.sql"/>
+               <projectURL/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/OFPI-2/11. OFPI-2 Audit Docs/09. Record Count Queries/HU_Data_Validation_R12_GL_linux.sql"/>
+               <projectURL/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/OFPI-2/11. OFPI-2 Audit Docs/09. Record Count Queries/HU_Data_Validation_R12_PO_linux.sql"/>
+               <projectURL/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/OFPI-2/11. OFPI-2 Audit Docs/09. Record Count Queries/HU_Data_Validation_R12_SSA_linux.sql"/>
+               <projectURL/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../../../temp3/temp4/HU_Data_Validation_R12_AP_linux.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../../../temp3/temp4/HU_Data_Validation_R12_AR_linux.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../../../temp3/temp4/HU_Data_Validation_R12_GL_linux.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../../../temp3/temp4/HU_Data_Validation_R12_PO_linux.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../../../temp3/temp4/HU_Data_Validation_R12_SSA_linux.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>false</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/My Sql/lock_script_advance.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.dbtools.worksheet.extension.WorksheetAddin</editor>
+               <explicit>true</explicit>
+               <nodeClass/>
+               <nodeURL path="../../../../../Google Drive/My Sql/lock_script.sql"/>
+               <projectURL protocol="sqldev.temp" path="/IdeConnections%23OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL protocol="sqldev.temp" path="/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.ideimpl.editor.DeclarativeEditorAddin-oracle.dbtools.worksheet.editor.Worksheet</editor>
+               <explicit>false</explicit>
+               <nodeClass>oracle.ide.db.model.SqlNode</nodeClass>
+               <nodeURL path="../../../../../Google Drive/My Sql/concurrent_requests_active_SQL.sql"/>
+               <projectURL path="../o.sqldeveloper/projects/IdeConnections#RPCDEV.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL path="../o.sqldeveloper/projects/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.ideimpl.editor.DeclarativeEditorAddin-oracle.dbtools.worksheet.editor.Worksheet</editor>
+               <explicit>true</explicit>
+               <nodeClass>oracle.ide.db.model.SqlNode</nodeClass>
+               <nodeURL path="../../../../../Google Drive/My Sql/fnd_resp_groups.sql"/>
+               <projectURL path="../o.sqldeveloper/projects/IdeConnections#OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL path="../o.sqldeveloper/projects/Databases.jws"/>
+            </Item>
+            <Item class="oracle.ide.editor.RecentFile">
+               <editor>oracle.ideimpl.editor.DeclarativeEditorAddin-oracle.dbtools.worksheet.editor.Worksheet</editor>
+               <explicit>true</explicit>
+               <nodeClass>oracle.ide.db.model.SqlNode</nodeClass>
+               <nodeURL path="../../../../../Google Drive (Not Syncing)/My Sql/lock_script.sql"/>
+               <projectURL path="../o.sqldeveloper/projects/IdeConnections#OFPI-PROD-LDAP.jpr"/>
+               <recentTime>0</recentTime>
+               <reopen>false</reopen>
+               <workspaceURL path="../o.sqldeveloper/projects/Databases.jws"/>
+            </Item>
+         </lruFiles>
+         <recentFilesShowAll>false</recentFilesShowAll>
+         <recentFilesShowClosedOnly>true</recentFilesShowClosedOnly>
+      </Value>
+   </Item>
+</client-settings>

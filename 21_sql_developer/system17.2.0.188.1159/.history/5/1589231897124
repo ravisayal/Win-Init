@@ -1,0 +1,52 @@
+Select Request_Id Req_Id,
+  Oracle_Process_Id Opid,
+  Fcr.Parent_Request_Id Parent_Req_Id,
+  Decode(Executable_Name, 'fndrssub','y','n') Is_Req_Set,
+  Nvl(Fcr.Description, User_Concurrent_Program_Name) User_Concurrent_Program_Name,
+  Fr.Responsibility_Name,
+  Phase_Code,
+  Status_Code ,
+  Argument_Text,
+  To_Char(Floor((Nvl(Actual_Completion_Date, Sysdate) - Actual_Start_Date)*24*60))
+  ||':'
+  ||Lpad(To_Char(Round(Mod((Nvl(Actual_Completion_Date, Sysdate) - Actual_Start_Date)*24*60,1)*60,2)),2,'0') Min_Secs,
+  User_Name,
+  Fu.Description, 
+  Request_Date ,
+  Actual_Start_Date,
+  Actual_Completion_Date,
+  Fcr.Concurrent_Program_Id,
+  Fu.User_Id,
+  Fr.Responsibility_Id,
+  Fcr.Program_Application_Id,
+  Fe.Executable_Name,
+  Fe.Execution_Method_Code,
+  Fe.Execution_File_Name,
+  --  get_link(fcr.request_id, 'o') outfile_link,
+  --  get_link(fcr.request_id, 'l') logfile_link,
+  Fcr.Oracle_Session_Id,
+  Logfile_Name,
+  Outfile_Name,
+  Logfile_Node_Name,
+  Outfile_Node_Name
+From Apps.Fnd_Concurrent_Requests Fcr,
+  Apps.Fnd_Concurrent_Programs_Vl Fcp,
+  Apps.Fnd_User Fu,
+  Apps.Fnd_Responsibility_Vl Fr,
+  Apps.Fnd_Executables Fe
+Where 1                       =1
+And Fcr.Responsibility_Id     = Fr.Responsibility_Id
+And Fu.User_Id                = Fcr.Requested_By
+And Fcp.Application_Id        = Fcr.Program_Application_Id
+And Fcp.Concurrent_Program_Id = Fcr.Concurrent_Program_Id
+And Fcp.Executable_Id         = Fe.Executable_Id
+  --and          user_concurrent_program_name not in ('dqm serial sync index program','workflow control queue cleanup', 'workflow background process','wip move transaction manager', 'process transaction interface','oam applications dashboard collection')
+  and          fr.responsibility_name like 'Payables Manager'
+--And Regexp_Like (Nvl(Fcr.Description, User_Concurrent_Program_Name),'(Payables Open)','i')--bank statement cashflow creation'--aam ce bank statement master automation program'--'aam ce bank statement %%'
+  --and          user_name like 'sayalr'
+--And Regexp_Like (User_Name , '(80408838)|(999)', 'i')
+  --and          actual_start_date between to_date('12-feb-2017 20:00:00','dd-mon-yyyy hh24:mi:ss') and to_date('25-feb-2017 21:00:00','dd-mon-yyyy hh24:mi:ss')
+  --and          status_code != 'c'
+--and          request_id in (54031030 and 54031030
+  --and          parent_request_id in (6790792)
+Order By Request_Id Desc;

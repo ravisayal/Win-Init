@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PARENT_TABLE</Item>
+      <Item class="java.lang.String">PARENT_ID</Item>
+      <Item class="java.lang.String">REJECT_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">TOKEN_NAME1</Item>
+      <Item class="java.lang.String">TOKEN_NAME2</Item>
+      <Item class="java.lang.String">TOKEN_NAME3</Item>
+      <Item class="java.lang.String">TOKEN_NAME4</Item>
+      <Item class="java.lang.String">TOKEN_NAME5</Item>
+      <Item class="java.lang.String">TOKEN_NAME6</Item>
+      <Item class="java.lang.String">TOKEN_NAME7</Item>
+      <Item class="java.lang.String">TOKEN_NAME8</Item>
+      <Item class="java.lang.String">TOKEN_NAME9</Item>
+      <Item class="java.lang.String">TOKEN_NAME10</Item>
+      <Item class="java.lang.String">TOKEN_VALUE1</Item>
+      <Item class="java.lang.String">TOKEN_VALUE2</Item>
+      <Item class="java.lang.String">TOKEN_VALUE3</Item>
+      <Item class="java.lang.String">TOKEN_VALUE4</Item>
+      <Item class="java.lang.String">TOKEN_VALUE5</Item>
+      <Item class="java.lang.String">TOKEN_VALUE6</Item>
+      <Item class="java.lang.String">TOKEN_VALUE7</Item>
+      <Item class="java.lang.String">TOKEN_VALUE8</Item>
+      <Item class="java.lang.String">TOKEN_VALUE9</Item>
+      <Item class="java.lang.String">TOKEN_VALUE10</Item>
+      <Item class="java.lang.String">NOTIFY_VENDOR_FLAG</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>152</Item>
+      <Item>75</Item>
+      <Item>173</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>125</Item>
+      <Item>83</Item>
+      <Item>145</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>92</Item>
+      <Item>98</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>95</Item>
+      <Item>101</Item>
+      <Item>134</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect  *
+from  AP_INTERFACE_REJECTIONS
+where  parent_table like 'AP_INVOICES_INTERFACE'
+and  last_update_date > sysdate - 10
+--and parent_id = 14376839</uniqueName>
+</TableSettings>

@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">LOCATION_ID</Item>
+      <Item class="java.lang.String">SEGMENT1</Item>
+      <Item class="java.lang.String">SEGMENT2</Item>
+      <Item class="java.lang.String">SEGMENT3</Item>
+      <Item class="java.lang.String">SEGMENT4</Item>
+      <Item class="java.lang.String">SEGMENT5</Item>
+      <Item class="java.lang.String">SEGMENT6</Item>
+      <Item class="java.lang.String">SEGMENT7</Item>
+      <Item class="java.lang.String">SUMMARY_FLAG</Item>
+      <Item class="java.lang.String">ENABLED_FLAG</Item>
+      <Item class="java.lang.String">START_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">END_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY_CODE</Item>
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID_IN</Item>
+      <Item class="java.lang.String">DISTRIBUTION_ID</Item>
+      <Item class="java.lang.String">TRANSACTION_HEADER_ID_OUT</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">MULTI_LOC</Item>
+      <Item class="java.lang.String">RECORD_RANK</Item>
+      <Item class="java.lang.String">DUP_RANK</Item>
+      <Item class="java.lang.String">LOC_RANK</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>88</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>99</Item>
+      <Item>94</Item>
+      <Item>125</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>125</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>168</Item>
+      <Item>171</Item>
+      <Item>108</Item>
+      <Item>181</Item>
+      <Item>67</Item>
+      <Item>75</Item>
+      <Item>94</Item>
+      <Item>72</Item>
+      <Item>72</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect * from hufa_asset_loc_v where asset_id=32922</uniqueName>
+</TableSettings>

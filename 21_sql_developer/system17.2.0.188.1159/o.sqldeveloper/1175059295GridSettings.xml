@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">OWNER</Item>
+      <Item class="java.lang.String">OBJECT_NAME</Item>
+      <Item class="java.lang.String">OBJECT_TYPE</Item>
+      <Item class="java.lang.String">LOCKING_FND_USER_NAME</Item>
+      <Item class="java.lang.String">LOCKING_FND_USER_LOGIN_TIME</Item>
+      <Item class="java.lang.String">MODULE</Item>
+      <Item class="java.lang.String">MACHINE</Item>
+      <Item class="java.lang.String">OSUSER</Item>
+      <Item class="java.lang.String">ORACLE_USERNAME</Item>
+      <Item class="java.lang.String">SID</Item>
+      <Item class="java.lang.String">PID</Item>
+      <Item class="java.lang.String">OS_PROCESS</Item>
+      <Item class="java.lang.String">SERIAL#</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">SADDR</Item>
+      <Item class="java.lang.String">AUDSID</Item>
+      <Item class="java.lang.String">PROCESS</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>57</Item>
+      <Item>289</Item>
+      <Item>87</Item>
+      <Item>155</Item>
+      <Item>188</Item>
+      <Item>334</Item>
+      <Item>215</Item>
+      <Item>59</Item>
+      <Item>119</Item>
+      <Item>36</Item>
+      <Item>36</Item>
+      <Item>85</Item>
+      <Item>62</Item>
+      <Item>61</Item>
+      <Item>117</Item>
+      <Item>61</Item>
+      <Item>65</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT objects.owner,
+       objects.object_name,
+       objects.object_type,
+       user1.user_name         locking_fnd_user_name,
+       login.start_time        locking_fnd_user_login_time,
+       vs.module,
+       vs.machine,
+       vs.osuser,
+       vlocked.oracle_username,
+       vs.sid,
+       vp.pid,
+       vp.spid                 os_process,
+       vs.serial#,
+       vs.status,
+       vs.saddr,
+       vs.audsid,
+       vs.process
+  FROM apps.fnd_logins      login,
+       apps.fnd_user        user1,
+       v$locked_object vlocked,
+       v$process       vp,
+       v$session       vs,
+       dba_objects     objects
+ WHERE vs.sid = vlocked.session_id
+   AND vlocked.object_id = objects.object_id
+   AND vs.paddr = vp.addr
+   AND vp.spid = login.process_spid(+)
+   AND vp.pid = login.pid(+)
+   AND login.user_id = user1.user_id(+)
+--change the table name below
+   and OBJECTS.OBJECT_NAME like 'HU%'</uniqueName>
+</TableSettings>

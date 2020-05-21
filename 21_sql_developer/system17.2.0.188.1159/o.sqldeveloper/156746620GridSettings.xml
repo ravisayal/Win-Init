@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ORA_ROWSCN</Item>
+      <Item class="java.lang.String">CODE_COMBINATION_ID</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">ORG</Item>
+      <Item class="java.lang.String">OBJECT</Item>
+      <Item class="java.lang.String">FUND</Item>
+      <Item class="java.lang.String">ACTIVITY</Item>
+      <Item class="java.lang.String">SUBACTIVITY</Item>
+      <Item class="java.lang.String">ROOT</Item>
+      <Item class="java.lang.String">ENABLED_FLAG</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>183</Item>
+      <Item>142</Item>
+      <Item>38</Item>
+      <Item>41</Item>
+      <Item>57</Item>
+      <Item>47</Item>
+      <Item>65</Item>
+      <Item>84</Item>
+      <Item>48</Item>
+      <Item>94</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect  ora_rowscn, c.* 
+from    pln_ccid c
+where  1=1</uniqueName>
+</TableSettings>

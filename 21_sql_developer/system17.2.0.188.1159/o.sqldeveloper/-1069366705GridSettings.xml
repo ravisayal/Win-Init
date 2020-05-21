@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PROGRAM_NAME</Item>
+      <Item class="java.lang.String">FILE_NAME</Item>
+      <Item class="java.lang.String">TIMESTAMP</Item>
+      <Item class="java.lang.String">FILE_COUNT#</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>150</Item>
+      <Item>249</Item>
+      <Item>138</Item>
+      <Item>89</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-TRAIN-LDAPselect   decode(program_name,null,substr(file_name, 1, 4),program_name) program_name, 
+         file_name,
+         TRUNC(timestamp) timestamp,
+         count(1) file_count#
+from     applsys.fnd_lob_access la,
+         applsys.fnd_lobs fl
+where    1=1
+and      la.file_id = fl.file_id
+and  trunc(timestamp) between sysdate -7 and  sysdate 
+group by decode(program_name,null,substr(file_name, 1, 4),program_name), file_name, trunc(timestamp)
+having   count(1) > 10
+order by 1 desc</uniqueName>
+</TableSettings>

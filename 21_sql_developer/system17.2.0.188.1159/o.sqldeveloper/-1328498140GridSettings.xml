@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">INVOICE_ID</Item>
+      <Item class="java.lang.String">INVOICE_NUM</Item>
+      <Item class="java.lang.String">AMOUNT_PAID</Item>
+      <Item class="java.lang.String">SUBSTR(D.DESCRIPTION,1,50)</Item>
+      <Item class="java.lang.String">CHECK_NUMBER</Item>
+      <Item class="java.lang.String">CHECK_DATE</Item>
+      <Item class="java.lang.String">PAYMENT_METHOD_CODE</Item>
+      <Item class="java.lang.String">INVOICE_DISTRIBUTION_ID</Item>
+      <Item class="java.lang.String">SEGMENT3</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">NUM_1099</Item>
+      <Item class="java.lang.String">DIST_CODE_COMBINATION_ID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>78</Item>
+      <Item>152</Item>
+      <Item>92</Item>
+      <Item>490</Item>
+      <Item>99</Item>
+      <Item>145</Item>
+      <Item>147</Item>
+      <Item>156</Item>
+      <Item>71</Item>
+      <Item>138</Item>
+      <Item>71</Item>
+      <Item>171</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT  i.invoice_id,
+            i.invoice_num,
+            i.amount_paid,
+            SUBSTR(d.description,1,50),  --max 100
+            c.check_number,
+            c.check_date,
+            c.payment_method_code,
+            d.invoice_distribution_id,
+            gl.segment3,
+            v.vendor_name,
+            v.num_1099,
+            d.dist_code_combination_id
+    FROM apps.ap_invoices_all i, 
+    apps.ap_invoice_payments_all p,
+    apps.ap_checks_all c, 
+    apps.ap_invoice_distributions_all d,
+    apps.gl_code_combinations gl, 
+    apps.ap_suppliers v, 
+    apps.ap_awt_groups t
+    WHERE i.invoice_id = p.invoice_id
+    AND c.check_id = p.check_id
+    --AND c.check_date BETWEEN TO_DATE(TO_DATE(p_start_date,'yyyy/mm/dd hh24:mi:ss'),'DD-MON-YY') AND TO_DATE(TO_DATE(p_end_date,'yyyy/mm/dd hh24:mi:ss'),'DD-MON-YY')
+    AND i.invoice_id = d.invoice_id
+    AND d.AWT_GROUP_ID = t.group_id
+    AND t.name = 'PERFORMERS TAX'
+    AND d.dist_code_combination_id = gl.code_combination_id
+    AND (gl.segment3 = '8690' or gl.segment3 = '8692')
+    AND  v.vendor_id = i.vendor_id
+      and   invoice_num in ('7323721901HILLIARD',
+                             'JEREMYRICHARDS06FEB19',
+                             'OANAZELEZNIK17DEC18',
+                             'ROBERTHKYR11FED19',
+                             'DIANASCHAUB21DEC18',
+                             'JHDIGITALHEALTH0312',
+                             'GREENHOUSE021219',
+                             'MARKCHURCH15MAR19'
+                             )</uniqueName>
+</TableSettings>

@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TS</Item>
+      <Item class="java.lang.String">Used</Item>
+      <Item class="java.lang.String">FSize</Item>
+      <Item class="java.lang.String">% Used</Item>
+      <Item class="java.lang.String">MAX FSize</Item>
+      <Item class="java.lang.String">% Used of MAX</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>124</Item>
+      <Item>68</Item>
+      <Item>44</Item>
+      <Item>57</Item>
+      <Item>68</Item>
+      <Item>94</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">1 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect d.tablespace_name "TS",
+   (select round(sum(s.bytes/(1024*1024)),2)
+      from dba_segments s
+      where (s.tablespace_name = d.tablespace_name)
+      group by s.tablespace_name) "Used",
+round(d.bytes/(1024*1024)) "FSize",
+round((select sum(s.bytes/(1024*1024))
+  from dba_segments s
+  where s.tablespace_name = d.tablespace_name
+  group by s.tablespace_name)*100/(d.bytes/(1024*1024)),2) "% Used",
+round(maxbytes/(1024*1024)) "MAX FSize",
+round((select sum(s.bytes/(1024*1024))
+  from dba_segments s
+  where (s.tablespace_name = d.tablespace_name) AND (d.AUTOEXTENSIBLE = 'YES')
+  group by s.tablespace_name)*100/(maxbytes/(1024*1024)),2) "% Used of MAX"  from dba_data_files d</uniqueName>
+</TableSettings>

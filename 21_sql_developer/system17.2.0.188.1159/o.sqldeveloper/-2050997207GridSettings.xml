@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">APPROVAL_LIST_HEADER_ID</Item>
+      <Item class="java.lang.String">APPROVAL_LIST_LINE_ID</Item>
+      <Item class="java.lang.String">NEXT_ELEMENT_ID</Item>
+      <Item class="java.lang.String">APPROVER_ID</Item>
+      <Item class="java.lang.String">SEQUENCE_NUM</Item>
+      <Item class="java.lang.String">NOTIFICATION_ID</Item>
+      <Item class="java.lang.String">NOTIFICATION_ROLE</Item>
+      <Item class="java.lang.String">COMMENTS</Item>
+      <Item class="java.lang.String">RESPONDER_ID</Item>
+      <Item class="java.lang.String">FORWARD_TO_ID</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">MANDATORY_FLAG</Item>
+      <Item class="java.lang.String">REQUIRES_REAPPROVAL_FLAG</Item>
+      <Item class="java.lang.String">APPROVER_TYPE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">RESPONSE_DATE</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>161</Item>
+      <Item>143</Item>
+      <Item>111</Item>
+      <Item>89</Item>
+      <Item>100</Item>
+      <Item>110</Item>
+      <Item>125</Item>
+      <Item>226</Item>
+      <Item>96</Item>
+      <Item>108</Item>
+      <Item>57</Item>
+      <Item>113</Item>
+      <Item>172</Item>
+      <Item>102</Item>
+      <Item>83</Item>
+      <Item>145</Item>
+      <Item>125</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>134</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT * 
+--         INTO l_current_approver_id
+         FROM apps.po_approval_list_lines
+        WHERE approval_list_header_id in (5695457)--, 5695455.1, 5695456.1)
+        order by approval_list_header_id, sequence_num
+          --AND sequence_num = 1</uniqueName>
+</TableSettings>

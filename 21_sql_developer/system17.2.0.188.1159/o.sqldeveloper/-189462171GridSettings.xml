@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">APP_NAME</Item>
+      <Item class="java.lang.String">GROUP_ID</Item>
+      <Item class="java.lang.String">GROUP_MEMBER</Item>
+      <Item class="java.lang.String">GROUP_PROVIDER</Item>
+      <Item class="java.lang.String">USER_ID</Item>
+      <Item class="java.lang.String">USER_PROVIDER</Item>
+      <Item class="java.lang.String">IS_GROUP</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>72</Item>
+      <Item>190</Item>
+      <Item>231</Item>
+      <Item>111</Item>
+      <Item>62</Item>
+      <Item>166</Item>
+      <Item>70</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect *
+from  pln_hsp_group_membership_v</uniqueName>
+</TableSettings>

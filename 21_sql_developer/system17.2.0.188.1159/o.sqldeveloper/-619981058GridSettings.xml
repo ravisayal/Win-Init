@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">AUDIT_TRAIL_ID</Item>
+      <Item class="java.lang.String">EVENT_DATE</Item>
+      <Item class="java.lang.String">CUSTOMER</Item>
+      <Item class="java.lang.String">INVOICE</Item>
+      <Item class="java.lang.String">EVENT</Item>
+      <Item class="java.lang.String">REFERER</Item>
+      <Item class="java.lang.String">USER_AGENT</Item>
+      <Item class="java.lang.String">REMOTEADDR</Item>
+      <Item class="java.lang.String">GEOLOCATION</Item>
+      <Item class="java.lang.String">ORACLE_SESSIONID</Item>
+      <Item class="java.lang.String">ICX_SESSIONID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>102</Item>
+      <Item>145</Item>
+      <Item>74</Item>
+      <Item>89</Item>
+      <Item>50</Item>
+      <Item>467</Item>
+      <Item>803</Item>
+      <Item>103</Item>
+      <Item>92</Item>
+      <Item>173</Item>
+      <Item>96</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect  *
+from   apps.HUAR_IREC_LOGINS</uniqueName>
+</TableSettings>

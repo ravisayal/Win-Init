@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">RESPONSIBILITY_NAME</Item>
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">EMAIL_ADDRESS</Item>
+      <Item class="java.lang.String">APPLICATION_ID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>360</Item>
+      <Item>262</Item>
+      <Item>369</Item>
+      <Item>218</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT	--frg.REQUEST_GROUP_NAME, 
+		FRV.RESPONSIBILITY_NAME, 
+		fu.user_name, 
+    fu.email_address,
+		frv.application_id
+FROM	apps.fnd_user fu,
+		apps.FND_USER_RESP_GROUPS frg,
+		apps.fnd_responsibility_vl FRV
+WHERE	1=1
+and		fu.user_id = frg.user_id
+AND		frv.RESPONSIBILITY_ID= frg.RESPONSIBILITY_ID
+and		frv.application_id = frg.RESPONSIBILITY_APPLICATION_ID
+--and		frv.application_id = 140
+--and		frg.RESPONSIBILITY_APPLICATION_ID = 140
+--and		fcp.ENABLED_FLAG = 'Y'           
+--AND		fcp.USER_CONCURRENT_PROGRAM_NAME LIKE '%KGP%'
+--AND		upper(frv.RESPONSIBILITY_NAME) LIKE 'FIXED%ASSET%MANAGER%'
+and		nvl(frv.end_date, sysdate + 1) > sysdate
+and  fu.user_id in (3298, 71890, 33812)
+and		nvl(fu.end_date, sysdate + 1) > sysdate
+ORDER BY 2, 1</uniqueName>
+</TableSettings>

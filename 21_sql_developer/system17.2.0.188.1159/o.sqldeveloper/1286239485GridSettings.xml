@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">APP_NAME</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">PARENT_NODE</Item>
+      <Item class="java.lang.String">CURRENT_NODE</Item>
+      <Item class="java.lang.String">NODE_TYPE</Item>
+      <Item class="java.lang.String">FILE_HASH</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">USERID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>72</Item>
+      <Item>38</Item>
+      <Item>175</Item>
+      <Item>306</Item>
+      <Item>77</Item>
+      <Item>306</Item>
+      <Item>138</Item>
+      <Item>83</Item>
+      <Item>61</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect * from   hubs_udf_file_list
+where 1=1
+and file_hash is not null
+and parent_node like 'PLNG0030/100%'
+--and current_node = 'EE'</uniqueName>
+</TableSettings>

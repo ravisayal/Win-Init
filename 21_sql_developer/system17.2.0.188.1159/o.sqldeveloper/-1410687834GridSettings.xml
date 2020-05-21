@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">YEAR</Item>
+      <Item class="java.lang.String">PERIOD</Item>
+      <Item class="java.lang.String">TUB_ORG</Item>
+      <Item class="java.lang.String">OBJECT</Item>
+      <Item class="java.lang.String">POSITION</Item>
+      <Item class="java.lang.String">SUM(VALUE)</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>106</Item>
+      <Item>75</Item>
+      <Item>152</Item>
+      <Item>151</Item>
+      <Item>111</Item>
+      <Item>108</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect --ora_database_name, 
+       year, period, TUB_ORG, OBJECT, POSITION, sum(value)
+from pln_data_xform_int
+where  1=1
+and   year='FY20'
+and   period='Oct'
+group by ora_database_name, year, period, TUB_ORG, OBJECT, POSITION
+minus
+select --ora_database_name@PLODS_HUBSTEST_LINK.HARVARD.EDU as source, 
+       year, period, TUB_ORG, OBJECT, POSITION, sum(value)
+from pln_data_xform_int@PLODS_HUBSTEST_LINK.HARVARD.EDU
+where  1=1
+and   year='FY20'
+and   period='Oct'
+group by ora_database_name,  year, period, TUB_ORG, OBJECT, POSITION</uniqueName>
+</TableSettings>

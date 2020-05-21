@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">REQUISITION_HEADER_ID</Item>
+      <Item class="java.lang.String">PREPARER_ID</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">SEGMENT1</Item>
+      <Item class="java.lang.String">SUMMARY_FLAG</Item>
+      <Item class="java.lang.String">ENABLED_FLAG</Item>
+      <Item class="java.lang.String">SEGMENT2</Item>
+      <Item class="java.lang.String">SEGMENT3</Item>
+      <Item class="java.lang.String">SEGMENT4</Item>
+      <Item class="java.lang.String">SEGMENT5</Item>
+      <Item class="java.lang.String">START_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">END_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+      <Item class="java.lang.String">AUTHORIZATION_STATUS</Item>
+      <Item class="java.lang.String">NOTE_TO_AUTHORIZER</Item>
+      <Item class="java.lang.String">TYPE_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">TRANSFERRED_TO_OE_FLAG</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ON_LINE_FLAG</Item>
+      <Item class="java.lang.String">PRELIMINARY_RESEARCH_FLAG</Item>
+      <Item class="java.lang.String">RESEARCH_COMPLETE_FLAG</Item>
+      <Item class="java.lang.String">PREPARER_FINISHED_FLAG</Item>
+      <Item class="java.lang.String">PREPARER_FINISHED_DATE</Item>
+      <Item class="java.lang.String">AGENT_RETURN_FLAG</Item>
+      <Item class="java.lang.String">AGENT_RETURN_NOTE</Item>
+      <Item class="java.lang.String">CANCEL_FLAG</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">USSGL_TRANSACTION_CODE</Item>
+      <Item class="java.lang.String">GOVERNMENT_CONTEXT</Item>
+      <Item class="java.lang.String">REQUEST_ID</Item>
+      <Item class="java.lang.String">PROGRAM_APPLICATION_ID</Item>
+      <Item class="java.lang.String">PROGRAM_ID</Item>
+      <Item class="java.lang.String">PROGRAM_UPDATE_DATE</Item>
+      <Item class="java.lang.String">INTERFACE_SOURCE_CODE</Item>
+      <Item class="java.lang.String">INTERFACE_SOURCE_LINE_ID</Item>
+      <Item class="java.lang.String">CLOSED_CODE</Item>
+      <Item class="java.lang.String">ORG_ID</Item>
+      <Item class="java.lang.String">WF_ITEM_TYPE</Item>
+      <Item class="java.lang.String">WF_ITEM_KEY</Item>
+      <Item class="java.lang.String">EMERGENCY_PO_NUM</Item>
+      <Item class="java.lang.String">PCARD_ID</Item>
+      <Item class="java.lang.String">APPS_SOURCE_CODE</Item>
+      <Item class="java.lang.String">CBC_ACCOUNTING_DATE</Item>
+      <Item class="java.lang.String">CHANGE_PENDING_FLAG</Item>
+      <Item class="java.lang.String">ACTIVE_SHOPPING_CART_FLAG</Item>
+      <Item class="java.lang.String">CONTRACTOR_STATUS</Item>
+      <Item class="java.lang.String">CONTRACTOR_REQUISITION_FLAG</Item>
+      <Item class="java.lang.String">SUPPLIER_NOTIFIED_FLAG</Item>
+      <Item class="java.lang.String">EMERGENCY_PO_ORG_ID</Item>
+      <Item class="java.lang.String">APPROVED_DATE</Item>
+      <Item class="java.lang.String">TAX_ATTRIBUTE_UPDATE_CODE</Item>
+      <Item class="java.lang.String">FIRST_APPROVER_ID</Item>
+      <Item class="java.lang.String">FIRST_POSITION_ID</Item>
+      <Item class="java.lang.String">FEDERAL_FLAG</Item>
+      <Item class="java.lang.String">CONFORMED_HEADER_ID</Item>
+      <Item class="java.lang.String">REVISION_NUM</Item>
+      <Item class="java.lang.String">AMENDMENT_TYPE</Item>
+      <Item class="java.lang.String">AMENDMENT_STATUS</Item>
+      <Item class="java.lang.String">AMENDMENT_REASON</Item>
+      <Item class="java.lang.String">UDA_TEMPLATE_ID</Item>
+      <Item class="java.lang.String">UDA_TEMPLATE_DATE</Item>
+      <Item class="java.lang.String">CLM_ISSUING_OFFICE</Item>
+      <Item class="java.lang.String">CLM_COTR_OFFICE</Item>
+      <Item class="java.lang.String">CLM_COTR_CONTACT</Item>
+      <Item class="java.lang.String">CLM_PRIORITY_CODE</Item>
+      <Item class="java.lang.String">SUGGESTED_AWARD_NO</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>149</Item>
+      <Item>88</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>71</Item>
+      <Item>99</Item>
+      <Item>94</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>71</Item>
+      <Item>125</Item>
+      <Item>113</Item>
+      <Item>125</Item>
+      <Item>138</Item>
+      <Item>83</Item>
+      <Item>523</Item>
+      <Item>147</Item>
+      <Item>495</Item>
+      <Item>123</Item>
+      <Item>162</Item>
+      <Item>134</Item>
+      <Item>341</Item>
+      <Item>80</Item>
+      <Item>96</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>93</Item>
+      <Item>176</Item>
+      <Item>161</Item>
+      <Item>155</Item>
+      <Item>156</Item>
+      <Item>129</Item>
+      <Item>131</Item>
+      <Item>89</Item>
+      <Item>173</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>162</Item>
+      <Item>139</Item>
+      <Item>82</Item>
+      <Item>159</Item>
+      <Item>86</Item>
+      <Item>146</Item>
+      <Item>156</Item>
+      <Item>167</Item>
+      <Item>92</Item>
+      <Item>58</Item>
+      <Item>95</Item>
+      <Item>89</Item>
+      <Item>127</Item>
+      <Item>70</Item>
+      <Item>125</Item>
+      <Item>144</Item>
+      <Item>141</Item>
+      <Item>176</Item>
+      <Item>133</Item>
+      <Item>193</Item>
+      <Item>151</Item>
+      <Item>144</Item>
+      <Item>138</Item>
+      <Item>178</Item>
+      <Item>124</Item>
+      <Item>120</Item>
+      <Item>94</Item>
+      <Item>146</Item>
+      <Item>95</Item>
+      <Item>111</Item>
+      <Item>125</Item>
+      <Item>128</Item>
+      <Item>113</Item>
+      <Item>128</Item>
+      <Item>129</Item>
+      <Item>116</Item>
+      <Item>127</Item>
+      <Item>127</Item>
+      <Item>142</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect   *
+from       apps.PO_REQUISITION_HEADERS_ALL
+where 1=1</uniqueName>
+</TableSettings>

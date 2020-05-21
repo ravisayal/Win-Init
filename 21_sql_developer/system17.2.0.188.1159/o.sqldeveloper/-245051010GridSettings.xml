@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VALIDATION_KEY</Item>
+      <Item class="java.lang.String">FILE_NAME</Item>
+      <Item class="java.lang.String">PLANNING_APP</Item>
+      <Item class="java.lang.String">PLANNING_DB</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">FILE_TYPE_CODE</Item>
+      <Item class="java.lang.String">EMAIL</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>104</Item>
+      <Item>322</Item>
+      <Item>94</Item>
+      <Item>88</Item>
+      <Item>38</Item>
+      <Item>104</Item>
+      <Item>194</Item>
+      <Item>57</Item>
+      <Item>83</Item>
+      <Item>138</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect  *
+from   pln_udef_data_validation_ctl 
+where  1=1
+order by validation_key desc</uniqueName>
+</TableSettings>

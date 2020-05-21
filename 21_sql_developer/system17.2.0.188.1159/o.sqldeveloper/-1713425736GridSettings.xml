@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">CALENDAR_TYPE</Item>
+      <Item class="java.lang.String">START_DATE</Item>
+      <Item class="java.lang.String">END_DATE</Item>
+      <Item class="java.lang.String">PERIOD_NUM</Item>
+      <Item class="java.lang.String">PERIOD_NAME</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>103</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>85</Item>
+      <Item>91</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>83</Item>
+      <Item>145</Item>
+      <Item>125</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">2 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect   *
+from    fa_calendar_periods</uniqueName>
+</TableSettings>

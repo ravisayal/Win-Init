@@ -1,0 +1,21 @@
+select sys_context( 'userenv', 'current_schema' ) from dual; 
+
+select * from PLN_HR_DATA_HIST_ALL;
+
+
+
+create table PLN_HR_DATA_HIST_ALL_0507 as select * from PLN_HR_DATA_HIST_ALL;
+
+Table PLN_HR_DATA_HIST_ALL_0507 created.
+
+delete from PLN_HR_DATA_HIST_ALL;
+832,124 rows deleted.
+
+
+INSERT INTO  PLN_HR_DATA_HIST_ALL SELECT * FROM PLN_HR_DATA_HIST_ALL@PLODS_HUBSTEST_LINK.HARVARD.EDU;	
+832,192 rows inserted.
+
+commit;
+Commit complete.
+
+INSERT INTO  PLN_HR_DATA_HIST_ALL_BK SELECT * FROM PLN_HR_DATA_HIST_ALL@PLODS_HUBSTEST_LINK.HARVARD.EDU;	HUB-NEXTGEN-TEST-PLANODS	1588089638078	SQL	1	7.724

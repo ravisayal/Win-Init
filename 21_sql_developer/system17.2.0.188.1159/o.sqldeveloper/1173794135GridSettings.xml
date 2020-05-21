@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">INVOICE_ID</Item>
+      <Item class="java.lang.String">LINE_LOCATION_ID</Item>
+      <Item class="java.lang.String">HOLD_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">HELD_BY</Item>
+      <Item class="java.lang.String">HOLD_DATE</Item>
+      <Item class="java.lang.String">HOLD_REASON</Item>
+      <Item class="java.lang.String">RELEASE_LOOKUP_CODE</Item>
+      <Item class="java.lang.String">RELEASE_REASON</Item>
+      <Item class="java.lang.String">STATUS_FLAG</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">ORG_ID</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_ID</Item>
+      <Item class="java.lang.String">RCV_TRANSACTION_ID</Item>
+      <Item class="java.lang.String">HOLD_DETAILS</Item>
+      <Item class="java.lang.String">LINE_NUMBER</Item>
+      <Item class="java.lang.String">HOLD_ID</Item>
+      <Item class="java.lang.String">WF_STATUS</Item>
+      <Item class="java.lang.String">VALIDATION_REQUEST_ID</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>78</Item>
+      <Item>116</Item>
+      <Item>159</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>62</Item>
+      <Item>145</Item>
+      <Item>358</Item>
+      <Item>152</Item>
+      <Item>194</Item>
+      <Item>88</Item>
+      <Item>125</Item>
+      <Item>145</Item>
+      <Item>83</Item>
+      <Item>134</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>58</Item>
+      <Item>117</Item>
+      <Item>134</Item>
+      <Item>93</Item>
+      <Item>88</Item>
+      <Item>63</Item>
+      <Item>79</Item>
+      <Item>149</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect  *
+from   apps.ap_holds_all
+where  1=1
+and invoice_id = 14376839</uniqueName>
+</TableSettings>

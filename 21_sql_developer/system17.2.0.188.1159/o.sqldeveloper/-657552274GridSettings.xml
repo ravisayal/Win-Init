@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TRANSACTION_ID</Item>
+      <Item class="java.lang.String">CUSTOMER_NUMBER</Item>
+      <Item class="java.lang.String">CUSTOMER_NAME</Item>
+      <Item class="java.lang.String">INVOICE_NUMBER</Item>
+      <Item class="java.lang.String">AMOUNT_DUE</Item>
+      <Item class="java.lang.String">AMOUNT_DUE_REMAINING</Item>
+      <Item class="java.lang.String">AMOUNT_DUE_ORIGINAL</Item>
+      <Item class="java.lang.String">SESSION_ID</Item>
+      <Item class="java.lang.String">PAYMENT_DATE</Item>
+      <Item class="java.lang.String">PAYMENT_METHOD</Item>
+      <Item class="java.lang.String">CARD_TYPE</Item>
+      <Item class="java.lang.String">PAYMENT_GATEWAY_REFERENCE_ID</Item>
+      <Item class="java.lang.String">RECEIPT_NUMBER</Item>
+      <Item class="java.lang.String">RECEIPT_ID</Item>
+      <Item class="java.lang.String">ACTIVE</Item>
+      <Item class="java.lang.String">TRANSACTION_RANK</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>108</Item>
+      <Item>121</Item>
+      <Item>355</Item>
+      <Item>108</Item>
+      <Item>88</Item>
+      <Item>151</Item>
+      <Item>143</Item>
+      <Item>79</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>77</Item>
+      <Item>201</Item>
+      <Item>108</Item>
+      <Item>78</Item>
+      <Item>55</Item>
+      <Item>124</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT      hiph.transaction_id,
+                arc.customer_number,
+                arc.customer_name,
+                apsa.trx_number invoice_number,
+                hiph.amount_due,
+                apsa.amount_due_remaining,
+                apsa.amount_due_original,
+                hiph.session_id,
+                hiph.payment_date,
+                hiph.payment_method,
+                hiph.card_type,
+                hiph.payment_gateway_reference_id,
+                hiph.receipt_number,
+                hiph.receipt_id,
+                hiph.active,
+                DENSE_RANK() OVER (PARTITION BY hipl.transaction_id ORDER BY hipl.invoice_id) AS transaction_rank
+                /*this analytical function is written to
+                  rank the invoice details of each transaction and update the trxn header table where RANK is 1*/
+    FROM
+                apps.huar_irec_payment_header hiph,
+                apps.huar_irec_payment_lines  hipl,
+                apps.ar_payment_schedules_all apsa,
+                apps.ar_customers arc
+    WHERE       hiph.transaction_id               =   hipl.transaction_id
+                AND hipl.invoice_id               =   apsa.customer_trx_id
+                AND hiph.customer_id              =   apsa.customer_id
+                AND apsa.customer_id              =   arc.customer_id
+                AND hiph.start_time               &lt;=  DECODE(300000,NULL,hiph.start_time,SYSDATE - ((60/86400)*30000))
+    ORDER BY    hipl.invoice_id</uniqueName>
+</TableSettings>

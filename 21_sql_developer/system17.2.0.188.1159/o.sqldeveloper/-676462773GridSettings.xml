@@ -1,0 +1,490 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">LOGICAL_GROUP_REFERENCE</Item>
+      <Item class="java.lang.String">PAYMENT_ID</Item>
+      <Item class="java.lang.String">PAYMENT_METHOD_CODE</Item>
+      <Item class="java.lang.String">PAYMENT_SERVICE_REQUEST_ID</Item>
+      <Item class="java.lang.String">PROCESS_TYPE</Item>
+      <Item class="java.lang.String">PAYMENT_STATUS</Item>
+      <Item class="java.lang.String">PAYMENTS_COMPLETE_FLAG</Item>
+      <Item class="java.lang.String">PAYMENT_FUNCTION</Item>
+      <Item class="java.lang.String">PAYMENT_AMOUNT</Item>
+      <Item class="java.lang.String">PAYMENT_CURRENCY_CODE</Item>
+      <Item class="java.lang.String">BILL_PAYABLE_FLAG</Item>
+      <Item class="java.lang.String">EXCLUSIVE_PAYMENT_FLAG</Item>
+      <Item class="java.lang.String">SEPARATE_REMIT_ADVICE_REQ_FLAG</Item>
+      <Item class="java.lang.String">INTERNAL_BANK_ACCOUNT_ID</Item>
+      <Item class="java.lang.String">ORG_ID</Item>
+      <Item class="java.lang.String">ORG_TYPE</Item>
+      <Item class="java.lang.String">LEGAL_ENTITY_ID</Item>
+      <Item class="java.lang.String">DECLARE_PAYMENT_FLAG</Item>
+      <Item class="java.lang.String">DELIVERY_CHANNEL_CODE</Item>
+      <Item class="java.lang.String">EXT_PAYEE_ID</Item>
+      <Item class="java.lang.String">PAYMENT_INSTRUCTION_ID</Item>
+      <Item class="java.lang.String">PAYMENT_PROFILE_ID</Item>
+      <Item class="java.lang.String">PREGROUPED_PAYMENT_FLAG</Item>
+      <Item class="java.lang.String">STOP_CONFIRMED_FLAG</Item>
+      <Item class="java.lang.String">STOP_RELEASED_FLAG</Item>
+      <Item class="java.lang.String">STOP_REQUEST_PLACED_FLAG</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">OBJECT_VERSION_NUMBER</Item>
+      <Item class="java.lang.String">PAYEE_PARTY_ID</Item>
+      <Item class="java.lang.String">PARTY_SITE_ID</Item>
+      <Item class="java.lang.String">SUPPLIER_SITE_ID</Item>
+      <Item class="java.lang.String">PAYMENT_REASON_CODE</Item>
+      <Item class="java.lang.String">PAYMENT_REASON_COMMENTS</Item>
+      <Item class="java.lang.String">PAYMENT_DATE</Item>
+      <Item class="java.lang.String">ANTICIPATED_VALUE_DATE</Item>
+      <Item class="java.lang.String">DECLARATION_AMOUNT</Item>
+      <Item class="java.lang.String">DECLARATION_CURRENCY_CODE</Item>
+      <Item class="java.lang.String">DISCOUNT_AMOUNT_TAKEN</Item>
+      <Item class="java.lang.String">PAYMENT_DETAILS</Item>
+      <Item class="java.lang.String">BANK_CHARGE_BEARER</Item>
+      <Item class="java.lang.String">BANK_CHARGE_AMOUNT</Item>
+      <Item class="java.lang.String">SETTLEMENT_PRIORITY</Item>
+      <Item class="java.lang.String">REMITTANCE_MESSAGE1</Item>
+      <Item class="java.lang.String">REMITTANCE_MESSAGE2</Item>
+      <Item class="java.lang.String">REMITTANCE_MESSAGE3</Item>
+      <Item class="java.lang.String">PAYMENT_REFERENCE_NUMBER</Item>
+      <Item class="java.lang.String">PAPER_DOCUMENT_NUMBER</Item>
+      <Item class="java.lang.String">BANK_ASSIGNED_REF_CODE</Item>
+      <Item class="java.lang.String">EXTERNAL_BANK_ACCOUNT_ID</Item>
+      <Item class="java.lang.String">UNIQUE_REMITTANCE_IDENTIFIER</Item>
+      <Item class="java.lang.String">URI_CHECK_DIGIT</Item>
+      <Item class="java.lang.String">BANK_INSTRUCTION1_CODE</Item>
+      <Item class="java.lang.String">BANK_INSTRUCTION2_CODE</Item>
+      <Item class="java.lang.String">BANK_INSTRUCTION_DETAILS</Item>
+      <Item class="java.lang.String">PAYMENT_TEXT_MESSAGE1</Item>
+      <Item class="java.lang.String">PAYMENT_TEXT_MESSAGE2</Item>
+      <Item class="java.lang.String">PAYMENT_TEXT_MESSAGE3</Item>
+      <Item class="java.lang.String">MATURITY_DATE</Item>
+      <Item class="java.lang.String">PAYMENT_DUE_DATE</Item>
+      <Item class="java.lang.String">DOCUMENT_CATEGORY_CODE</Item>
+      <Item class="java.lang.String">DOCUMENT_SEQUENCE_ID</Item>
+      <Item class="java.lang.String">DOCUMENT_SEQUENCE_VALUE</Item>
+      <Item class="java.lang.String">BENEFICIARY_PARTY</Item>
+      <Item class="java.lang.String">STOP_CONFIRMED_BY</Item>
+      <Item class="java.lang.String">STOP_CONFIRM_DATE</Item>
+      <Item class="java.lang.String">STOP_CONFIRM_REASON</Item>
+      <Item class="java.lang.String">STOP_CONFIRM_REFERENCE</Item>
+      <Item class="java.lang.String">STOP_RELEASED_BY</Item>
+      <Item class="java.lang.String">STOP_RELEASE_DATE</Item>
+      <Item class="java.lang.String">STOP_RELEASE_REASON</Item>
+      <Item class="java.lang.String">STOP_RELEASE_REFERENCE</Item>
+      <Item class="java.lang.String">STOP_REQUEST_DATE</Item>
+      <Item class="java.lang.String">STOP_REQUEST_PLACED_BY</Item>
+      <Item class="java.lang.String">STOP_REQUEST_REASON</Item>
+      <Item class="java.lang.String">STOP_REQUEST_REFERENCE</Item>
+      <Item class="java.lang.String">VOIDED_BY</Item>
+      <Item class="java.lang.String">VOID_DATE</Item>
+      <Item class="java.lang.String">VOID_REASON</Item>
+      <Item class="java.lang.String">REMIT_TO_LOCATION_ID</Item>
+      <Item class="java.lang.String">COMPLETED_PMTS_GROUP_ID</Item>
+      <Item class="java.lang.String">POSITIVE_PAY_FILE_CREATED_FLAG</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">EXT_BRANCH_NUMBER</Item>
+      <Item class="java.lang.String">EXT_BANK_NUMBER</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCOUNT_NAME</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCOUNT_NUMBER</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCOUNT_TYPE</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCOUNT_IBAN_NUMBER</Item>
+      <Item class="java.lang.String">PAYEE_NAME</Item>
+      <Item class="java.lang.String">PAYEE_ADDRESS1</Item>
+      <Item class="java.lang.String">PAYEE_ADDRESS2</Item>
+      <Item class="java.lang.String">PAYEE_ADDRESS3</Item>
+      <Item class="java.lang.String">PAYEE_ADDRESS4</Item>
+      <Item class="java.lang.String">PAYEE_CITY</Item>
+      <Item class="java.lang.String">PAYEE_POSTAL_CODE</Item>
+      <Item class="java.lang.String">PAYEE_STATE</Item>
+      <Item class="java.lang.String">PAYEE_PROVINCE</Item>
+      <Item class="java.lang.String">PAYEE_COUNTY</Item>
+      <Item class="java.lang.String">PAYEE_COUNTRY</Item>
+      <Item class="java.lang.String">REMIT_ADVICE_DELIVERY_METHOD</Item>
+      <Item class="java.lang.String">REMIT_ADVICE_EMAIL</Item>
+      <Item class="java.lang.String">REMIT_ADVICE_FAX</Item>
+      <Item class="java.lang.String">PAYMENT_PROFILE_SYS_NAME</Item>
+      <Item class="java.lang.String">PAYMENT_PROFILE_ACCT_NAME</Item>
+      <Item class="java.lang.String">PAYMENT_PROCESS_REQUEST_NAME</Item>
+      <Item class="java.lang.String">SOURCE_PRODUCT</Item>
+      <Item class="java.lang.String">PAYMENT_REASON_FORMAT_VALUE</Item>
+      <Item class="java.lang.String">DECLARATION_EXCH_RATE_TYPE</Item>
+      <Item class="java.lang.String">DECLARATION_FORMAT</Item>
+      <Item class="java.lang.String">DELIVERY_CHANNEL_FORMAT_VALUE</Item>
+      <Item class="java.lang.String">BANK_INSTRUCTION1_FORMAT_VALUE</Item>
+      <Item class="java.lang.String">BANK_INSTRUCTION2_FORMAT_VALUE</Item>
+      <Item class="java.lang.String">SRA_DELIVERY_METHOD</Item>
+      <Item class="java.lang.String">INT_BANK_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_NUMBER</Item>
+      <Item class="java.lang.String">INT_EFT_SWIFT_CODE</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_NUMBER</Item>
+      <Item class="java.lang.String">INT_BANK_ACCOUNT_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_ACCOUNT_NUMBER</Item>
+      <Item class="java.lang.String">INT_BANK_ACCOUNT_IBAN</Item>
+      <Item class="java.lang.String">EXT_BANK_NAME</Item>
+      <Item class="java.lang.String">EXT_EFT_SWIFT_CODE</Item>
+      <Item class="java.lang.String">EXT_BANK_BRANCH_NAME</Item>
+      <Item class="java.lang.String">ORG_NAME</Item>
+      <Item class="java.lang.String">PAYER_LEGAL_ENTITY_NAME</Item>
+      <Item class="java.lang.String">PAYER_LE_REGISTRATION_NUM</Item>
+      <Item class="java.lang.String">PAYER_TAX_REGISTRATION_NUM</Item>
+      <Item class="java.lang.String">PAYEE_PARTY_NAME</Item>
+      <Item class="java.lang.String">PAYEE_LE_REGISTRATION_NUM</Item>
+      <Item class="java.lang.String">PAYEE_TAX_REGISTRATION_NUM</Item>
+      <Item class="java.lang.String">PAYER_PARTY_SITE_NAME</Item>
+      <Item class="java.lang.String">PAYEE_ADDRESS_CONCAT</Item>
+      <Item class="java.lang.String">BENEFICIARY_NAME</Item>
+      <Item class="java.lang.String">PAYER_PARTY_NUMBER</Item>
+      <Item class="java.lang.String">PAYEE_PARTY_NUMBER</Item>
+      <Item class="java.lang.String">PAYEE_ALTERNATE_NAME</Item>
+      <Item class="java.lang.String">PAYEE_SITE_ALTERNATE_NAME</Item>
+      <Item class="java.lang.String">PAYEE_SUPPLIER_NUMBER</Item>
+      <Item class="java.lang.String">PAYEE_FIRST_PARTY_REFERENCE</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_RFC_IDENTIFIER</Item>
+      <Item class="java.lang.String">INT_BANK_ACCT_AGENCY_LOC_CODE</Item>
+      <Item class="java.lang.String">PAYER_ABBREVIATED_AGENCY_CODE</Item>
+      <Item class="java.lang.String">PAYER_FEDERAL_US_EMPLOYER_ID</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCT_OWNER_PARTY_ID</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCT_PMT_FACTOR_FLAG</Item>
+      <Item class="java.lang.String">ADDRESS_SOURCE</Item>
+      <Item class="java.lang.String">EMPLOYEE_ADDRESS_CODE</Item>
+      <Item class="java.lang.String">EMPLOYEE_PERSON_ID</Item>
+      <Item class="java.lang.String">EMPLOYEE_PAYMENT_FLAG</Item>
+      <Item class="java.lang.String">EMPLOYEE_ADDRESS_ID</Item>
+      <Item class="java.lang.String">REQUEST_ID</Item>
+      <Item class="java.lang.String">EXT_BANK_BRANCH_PARTY_ID</Item>
+      <Item class="java.lang.String">EXT_BANK_ALT_NAME</Item>
+      <Item class="java.lang.String">EXT_BANK_BRANCH_ALT_NAME</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCOUNT_ALT_NAME</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCOUNT_NUM_ELEC</Item>
+      <Item class="java.lang.String">EXT_BANK_BRANCH_LOCATION_ID</Item>
+      <Item class="java.lang.String">EXT_BANK_ACCT_OWNER_PARTY_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_PARTY_ID</Item>
+      <Item class="java.lang.String">INT_BANK_ALT_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_ALT_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_ACCOUNT_ALT_NAME</Item>
+      <Item class="java.lang.String">INT_BANK_ACCOUNT_NUM_ELEC</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_LOCATION_ID</Item>
+      <Item class="java.lang.String">INT_BANK_BRANCH_EFT_USER_NUM</Item>
+      <Item class="java.lang.String">PAYER_PARTY_ID</Item>
+      <Item class="java.lang.String">PAYER_LOCATION_ID</Item>
+      <Item class="java.lang.String">PAYER_PARTY_ATTR_CATEGORY</Item>
+      <Item class="java.lang.String">PAYER_LE_ATTR_CATEGORY</Item>
+      <Item class="java.lang.String">PAYEE_PARTY_ATTR_CATEGORY</Item>
+      <Item class="java.lang.String">PAYEE_SUPPLIER_ATTR_CATEGORY</Item>
+      <Item class="java.lang.String">PAYEE_SPPLR_SITE_ATTR_CATEGORY</Item>
+      <Item class="java.lang.String">PAYEE_SUPPLIER_SITE_NAME</Item>
+      <Item class="java.lang.String">PAYEE_SUPPLIER_SITE_ALT_NAME</Item>
+      <Item class="java.lang.String">PAYEE_SUPPLIER_ID</Item>
+      <Item class="java.lang.String">EXT_INV_PAYEE_ID</Item>
+      <Item class="java.lang.String">INV_PAYEE_PARTY_ID</Item>
+      <Item class="java.lang.String">INV_PARTY_SITE_ID</Item>
+      <Item class="java.lang.String">INV_SUPPLIER_SITE_ID</Item>
+      <Item class="java.lang.String">INV_BENEFICIARY_PARTY</Item>
+      <Item class="java.lang.String">INV_PAYEE_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_ADDRESS1</Item>
+      <Item class="java.lang.String">INV_PAYEE_ADDRESS2</Item>
+      <Item class="java.lang.String">INV_PAYEE_ADDRESS3</Item>
+      <Item class="java.lang.String">INV_PAYEE_ADDRESS4</Item>
+      <Item class="java.lang.String">INV_PAYEE_CITY</Item>
+      <Item class="java.lang.String">INV_PAYEE_POSTAL_CODE</Item>
+      <Item class="java.lang.String">INV_PAYEE_STATE</Item>
+      <Item class="java.lang.String">INV_PAYEE_PROVINCE</Item>
+      <Item class="java.lang.String">INV_PAYEE_COUNTY</Item>
+      <Item class="java.lang.String">INV_PAYEE_COUNTRY</Item>
+      <Item class="java.lang.String">INV_PAYEE_PARTY_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_LE_REG_NUM</Item>
+      <Item class="java.lang.String">INV_PAYEE_TAX_REG_NUM</Item>
+      <Item class="java.lang.String">INV_PAYEE_ADDRESS_CONCAT</Item>
+      <Item class="java.lang.String">INV_BENEFICIARY_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_PARTY_NUMBER</Item>
+      <Item class="java.lang.String">INV_PAYEE_ALTERNATE_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_SITE_ALT_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_SUPPLIER_NUMBER</Item>
+      <Item class="java.lang.String">INV_PAYEE_FIRST_PARTY_REF</Item>
+      <Item class="java.lang.String">EXT_BNK_ACCT_OWNR_INV_PRTY_ID</Item>
+      <Item class="java.lang.String">EXT_BNK_BRANCH_INV_PRTY_ID</Item>
+      <Item class="java.lang.String">EXT_BNK_ACCT_OWNR_INV_PRTY_NME</Item>
+      <Item class="java.lang.String">INV_PAYEE_PARTY_ATTR_CAT</Item>
+      <Item class="java.lang.String">INV_PAYEE_SUPPLIER_ATTR_CAT</Item>
+      <Item class="java.lang.String">INV_PAYEE_SPPLR_SITE_ATTR_CAT</Item>
+      <Item class="java.lang.String">INV_PAYEE_SUPPLIER_SITE_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_SPPLR_SITE_ALT_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_SUPPLIER_ID</Item>
+      <Item class="java.lang.String">PAYEE_ADDRESSEE</Item>
+      <Item class="java.lang.String">PAYEE_PARTY_SITE_NAME</Item>
+      <Item class="java.lang.String">INV_PAYEE_PARTY_SITE_NAME</Item>
+      <Item class="java.lang.String">ACKNOWLEDGED_FLAG</Item>
+      <Item class="java.lang.String">AFFECTS_REJECTION_LEVEL</Item>
+      <Item class="java.lang.String">INVOICING_LEGAL_ENTITY_ID</Item>
+      <Item class="java.lang.String">SERVICE_LEVEL_CODE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>167</Item>
+      <Item>82</Item>
+      <Item>147</Item>
+      <Item>182</Item>
+      <Item>95</Item>
+      <Item>109</Item>
+      <Item>160</Item>
+      <Item>123</Item>
+      <Item>114</Item>
+      <Item>159</Item>
+      <Item>119</Item>
+      <Item>155</Item>
+      <Item>208</Item>
+      <Item>172</Item>
+      <Item>58</Item>
+      <Item>103</Item>
+      <Item>107</Item>
+      <Item>147</Item>
+      <Item>152</Item>
+      <Item>91</Item>
+      <Item>157</Item>
+      <Item>130</Item>
+      <Item>169</Item>
+      <Item>142</Item>
+      <Item>132</Item>
+      <Item>172</Item>
+      <Item>83</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>125</Item>
+      <Item>138</Item>
+      <Item>154</Item>
+      <Item>105</Item>
+      <Item>96</Item>
+      <Item>111</Item>
+      <Item>146</Item>
+      <Item>174</Item>
+      <Item>138</Item>
+      <Item>155</Item>
+      <Item>139</Item>
+      <Item>184</Item>
+      <Item>158</Item>
+      <Item>112</Item>
+      <Item>137</Item>
+      <Item>141</Item>
+      <Item>135</Item>
+      <Item>141</Item>
+      <Item>141</Item>
+      <Item>141</Item>
+      <Item>176</Item>
+      <Item>160</Item>
+      <Item>160</Item>
+      <Item>173</Item>
+      <Item>191</Item>
+      <Item>110</Item>
+      <Item>160</Item>
+      <Item>160</Item>
+      <Item>167</Item>
+      <Item>153</Item>
+      <Item>153</Item>
+      <Item>153</Item>
+      <Item>102</Item>
+      <Item>123</Item>
+      <Item>169</Item>
+      <Item>151</Item>
+      <Item>171</Item>
+      <Item>123</Item>
+      <Item>129</Item>
+      <Item>130</Item>
+      <Item>145</Item>
+      <Item>162</Item>
+      <Item>119</Item>
+      <Item>126</Item>
+      <Item>141</Item>
+      <Item>158</Item>
+      <Item>129</Item>
+      <Item>159</Item>
+      <Item>144</Item>
+      <Item>161</Item>
+      <Item>75</Item>
+      <Item>138</Item>
+      <Item>110</Item>
+      <Item>145</Item>
+      <Item>168</Item>
+      <Item>200</Item>
+      <Item>134</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>131</Item>
+      <Item>116</Item>
+      <Item>158</Item>
+      <Item>171</Item>
+      <Item>154</Item>
+      <Item>201</Item>
+      <Item>327</Item>
+      <Item>264</Item>
+      <Item>278</Item>
+      <Item>194</Item>
+      <Item>108</Item>
+      <Item>82</Item>
+      <Item>128</Item>
+      <Item>87</Item>
+      <Item>107</Item>
+      <Item>97</Item>
+      <Item>104</Item>
+      <Item>194</Item>
+      <Item>129</Item>
+      <Item>118</Item>
+      <Item>180</Item>
+      <Item>180</Item>
+      <Item>203</Item>
+      <Item>114</Item>
+      <Item>197</Item>
+      <Item>184</Item>
+      <Item>138</Item>
+      <Item>203</Item>
+      <Item>211</Item>
+      <Item>211</Item>
+      <Item>140</Item>
+      <Item>102</Item>
+      <Item>115</Item>
+      <Item>132</Item>
+      <Item>149</Item>
+      <Item>162</Item>
+      <Item>157</Item>
+      <Item>170</Item>
+      <Item>153</Item>
+      <Item>103</Item>
+      <Item>133</Item>
+      <Item>150</Item>
+      <Item>236</Item>
+      <Item>222</Item>
+      <Item>177</Item>
+      <Item>185</Item>
+      <Item>327</Item>
+      <Item>176</Item>
+      <Item>184</Item>
+      <Item>151</Item>
+      <Item>908</Item>
+      <Item>327</Item>
+      <Item>136</Item>
+      <Item>135</Item>
+      <Item>147</Item>
+      <Item>175</Item>
+      <Item>150</Item>
+      <Item>187</Item>
+      <Item>204</Item>
+      <Item>207</Item>
+      <Item>205</Item>
+      <Item>195</Item>
+      <Item>201</Item>
+      <Item>206</Item>
+      <Item>112</Item>
+      <Item>156</Item>
+      <Item>133</Item>
+      <Item>153</Item>
+      <Item>139</Item>
+      <Item>82</Item>
+      <Item>171</Item>
+      <Item>127</Item>
+      <Item>174</Item>
+      <Item>182</Item>
+      <Item>182</Item>
+      <Item>191</Item>
+      <Item>218</Item>
+      <Item>170</Item>
+      <Item>126</Item>
+      <Item>173</Item>
+      <Item>181</Item>
+      <Item>181</Item>
+      <Item>190</Item>
+      <Item>199</Item>
+      <Item>106</Item>
+      <Item>126</Item>
+      <Item>181</Item>
+      <Item>160</Item>
+      <Item>180</Item>
+      <Item>195</Item>
+      <Item>206</Item>
+      <Item>165</Item>
+      <Item>189</Item>
+      <Item>120</Item>
+      <Item>114</Item>
+      <Item>128</Item>
+      <Item>119</Item>
+      <Item>134</Item>
+      <Item>146</Item>
+      <Item>327</Item>
+      <Item>131</Item>
+      <Item>131</Item>
+      <Item>131</Item>
+      <Item>131</Item>
+      <Item>102</Item>
+      <Item>151</Item>
+      <Item>110</Item>
+      <Item>130</Item>
+      <Item>120</Item>
+      <Item>127</Item>
+      <Item>327</Item>
+      <Item>144</Item>
+      <Item>152</Item>
+      <Item>173</Item>
+      <Item>327</Item>
+      <Item>158</Item>
+      <Item>170</Item>
+      <Item>159</Item>
+      <Item>173</Item>
+      <Item>171</Item>
+      <Item>204</Item>
+      <Item>180</Item>
+      <Item>214</Item>
+      <Item>169</Item>
+      <Item>184</Item>
+      <Item>195</Item>
+      <Item>188</Item>
+      <Item>195</Item>
+      <Item>143</Item>
+      <Item>114</Item>
+      <Item>150</Item>
+      <Item>173</Item>
+      <Item>133</Item>
+      <Item>159</Item>
+      <Item>167</Item>
+      <Item>129</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect   *
+from     iby_payments_all
+where    1 = 1
+and      payment_id >= 3416778 - 100000
+--group   by payment_method_code</uniqueName>
+</TableSettings>

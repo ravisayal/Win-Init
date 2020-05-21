@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">LOOKUP_CODE</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>93</Item>
+      <Item>602</Item>
+      <Item>516</Item>
+      <Item>621</Item>
+      <Item>82</Item>
+      <Item>600</Item>
+      <Item>621</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-TNSSELECT t.lookup_code, t.attribute1
+              ,t.attribute2
+              ,t.attribute3
+              ,t.attribute4
+			  ,t.attribute5
+			  ,t.attribute6
+        FROM   fnd_lookup_values t
+              ,fnd_lookup_types l
+        WHERE  l.lookup_type         = 'HUAR IREC PAYMENT'
+        AND    t.attribute_category  = 'HUAR IREC PAYMENT'
+--        AND    t.lookup_code         = l_db_name
+        AND    l.lookup_type         = t.lookup_type
+        AND    l.security_group_id   = t.security_group_id
+        AND    l.view_application_id = t.view_application_id
+        AND    t.LANGUAGE =  USERENV('LANG')</uniqueName>
+</TableSettings>

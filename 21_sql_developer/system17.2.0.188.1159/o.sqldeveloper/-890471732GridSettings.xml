@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ROLE_DESCRIPTION</Item>
+      <Item class="java.lang.String">GROUP_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>266</Item>
+      <Item>515</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect   distinct role_description, group_name
+from   PLN_USER_GROUP_V
+where 1=1</uniqueName>
+</TableSettings>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">RPAD('TEST',10*LENGTH(CHR(38)||'NBSP;'),CHR(38)||'NBSP;')</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>521</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUBS-NEXTGEN-TEST-LDAPselect rpad('test',10* length(chr(38)||'nbsp;'),chr(38)||'nbsp;')
+from dual</uniqueName>
+</TableSettings>

@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_NAME</Item>
+      <Item class="java.lang.String">APPLICATION_NAME</Item>
+      <Item class="java.lang.String">START_DATE</Item>
+      <Item class="java.lang.String">END_DATE</Item>
+      <Item class="java.lang.String">USER_ID</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_ID</Item>
+      <Item class="java.lang.String">RESPONSIBILITY_ID_1</Item>
+      <Item class="java.lang.String">EMAIL_ADDRESS</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>79</Item>
+      <Item>250</Item>
+      <Item>369</Item>
+      <Item>145</Item>
+      <Item>93</Item>
+      <Item>62</Item>
+      <Item>117</Item>
+      <Item>129</Item>
+      <Item>187</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSELECT	  fu.user_name, fr.RESPONSIBILITY_NAME, application_name, fg.start_date, fg.end_date, fu.user_id , fr.RESPONSIBILITY_ID, fr.RESPONSIBILITY_ID, fu.email_address
+FROM	  FND_RESPONSIBILITY_vl fr,
+          fnd_application_vl fa,
+		  Apps.FND_USER_RESP_GROUPS fg,
+		  fnd_user fu
+WHERE	  fu.user_id = fg.user_id
+AND		  fr.RESPONSIBILITY_ID= fg.RESPONSIBILITY_ID
+and       fr.application_id = fa.application_id
+and		  fu.user_name like  '21256447%'  		
+--and		  fu.user_name like  'MARY%LYNN%%'  		
+--AND		  fr.RESPONSIBILITY_NAME LIKE 'HU%'
+ORDER BY  user_name</uniqueName>
+</TableSettings>

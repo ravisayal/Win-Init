@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ID</Item>
+      <Item class="java.lang.String">PROFILE</Item>
+      <Item class="java.lang.String">VALUE</Item>
+      <Item class="java.lang.String">LEVEL</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>54</Item>
+      <Item>278</Item>
+      <Item>450</Item>
+      <Item>47</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-TRAINselect t.PROFILE_OPTION_ID ID, z.USER_PROFILE_OPTION_NAME Profile, nvl(v.PROFILE_OPTION_VALUE,'Replace with non-load balanced URL') Value, decode(v.level_id, 10001,'Site',
+                            10002,'Application',
+                            10003,'Responsibility',
+                            10004,'User',
+                            10005,'Server',
+                            10006,'Organization') "LEVEL"
+from apps.fnd_profile_options t, apps.fnd_profile_option_values v, apps.fnd_profile_options_tl z
+where (v.PROFILE_OPTION_ID (+) = t.PROFILE_OPTION_ID)
+and (z.PROFILE_OPTION_NAME = t.PROFILE_OPTION_NAME)
+and (t.PROFILE_OPTION_NAME in ('FND_APEX_URL','APPS_FRAMEWORK_AGENT','WF_MAIL_WEB_AGENT'))
+--and  upper(PROFILE_OPTION_VALUE) like '%FIN%'</uniqueName>
+</TableSettings>

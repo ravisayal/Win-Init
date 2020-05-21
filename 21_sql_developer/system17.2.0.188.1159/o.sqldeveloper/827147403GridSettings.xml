@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">NAME</Item>
+      <Item class="java.lang.String">CREATION_METHOD_CODE</Item>
+      <Item class="java.lang.String">CLEAR_FLAG</Item>
+      <Item class="java.lang.String">REMIT_FLAG</Item>
+      <Item class="java.lang.String">CREATION_STATUS</Item>
+      <Item class="java.lang.String">REMIT_METHOD_CODE</Item>
+      <Item class="java.lang.String">NOTES_RECEIVABLE</Item>
+      <Item class="java.lang.String">BILL_OF_EXCHANGE_FLAG</Item>
+      <Item class="java.lang.String">AMOUNT</Item>
+      <Item class="java.lang.String">PAY_FROM_CUSTOMER</Item>
+      <Item class="java.lang.String">RECEIPT_NUMBER</Item>
+      <Item class="java.lang.String">CASH_RECEIPT_ID</Item>
+      <Item class="java.lang.String">RECEIPT_METHOD_ID</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>173</Item>
+      <Item>153</Item>
+      <Item>82</Item>
+      <Item>81</Item>
+      <Item>115</Item>
+      <Item>132</Item>
+      <Item>118</Item>
+      <Item>149</Item>
+      <Item>62</Item>
+      <Item>134</Item>
+      <Item>108</Item>
+      <Item>111</Item>
+      <Item>126</Item>
+      <Item>145</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect    arc.name, arc.creation_method_code,
+          arc.clear_flag,
+          arc.remit_flag,
+          arc.creation_status,
+          arc.remit_method_code,
+          arc.notes_receivable,
+          arc.bill_of_exchange_flag,
+          acr.amount,
+          acr.pay_from_customer,
+          acr.receipt_number, 
+          acr.cash_receipt_id,
+          acr.receipt_method_id,
+          acr.creation_date
+from      ar_cash_receipts_all acr,
+          AR_RECEIPT_CLASSES arc
+where  1=1
+and    arc.receipt_class_id = acr.receipt_method_id
+and   cash_receipt_id >3274081 -1000</uniqueName>
+</TableSettings>

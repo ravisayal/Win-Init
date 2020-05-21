@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PERIOD_NAME</Item>
+      <Item class="java.lang.String">ASSET_ID</Item>
+      <Item class="java.lang.String">ASSET_NUMBER</Item>
+      <Item class="java.lang.String">ASSET_KEY</Item>
+      <Item class="java.lang.String">ASSET_TYPE</Item>
+      <Item class="java.lang.String">TAG_NUMBER</Item>
+      <Item class="java.lang.String">ASSET_CATEGORY_ID</Item>
+      <Item class="java.lang.String">MAJOR_CATERGORY</Item>
+      <Item class="java.lang.String">MINOR_CATEGORY</Item>
+      <Item class="java.lang.String">CATEGORY_TYPE</Item>
+      <Item class="java.lang.String">OWNED_LEASED</Item>
+      <Item class="java.lang.String">ASSET_LOCATION</Item>
+      <Item class="java.lang.String">MANUFACTURER_NAME</Item>
+      <Item class="java.lang.String">SERIAL_NUMBER</Item>
+      <Item class="java.lang.String">MODEL_NUMBER</Item>
+      <Item class="java.lang.String">DATE_PLACED_IN_SERVICE</Item>
+      <Item class="java.lang.String">PRORATE_DATE</Item>
+      <Item class="java.lang.String">DEPRN_METHOD_CODE</Item>
+      <Item class="java.lang.String">UNITS</Item>
+      <Item class="java.lang.String">LIFE_IN_MONTHS</Item>
+      <Item class="java.lang.String">ORIGINAL_COST</Item>
+      <Item class="java.lang.String">ADJUSTED_COST</Item>
+      <Item class="java.lang.String">RECOVERABLE_COST</Item>
+      <Item class="java.lang.String">ADJUSTED_RECOVERABLE_COST</Item>
+      <Item class="java.lang.String">RETIREMENT_ID</Item>
+      <Item class="java.lang.String">PERIOD_NAME_1</Item>
+      <Item class="java.lang.String">PERIOD_COUNTER</Item>
+      <Item class="java.lang.String">FISCAL_YEAR</Item>
+      <Item class="java.lang.String">PERIOD_NUM</Item>
+      <Item class="java.lang.String">PERIOD_OPEN_DATE</Item>
+      <Item class="java.lang.String">PERIOD_CLOSE_DATE</Item>
+      <Item class="java.lang.String">CALENDAR_PERIOD_OPEN_DATE</Item>
+      <Item class="java.lang.String">CALENDAR_PERIOD_CLOSE_DATE</Item>
+      <Item class="java.lang.String">DEPRN_RUN_DATE</Item>
+      <Item class="java.lang.String">DEPRN_AMOUNT</Item>
+      <Item class="java.lang.String">YTD_DEPRN</Item>
+      <Item class="java.lang.String">ITD_DEPRN_RESERVE</Item>
+      <Item class="java.lang.String">ORIG_DEPRN_RESERVE</Item>
+      <Item class="java.lang.String">DEPRN_SOURCE_CODE</Item>
+      <Item class="java.lang.String">DEPRN_ADJUSTED_COST</Item>
+      <Item class="java.lang.String">DEPRN_ADJUSTMENT_AMOUNT</Item>
+      <Item class="java.lang.String">DEPRN_OVERRIDE_FLAG</Item>
+      <Item class="java.lang.String">ITD_DEPRN_ADJUSTMENT</Item>
+      <Item class="java.lang.String">NULL</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>91</Item>
+      <Item>67</Item>
+      <Item>97</Item>
+      <Item>313</Item>
+      <Item>82</Item>
+      <Item>86</Item>
+      <Item>127</Item>
+      <Item>121</Item>
+      <Item>113</Item>
+      <Item>103</Item>
+      <Item>100</Item>
+      <Item>236</Item>
+      <Item>135</Item>
+      <Item>101</Item>
+      <Item>100</Item>
+      <Item>154</Item>
+      <Item>145</Item>
+      <Item>134</Item>
+      <Item>49</Item>
+      <Item>105</Item>
+      <Item>101</Item>
+      <Item>103</Item>
+      <Item>123</Item>
+      <Item>180</Item>
+      <Item>99</Item>
+      <Item>103</Item>
+      <Item>111</Item>
+      <Item>86</Item>
+      <Item>85</Item>
+      <Item>145</Item>
+      <Item>145</Item>
+      <Item>181</Item>
+      <Item>186</Item>
+      <Item>145</Item>
+      <Item>101</Item>
+      <Item>77</Item>
+      <Item>125</Item>
+      <Item>134</Item>
+      <Item>133</Item>
+      <Item>142</Item>
+      <Item>172</Item>
+      <Item>140</Item>
+      <Item>146</Item>
+      <Item>47</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">39 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSELECT fdp.period_name,
+       fab.asset_id,
+       fab.asset_number,
+       gcc_ak.concatenated_segments asset_key,
+       fah.asset_type,
+       fab.tag_number,
+       fab.asset_category_id,
+       fc.segment1 major_catergory,
+       fc.segment2 minor_category,
+       fc.category_type,
+       fc.owned_leased,
+       fl.concatenated_segments asset_location,
+       fab.manufacturer_name,
+       fab.serial_number,
+       fab.model_number,
+       fb.date_placed_in_service,
+       fb.prorate_date,
+       fb.deprn_method_code,
+       fah.units,
+       fb.life_in_months,
+       fb.original_cost,
+       fb.adjusted_cost,
+       fb.recoverable_cost,
+       fb.adjusted_recoverable_cost,
+       fb.retirement_id,
+       fdp.period_name,
+       fdp.period_counter,
+       fdp.fiscal_year,
+       fdp.period_num,
+       fdp.period_open_date,
+       fdp.period_close_date,
+       fdp.calendar_period_open_date,
+       fdp.calendar_period_close_date,
+       fds.deprn_run_date,
+       fds.deprn_amount,
+       fds.ytd_deprn,
+       fds.deprn_reserve itd_deprn_reserve,
+       fds_orig.deprn_reserve orig_deprn_reserve,
+       fds.deprn_source_code,
+       fds.adjusted_cost deprn_adjusted_cost,
+       fds.deprn_adjustment_amount,
+       fds.deprn_override_flag,
+       (SELECT NVL(SUM(adjustment_amount),0)
+          FROM fa_adjustments fa
+         WHERE 1 = 1
+           AND fa.asset_id = fab.asset_id
+           AND fa.source_type_code = 'DEPRECIATION'
+           AND fa.period_counter_adjusted &lt;= fdp.period_counter
+       )itd_deprn_adjustment,
+       null
+  FROM fa_additions_b fab,
+       fa_books fb,
+       fa_deprn_periods fdp,
+       fa_deprn_summary fds,
+       fa_asset_keywords_kfv gcc_ak,
+       fa_categories_vl fc,
+       fa_distribution_history fdh,
+       fa_locations_kfv fl,
+       fa_asset_history fah,
+       fa_deprn_summary fds_orig
+       -- Retirements
+WHERE 1 = 1
+   AND fab.asset_id = fb.asset_id
+   AND fb.asset_id = fds.asset_id
+   AND fds.period_counter = fdp.period_counter
+   AND fab.asset_key_ccid = gcc_ak.code_combination_id
+   AND fah.category_id = fc.category_id
+   AND fab.asset_id = fdh.asset_id
+   AND fdh.location_id = fl.location_id
+   and fb.asset_id = fah.asset_id
+   AND fb.asset_id = fds_orig.asset_id
+   AND fds_orig.deprn_source_code = 'BOOKS'
+   --and decode 
+--   and fdp.period_close_date BETWEEN fah.date_effective AND NVL(fah.date_ineffective,SYSDATE)
+ --  AND fdp.period_close_date BETWEEN fb.date_effective AND NVL(fb.date_ineffective,SYSDATE)
+ --  AND fdp.period_close_date BETWEEN fdh.date_effective AND NVL(fdh.date_ineffective,SYSDATE)    
+   AND fdp.period_name = 'JUN-14'
+   --AND fab.asset_id = 2066;
+   AND fab.asset_id = 18342
+   order by period_counter</uniqueName>
+</TableSettings>

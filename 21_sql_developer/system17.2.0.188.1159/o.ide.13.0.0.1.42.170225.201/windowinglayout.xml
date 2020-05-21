@@ -1,0 +1,367 @@
+<LayoutInfo>
+   <clientLayoutData>
+      <global>
+         <view-data filter162.options="0" filter180.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter191.options="0" filter114.options="0" filter18.key="DatabasesConnectionsOFPI-PROD-LDAPRecycle Bin RSAYAL.null@OFPI-PROD-LDAP" filter108.options="0" filter31.options="0" filter3.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter86.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter71.key="Databases" filter17.key="DatabasesConnectionsOFPI-TRAIN-LDAPPackage RSAYAL.null@OFPI-TRAIN-LDAP" filter41.options="0" filter132.key="DatabasesConnectionsOFPI-P2-LDAPMaterialized View APPS.null@OFPI-P2-LDAP" filter26.options="0" filter2.key="DatabasesConnectionsOFPI-P2-LDAPXML Schema APPS.null@OFPI-P2-LDAP" filter192.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter189.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter158.key="DatabasesConnectionsRPCDEVQueue APPS.null@RPCDEV" filter24.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter96.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter10.key="DatabasesConnectionsOFPI-P1-LDAPPUBLIC_SYNONYM APPS.null@OFPI-P1-LDAP" filter190.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter14.options="0" filter166.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter189.options="0" filter204.options="0" filter64.key="DatabasesConnectionsRPCDEVJava APPS.null@RPCDEV" filter114.key="DatabasesConnectionsOFPI-P2-LDAPQueue APPS.null@OFPI-P2-LDAP" filter168.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter43.options="0" filter14.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter65.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter166.key="DatabasesConnectionsOFPI-TRAIN-LDAPPUBLIC_SYNONYM RSAYAL.null@OFPI-TRAIN-LDAP" filter53.options="0" filter56.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter0.key="DatabasesConnectionsOFPI-TRAIN-LDAPScheduler" filter189.key="DatabasesConnectionsRPCDEVScheduler" filter112.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter208.key="DatabasesConnectionsOFPI-P3-TNSPackage APPS.null@OFPI-P3-TNS" filter187.key="DatabasesConnectionsOFPI-TRAIN-LDAPEDITION_VIEW RSAYAL.null@OFPI-TRAIN-LDAP" filter160.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter1.key="DatabasesConnectionsOFPI-P2-LDAPEDITION_SUBFOLDER APPS.null@OFPI-P2-LDAP" filter158.options="0" filter188.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter88.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter162.key="DatabasesConnectionsOFPI-PROD-LDAPIndex RSAYAL.null@OFPI-PROD-LDAP" filter205.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter147.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter50.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter103.key="DatabasesConnectionsOFPI-P1-LDAPDatabase Link APPS.null@OFPI-P1-LDAP" filter205.options="0" filter21.options="0" filter4.key="DatabasesConnectionsOFPI-P2-TNSSequence APPS.null@OFPI-P2-TNS" filter201.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter145.options="0" filter33.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter109.key="DatabasesConnectionsOFPI-P1-LDAPPUBLIC DATABASE LINK APPS.null@OFPI-P1-LDAP" filter65.options="0" filter111.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter125.options="0" filter35.options="0" filter195.key="DatabasesConnectionsOFPI-P1-LDAPQueue APPS.null@OFPI-P1-LDAP" filter9.key="DatabasesConnectionsOFPI-TRAIN-LDAPIndex RSAYAL.null@OFPI-TRAIN-LDAP" filter68.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter187.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter97.key="DatabasesConnectionsOFPI-P3-TNSEDITION_VIEW APPS.null@OFPI-P3-TNS" filter156.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter106.key="DatabasesConnectionsOFPI-P1-LDAPEDITION_SUBFOLDER APPS.null@OFPI-P1-LDAP" filter110.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter113.key="DatabasesConnectionsOFPI-P2-LDAPQueue Table APPS.null@OFPI-P2-LDAP" filter70.options="0" filter143.options="0" filter164.key="DatabasesConnectionsOFPI-PROD-LDAPFunction RSAYAL.null@OFPI-PROD-LDAP" filter84.key="DatabasesConnectionsOFPI-P1-LDAPApex APPS.null@OFPI-P1-LDAP" filter181.key="DatabasesConnectionsOFPI-P2-LDAPMaterialized View Log APPS.null@OFPI-P2-LDAP" filter7.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter15.options="0" filter92.key="DatabasesConnectionsOFPI-TRAIN-LDAPQueue Table RSAYAL.null@OFPI-TRAIN-LDAP" filter163.options="0" filter94.key="DatabasesConnectionsRPCDEVProcedure APPS.null@RPCDEV" filter108.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter15.key="DatabasesConnectionsOFPI-P2-LDAPDatabase Link APPS.null@OFPI-P2-LDAP" filter54.options="0" filter30.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter129.options="0" filter101.options="0" filter194.key="DatabasesConnectionsOFPI-TRAIN-LDAPSynonym RSAYAL.null@OFPI-TRAIN-LDAP" filter55.options="0" filter4.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter102.key="DatabasesConnectionsOFPI-P3-TNSType APPS.null@OFPI-P3-TNS" filter87.options="0" filter123.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter161.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter71.options="0" filter186.options="0" filter142.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter141.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter137.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter210.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter39.options="0" filter192.key="DatabasesConnectionsOFPI-P2-TNSTrigger APPS.null@OFPI-P2-TNS" filter198.key="DatabasesConnectionsOFPI-P1-LDAPScheduler" filter178.key="DatabasesConnectionsRPCDEVDirectory APPS.null@RPCDEV" filter104.options="0" filter199.options="0" filter50.options="0" filter115.options="0" filter82.options="0" filter147.key="DatabasesConnectionsOFPI-P2-TNSIndex APPS.null@OFPI-P2-TNS" filter143.key="DatabasesConnectionsOFPI-P2-TNSMaterialized View Log APPS.null@OFPI-P2-TNS" filter55.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter117.key="DatabasesConnectionsOFPI DEV" filter12.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter137.options="0" filter60.options="0" filter170.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter21.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter105.key="DatabasesConnectionsOFPI-P2-LDAPDirectory APPS.null@OFPI-P2-LDAP" filter202.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter66.options="0" filter149.key="DatabasesConnectionsOFPI-TRAIN-LDAPType RSAYAL.null@OFPI-TRAIN-LDAP" filter130.options="0" filter204.key="DatabasesConnectionsOFPI-P2-TNSSynonym APPS.null@OFPI-P2-TNS" filter61.options="0" filter90.key="DatabasesConnectionsOFPI-TRAIN-LDAPProcedure RSAYAL.null@OFPI-TRAIN-LDAP" filter113.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter122.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter46.key="DatabasesConnectionsOFPI-TRAIN-LDAPView RSAYAL.null@OFPI-TRAIN-LDAP" filter121.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter142.key="DatabasesConnectionsOFPI-PROD-LDAPTable RSAYAL.null@OFPI-PROD-LDAP" filter151.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter106.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter68.key="DatabasesConnectionsOFPI-P1-LDAPPackage APPS.null@OFPI-P1-LDAP" filter23.options="0" filter29.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter37.options="0" filter201.key="DatabasesConnectionsOFPI-PROD-LDAPApex RSAYAL.null@OFPI-PROD-LDAP" filter152.options="0" filter122.key="DatabasesConnectionsOFPI-P3-LDAP" filter197.key="DatabasesConnectionsOFPI-P2-LDAPPUBLIC_SYNONYM APPS.null@OFPI-P2-LDAP" filter98.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter167.key="DatabasesConnectionsOFPI-P2-LDAPSynonym APPS.null@OFPI-P2-LDAP" filter140.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter47.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter208.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter193.options="0" filter77.key="DatabasesConnectionsRPCDEVQueue Table APPS.null@RPCDEV" filter209.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter196.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter75.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter154.key="DatabasesConnectionsRPCDEVSequence APPS.null@RPCDEV" filter69.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter87.filterCls="oracle.dbtools.raptor.navigator.folders.DatabasesFilter" filter7.key="DatabasesConnectionsOFPI-P2-TNSTable APPS.null@OFPI-P2-TNS" filter111.key="DatabasesConnectionsOFPI-P2-LDAPEDITION_VIEW APPS.null@OFPI-P2-LDAP" filter31.key="DatabasesConnectionsOFPI-P2-LDAPApex APPS.null@OFPI-P2-LDAP" filter41.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter27.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter128.key="DatabasesConnectionsOFPI-P2-TNSPackage APPS.null@OFPI-P2-TNS" filter26.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter122.options="0" filter175.key="DatabasesConnectionsRPCDEVTable APPS.null@RPCDEV" filter175.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter136.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter168.options="0" filter160.options="0" filter158.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter171.key="DatabasesConnectionsOFPI-TRAIN-LDAPMaterialized View Log RSAYAL.null@OFPI-TRAIN-LDAP" filter71.filterCls="oracle.dbtools.raptor.navigator.ConnectionStoresFilter" filter109.options="0" filter23.key="DatabasesConnectionsOFPI-PROD-LDAPScheduler" filter142.options="0" filter109.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter184.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter6.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter21.key="DatabasesConnectionsRPCDEVEDITION_SUBFOLDER APPS.null@RPCDEV" filter99.options="0" filter84.options="0" filter46.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter188.options="0" filter86.options="0" filter199.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter22.key="DatabasesConnectionsOFPI-P1-LDAPMaterialized View APPS.null@OFPI-P1-LDAP" filter200.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter180.options="0" filter105.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter188.key="DatabasesConnectionsRPCDEVEDITION_VIEW APPS.null@RPCDEV" filter138.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter60.key="DatabasesConnectionsOFPI-P2-TNSOther Users" filter207.key="DatabasesConnectionsOFPI-TRAIN-LDAPEDITION_TRIGGER RSAYAL.null@OFPI-TRAIN-LDAP" filter42.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter68.options="0" filter145.key="DatabasesConnectionsRPCDEVPUBLIC DATABASE LINK APPS.null@RPCDEV" filter81.key="DatabasesConnectionsOFPI-P2-LDAPIndex APPS.null@OFPI-P2-LDAP" filter61.key="DatabasesConnectionsOFPI-P2-TNSJava APPS.null@OFPI-P2-TNS" filter45.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter185.options="0" filter56.options="0" filter43.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter88.options="0" filter200.options="0" filter173.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter186.key="DatabasesConnectionsOFPI-P2-LDAPEDITION_TRIGGER APPS.null@OFPI-P2-LDAP" filter51.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter19.key="DatabasesConnectionsOFPI-TRAIN-LDAPEDITION_SUBFOLDER RSAYAL.null@OFPI-TRAIN-LDAP" filter203.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter152.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter36.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter62.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter119.options="0" filter33.key="DatabasesConnectionsOFPI-TRAIN-LDAPRecycle Bin RSAYAL.null@OFPI-TRAIN-LDAP" filter165.key="DatabasesConnectionsOFPI-P3-TNSView APPS.null@OFPI-P3-TNS" filter183.options="0" filter8.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter99.key="DatabasesConnectionsRPCDEVSynonym APPS.null@RPCDEV" filter102.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter157.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter203.key="DatabasesConnectionsOFPI-TRAIN-LDAPXML Schema RSAYAL.null@OFPI-TRAIN-LDAP" filter58.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter163.key="DatabasesConnectionsOFPI-PROD-LDAPPUBLIC DATABASE LINK RSAYAL.null@OFPI-PROD-LDAP" filter119.key="DatabasesConnectionsDEVR12" filter63.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter16.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" ID="DatabaseNavigatorWindow.DatabaseNavigatorName" filter183.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter22.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter112.options="0" filter60.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter91.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter117.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter30.key="DatabasesConnectionsOFPI-TRAIN-LDAPTrigger RSAYAL.null@OFPI-TRAIN-LDAP" filter40.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter181.options="0" filter141.key="DatabasesConnectionsRPCDEVFunction APPS.null@RPCDEV" filter101.key="DatabasesConnectionsOFPI-PROD-LDAPQueue Table RSAYAL.null@OFPI-PROD-LDAP" filter151.key="DatabasesConnectionsOFPI-PROD-LDAPEDITION_SUBFOLDER RSAYAL.null@OFPI-PROD-LDAP" filter140.key="DatabasesConnectionsOFPI-P1-LDAPXML Schema APPS.null@OFPI-P1-LDAP" filter94.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter51.key="DatabasesConnectionsRPCDEVXML Schema APPS.null@RPCDEV" filter157.key="DatabasesConnectionsOFPI-PROD-LDAP" filter136.key="DatabasesConnectionsOFPI-P3-TNS" filter210.options="0" filter144.options="0" filter73.key="DatabasesConnectionsOFPI-P3-TNSMaterialized View APPS.null@OFPI-P3-TNS" filter98.options="0" filter143.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter93.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter146.key="DatabasesConnectionsOFPI-PROD-LDAPXML Schema RSAYAL.null@OFPI-PROD-LDAP" filter85.options="0" filter169.key="DatabasesConnectionsOFPI-P2-LDAPOther Users" filter13.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter125.key="DatabasesConnectionsOFPI-PROD-LDAPXDB_SUBFOLDER RSAYAL.null@OFPI-PROD-LDAP" filter162.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter124.options="0" filter127.options="0" filter156.options="0" filter191.key="DatabasesConnectionsOFPI-P2-LDAPSequence APPS.null@OFPI-P2-LDAP" filter116.key="DatabasesConnectionsOFPI-PROD-LDAPOther Users" filter86.key="DatabasesConnectionsOFPI-PROD-LDAPTrigger RSAYAL.null@OFPI-PROD-LDAP" filter67.key="DatabasesConnectionsOFPI-P2-LDAPXDB_SUBFOLDER APPS.null@OFPI-P2-LDAP" filter146.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter211.options="0" filter35.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter29.options="0" filter17.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter74.options="0" filter29.key="DatabasesConnectionsOFPI-P2-TNSPUBLIC DATABASE LINK APPS.null@OFPI-P2-TNS" filter92.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter101.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter131.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter196.options="0" filter175.options="0" filter57.options="0" filter55.key="DatabasesConnectionsOFPI-P2-TNSQueue APPS.null@OFPI-P2-TNS" filter28.key="DatabasesConnectionsOFPI-P2-TNSEDITION_VIEW APPS.null@OFPI-P2-TNS" filter120.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter31.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter164.options="0" filter163.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter49.key="DatabasesConnectionsOFPI DEV1" filter34.key="DatabasesConnectionsOFPI-P3-TNSJava APPS.null@OFPI-P3-TNS" filter89.key="DatabasesConnectionsOFPI-P3-TNSFunction APPS.null@OFPI-P3-TNS" filter35.key="DatabasesConnectionsOFPI-P2-LDAPRecycle Bin APPS.null@OFPI-P2-LDAP" filter197.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter59.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter100.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter8.key="DatabasesConnectionsOFPI-P1-LDAP" filter135.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter112.key="DatabasesConnectionsOFPI-PROD-LDAPSequence RSAYAL.null@OFPI-PROD-LDAP" filter107.key="DatabasesConnectionsOFPI-TRAIN-LDAPSequence RSAYAL.null@OFPI-TRAIN-LDAP" filter95.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter80.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter194.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter169.options="0" filter97.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter48.key="DatabasesConnectionsRPCDEVOther Users (Filtered)" filter51.options="0" filter172.key="DatabasesConnectionsOFPI-P2-TNSMaterialized View APPS.null@OFPI-P2-TNS" filter115.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter168.key="DatabasesConnectionsOFPI-PROD-LDAPEDITION_VIEW RSAYAL.null@OFPI-PROD-LDAP" filter133.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter41.key="DatabasesConnectionsOFPI-P2-TNSEDITION_SUBFOLDER APPS.null@OFPI-P2-TNS" filter38.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter137.key="DatabasesConnectionsOFPI-P2-TNSFunction APPS.null@OFPI-P2-TNS" filter72.key="DatabasesConnectionsOFPI-P1-LDAPProcedure APPS.null@OFPI-P1-LDAP" filter11.key="DatabasesConnectionsOFPI-PROD-LDAPMaterialized View RSAYAL.null@OFPI-PROD-LDAP" filter118.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter2.options="0" filter28.options="0" filter207.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter200.key="DatabasesConnectionsOFPI-P2-TNSType APPS.null@OFPI-P2-TNS" filter190.key="DatabasesConnectionsOFPI-PROD-LDAPQueue RSAYAL.null@OFPI-PROD-LDAP" filter70.key="DatabasesConnectionsOFPI-P2-TNSRecycle Bin APPS.null@OFPI-P2-TNS" filter44.key="DatabasesConnectionsOFPI-P3-TNSQueue Table APPS.null@OFPI-P3-TNS" filter119.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter139.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter129.key="DatabasesConnectionsOFPI-PROD-LDAPDirectory RSAYAL.null@OFPI-PROD-LDAP" filter139.key="DatabasesConnectionsRPCDEVEDITION_TRIGGER APPS.null@RPCDEV" filter89.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter32.options="0" filter124.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter13.key="DatabasesConnectionsOFPI-TRAIN-LDAPXDB_SUBFOLDER RSAYAL.null@OFPI-TRAIN-LDAP" filter91.key="DatabasesConnectionsOFPI-TRAIN-LDAP" filter15.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter121.options="0" filter210.key="DatabasesConnectionsOFPI-PROD-LDAPPackage RSAYAL.null@OFPI-PROD-LDAP" filter57.key="DatabasesConnectionsOFPI-P1-LDAPTrigger APPS.null@OFPI-P1-LDAP" filter172.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter159.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter99.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter138.options="0" filter198.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter111.options="0" filter123.options="0" filter124.key="DatabasesConnectionsOFPI-P1-LDAPOther Users" filter74.key="DatabasesConnectionsOFPI-PROD-LDAPPUBLIC_SYNONYM RSAYAL.null@OFPI-PROD-LDAP" filter64.options="0" filter52.options="0" filter8.options="0" filter73.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter106.options="0" filter78.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter83.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter146.options="0" filter128.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter59.key="DatabasesConnectionsOFPI-P3-TNSQueue APPS.null@OFPI-P3-TNS" filter155.key="DatabasesConnectionsOFPI-P2-TNSView APPS.null@OFPI-P2-TNS" filter2.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter16.key="DatabasesConnectionsOFPI-P3-TNSTable APPS.null@OFPI-P3-TNS" filter136.options="0" filter1.options="0" filter176.key="DatabasesConnectionsOFPI-P3-TNSXDB_SUBFOLDER APPS.null@OFPI-P3-TNS" filter171.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter45.key="DatabasesConnectionsOFPI-P1-LDAPView APPS.null@OFPI-P1-LDAP" filter107.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter176.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter1.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter148.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter12.key="DatabasesConnectionsOFPI-P2-LDAPProcedure APPS.null@OFPI-P2-LDAP" filter132.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter76.options="0" filter141.options="0" filter85.key="DatabasesConnectionsOFPI-P2-TNSDatabase Link APPS.null@OFPI-P2-TNS" filter56.key="DatabasesConnectionsOFPI-P1-LDAPFunction APPS.null@OFPI-P1-LDAP" filter76.key="DatabasesConnectionsOFPI-P2-LDAPTable APPS.null@OFPI-P2-LDAP" filter199.key="DatabasesConnectionsOFPI-P2-TNSDirectory APPS.null@OFPI-P2-TNS" filter121.key="DatabasesConnectionsOFPI-P1-LDAPType APPS.null@OFPI-P1-LDAP" filter127.key="DatabasesConnectionsRPCDEVMaterialized View Log APPS.null@RPCDEV" filter157.options="0" filter184.key="DatabasesConnectionsOFPI-P2-LDAPFunction APPS.null@OFPI-P2-LDAP" filter58.options="0" filter135.options="0" filter18.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter100.key="DatabasesConnectionsOFPI-P3-TNSScheduler" filter52.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter93.options="0" filter123.key="DatabasesConnectionsRPCDEV" filter211.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter88.key="DatabasesConnectionsRPCDEVView APPS.null@RPCDEV" filter190.options="0" filter10.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter26.key="DatabasesConnectionsOFPI-P2-TNSXDB_SUBFOLDER APPS.null@OFPI-P2-TNS" filter37.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter40.options="0" filter23.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter161.key="DatabasesConnectionsOFPI-P3-TNSProcedure APPS.null@OFPI-P3-TNS" filter145.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter178.options="0" filter36.key="DatabasesConnectionsOFPI-P3-TNSEDITION_TRIGGER APPS.null@OFPI-P3-TNS" filter152.key="DatabasesConnectionsOFPI-PROD-LDAPSynonym RSAYAL.null@OFPI-PROD-LDAP" filter18.options="0" filter65.key="DatabasesConnectionsOFPI-P1-LDAPIndex APPS.null@OFPI-P1-LDAP" filter12.options="0" filter134.options="0" filter75.key="DatabasesConnectionsOFPI-P2-LDAPScheduler" filter126.key="DatabasesConnectionsOFPI-TRAIN" filter154.options="0" filter193.key="DatabasesConnectionsRPCDEVApex APPS.null@RPCDEV" filter49.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter195.options="0" filter125.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter81.options="0" filter156.key="DatabasesConnectionsOFPI-PROD-LDAPProcedure RSAYAL.null@OFPI-PROD-LDAP" filter47.key="DatabasesConnectionsOFPI-P3-TNSMaterialized View Log APPS.null@OFPI-P3-TNS" filter128.options="0" filter20.options="0" filter198.options="0" filter116.options="0" filter204.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter154.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter116.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter69.key="DatabasesConnectionsOFPI-P2-TNSScheduler" filter48.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter72.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter206.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter3.key="DatabasesConnectionsRPCDEVPUBLIC_SYNONYM APPS.null@RPCDEV" filter74.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter164.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter7.options="0" filter78.options="0" filter105.options="0" filter63.options="0" filter25.key="DatabasesConnectionsOFPI-TRAIN-LDAPTable RSAYAL.null@OFPI-TRAIN-LDAP" filter206.key="DatabasesConnectionsOFPI-P1-LDAPEDITION_VIEW APPS.null@OFPI-P1-LDAP" filter10.options="0" filter130.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter84.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter139.options="0" filter48.options="0" filter148.key="DatabasesConnectionsOFPI-P3-TNSDirectory APPS.null@OFPI-P3-TNS" filter177.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter76.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter27.key="DatabasesConnectionsOFPI-P3-TNSApex APPS.null@OFPI-P3-TNS" filter83.key="DatabasesConnectionsOFPI-PROD-LDAPJava RSAYAL.null@OFPI-PROD-LDAP" filter40.key="DatabasesConnectionsP-1 FININT" filter132.options="0" filter14.key="DatabasesConnectionsOFPI-P1-LDAPQueue Table APPS.null@OFPI-P1-LDAP" filter67.options="0" filter118.options="0" filter170.key="DatabasesConnectionsOFPI-P3-TNSRecycle Bin APPS.null@OFPI-P3-TNS" filter173.key="DatabasesConnectionsOFPI-P3-TNSOther Users" filter67.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter4.options="0" filter87.key="DatabasesConnections" filter20.key="DatabasesConnectionsOFPI-P1-LDAPJava APPS.null@OFPI-P1-LDAP" filter28.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter62.options="0" filter62.key="DatabasesConnectionsRPCDEVIndex APPS.null@RPCDEV" filter180.key="DatabasesConnectionsOFPI-P2-TNSXML Schema APPS.null@OFPI-P2-TNS" filter32.key="DatabasesConnectionsOFPI-P1-LDAPRecycle Bin APPS.null@OFPI-P1-LDAP" filter104.key="DatabasesConnectionsOFPI-PROD-LDAPView RSAYAL.null@OFPI-PROD-LDAP" filter118.key="DatabasesConnectionsOFPI-P2-TNSPUBLIC_SYNONYM APPS.null@OFPI-P2-TNS" filter159.options="0" filter78.key="DatabasesConnectionsOFPI-P2-LDAPJava APPS.null@OFPI-P2-LDAP" filter133.key="DatabasesConnectionsOFPI-TRAIN-LDAPFunction RSAYAL.null@OFPI-TRAIN-LDAP" filter114.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter61.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter169.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter80.key="DatabasesConnectionsOFPI-P3-TNSDatabase Link APPS.null@OFPI-P3-TNS" filter81.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter6.key="DatabasesConnectionsOFPI-P3-TNSPUBLIC DATABASE LINK APPS.null@OFPI-P3-TNS" filter144.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter165.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter94.options="0" filter134.key="DatabasesConnectionsOFPI-P1-LDAPEDITION_TRIGGER APPS.null@OFPI-P1-LDAP" filter167.options="0" filter206.options="0" filter193.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter98.key="DatabasesConnectionsRPCDEVXDB_SUBFOLDER APPS.null@RPCDEV" filter3.options="0" filter77.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter147.options="0" filter57.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter9.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter79.key="DatabasesConnectionsOFPI-P2-LDAPType APPS.null@OFPI-P2-LDAP" filter96.key="DatabasesConnectionsOFPI-TRAIN-LDAPQueue RSAYAL.null@OFPI-TRAIN-LDAP" filter186.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter103.options="0" filter53.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter58.key="DatabasesConnectionsOFPI-P2-TNSEDITION_TRIGGER APPS.null@OFPI-P2-TNS" filter11.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter24.key="DatabasesConnectionsOFPI-TRAIN-LDAPDatabase Link RSAYAL.null@OFPI-TRAIN-LDAP" filter38.key="DatabasesConnectionsOFPI-P3-TNSIndex APPS.null@OFPI-P3-TNS" filter93.key="DatabasesConnectionsOFPI-P2-TNSProcedure APPS.null@OFPI-P2-TNS" filter178.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter150.filterCls="oracle.dbtools.raptor.navigator.OtherSchemasFilter" filter82.key="DatabasesConnectionsOFPI-PROD-LDAPMaterialized View Log RSAYAL.null@OFPI-PROD-LDAP" filter39.key="DatabasesConnectionsOFPI-P2-LDAP" filter110.key="DatabasesConnectionsOFPI-P3-TNSXML Schema APPS.null@OFPI-P3-TNS" filter5.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter63.key="DatabasesConnectionsRPCDEVDatabase Link APPS.null@RPCDEV" filter104.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter5.key="DatabasesConnectionsOFPI-P3-TNSSequence APPS.null@OFPI-P3-TNS" filter83.options="0" filter201.options="0" filter195.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter192.options="0" filter144.key="DatabasesConnectionsOFPI-P2-LDAPView APPS.null@OFPI-P2-LDAP" filter37.key="DatabasesConnectionsOFPI-PROD-LDAPType RSAYAL.null@OFPI-PROD-LDAP" filter155.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter66.key="DatabasesConnectionsOFPI-P2-LDAPTrigger APPS.null@OFPI-P2-LDAP" filter52.key="DatabasesConnectionsOFPI-P2-TNSQueue Table APPS.null@OFPI-P2-TNS" filter150.key="DatabasesConnectionsOFPI-TRAIN-LDAPOther Users" filter130.key="DatabasesConnectionsOFPI-PROD-LDAPEDITION_TRIGGER RSAYAL.null@OFPI-PROD-LDAP" filter184.options="0" filter113.options="0" filter179.key="DatabasesConnectionsOFPI-TRAIN-LDAPMaterialized View RSAYAL.null@OFPI-TRAIN-LDAP" filter167.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter151.options="0" filter20.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter90.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter209.options="0" filter50.key="DatabasesConnectionsRPCDEVRecycle Bin APPS.null@RPCDEV" filter45.options="0" filter85.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter79.options="0" filter66.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter197.options="0" filter103.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter39.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter77.options="0" filter115.key="DatabasesConnectionsRPCDEVType APPS.null@RPCDEV" filter25.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter174.options="0" filter129.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter153.key="DatabasesConnectionsOFPI-TRAIN-LDAPApex RSAYAL.null@OFPI-TRAIN-LDAP" filter53.key="DatabasesConnectionsRPCDEVMaterialized View APPS.null@RPCDEV" filter54.key="DatabasesConnectionsOFPI-PROD-LDAPDatabase Link RSAYAL.null@OFPI-PROD-LDAP" filter172.options="0" filter11.options="0" filter79.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter202.key="DatabasesConnectionsOFPI-P3-TNSTrigger APPS.null@OFPI-P3-TNS" filter69.options="0" filter="212" filter183.key="DatabasesConnectionsOFPI-P1-LDAPSequence APPS.null@OFPI-P1-LDAP" filter155.options="0" filter42.key="DatabasesConnectionsOFPI-P3-TNSSynonym APPS.null@OFPI-P3-TNS" filter72.options="0" filter182.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter153.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter185.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter127.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter181.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter159.key="DatabasesConnectionsOFPI-P2-LDAPPackage APPS.null@OFPI-P2-LDAP" filter108.key="DatabasesConnectionsRPCDEVPackage APPS.null@RPCDEV" filter160.key="DatabasesConnectionsOFPI-P1-LDAPMaterialized View Log APPS.null@OFPI-P1-LDAP" filter185.key="DatabasesConnectionsOFPI-P1-LDAPDirectory APPS.null@OFPI-P1-LDAP" filter70.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter174.key="DatabasesConnectionsOFPI-P1-LDAPXDB_SUBFOLDER APPS.null@OFPI-P1-LDAP" filter135.key="DatabasesConnectionsRPCDEVTrigger APPS.null@RPCDEV" filter0.filterCls="oracle.dbtools.raptor.navigator.CategoryFilter" filter64.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter19.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter22.options="0" filter131.key="DatabasesConnectionsOFPI-TRAIN-LDAPPUBLIC DATABASE LINK RSAYAL.null@OFPI-TRAIN-LDAP" filter209.key="DatabasesConnectionsOFPI-P2-TNSApex APPS.null@OFPI-P2-TNS" filter44.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter177.key="DatabasesConnectionsOFPI-P3-TNSEDITION_SUBFOLDER APPS.null@OFPI-P3-TNS" filter191.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter182.key="DatabasesConnectionsOFPI-TRAIN-LDAPDirectory RSAYAL.null@OFPI-TRAIN-LDAP" filter43.key="DatabasesConnectionsOFPI-P2-TNS" filter32.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter205.key="DatabasesConnectionsOFPI-P1-LDAPSynonym APPS.null@OFPI-P1-LDAP" filter120.key="DatabasesConnectionsOFPI-P3-TNSPUBLIC_SYNONYM APPS.null@OFPI-P3-TNS" filter34.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter138.key="DatabasesConnectionsOFPI-P2-LDAPPUBLIC DATABASE LINK APPS.null@OFPI-P2-LDAP" filter196.key="DatabasesConnectionsOFPI-P-TNS" filter49.options="0" filter126.filterCls="oracle.dbtools.raptor.navigator.ConnectionFilter" filter211.key="DatabasesConnectionsOFPI-P1-LDAPTable APPS.null@OFPI-P1-LDAP" filter134.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter54.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter149.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter174.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter82.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter140.options="0" filter95.key="DatabasesConnectionsOFPI-TRAIN-LDAPJava RSAYAL.null@OFPI-TRAIN-LDAP" filter179.filterCls="oracle.dbtools.raptor.navigator.ObjectFilter" filter75.options="0"/>
+         <view-data ID="ReportNavigatorWindow.Reports" ReportsDummy="true"/>
+         <view-data ID="LogWindow.Log" ClosedByUser="false"/>
+      </global>
+      <Editing layout-name="Editing">
+         <view-data pageSelection="" ID="PALETTEFACTORY.PALETTE"/>
+      </Editing>
+   </clientLayoutData>
+   <knownDockableFactories>
+      <Systemoracle_ideimpl_editor_RecentFiles_VIEW_TYPE/>
+      <Applicationoracle_ideimpl_editor_RecentFiles_VIEW_TYPE/>
+      <ExplorerWindow/>
+      <BOOKMARKS_VIEW_TYPE/>
+      <RunManagerWindow/>
+      <LogWindow/>
+      <Debugger/>
+      <DatabaseNavigatorWindow/>
+      <OUTLINE_VIEW_TYPE/>
+      <SQLHISTORY_VIEW_TYPE/>
+      <DBMS_OUTPUT_DOCKABLE_VIEW_TYPE/>
+      <OWA_OUTPUT_DOCKABLE_VIEW_TYPE/>
+      <ReportNavigatorWindow/>
+      <VHV-VersionProperties/>
+      <SNIPPET_VIEW_TYPE/>
+      <SEARCH_VIEW_TYPE/>
+      <RECENT_OBJECTS_VIEW_TYPE/>
+      <PALETTEFACTORY/>
+      <UnifiedThumbnailDockable/>
+      <SPATIAL_VIEW_TYPE/>
+      <InspectorWindow/>
+      <STATUS/>
+      <ComponentPalette/>
+      <DbaNavigatorWindow/>
+      <CM_VIEW_TYPE/>
+      <LISTENER_VIEW_TYPE/>
+      <DBCART_VIEW_TYPE/>
+      <UtNavigatorWindow/>
+      <DataMinerNavigator/>
+      <TASKS_VIEW_TYPE/>
+      <VersioningNavigatorWindow/>
+      <SchemaBrowser/>
+      <TASK_PROGRESS_VIEW_TYPE/>
+      <FileNavigatorWindow/>
+      <oracle-jdeveloper-subversion-PendingChangesWindow/>
+      <MigrationProjectNavigatorWindow/>
+   </knownDockableFactories>
+   <dockingPositions>
+      <WEST floatSize="180" dockSize="226">
+         <box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="DatabaseNavigatorWindow.DatabaseNavigatorName" floatWidth="400"/>
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="ReportNavigatorWindow.Reports" floatWidth="400"/>
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="FileNavigatorWindow.Files" floatWidth="400"/>
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="UtNavigatorWindow.Unit Test" floatWidth="400"/>
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="DataMinerNavigator.Connection" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="RECENT_OBJECTS_VIEW_TYPE.oracle-dbtools-raptor-recent-objects-Window" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="SEARCH_VIEW_TYPE.oracle-dbtools-raptor-nav-search-Window" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="OUTLINE_VIEW_TYPE.oracle-dbtools-raptor-plsql-structure-Window" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="DbaNavigatorWindow.DbaNavigatorName" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="ExplorerWindow.SingletonExplorerWindow" floatWidth="400"/>
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="Debugger.StackWindow" floatWidth="400"/>
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="UnifiedThumbnailDockable.UnifiedThumbnailDockable" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="RunManagerWindow" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="VersioningNavigatorWindow.VersioningNavigator" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="TASKS_VIEW_TYPE.RunManager" floatWidth="400"/>
+               </leafBox>
+            </box>
+         </box>
+      </WEST>
+      <EAST floatSize="180" dockSize="332">
+         <box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="PALETTEFACTORY.PALETTE" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="ComponentPalette" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="InspectorWindow.SingletonInspectorWindow" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="CM_VIEW_TYPE.CM_VIEW_ID" floatWidth="400"/>
+               </leafBox>
+            </box>
+            <box>
+               <leafBox height="300" width="400">
+                  <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="SNIPPET_VIEW_TYPE.SNIPPET_VIEW_ID" floatWidth="400"/>
+               </leafBox>
+            </box>
+         </box>
+      </EAST>
+      <NORTH floatSize="180" dockSize="156"/>
+      <SOUTH floatSize="180" dockSize="250">
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="BOOKMARKS_VIEW_TYPE.BOOKMARK_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="LogWindow.Log" floatWidth="400"/>
+               <dockable dockWidth="400" floatHeight="162" floatOrientation="-1" dockHeight="300" ID="Debugger.BreakpointsWindow" floatWidth="162"/>
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="Debugger.SmartWindow" floatWidth="400"/>
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="Debugger.LocalsWindow" floatWidth="400"/>
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="Debugger.WatchWindow" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="SQLHISTORY_VIEW_TYPE.SQLHISTORY_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="DBMS_OUTPUT_DOCKABLE_VIEW_TYPE.DBMS_OUTPUT_DOCKABLE_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="OWA_OUTPUT_DOCKABLE_VIEW_TYPE.OWA_OUTPUT_DOCKABLE_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="STATUS.STATUS" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="LISTENER_VIEW_TYPE.LISTENER_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="TASK_PROGRESS_VIEW_TYPE.TASK_PROGRESS_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="DBCART_VIEW_TYPE.DBCART_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+         <box>
+            <leafBox height="300" width="400">
+               <dockable dockWidth="400" floatHeight="300" floatOrientation="-1" dockHeight="300" ID="SPATIAL_VIEW_TYPE.SPATIAL_VIEW_ID" floatWidth="400"/>
+            </leafBox>
+         </box>
+      </SOUTH>
+   </dockingPositions>
+   <editorPositions>
+      <box>
+         <leafBox height="300" selectedPage="9" width="400">
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523RPCDEV.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet3250441719211102495.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-TRAIN-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet8792740513329369719.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-TRAIN-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet1642649483406999139.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-TRAIN-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet6629492887219727971.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-TRAIN-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet7129940504146372052.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-P3-TNS.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet2353577857602849916.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-P3-TNS.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet7385051538346588949.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-P3-TNS.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet8924001806533992809.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-P3-TNS.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet804446194641253974.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-P3-TNS.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet7093333301463840489.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-TRAIN-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet9165271862322518710.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-TRAIN-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet7560619703896135568.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+            <state project="sqldev.temp ; ; -1 %2FIdeConnections%2523OFPI-P1-LDAP.jpr ; ;" document="ide.worksheet.file ; ; -1 %2FC%3A%2FUsers%2Fras8804%2FAppData%2FLocal%2FTemp%2Fworksheet3511772898931739058.sql ; ;" workspace="sqldev.temp ; ; -1 %2FDatabases.jws ; ;" accelerator="-1">
+               <paneState currentEditor="oracle.dbtools.worksheet.extension.WorksheetAddin">
+                  <editorState yScrollMin="0" yScrollMax="0" xScrollMax="0" xScrollMin="0" yScrollPos="0" yScrollExtent="0" xScrollExtent="0" addin="oracle.dbtools.worksheet.extension.WorksheetAddin" xScrollPos="0"/>
+               </paneState>
+               <pane>
+                  <box>
+                     <leafBox height="1000" width="1000" pane="0"/>
+                  </box>
+               </pane>
+            </state>
+         </leafBox>
+      </box>
+   </editorPositions>
+   <visibilityLayouts>
+      <Editing displayName="Editing">
+         <UnifiedThumbnailDockable.UnifiedThumbnailDockable/>
+         <CM_VIEW_TYPE.CM_VIEW_ID/>
+         <STATUS.STATUS/>
+         <Debugger.WatchWindow minimized="true"/>
+         <Debugger.SmartWindow minimized="true"/>
+         <DBCART_VIEW_TYPE.DBCART_VIEW_ID/>
+         <OWA_OUTPUT_DOCKABLE_VIEW_TYPE.OWA_OUTPUT_DOCKABLE_VIEW_ID/>
+         <InspectorWindow.SingletonInspectorWindow/>
+         <TASKS_VIEW_TYPE.RunManager/>
+         <DataMinerNavigator.Connection/>
+         <SPATIAL_VIEW_TYPE.SPATIAL_VIEW_ID/>
+         <ExplorerWindow.SingletonExplorerWindow/>
+         <VersioningNavigatorWindow.VersioningNavigator/>
+         <TASK_PROGRESS_VIEW_TYPE.TASK_PROGRESS_VIEW_ID/>
+         <DatabaseNavigatorWindow.DatabaseNavigatorName raised="true" visible="true"/>
+         <ComponentPalette/>
+         <LogWindow.Log raised="true" minimized="true" visible="true"/>
+         <DBMS_OUTPUT_DOCKABLE_VIEW_TYPE.DBMS_OUTPUT_DOCKABLE_VIEW_ID/>
+         <RunManagerWindow/>
+         <OUTLINE_VIEW_TYPE.oracle-dbtools-raptor-plsql-structure-Window/>
+         <Debugger.LocalsWindow minimized="true"/>
+         <ReportNavigatorWindow.Reports/>
+         <RECENT_OBJECTS_VIEW_TYPE.oracle-dbtools-raptor-recent-objects-Window/>
+         <SEARCH_VIEW_TYPE.oracle-dbtools-raptor-nav-search-Window raised="true" visible="true"/>
+         <_escaped _escapedValue="UtNavigatorWindow.Unit Test"/>
+         <Debugger.BreakpointsWindow minimized="true"/>
+         <DbaNavigatorWindow.DbaNavigatorName/>
+         <FileNavigatorWindow.Files/>
+         <LISTENER_VIEW_TYPE.LISTENER_VIEW_ID/>
+         <Debugger.StackWindow/>
+         <SQLHISTORY_VIEW_TYPE.SQLHISTORY_VIEW_ID raised="true" minimized="true" visible="true"/>
+         <SNIPPET_VIEW_TYPE.SNIPPET_VIEW_ID/>
+         <BOOKMARKS_VIEW_TYPE.BOOKMARK_VIEW_ID/>
+         <PALETTEFACTORY.PALETTE/>
+      </Editing>
+   </visibilityLayouts>
+</LayoutInfo>

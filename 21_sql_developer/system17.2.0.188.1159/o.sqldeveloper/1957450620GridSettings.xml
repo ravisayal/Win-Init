@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">CONCURRENT_QUEUE_NAME</Item>
+      <Item class="java.lang.String">LOG_LEVEL</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>162</Item>
+      <Item>261</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect concurrent_queue_name,substr(service_parameters,instr(service_parameters,  
+'SVC_CONTAINER_LOG_LEVEL',1),25) log_level  
+from apps.fnd_concurrent_queues  
+where concurrent_queue_name like 'WF%SVC'</uniqueName>
+</TableSettings>

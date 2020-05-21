@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">REFERENCED_TYPE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>242</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUBTESTSelect     distinct referenced_type
+         From       Dba_Dependencies
+         Where      1=1
+         --and        name like '
+--         and referenced_type like '%LINK%'
+--         And        Referenced_Name Like 'PLODS_HDW_LINK.HARVARD.EDU'</uniqueName>
+</TableSettings>

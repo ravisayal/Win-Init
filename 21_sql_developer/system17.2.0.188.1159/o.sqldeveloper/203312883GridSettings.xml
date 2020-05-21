@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">TRANSACTION_ID</Item>
+      <Item class="java.lang.String">CUSTOMER_ID</Item>
+      <Item class="java.lang.String">SESSION_ID</Item>
+      <Item class="java.lang.String">AMOUNT_DUE</Item>
+      <Item class="java.lang.String">START_TIME</Item>
+      <Item class="java.lang.String">ACTIVE</Item>
+      <Item class="java.lang.String">KILLED_AT</Item>
+      <Item class="java.lang.String">PAYMENT_AMOUNT</Item>
+      <Item class="java.lang.String">PAYMENT_DATE</Item>
+      <Item class="java.lang.String">PAYMENT_METHOD</Item>
+      <Item class="java.lang.String">CARD_TYPE</Item>
+      <Item class="java.lang.String">PAYMENT_GATEWAY_REFERENCE_ID</Item>
+      <Item class="java.lang.String">TRANSACTION_STATUS</Item>
+      <Item class="java.lang.String">RECEIPT_NUMBER</Item>
+      <Item class="java.lang.String">RECEIPT_ID</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">API_ERROR_CODE</Item>
+      <Item class="java.lang.String">API_ERROR_MSG</Item>
+      <Item class="java.lang.String">ERROR_TEXT</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>108</Item>
+      <Item>91</Item>
+      <Item>79</Item>
+      <Item>88</Item>
+      <Item>145</Item>
+      <Item>55</Item>
+      <Item>145</Item>
+      <Item>114</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>117</Item>
+      <Item>201</Item>
+      <Item>135</Item>
+      <Item>108</Item>
+      <Item>78</Item>
+      <Item>83</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>111</Item>
+      <Item>104</Item>
+      <Item>509</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSselect    *
+from      huar_irec_payment_headers
+where     1=1
+and       1=1</uniqueName>
+</TableSettings>

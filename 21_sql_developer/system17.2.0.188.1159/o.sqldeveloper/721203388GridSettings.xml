@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">C1</Item>
+      <Item class="java.lang.String">C2</Item>
+      <Item class="java.lang.String">C3</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>223</Item>
+      <Item>190</Item>
+      <Item>177</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-LDAPselect
+to_char(begin_interval_time,'yy/mm/dd hh24:mm') c1,
+object_name c2,
+space_used_total c3
+from
+dba_hist_seg_stat s,
+dba_hist_seg_stat_obj o,
+dba_hist_snapshot sn
+where
+o.owner = 'APPLSYS'
+and
+s.obj# = o.obj#
+and
+sn.snap_id = s.snap_id
+and object_name like 'FND_LOG_MESSAGES'
+order by begin_interval_time</uniqueName>
+</TableSettings>

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">VENDOR_NUMBER</Item>
+      <Item class="java.lang.String">VENDOR_NAME</Item>
+      <Item class="java.lang.String">VENDOR_DFF_CATEGORY</Item>
+      <Item class="java.lang.String">VISA_START_DATE</Item>
+      <Item class="java.lang.String">VISA_END_DATE</Item>
+      <Item class="java.lang.String">VENDOR_END_DATE_ACTIVE</Item>
+      <Item class="java.lang.String">VENDOR_LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">VENDOR_LAST_UPDATED_BY_USER</Item>
+      <Item class="java.lang.String">VENDOR_SITE</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_LINE1</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_LINE2</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_LINE3</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_CITY</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_STATE</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_ZIP</Item>
+      <Item class="java.lang.String">SITE_ADDRESS_COUNTRY</Item>
+      <Item class="java.lang.String">SITE_INACTIVE_DATE</Item>
+      <Item class="java.lang.String">PURCHASING_SITE_FLAG</Item>
+      <Item class="java.lang.String">TAX_REPORTING_SITE_FLAG</Item>
+      <Item class="java.lang.String">PAY_SITE_FLAG</Item>
+      <Item class="java.lang.String">PRIMARY_PAY_SITE_FLAG</Item>
+      <Item class="java.lang.String">SITE_PAYMODE_ID</Item>
+      <Item class="java.lang.String">SITE_LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">SITE_LAST_UPDATED_BY_USER</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>107</Item>
+      <Item>250</Item>
+      <Item>145</Item>
+      <Item>138</Item>
+      <Item>138</Item>
+      <Item>160</Item>
+      <Item>167</Item>
+      <Item>271</Item>
+      <Item>103</Item>
+      <Item>208</Item>
+      <Item>187</Item>
+      <Item>187</Item>
+      <Item>122</Item>
+      <Item>130</Item>
+      <Item>115</Item>
+      <Item>147</Item>
+      <Item>145</Item>
+      <Item>143</Item>
+      <Item>161</Item>
+      <Item>97</Item>
+      <Item>148</Item>
+      <Item>219</Item>
+      <Item>148</Item>
+      <Item>271</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPSELECT      segment1                        vendor_number,
+            vendor_name                     vendor_name,
+            aps.attribute_category          vendor_dff_category, 
+            aps.attribute11                 visa_start_date,
+            aps.attribute12                 visa_end_date,
+            aps.end_date_active             vendor_end_date_active,            
+            aps.last_update_date            vendor_last_update_date,
+            fu2.user_name||' :'|| substr(fu2.description,1,20)                    vendor_last_updated_by_user,
+            apss.vendor_site_code           vendor_site,
+            apss.address_line1              site_address_line1,
+            apss.address_line2              site_address_line2,
+            apss.address_line3              site_address_line3,
+            apss.city                       site_address_city,
+            apss.state                      site_address_state,
+            apss.zip                        site_address_zip,
+            apss.country                    site_address_country,
+            apss.INACTIVE_DATE              site_inactive_date,
+            apss.purchasing_site_flag       purchasing_site_flag,
+            apss.tax_reporting_site_flag    tax_reporting_site_flag,
+            apss.pay_site_flag              pay_site_flag,
+            apss.primary_pay_site_flag      primary_pay_site_flag,
+            apss.attribute3                 site_paymode_id,
+            apss.last_update_date           site_last_update_date,
+            fu.user_name||' :'|| substr(fu.description,1,20)                    site_last_updated_by_user
+FROM        APPS.ap_suppliers               aps,
+            (select     *
+             from       APPS.ap_supplier_sites_all
+             where      1 = 1
+             and        nvl(INACTIVE_DATE, sysdate) >=  To_Date('03-Jun-2019','dd-mon-yyyy')  
+            ) apss,
+            apps.fnd_user                    fu,
+            apps.fnd_user                   fu2
+where       aps.vendor_id                           =  apss.vendor_id(+)            
+--and         aps.VENDOR_TYPE_LOOKUP_CODE            !=  'EMPLOYEE'
+and         aps.last_updated_by                     =   fu2.user_id (+)
+and         apss.last_updated_by                    =   fu.user_id (+)
+--and         aps.vendor_id     = 4968513
+and         aps.vendor_id in 
+                        ( select vendor_id 
+                          from   huap_jg_suppliers 
+                          where  1  = 1
+                          and    synchronized_time >= To_Date('03-Jun-2019','dd-mon-yyyy')
+                        )  
+order by    aps.vendor_name, apss.vendor_site_code</uniqueName>
+</TableSettings>

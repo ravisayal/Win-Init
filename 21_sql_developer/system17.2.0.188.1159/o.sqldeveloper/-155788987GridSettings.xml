@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">JOBSTREAM_NAME</Item>
+      <Item class="java.lang.String">JOB_NAME</Item>
+      <Item class="java.lang.String">DEPENDENT_JOBSTREAM_NAME</Item>
+      <Item class="java.lang.String">DEPENDENT_JOB_NAME</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>112</Item>
+      <Item>173</Item>
+      <Item>176</Item>
+      <Item>327</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23RPCDEVselect  *
+from   app_jobstream_jobs</uniqueName>
+</TableSettings>

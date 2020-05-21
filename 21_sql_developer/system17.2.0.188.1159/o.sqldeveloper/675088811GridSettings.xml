@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">CORRID</Item>
+      <Item class="java.lang.String">STATE</Item>
+      <Item class="java.lang.String">COUNT</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>291</Item>
+      <Item>68</Item>
+      <Item>54</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-PROD-LDAPselect NVL(substr(wfe.corrid,1,50),'NULL - No Value') corrid, decode(wfe.state,0,'0 = Ready',1,'1 = Delayed',2,'2 = Retained',3,'3 = Exception',to_char(substr(wfe.state,1,12))) State,count(*) COUNT 
+from applsys.wf_notification_out wfe 
+where  1 =1
+and   wfe.state = 0
+group by wfe.corrid, wfe.state</uniqueName>
+</TableSettings>

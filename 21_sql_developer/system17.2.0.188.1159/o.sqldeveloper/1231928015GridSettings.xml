@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">1</Item>
+      <Item class="java.lang.String">TUB</Item>
+      <Item class="java.lang.String">ORG</Item>
+      <Item class="java.lang.String">OBJECT</Item>
+      <Item class="java.lang.String">FUND</Item>
+      <Item class="java.lang.String">ACTIVITY</Item>
+      <Item class="java.lang.String">SUBACTIVITY</Item>
+      <Item class="java.lang.String">ROOT</Item>
+      <Item class="java.lang.String">PERIOD</Item>
+      <Item class="java.lang.String">VALUE</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>25</Item>
+      <Item>38</Item>
+      <Item>41</Item>
+      <Item>57</Item>
+      <Item>47</Item>
+      <Item>65</Item>
+      <Item>84</Item>
+      <Item>48</Item>
+      <Item>57</Item>
+      <Item>202</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSSELECT * FROM ( 
+                                    SELECT   1,
+                                             SUBSTR(tub_org, 1,3)    AS   tub,
+                                             SUBSTR(tub_org, 5,5)    AS   org,
+                                             object,
+                                             fund,
+                                             SUBSTR(act_sub,1,6)     AS activity,
+                                             SUBSTR(act_sub,8,4)     AS subactivity,
+                                             root,
+                                             period,
+                                             value
+                                       FROM     pln_data_xform_sum
+                                       WHERE    1=1
+                                       AND      DB_NAME LIKE 'CINA'
+                                       AND      APP_NAME     =    'PLNG0006'
+                                       AND      year         =    'FY20'
+                                       AND      scenario     =    'Plan'
+                                       AND      version      =    'Working'
+                                       AND      (object      IN (SELECT object  --if  parameter p_include_370objects is Y include T370 objects else exclude
+                                                                FROM   pln_objects_stg
+                                                                WHERE  tera_object IN ('T400','T600','T901','T951')  
+                                                                AND    'N' != 'Y'
+                                                               )
+                                                      OR      OBJECT IN (SELECT    object  
+                                                                         FROM      pln_objects_stg
+                                                                         WHERE     tera_object in ('T400','T600','T901','T951','T370') 
+                                                                         AND       'N' = 'Y'
+                                                                         )
+                                                )
+                                       AND      tub_org      NOT LIKE 'No%'
+                                       AND      OBJECT       BETWEEN '3700' AND '9999'
+                                       AND      fund         NOT LIKE 'No%'
+                                       AND      act_sub      NOT LIKE 'No%'
+                                       AND      root         NOT LIKE 'No%'
+                                    and tub_org like '520%45340'
+                              and object = '8450'
+                              and root = '66778'
+                              and fund = '148000'
+                                     )</uniqueName>
+</TableSettings>

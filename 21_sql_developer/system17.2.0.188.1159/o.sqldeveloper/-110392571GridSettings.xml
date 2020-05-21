@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ROW_ID</Item>
+      <Item class="java.lang.String">RUNTIME_PROPERTY_FUNCTION</Item>
+      <Item class="java.lang.String">APPLICATION_ID</Item>
+      <Item class="java.lang.String">DESCRIPTIVE_FLEXFIELD_NAME</Item>
+      <Item class="java.lang.String">DESCRIPTIVE_FLEX_CONTEXT_CODE</Item>
+      <Item class="java.lang.String">APPLICATION_COLUMN_NAME</Item>
+      <Item class="java.lang.String">END_USER_COLUMN_NAME</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">COLUMN_SEQ_NUM</Item>
+      <Item class="java.lang.String">ENABLED_FLAG</Item>
+      <Item class="java.lang.String">REQUIRED_FLAG</Item>
+      <Item class="java.lang.String">SECURITY_ENABLED_FLAG</Item>
+      <Item class="java.lang.String">DISPLAY_FLAG</Item>
+      <Item class="java.lang.String">DISPLAY_SIZE</Item>
+      <Item class="java.lang.String">MAXIMUM_DESCRIPTION_LEN</Item>
+      <Item class="java.lang.String">CONCATENATION_DESCRIPTION_LEN</Item>
+      <Item class="java.lang.String">FLEX_VALUE_SET_ID</Item>
+      <Item class="java.lang.String">RANGE_CODE</Item>
+      <Item class="java.lang.String">DEFAULT_TYPE</Item>
+      <Item class="java.lang.String">DEFAULT_VALUE</Item>
+      <Item class="java.lang.String">SRW_PARAM</Item>
+      <Item class="java.lang.String">FORM_LEFT_PROMPT</Item>
+      <Item class="java.lang.String">FORM_ABOVE_PROMPT</Item>
+      <Item class="java.lang.String">DESCRIPTION</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>131</Item>
+      <Item>180</Item>
+      <Item>103</Item>
+      <Item>175</Item>
+      <Item>215</Item>
+      <Item>168</Item>
+      <Item>180</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>83</Item>
+      <Item>125</Item>
+      <Item>115</Item>
+      <Item>94</Item>
+      <Item>102</Item>
+      <Item>149</Item>
+      <Item>91</Item>
+      <Item>88</Item>
+      <Item>165</Item>
+      <Item>204</Item>
+      <Item>120</Item>
+      <Item>87</Item>
+      <Item>93</Item>
+      <Item>100</Item>
+      <Item>83</Item>
+      <Item>180</Item>
+      <Item>180</Item>
+      <Item>87</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P2-TNSSELECT      *
+FROM        fnd_descr_flex_col_usage_vl 
+WHERE      1=1 
+--and        descriptive_flex_context_code    =   'Global Data Elements' 
+--AND         default_type                     =   'C' --constant
+AND         descriptive_flexfield_name       =   'FA_ADDITIONS'
+--AND         application_column_name          in (   'ATTRIBUTE20',   'ATTRIBUTE21',   'ATTRIBUTE22')</uniqueName>
+</TableSettings>

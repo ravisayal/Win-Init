@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">ORIG_SYSTEM</Item>
+      <Item class="java.lang.String">OWNER_TABLE_NAME</Item>
+      <Item class="java.lang.String">STATUS</Item>
+      <Item class="java.lang.String">MULTIPLE_FLAG</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+      <Item class="java.lang.String">OBJECT_VERSION_NUMBER</Item>
+      <Item class="java.lang.String">CREATED_BY_MODULE</Item>
+      <Item class="java.lang.String">APPLICATION_ID</Item>
+      <Item class="java.lang.String">ATTRIBUTE_CATEGORY</Item>
+      <Item class="java.lang.String">ATTRIBUTE1</Item>
+      <Item class="java.lang.String">ATTRIBUTE2</Item>
+      <Item class="java.lang.String">ATTRIBUTE3</Item>
+      <Item class="java.lang.String">ATTRIBUTE4</Item>
+      <Item class="java.lang.String">ATTRIBUTE5</Item>
+      <Item class="java.lang.String">ATTRIBUTE6</Item>
+      <Item class="java.lang.String">ATTRIBUTE7</Item>
+      <Item class="java.lang.String">ATTRIBUTE8</Item>
+      <Item class="java.lang.String">ATTRIBUTE9</Item>
+      <Item class="java.lang.String">ATTRIBUTE10</Item>
+      <Item class="java.lang.String">ATTRIBUTE11</Item>
+      <Item class="java.lang.String">ATTRIBUTE12</Item>
+      <Item class="java.lang.String">ATTRIBUTE13</Item>
+      <Item class="java.lang.String">ATTRIBUTE14</Item>
+      <Item class="java.lang.String">ATTRIBUTE15</Item>
+      <Item class="java.lang.String">ATTRIBUTE16</Item>
+      <Item class="java.lang.String">ATTRIBUTE17</Item>
+      <Item class="java.lang.String">ATTRIBUTE18</Item>
+      <Item class="java.lang.String">ATTRIBUTE19</Item>
+      <Item class="java.lang.String">ATTRIBUTE20</Item>
+      <Item class="java.lang.String">MULTI_OSR_FLAG</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>217</Item>
+      <Item>159</Item>
+      <Item>57</Item>
+      <Item>97</Item>
+      <Item>83</Item>
+      <Item>145</Item>
+      <Item>113</Item>
+      <Item>145</Item>
+      <Item>125</Item>
+      <Item>154</Item>
+      <Item>130</Item>
+      <Item>103</Item>
+      <Item>134</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>80</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>86</Item>
+      <Item>107</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item class="java.lang.String">6 asc</Item>
+      <Item/>
+   </sortClauses>
+   <uniqueName>%2FC%3A%2FUsers%2Fras8804%2FAppData%2FRoaming%2FSQL+Developer%2Ftmp%2Finternal16991.xml%23OFPI-P3-TNS__1select * 
+from hz_orig_sys_mapping</uniqueName>
+</TableSettings>

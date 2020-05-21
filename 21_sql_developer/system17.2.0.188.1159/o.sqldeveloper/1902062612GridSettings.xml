@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">PATH_NAME</Item>
+      <Item class="java.lang.String">PATH_DOCID</Item>
+      <Item class="java.lang.String">PATH_OWNER_DOCID</Item>
+      <Item class="java.lang.String">PATH_TYPE</Item>
+      <Item class="java.lang.String">PATH_SEQ</Item>
+      <Item class="java.lang.String">PATH_XML_VERSION</Item>
+      <Item class="java.lang.String">PATH_XML_ENCODING</Item>
+      <Item class="java.lang.String">CREATED_BY</Item>
+      <Item class="java.lang.String">CREATION_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATED_BY</Item>
+      <Item class="java.lang.String">LAST_UPDATE_DATE</Item>
+      <Item class="java.lang.String">LAST_UPDATE_LOGIN</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>182</Item>
+      <Item>84</Item>
+      <Item>128</Item>
+      <Item>75</Item>
+      <Item>71</Item>
+      <Item>120</Item>
+      <Item>129</Item>
+      <Item>83</Item>
+      <Item>138</Item>
+      <Item>113</Item>
+      <Item>138</Item>
+      <Item>125</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23OFPI-P3-TNSSELECT    *
+ FROM jdr_paths
+ where 1=1
+ and creation_date > sysdate - 1</uniqueName>
+</TableSettings>

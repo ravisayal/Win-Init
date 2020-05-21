@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSettings class="oracle.dbtools.raptor.controls.grid.RaptorGridPersistedSettings" xmlns="http://xmlns.oracle.com/jdeveloper/110000/Table-attributes">
+   <columnPositions class="java.util.ArrayList">
+      <Item class="java.lang.String">APP_NAME</Item>
+      <Item class="java.lang.String">GROUP_NAME</Item>
+      <Item class="java.lang.String">USER_NAME</Item>
+      <Item class="java.lang.String">ROLE</Item>
+      <Item class="java.lang.String">ROLE_DESCRIPTION</Item>
+   </columnPositions>
+   <columnWidths>
+      <Item>72</Item>
+      <Item>242</Item>
+      <Item>79</Item>
+      <Item>45</Item>
+      <Item>152</Item>
+   </columnWidths>
+   <searchParams class="java.util.ArrayList"/>
+   <sortClauses>
+      <Item/>
+   </sortClauses>
+   <uniqueName>IdeConnections%23HUB-NEXTGEN-TEST-PLANODSselect   *
+from   PLN_USER_GROUP_V
+where 1=1</uniqueName>
+</TableSettings>
