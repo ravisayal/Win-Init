@@ -1,7 +1,6 @@
-# Win-Init
-Windows Init Softwares and Utility Scripts
+# Windows 10-Init Softwares
 
-This has
+Repo for my must have Windows  Softwares, Utilities and Settings on Windows Machines
 
 * Chocolatey Scripts
 * Windows Settings
@@ -11,8 +10,9 @@ This has
 * WinMerge Setting
 * Putty Settings
 * SQL Developer Setting
-* Toad Settings
-* Toad Scripts
+* Toad for Oracle
+	* Settings
+	* Code Substitution 
 * Chrome Settings
 * FireFox Settings
-
+* GitRepos Setups
