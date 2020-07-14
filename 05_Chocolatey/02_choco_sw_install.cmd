@@ -14,8 +14,8 @@ choco install    textpad -y
 choco install    git.install -y
 choco install    winscp -y
 REM   choco install    superputty -y
-choco install    tortoisesvn
-choco install    TortoiseGit
+choco install    tortoisesvn -y
+choco install    TortoiseGit -y
 choco install    puretext -y
 choco install    greenshot -y
 choco install    caffeine -y
@@ -24,7 +24,7 @@ choco install    vscode -y
 REM   JDK Installation 
 REM   This below isntalls both 32 and 64 bit versions
 choco install    jdk8 -params "both=true" --force  -y
-REM   choco install    jdk8
+REM   choco install    jdk8 -y
 
 
 choco install    microsoft-windows-terminal
@@ -67,7 +67,7 @@ choco install    inputdirector -y
 
 REM  Virtual Box
 REM  choco install    virtualbox 
-choco install    virtualbox --version=5.2.18
+choco install    virtualbox --version=5.2.18 -y
 
 
 choco install    sysinternals -y
@@ -75,7 +75,7 @@ choco install    PDFCreator  -y
 
 
 REM Privacy tools
-choco install    tor-browser
+choco install    tor-browser -y
 choco install    gpg4win-vanilla -y
 choco install    openvpn  -y
 
@@ -88,3 +88,7 @@ choco install    rufus -y
 
 REM  IOT Tools
 choco install    arduino -y
+
+
+REM Google tools
+choco install    google-drive-file-stream -y
