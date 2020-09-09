@@ -18,6 +18,7 @@ choco install    tortoisesvn -y
 choco install    TortoiseGit -y
 choco install    puretext -y
 choco install    greenshot -y
+choco install    sharex -y
 choco install    caffeine -y
 choco install    vscode -y
 
@@ -25,6 +26,7 @@ REM   JDK Installation
 REM   This below isntalls both 32 and 64 bit versions
 choco install    jdk8 -params "both=true" --force  -y
 REM   choco install    jdk8 -y
+REM   choco install eclipse-java-oxygen
 
 
 choco install    microsoft-windows-terminal
