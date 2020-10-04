@@ -21,6 +21,7 @@ choco install    greenshot -y
 choco install    sharex -y
 choco install    caffeine -y
 choco install    vscode -y
+choco install    powertoys -y
 
 REM   JDK Installation 
 REM   This below isntalls both 32 and 64 bit versions
@@ -74,6 +75,7 @@ choco install    virtualbox --version=5.2.18 -y
 
 choco install    sysinternals -y
 choco install    PDFCreator  -y
+choco install    foxitereader -y
 
 
 REM Privacy tools
