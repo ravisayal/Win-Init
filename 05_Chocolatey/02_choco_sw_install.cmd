@@ -4,6 +4,7 @@ REM   Logfile %ProgramData%/chocolatey\logs\choco.summary.log
 choco install    chocolatey-core.extension -y
 choco install    7zip.install -y
 choco install    putty.install -y
+choco install    mtputty -y
 choco install    notepadplusplus -y
 choco install    autohotkey -y
 choco install    paint.net -y
