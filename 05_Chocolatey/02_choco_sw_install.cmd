@@ -94,6 +94,11 @@ choco install    rufus -y
 REM  IOT Tools
 choco install    arduino -y
 
+REM  Microsoft Tools
+choco install    microsoft-windows-terminal --pre
+choco install    visualstudio2019buildtools
 
 REM Google tools
 choco install    google-drive-file-stream -y
+choco install    androidstudio
+
