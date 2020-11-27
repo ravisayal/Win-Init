@@ -42,6 +42,7 @@ choco install    curl -y
 choco install    wget -y
 
 REM  Linux Sub Systems 
+choco install    msys2
 REM choco install    cygwin -y
 REM choco install    cyg-get -y
 REM  cyg-get rsync
