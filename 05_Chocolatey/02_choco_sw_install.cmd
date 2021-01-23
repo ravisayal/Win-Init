@@ -65,7 +65,8 @@ REM  Remote Access
 choco install    anydesk -y
 REM   choco install    teamviewer -y
 REM   choco install    teamviewer.host -y
-choco install    tightvnc -y
+REM   choco install    tightvnc -y
+choco install    vnc-viewer -y   
 
 REM KeyBoard/Mouse Tools
 choco install    inputdirector -y
