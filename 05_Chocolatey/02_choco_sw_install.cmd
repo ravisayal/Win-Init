@@ -92,6 +92,7 @@ choco install    teracopy -y
 REM USB Tools
 choco install    etcher -y 
 choco install    rufus -y 
+choco install    ventoy -y
 
 REM  IOT Tools
 choco install    arduino -y
