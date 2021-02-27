@@ -99,7 +99,8 @@ choco install    arduino -y
 
 REM  Microsoft Tools
 choco install    microsoft-windows-terminal --pre
-choco install    visualstudio2019buildtools
+choco install    visualstudio2019buildtools -y
+choco install    visualstudio2019community  -y
 
 REM Google tools
 choco install    google-drive-file-stream -y
