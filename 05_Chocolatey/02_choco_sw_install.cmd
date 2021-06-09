@@ -106,3 +106,6 @@ REM Google tools
 choco install    google-drive-file-stream -y
 choco install    androidstudio
 
+REM Oracle Tools
+choco install    oracle-sql-developer --params "'/Username:ravinder.sayal@fujitsu.com /Password:abcd'"
+
