@@ -102,6 +102,9 @@ choco install    microsoft-windows-terminal --pre
 choco install    visualstudio2019buildtools -y
 choco install    visualstudio2019community  -y
 
+REM IDE
+choco install    pycharm-community -y
+
 REM Google tools
 choco install    google-drive-file-stream -y
 choco install    androidstudio
