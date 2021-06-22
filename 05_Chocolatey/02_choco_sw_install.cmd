@@ -23,6 +23,8 @@ choco install    sharex -y
 choco install    caffeine -y
 choco install    vscode -y
 choco install    powertoys -y
+choco install    jq    -y
+
 
 REM   JDK Installation 
 REM   This below isntalls both 32 and 64 bit versions
