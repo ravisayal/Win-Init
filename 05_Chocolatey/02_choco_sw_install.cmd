@@ -24,6 +24,7 @@ choco install    caffeine -y
 choco install    vscode -y
 choco install    powertoys -y
 choco install    jq    -y
+choco install    sqlite  -y
 
 
 REM   JDK Installation 
